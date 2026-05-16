@@ -20,14 +20,13 @@ export function HeroSection() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-6">
-      <div className="max-w-2xl mx-auto text-center">
-        {/* Logo */}
-        <div className="mb-12">
-          <div className="inline-flex items-center justify-center w-14 h-14 bg-foreground rounded-full">
-            <span className="text-background font-semibold text-xl">T</span>
-          </div>
-        </div>
+    <main className="min-h-screen flex flex-col px-6 py-8">
+      {/* Top Left Logo */}
+      <div className="mb-16">
+        <span className="text-2xl font-semibold tracking-tight text-foreground">TWO</span>
+      </div>
+
+      <div className="max-w-3xl mx-auto text-center flex-1 flex flex-col justify-center">
 
         {/* Headline */}
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-foreground leading-[1.1] text-balance mb-6">
@@ -77,12 +76,23 @@ export function HeroSection() {
         )}
 
         {/* Decorative Pastel Cards */}
-        <div className="mt-20 flex items-center justify-center gap-4 opacity-60">
+        <div className="mt-16 flex items-center justify-center gap-4 opacity-60">
           <div className="w-3 h-3 rounded-full bg-pastel-yellow" />
           <div className="w-3 h-3 rounded-full bg-pastel-coral" />
           <div className="w-3 h-3 rounded-full bg-pastel-lime" />
           <div className="w-3 h-3 rounded-full bg-pastel-purple" />
           <div className="w-3 h-3 rounded-full bg-pastel-cyan" />
+        </div>
+      </div>
+
+      {/* App Mockup Screenshot */}
+      <div className="mt-16 mb-8 w-full max-w-5xl mx-auto px-4">
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-foreground/10 ring-1 ring-border">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-05-16%20at%203.47.03%E2%80%AFAM-NXMKRdRPwPwiD5eCoMHGMhVQcD2wsE.png"
+            alt="TWO app interface showing colorful note cards"
+            className="w-full h-auto"
+          />
         </div>
       </div>
     </main>
