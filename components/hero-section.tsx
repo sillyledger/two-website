@@ -75,24 +75,74 @@ export function HeroSection() {
           </div>
         )}
 
-        {/* Decorative Pastel Cards */}
-        <div className="mt-16 flex items-center justify-center gap-4 opacity-60">
-          <div className="w-3 h-3 rounded-full bg-pastel-yellow" />
-          <div className="w-3 h-3 rounded-full bg-pastel-coral" />
-          <div className="w-3 h-3 rounded-full bg-pastel-lime" />
-          <div className="w-3 h-3 rounded-full bg-pastel-purple" />
-          <div className="w-3 h-3 rounded-full bg-pastel-cyan" />
-        </div>
       </div>
 
-      {/* App Mockup Screenshot */}
-      <div className="mt-16 mb-8 w-full max-w-5xl mx-auto px-4">
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-foreground/10 ring-1 ring-border">
-          <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-05-16%20at%203.47.03%E2%80%AFAM-NXMKRdRPwPwiD5eCoMHGMhVQcD2wsE.png"
-            alt="TWO app interface showing colorful note cards"
-            className="w-full h-auto"
-          />
+      {/* Floating App Mockup - Marathon Style */}
+      <div className="mt-16 mb-8 w-full max-w-4xl mx-auto px-4">
+        <div className="relative rounded-2xl overflow-hidden bg-card shadow-2xl shadow-foreground/8 ring-1 ring-border">
+          {/* Mockup Header */}
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
+            <div className="flex gap-1.5">
+              <div className="w-3 h-3 rounded-full bg-pastel-coral" />
+              <div className="w-3 h-3 rounded-full bg-pastel-yellow" />
+              <div className="w-3 h-3 rounded-full bg-pastel-lime" />
+            </div>
+          </div>
+          
+          {/* Mockup Content */}
+          <div className="flex">
+            {/* Sidebar */}
+            <div className="w-48 border-r border-border p-4 hidden sm:block">
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center">
+                  <span className="text-background text-xs font-medium">T</span>
+                </div>
+                <span className="font-medium text-sm">TWO</span>
+              </div>
+              <div className="space-y-1">
+                <div className="h-8 rounded-lg bg-muted flex items-center px-3">
+                  <span className="text-xs text-foreground">All Notes</span>
+                </div>
+                <div className="h-8 rounded-lg flex items-center px-3">
+                  <span className="text-xs text-muted-foreground">Favorites</span>
+                </div>
+                <div className="h-8 rounded-lg flex items-center px-3">
+                  <span className="text-xs text-muted-foreground">Archive</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Main Content - Note Cards Grid */}
+            <div className="flex-1 p-6">
+              <h3 className="text-lg font-medium mb-4">Notes</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                <div className="aspect-[4/3] rounded-xl bg-pastel-yellow p-3">
+                  <p className="text-xs font-medium text-foreground/80 leading-snug">The beginning of screenless design</p>
+                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">May 21</p>
+                </div>
+                <div className="aspect-[4/3] rounded-xl bg-pastel-coral p-3">
+                  <p className="text-xs font-medium text-foreground/80 leading-snug">13 Things to Give Up</p>
+                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">May 25</p>
+                </div>
+                <div className="aspect-[4/3] rounded-xl bg-pastel-lime p-3 hidden md:block">
+                  <p className="text-xs font-medium text-foreground/80 leading-snug">Psychology Principles</p>
+                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">June 5</p>
+                </div>
+                <div className="aspect-[4/3] rounded-xl bg-pastel-purple p-3">
+                  <p className="text-xs font-medium text-foreground/80 leading-snug">10 UI & UX Lessons</p>
+                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">June 12</p>
+                </div>
+                <div className="aspect-[4/3] rounded-xl bg-pastel-cyan p-3">
+                  <p className="text-xs font-medium text-foreground/80 leading-snug">52 Research Terms</p>
+                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">June 18</p>
+                </div>
+                <div className="aspect-[4/3] rounded-xl bg-pastel-yellow p-3 hidden md:block">
+                  <p className="text-xs font-medium text-foreground/80 leading-snug">Text fields & Forms</p>
+                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">June 22</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
