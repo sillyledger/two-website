@@ -27,7 +27,7 @@ export function HeroSection() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="px-6 py-20 md:py-32">
+      <section className="px-6 py-20 md:py-32 pt-24">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
           <div className="flex justify-center mb-12">
