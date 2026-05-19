@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight } from "lucide-react"
+import { Mail, CheckCircle2 } from "lucide-react"
+import { Navigation } from "./navigation"
+import { AppMockup } from "./app-mockup"
 
 export function HeroSection() {
   const [email, setEmail] = useState("")
@@ -20,131 +22,81 @@ export function HeroSection() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col px-6 py-8">
-      {/* Top Left Logo */}
-      <div className="mb-16">
-        <span className="text-2xl font-semibold tracking-tight text-foreground">TWO</span>
-      </div>
+    <main className="min-h-screen w-full bg-zinc-950 text-white overflow-hidden">
+      {/* Navigation */}
+      <Navigation />
 
-      <div className="max-w-3xl mx-auto text-center flex-1 flex flex-col justify-center">
-
-        {/* Headline */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-foreground leading-[1.1] text-balance mb-6">
-          Notes that think
-          <br />
-          with you
-        </h1>
-
-        {/* Subheadline */}
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-md mx-auto mb-10 text-pretty">
-          A calmer way to capture ideas. Organize thoughts. Build clarity.
-        </p>
-
-        {/* Waitlist Form */}
-        {!submitted ? (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              required
-              className="flex-1 h-12 px-4 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-foreground/20 transition-all"
-            />
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="h-12 px-6 rounded-xl bg-foreground text-background font-medium inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-70"
-            >
-              {isSubmitting ? (
-                "Joining..."
-              ) : (
-                <>
-                  Join waitlist
-                  <ArrowRight className="w-4 h-4" />
-                </>
-              )}
-            </button>
-          </form>
-        ) : (
-          <div className="inline-flex items-center gap-2 h-12 px-6 rounded-xl bg-pastel-lime text-foreground font-medium">
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            {"You're on the list!"}
-          </div>
-        )}
-
-      </div>
-
-      {/* Floating App Mockup - Marathon Style */}
-      <div className="mt-16 mb-8 w-full max-w-4xl mx-auto px-4">
-        <div className="relative rounded-2xl overflow-hidden bg-card shadow-2xl shadow-foreground/8 ring-1 ring-border">
-          {/* Mockup Header */}
-          <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
-            <div className="flex gap-1.5">
-              <div className="w-3 h-3 rounded-full bg-pastel-coral" />
-              <div className="w-3 h-3 rounded-full bg-pastel-yellow" />
-              <div className="w-3 h-3 rounded-full bg-pastel-lime" />
+      {/* Hero Section */}
+      <section className="px-6 py-20 md:py-32">
+        <div className="max-w-4xl mx-auto">
+          {/* Badge */}
+          <div className="flex justify-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full">
+              <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+              <span className="text-sm text-zinc-400">Private beta coming soon</span>
             </div>
           </div>
-          
-          {/* Mockup Content */}
-          <div className="flex">
-            {/* Sidebar */}
-            <div className="w-48 border-r border-border p-4 hidden sm:block">
-              <div className="flex items-center gap-2 mb-6">
-                <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center">
-                  <span className="text-background text-xs font-medium">T</span>
-                </div>
-                <span className="font-medium text-sm">TWO</span>
-              </div>
-              <div className="space-y-1">
-                <div className="h-8 rounded-lg bg-muted flex items-center px-3">
-                  <span className="text-xs text-foreground">All Notes</span>
-                </div>
-                <div className="h-8 rounded-lg flex items-center px-3">
-                  <span className="text-xs text-muted-foreground">Favorites</span>
-                </div>
-                <div className="h-8 rounded-lg flex items-center px-3">
-                  <span className="text-xs text-muted-foreground">Archive</span>
-                </div>
-              </div>
-            </div>
+
+          {/* Main Headline */}
+          <div className="text-center mb-8">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-8 text-white">
+              Your thoughts,<br />
+              beautifully organized.
+            </h1>
             
-            {/* Main Content - Note Cards Grid */}
-            <div className="flex-1 p-6">
-              <h3 className="text-lg font-medium mb-4">Notes</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                <div className="aspect-[4/3] rounded-xl bg-pastel-yellow p-3">
-                  <p className="text-xs font-medium text-foreground/80 leading-snug">The beginning of screenless design</p>
-                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">May 21</p>
+            {/* Subheadline */}
+            <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+              TWO is a modern note-taking app for capturing ideas, organizing what matters, and finding clarity every day.
+            </p>
+          </div>
+
+          {/* Email Signup Form */}
+          <div className="flex justify-center mb-12">
+            {!submitted ? (
+              <form onSubmit={handleSubmit} className="w-full max-w-md flex gap-3">
+                <div className="flex-1 relative">
+                  <div className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    required
+                    className="w-full h-12 pl-12 pr-4 rounded-lg bg-zinc-900 border border-zinc-800 text-white placeholder:text-zinc-600 focus:outline-none focus:border-zinc-700 focus:ring-1 focus:ring-zinc-700 transition"
+                  />
                 </div>
-                <div className="aspect-[4/3] rounded-xl bg-pastel-coral p-3">
-                  <p className="text-xs font-medium text-foreground/80 leading-snug">13 Things to Give Up</p>
-                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">May 25</p>
-                </div>
-                <div className="aspect-[4/3] rounded-xl bg-pastel-lime p-3 hidden md:block">
-                  <p className="text-xs font-medium text-foreground/80 leading-snug">Psychology Principles</p>
-                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">June 5</p>
-                </div>
-                <div className="aspect-[4/3] rounded-xl bg-pastel-purple p-3">
-                  <p className="text-xs font-medium text-foreground/80 leading-snug">10 UI & UX Lessons</p>
-                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">June 12</p>
-                </div>
-                <div className="aspect-[4/3] rounded-xl bg-pastel-cyan p-3">
-                  <p className="text-xs font-medium text-foreground/80 leading-snug">52 Research Terms</p>
-                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">June 18</p>
-                </div>
-                <div className="aspect-[4/3] rounded-xl bg-pastel-yellow p-3 hidden md:block">
-                  <p className="text-xs font-medium text-foreground/80 leading-snug">Text fields & Forms</p>
-                  <p className="text-[10px] text-foreground/50 mt-auto pt-6">June 22</p>
-                </div>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="h-12 px-6 rounded-lg bg-white text-black font-semibold hover:bg-zinc-100 transition-colors disabled:opacity-70 whitespace-nowrap"
+                >
+                  {isSubmitting ? "Joining..." : "Join Waitlist"}
+                </button>
+              </form>
+            ) : (
+              <div className="inline-flex items-center gap-2 h-12 px-6 rounded-lg bg-green-900/20 border border-green-800 text-green-400 font-medium">
+                <CheckCircle2 className="w-5 h-5" />
+                You're on the list!
               </div>
-            </div>
+            )}
+          </div>
+
+          {/* Subtext */}
+          <div className="text-center mb-20">
+            <p className="text-sm text-zinc-500 flex items-center justify-center gap-2">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              No spam. Just product updates.
+            </p>
           </div>
         </div>
-      </div>
+
+        {/* App Mockup */}
+        <AppMockup />
+      </section>
     </main>
   )
 }
