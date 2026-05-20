@@ -16,7 +16,7 @@ export async function POST(request: Request) {
 
     // Notification to you
     await resend.emails.send({
-      from: "TWO APP <news@two.so>",
+      from: "TWO <news@two.so>",
       to: process.env.WAITLIST_TO!,
       subject: `New waitlist signup: ${email}`,
       html: `<p>${email} joined the TWO waitlist.</p>`,
@@ -24,7 +24,7 @@ export async function POST(request: Request) {
 
     // Confirmation email to the user
     await resend.emails.send({
-      from: "TWO <hello@two.so>",
+      from: "TWO <news@two.so>",
       to: email,
       subject: "You're on the TWO waitlist",
       html: `
