@@ -13,7 +13,7 @@ export function Navigation() {
         {/* Logo */}
         <a href="/" className="flex items-center no-underline">
           <img
-            src="/logo-transparent.png"
+            src="/logo.png"
             alt="TWO"
             className="h-9 w-auto"
           />
