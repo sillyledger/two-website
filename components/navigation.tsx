@@ -15,7 +15,7 @@ export function Navigation() {
           <img
             src="/logo.png"
             alt="TWO"
-            className="h-9 w-auto"
+            className="h-12 w-auto"
           />
         </a>
 
