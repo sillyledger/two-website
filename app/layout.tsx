@@ -11,22 +11,9 @@ export const metadata: Metadata = {
   description: 'A beautiful note-taking app that helps you capture and organize your thoughts effortlessly.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+  icon: '/favicon.ico',
+  apple: '/icon-512.png',
+},
 }
 
 export default function RootLayout({
