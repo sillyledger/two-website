@@ -12,9 +12,7 @@ export function Navigation() {
 
         {/* Logo */}
         <a href="/" className="flex items-center gap-2.5 no-underline">
-          <div className="w-7 h-7 bg-stone-950 rounded-lg flex items-center justify-center text-white font-serif text-sm font-normal">
-            T
-          </div>
+          <div className="w-7 h-7 bg-stone-950 rounded-lg flex items-center justify-center text-white text-sm font-normal">T</div>
           <span className="text-stone-950 font-semibold text-sm tracking-tight">TWO</span>
         </a>
 
@@ -27,20 +25,11 @@ export function Navigation() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          
-            href="#waitlist"
-            className="inline-flex items-center h-8 px-4 bg-stone-950 text-white text-sm font-medium rounded-lg hover:bg-stone-800 transition-colors no-underline"
-          >
-            Join Waitlist
-          </a>
+          <a href="#waitlist" className="inline-flex items-center h-8 px-4 bg-stone-950 text-white text-sm font-medium rounded-lg hover:bg-stone-800 transition-colors no-underline">Join Waitlist</a>
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-stone-700"
-          aria-label="Toggle menu"
-        >
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-stone-700" aria-label="Toggle menu">
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
@@ -52,12 +41,7 @@ export function Navigation() {
             <a href="#features" className="text-sm text-stone-500 hover:text-stone-900 transition-colors font-medium">Features</a>
             <a href="#pricing" className="text-sm text-stone-500 hover:text-stone-900 transition-colors font-medium">Pricing</a>
             <a href="#about" className="text-sm text-stone-500 hover:text-stone-900 transition-colors font-medium">About</a>
-            
-              href="#waitlist"
-              className="inline-flex items-center justify-center h-9 px-4 bg-stone-950 text-white text-sm font-medium rounded-lg"
-            >
-              Join Waitlist
-            </a>
+            <a href="#waitlist" className="inline-flex items-center justify-center h-9 px-4 bg-stone-950 text-white text-sm font-medium rounded-lg">Join Waitlist</a>
           </div>
         </div>
       )}
