@@ -7,53 +7,57 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800/50 bg-zinc-950/80 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 h-14 flex items-center px-6">
+      <div className="max-w-6xl mx-auto w-full flex items-center justify-between">
+
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center">
-            <span className="text-zinc-950 font-bold text-sm">J</span>
+        <a href="/" className="flex items-center gap-2.5 no-underline">
+          <div className="w-7 h-7 bg-stone-950 rounded-lg flex items-center justify-center text-white font-serif text-sm font-normal">
+            T
           </div>
-          <span className="text-white font-semibold">John</span>
-        </div>
+          <span className="text-stone-950 font-semibold text-sm tracking-tight">TWO</span>
+        </a>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#" className="text-zinc-400 hover:text-white transition">Features</a>
-          <a href="#" className="text-zinc-400 hover:text-white transition">Pricing</a>
-          <a href="#" className="text-zinc-400 hover:text-white transition">About</a>
+          <a href="#features" className="text-sm text-stone-500 hover:text-stone-900 transition-colors font-medium no-underline">Features</a>
+          <a href="#pricing" className="text-sm text-stone-500 hover:text-stone-900 transition-colors font-medium no-underline">Pricing</a>
+          <a href="#about" className="text-sm text-stone-500 hover:text-stone-900 transition-colors font-medium no-underline">About</a>
         </div>
 
-        {/* CTA Button (Desktop) */}
+        {/* Desktop CTA */}
         <div className="hidden md:block">
-          <button className="px-6 py-2 rounded-lg bg-white text-black font-medium hover:bg-zinc-100 transition">
+          
+            href="#waitlist"
+            className="inline-flex items-center h-8 px-4 bg-stone-950 text-white text-sm font-medium rounded-lg hover:bg-stone-800 transition-colors no-underline"
+          >
             Join Waitlist
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white"
+          className="md:hidden text-stone-700"
+          aria-label="Toggle menu"
         >
-          {isOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
+          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden border-t border-zinc-800 bg-zinc-950">
-          <div className="px-6 py-4 space-y-4">
-            <a href="#" className="block text-zinc-400 hover:text-white transition">Features</a>
-            <a href="#" className="block text-zinc-400 hover:text-white transition">Pricing</a>
-            <a href="#" className="block text-zinc-400 hover:text-white transition">About</a>
-            <button className="w-full px-6 py-2 rounded-lg bg-white text-black font-medium hover:bg-zinc-100 transition">
+        <div className="absolute top-14 left-0 right-0 bg-white border-b border-stone-200 md:hidden">
+          <div className="px-6 py-5 flex flex-col gap-4">
+            <a href="#features" className="text-sm text-stone-500 hover:text-stone-900 transition-colors font-medium">Features</a>
+            <a href="#pricing" className="text-sm text-stone-500 hover:text-stone-900 transition-colors font-medium">Pricing</a>
+            <a href="#about" className="text-sm text-stone-500 hover:text-stone-900 transition-colors font-medium">About</a>
+            
+              href="#waitlist"
+              className="inline-flex items-center justify-center h-9 px-4 bg-stone-950 text-white text-sm font-medium rounded-lg"
+            >
               Join Waitlist
-            </button>
+            </a>
           </div>
         </div>
       )}
