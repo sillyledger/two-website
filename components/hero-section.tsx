@@ -37,13 +37,13 @@ export function HeroSection() {
 
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-normal tracking-tight leading-none mb-6 text-stone-950">
-            Your thoughts,<br />
+            Your work,<br />
             <span className="italic text-stone-400">beautifully</span> organized.
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg text-stone-500 max-w-xl mx-auto leading-relaxed mb-10 font-normal">
-            TWO is a modern note-taking app for capturing ideas, organizing what matters, and finding clarity every day.
+           A modern note-taking app for capturing ideas, organizing what matters, and finding clarity every day.
           </p>
 
           {/* Waitlist Form */}
