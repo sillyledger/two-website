@@ -3,11 +3,7 @@ export default function Home() {
     <>
       <nav>
         <a href="#" className="nav-logo">
-          <div className="logo-mark">
-            <div className="r1"></div>
-            <div className="r2"></div>
-          </div>
-          <span className="nav-wordmark">TWO</span>
+          <img src="/logo.png" alt="TWO" className="nav-logo-img" />
         </a>
         <ul className="nav-links">
           <li><a href="#">Product</a></li>
@@ -21,9 +17,7 @@ export default function Home() {
       </nav>
 
       <section className="hero">
-        <div className="glow glow-blue"></div>
-        <div className="glow glow-amber"></div>
-        <div className="hero-badge"><div className="badge-dot"></div>Now in early access</div>
+        <div className="hero-badge"><div className="badge-dot"></div>Private Beta Soon</div>
         <h1>Your work,<br /><em>beautifully</em> organized.</h1>
         <p className="hero-sub">A modern note-taking app for capturing ideas, organizing what matters, and finding clarity every day.</p>
         <div className="hero-actions">
@@ -44,13 +38,12 @@ export default function Home() {
             <span className="tl tl-r"></span>
             <span className="tl tl-y"></span>
             <span className="tl tl-g"></span>
-            <div className="mock-url">⬤ app.two.so</div>
+            <div className="mock-url">app.two.so</div>
           </div>
           <div className="app-layout">
             <div className="sidebar">
               <div className="sb-logo">
-                <div className="logo-mark sm"><div className="r1"></div><div className="r2"></div></div>
-                <span>TWO</span>
+                <img src="/logo.png" alt="TWO" className="sb-logo-img" />
               </div>
               <div className="sb-section">
                 <div className="sb-label">Workspace</div>
@@ -151,7 +144,6 @@ export default function Home() {
 
       <div className="divider"></div>
       <section className="cta" id="waitlist">
-        <div className="cta-glow"></div>
         <h2>Ready to get<br /><em>organized?</em></h2>
         <p>Join the waitlist for early access — free for the first 500.</p>
         <div className="wl-row">
@@ -163,7 +155,7 @@ export default function Home() {
 
       <footer>
         <div className="fl">
-          <div className="logo-mark sm"><div className="r1"></div><div className="r2"></div></div>
+          <img src="/logo.png" alt="TWO" className="footer-logo" />
           TWO — A note-taking app by Strevius
         </div>
         <div className="fr">© 2025 Strevius. All rights reserved.</div>
