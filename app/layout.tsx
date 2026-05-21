@@ -1,32 +1,19 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
-
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+import type { Metadata } from "next";
+import "../styles/globals.css";
 
 export const metadata: Metadata = {
-  title: 'TWO — Notes that think with you',
-  description: 'A beautiful note-taking app that helps you capture and organize your thoughts effortlessly.',
-  generator: 'v0.app',
-  icons: {
-  icon: '/favicon.ico',
-  apple: '/icon-512.png',
-},
-}
+  title: "TWO — Your work, beautifully organized.",
+  description: "A modern note-taking app for capturing ideas, organizing what matters, and finding clarity every day.",
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className="bg-background">
-      <body className="font-sans antialiased bg-background text-foreground">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
-  )
+  );
 }
