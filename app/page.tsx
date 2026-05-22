@@ -206,7 +206,7 @@ export default function Home() {
 
       <footer>
         <div className="fl">
-          <img src="/logo-transparent.png" alt="TWO" className="footer-logo" />
+          <img src="/logo-two.svg" alt="TWO" className="footer-logo" />
           TWO — A docs app by Strevius
         </div>
         <div className="fr">© 2025 Strevius. All rights reserved.</div>
