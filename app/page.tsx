@@ -16,23 +16,51 @@ export default function Home() {
         </div>
       </nav>
 
+      {/* HERO */}
       <section className="hero">
-        <div className="hero-badge"><div className="badge-dot"></div>Private Beta Soon</div>
-        <h1>Write without<br />the <em>database.</em></h1>
-        <p className="hero-sub">A fast, beautiful writing app for content creators and small teams who live on Apple devices. Built for iPad Pro and Mac first.</p>
-        <div className="hero-actions">
-          <a href="#waitlist" className="btn-primary btn-lg">Join the waitlist</a>
-          <a href="#" className="btn-ghost btn-lg">See how it works →</a>
+        <div className="hero-eyebrow">
+          <div className="badge-dot"></div>
+          Private Beta — Coming Soon
         </div>
-        <div className="hero-proof">
-          <div className="avatars">
-            <span className="av1">A</span><span className="av2">M</span><span className="av3">S</span><span className="av4">J</span>
+        <h1>Write without<br />the <em>database.</em></h1>
+        <div className="hero-bottom">
+          <p className="hero-sub">A fast, beautiful writing app for content creators and small teams. Built for iPad Pro and Mac first — without Notion&apos;s complexity.</p>
+          <div className="hero-actions">
+            <a href="#waitlist" className="btn-primary btn-lg">Join the waitlist</a>
+            <a href="#" className="btn-ghost btn-lg">See how it works →</a>
           </div>
-          <span>Join 400+ people already on the list</span>
         </div>
       </section>
 
-      <div className="mockup-wrap">
+      {/* MARQUEE */}
+      <div className="marquee-strip">
+        <div className="marquee-inner">
+          {[
+            "Fast by default",
+            "Built for iPad Pro",
+            "Rich text editor",
+            "Smart collections",
+            "Apple-first design",
+            "Instant capture",
+            "Offline ready",
+            "Native Mac app",
+            "Fast by default",
+            "Built for iPad Pro",
+            "Rich text editor",
+            "Smart collections",
+            "Apple-first design",
+            "Instant capture",
+            "Offline ready",
+            "Native Mac app",
+          ].map((item, i) => (
+            <span key={i} className="marquee-item">{item}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* MOCKUP */}
+      <div className="mockup-section">
+        <div className="mockup-label">The app</div>
         <div className="mockup-frame">
           <div className="titlebar">
             <span className="tl tl-r"></span>
@@ -75,7 +103,7 @@ export default function Home() {
                   Search notes...
                 </div>
                 <button className="new-btn">
-                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v9M1 5.5h9" stroke="#0c0c0b" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v9M1 5.5h9" stroke="#141412" strokeWidth="1.5" strokeLinecap="round"/></svg>
                   New note
                 </button>
               </div>
@@ -119,66 +147,67 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="divider"></div>
-
-      <section className="features">
+      {/* FEATURES — dark section */}
+      <section className="dark-section">
         <div className="eyebrow">Why TWO</div>
-        <h2 className="section-h">Built for how you actually think</h2>
+        <h2 className="section-h">Built for how<br />you actually think.</h2>
         <div className="feat-grid">
           <div className="feat-cell">
-            <div className="feat-icon fi-blue">✦</div>
+            <div className="feat-num">01</div>
             <div className="feat-title">Instant capture</div>
-            <div className="feat-desc">Open to a blank note in under a second. Never lose a thought while it&apos;s fresh.</div>
+            <div className="feat-desc">Open to a blank note in under a second. Never lose a thought while it&apos;s still fresh.</div>
           </div>
           <div className="feat-cell">
-            <div className="feat-icon fi-amber">◈</div>
+            <div className="feat-num">02</div>
             <div className="feat-title">Smart organization</div>
             <div className="feat-desc">Collections, tags, and search that actually work. Find anything in seconds — not minutes.</div>
           </div>
           <div className="feat-cell">
-            <div className="feat-icon fi-green">⬡</div>
+            <div className="feat-num">03</div>
             <div className="feat-title">Beautiful writing</div>
             <div className="feat-desc">A rich editor that stays out of your way. Format when you need it, not when you don&apos;t.</div>
           </div>
         </div>
       </section>
 
-      <div className="divider"></div>
-
-      <section className="positioning">
-        <div className="pos-left">
-          <div className="eyebrow">The backstory</div>
-          <p className="pos-quote">&ldquo;I&apos;m a content creator who does 90% of my writing on an iPad Pro. Every app I tried either died, got bloated, or never took the iPad seriously. So I built the one I always wanted.&rdquo;</p>
-          <p className="pos-attr"><strong>Pieter</strong> — Founder, TWO</p>
-        </div>
-        <div className="pos-right">
-          <div className="eyebrow">How we compare</div>
-          <div className="comp-row">
-            <div className="comp-name">Notion</div>
-            <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'85%'}}></div></div>
-            <div className="comp-label">Too complex</div>
+      {/* FOUNDER + COMPARISON — light section */}
+      <section className="light-section">
+        <div className="two-col">
+          <div>
+            <div className="eyebrow">The backstory</div>
+            <p className="pos-quote">&ldquo;I&apos;m a content creator who does 90% of my writing on an iPad Pro. Every app I tried either died, got bloated, or never took the iPad seriously. So I built the one I always <em>wanted.</em>&rdquo;</p>
+            <p className="pos-attr"><strong>Pieter</strong> — Founder, TWO</p>
           </div>
-          <div className="comp-row">
-            <div className="comp-name">Obsidian</div>
-            <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'70%'}}></div></div>
-            <div className="comp-label">Too steep</div>
-          </div>
-          <div className="comp-row">
-            <div className="comp-name">Bear</div>
-            <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'40%'}}></div></div>
-            <div className="comp-label">Notes only</div>
-          </div>
-          <div className="comp-row">
-            <div className="comp-name" style={{color:'var(--accent)'}}>TWO</div>
-            <div className="comp-bar-wrap"><div className="comp-bar highlight" style={{width:'60%'}}></div></div>
-            <div className="comp-label" style={{color:'var(--accent)'}}>Just right</div>
+          <div>
+            <div className="eyebrow">How we compare</div>
+            <div className="comp-rows">
+              <div className="comp-row">
+                <div className="comp-name">Notion</div>
+                <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'88%'}}></div></div>
+                <div className="comp-label">Too complex</div>
+              </div>
+              <div className="comp-row">
+                <div className="comp-name">Obsidian</div>
+                <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'72%'}}></div></div>
+                <div className="comp-label">Too steep</div>
+              </div>
+              <div className="comp-row">
+                <div className="comp-name">Bear</div>
+                <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'38%'}}></div></div>
+                <div className="comp-label">Notes only</div>
+              </div>
+              <div className="comp-row">
+                <div className="comp-name highlight">TWO</div>
+                <div className="comp-bar-wrap"><div className="comp-bar highlight" style={{width:'58%'}}></div></div>
+                <div className="comp-label highlight">Just right</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <div className="divider"></div>
-
-      <section className="cta" id="waitlist">
+      {/* CTA */}
+      <section className="cta-section" id="waitlist">
         <h2>Finally built<br />for <em>iPad.</em></h2>
         <p>Free for the first 500 people. No credit card, no spam.</p>
         <div className="wl-row">
