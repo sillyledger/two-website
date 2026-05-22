@@ -23,7 +23,7 @@ body {
   --border: #dedad2;
   --font-display: 'Instrument Serif', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
-  --max-w: 860px;
+  --max-w: 720px;
 }
 
 /* ── NAV ── */
@@ -102,7 +102,7 @@ h1 {
   font-size: clamp(64px, 8.5vw, 120px);
   font-weight: 400; line-height: 0.95;
   letter-spacing: -0.025em; color: var(--ink);
-  margin-bottom: 52px; max-width: 820px;
+  margin-bottom: 52px; max-width: 720px;
 }
 h1 em { font-style: italic; color: var(--ink-muted); }
 
