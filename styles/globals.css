@@ -42,7 +42,7 @@ nav {
 }
 
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
-.nav-logo-img { height: 28px; width: auto; }
+.nav-logo-img { height: 56px; width: auto; }
 
 .nav-links { display: flex; gap: 36px; list-style: none; }
 .nav-links a {
@@ -75,7 +75,7 @@ nav {
 /* ── HERO ── */
 .hero {
   min-height: 100vh;
-  display: flex; flex-direction: column; justify-content: flex-end;
+  display: flex; flex-direction: column; justify-content: center;
   padding: 140px 48px 88px;
   border-bottom: 1px solid var(--border);
 }
