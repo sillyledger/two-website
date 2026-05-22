@@ -22,9 +22,9 @@ export default function Home() {
           <div className="badge-dot"></div>
           Private Beta — Coming Soon
         </div>
-        <h1>Write without<br />the <em>database.</em></h1>
+        <h1>Docs that feel<br />like <em>thinking.</em></h1>
         <div className="hero-bottom">
-          <p className="hero-sub">A beautiful docs app for small teams. Built for iPad Pro and Mac first — without Notion&apos;s complexity.</p>
+          <p className="hero-sub">Beautiful docs for small teams who live on Apple devices. Fast, focused, and nothing you don&apos;t need.</p>
           <div className="hero-actions">
             <a href="#waitlist" className="btn-primary btn-lg">Join the waitlist</a>
             <a href="#" className="btn-ghost btn-lg">See how it works →</a>
