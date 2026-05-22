@@ -48,88 +48,70 @@ export default function Home() {
         </div>
       </div>
 
-      {/* iPAD MOCKUP */}
+    {/* MOCKUP */}
       <div className="mockup-section">
         <div className="mockup-label">The app</div>
-        <div className="ipad-wrap">
-          <div className="ipad-frame">
-            <div className="ipad-camera"></div>
-            <div className="ipad-screen">
-              <div className="app-shell">
-                {/* Sidebar */}
-                <div className="app-sidebar">
-                  <div className="app-sidebar-header">
-                    <div className="app-avatar">P</div>
-                    <div className="app-user">Pieter</div>
-                  </div>
-                  <div className="app-nav-item active">
-                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="0.5" y="0.5" width="5" height="5" rx="1" fill="currentColor"/><rect x="7.5" y="0.5" width="5" height="5" rx="1" fill="currentColor" opacity="0.4"/><rect x="0.5" y="7.5" width="5" height="5" rx="1" fill="currentColor" opacity="0.4"/><rect x="7.5" y="7.5" width="5" height="5" rx="1" fill="currentColor" opacity="0.4"/></svg>
-                    Home
-                  </div>
-                  <div className="app-nav-item">
-                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 3h10M1.5 6.5h6M1.5 10h8" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
-                    Activity
-                  </div>
-                  <div className="app-nav-item">
-                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" strokeWidth="1.3"/><path d="M4 4h5M4 6.5h3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>
-                    Library
-                  </div>
-                  <div className="app-nav-section">My Workspace</div>
-                  <div className="app-nav-doc">
-                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 1.5h5l2 2V10H2V1.5z" stroke="currentColor" strokeWidth="1.1"/></svg>
-                    Q2 Roadmap
-                  </div>
-                  <div className="app-nav-doc">
-                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 1.5h5l2 2V10H2V1.5z" stroke="currentColor" strokeWidth="1.1"/></svg>
-                    Investor Notes
-                  </div>
-                  <div className="app-nav-doc">
-                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 1.5h5l2 2V10H2V1.5z" stroke="currentColor" strokeWidth="1.1"/></svg>
-                    Brand Guidelines
-                  </div>
-                  <div className="app-nav-doc">
-                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 1.5h5l2 2V10H2V1.5z" stroke="currentColor" strokeWidth="1.1"/></svg>
-                    Team Handbook
-                  </div>
-                  <div className="app-nav-doc">
-                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 1.5h5l2 2V10H2V1.5z" stroke="currentColor" strokeWidth="1.1"/></svg>
-                    Product Spec v2
-                  </div>
-                </div>
-
-                {/* Main */}
-                <div className="app-main">
-                  <div className="app-topbar">
-                    <div className="app-title">Recent Docs</div>
-                    <div className="app-new-btn">
-                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none"><path d="M4.5 1v7M1 4.5h7" stroke="#141412" strokeWidth="1.4" strokeLinecap="round"/></svg>
-                      New Doc
-                    </div>
-                  </div>
-                  <div className="docs-grid">
-                    {[
-                      { title: "Q2 Roadmap", preview: "Features to ship before launch — onboarding flow, search, mobile MVP..." },
-                      { title: "Investor Call Notes", preview: "Key questions from the call, follow-ups, and next steps..." },
-                      { title: "Brand Guidelines", preview: "Logo usage, color palette, typography, tone of voice..." },
-                      { title: "Team Handbook", preview: "How we work, async principles, tools, and meeting cadence..." },
-                      { title: "Product Spec v2", preview: "Updated spec for the iPad app — navigation, editor, sync..." },
-                      { title: "Competitor Analysis", preview: "TWO vs Notion, Bear, Obsidian — positioning and gaps..." },
-                    ].map((doc, i) => (
-                      <div key={i} className="doc-card">
-                        <div className="doc-title">{doc.title}</div>
-                        <div className="doc-preview">{doc.preview}</div>
-                        <div className="doc-date">May 2026</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+        <div className="app-window">
+          <div className="aw-titlebar">
+            <span className="tl tl-r"></span>
+            <span className="tl tl-y"></span>
+            <span className="tl tl-g"></span>
+            <div className="aw-url">app.two.so</div>
+          </div>
+          <div className="aw-body">
+            {/* Icon sidebar */}
+            <div className="aw-sidebar">
+              <div className="aw-sb-icon aw-sb-avatar">C</div>
+              <div style={{flex:1}}></div>
+              <div className="aw-sb-icon active">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="5.5" height="5.5" rx="1.2" fill="currentColor"/><rect x="9.5" y="1" width="5.5" height="5.5" rx="1.2" fill="currentColor" opacity="0.4"/><rect x="1" y="9.5" width="5.5" height="5.5" rx="1.2" fill="currentColor" opacity="0.4"/><rect x="9.5" y="9.5" width="5.5" height="5.5" rx="1.2" fill="currentColor" opacity="0.4"/></svg>
+              </div>
+              <div className="aw-sb-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4.5h12M2 8h8M2 11.5h10" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg>
+              </div>
+              <div className="aw-sb-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 2h7l3 3v9H3V2z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/><path d="M10 2v3h3" stroke="currentColor" strokeWidth="1.3"/></svg>
+              </div>
+              <div className="aw-sb-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 5h12M2 8h7" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/><rect x="2" y="11" width="5" height="3" rx="1" fill="currentColor" opacity="0.4"/></svg>
+              </div>
+              <div style={{flex:1}}></div>
+              <div className="aw-sb-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" strokeWidth="1.3"/><path d="M8 5.5v3l2 1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
+              </div>
+              <div className="aw-sb-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="2.5" stroke="currentColor" strokeWidth="1.3"/><path d="M2.5 13.5c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
               </div>
             </div>
-            <div className="ipad-home-bar"></div>
+            {/* Main content */}
+            <div className="aw-main">
+              <div className="aw-topbar">
+                <div className="aw-page-title">Recent Docs</div>
+                <button className="aw-new-btn">+ New Doc</button>
+              </div>
+              <div className="aw-docs-grid">
+                {[
+                  { title: "Q2 Roadmap", preview: "Features to ship before launch — onboarding flow, search with autocomplete, mobile MVP..." },
+                  { title: "Investor Call Notes", preview: "Key questions from the call, follow-ups, and next steps for the round..." },
+                  { title: "Brand Guidelines", preview: "Logo usage, color palette, typography, and tone of voice for TWO..." },
+                  { title: "Team Handbook", preview: "How we work, async principles, tools, and meeting cadence for the team..." },
+                  { title: "Product Spec v2", preview: "Updated spec for the iPad app — navigation patterns, editor, sync architecture..." },
+                  { title: "Competitor Analysis", preview: "Market positioning, feature gaps, and opportunities for TWO to stand out..." },
+                  { title: "Launch Checklist", preview: "Everything we need before going public — marketing, onboarding, press kit..." },
+                  { title: "Design System", preview: "Components, spacing tokens, color variables, and usage guidelines..." },
+                  { title: "Cara's Meeting Notes", preview: "Weekly sync notes, action items, and decisions made across the team..." },
+                ].map((doc, i) => (
+                  <div key={i} className="aw-doc-card">
+                    <div className="aw-doc-title">{doc.title}</div>
+                    <div className="aw-doc-preview">{doc.preview}</div>
+                    <div className="aw-doc-date">May 2026</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
       {/* FEATURES */}
       <section className="dark-section">
         <div className="section-inner">
