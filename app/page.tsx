@@ -32,22 +32,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MARQUEE */}
-      <div className="marquee-strip">
-        <div className="marquee-inner">
-          {[
-            "Fast by default","Built for iPad Pro","Rich text editor",
-            "Smart collections","Apple-first design","Instant capture",
-            "Offline ready","Native Mac app",
-            "Fast by default","Built for iPad Pro","Rich text editor",
-            "Smart collections","Apple-first design","Instant capture",
-            "Offline ready","Native Mac app",
-          ].map((item, i) => (
-            <span key={i} className="marquee-item">{item}</span>
-          ))}
-        </div>
-      </div>
-
     {/* MOCKUP */}
       <div className="mockup-section">
         <div className="mockup-label">The app</div>
