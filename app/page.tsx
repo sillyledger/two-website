@@ -18,11 +18,11 @@ export default function Home() {
 
       <section className="hero">
         <div className="hero-badge"><div className="badge-dot"></div>Private Beta Soon</div>
-        <h1>Your work,<br /><em>beautifully</em> organized.</h1>
-        <p className="hero-sub">A modern note-taking app for capturing ideas, organizing what matters, and finding clarity every day.</p>
+        <h1>Write without<br />the <em>database.</em></h1>
+        <p className="hero-sub">A fast, beautiful writing app for content creators and small teams who live on Apple devices. Built for iPad Pro and Mac first.</p>
         <div className="hero-actions">
           <a href="#waitlist" className="btn-primary btn-lg">Join the waitlist</a>
-          <a href="#" className="btn-ghost btn-lg">See how it works</a>
+          <a href="#" className="btn-ghost btn-lg">See how it works →</a>
         </div>
         <div className="hero-proof">
           <div className="avatars">
@@ -75,7 +75,7 @@ export default function Home() {
                   Search notes...
                 </div>
                 <button className="new-btn">
-                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v9M1 5.5h9" stroke="white" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v9M1 5.5h9" stroke="#0c0c0b" strokeWidth="1.5" strokeLinecap="round"/></svg>
                   New note
                 </button>
               </div>
@@ -102,13 +102,13 @@ export default function Home() {
                   </div>
                   <div className="card">
                     <span className="tag t-pink">Research</span>
-                    <div className="card-title">Competitor analysis notes</div>
-                    <div className="card-preview">Key differentiators: TWO focuses on speed and simplicity over feature bloat...</div>
+                    <div className="card-title">Competitor analysis</div>
+                    <div className="card-preview">TWO focuses on speed and simplicity over feature bloat...</div>
                     <div className="card-meta"><span>4 days ago</span></div>
                   </div>
                   <div className="card">
                     <span className="tag t-blue">Product</span>
-                    <div className="card-title">UX feedback from beta users</div>
+                    <div className="card-title">UX feedback from beta</div>
                     <div className="lines"><div className="line"></div><div className="line"></div><div className="line short"></div></div>
                     <div className="card-meta"><span>1 week ago</span></div>
                   </div>
@@ -120,6 +120,7 @@ export default function Home() {
       </div>
 
       <div className="divider"></div>
+
       <section className="features">
         <div className="eyebrow">Why TWO</div>
         <h2 className="section-h">Built for how you actually think</h2>
@@ -132,7 +133,7 @@ export default function Home() {
           <div className="feat-cell">
             <div className="feat-icon fi-amber">◈</div>
             <div className="feat-title">Smart organization</div>
-            <div className="feat-desc">Collections, tags, and search that actually work. Find anything in seconds.</div>
+            <div className="feat-desc">Collections, tags, and search that actually work. Find anything in seconds — not minutes.</div>
           </div>
           <div className="feat-cell">
             <div className="feat-icon fi-green">⬡</div>
@@ -143,20 +144,54 @@ export default function Home() {
       </section>
 
       <div className="divider"></div>
+
+      <section className="positioning">
+        <div className="pos-left">
+          <div className="eyebrow">The backstory</div>
+          <p className="pos-quote">&ldquo;I&apos;m a content creator who does 90% of my writing on an iPad Pro. Every app I tried either died, got bloated, or never took the iPad seriously. So I built the one I always wanted.&rdquo;</p>
+          <p className="pos-attr"><strong>Pieter</strong> — Founder, TWO</p>
+        </div>
+        <div className="pos-right">
+          <div className="eyebrow">How we compare</div>
+          <div className="comp-row">
+            <div className="comp-name">Notion</div>
+            <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'85%'}}></div></div>
+            <div className="comp-label">Too complex</div>
+          </div>
+          <div className="comp-row">
+            <div className="comp-name">Obsidian</div>
+            <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'70%'}}></div></div>
+            <div className="comp-label">Too steep</div>
+          </div>
+          <div className="comp-row">
+            <div className="comp-name">Bear</div>
+            <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'40%'}}></div></div>
+            <div className="comp-label">Notes only</div>
+          </div>
+          <div className="comp-row">
+            <div className="comp-name" style={{color:'var(--accent)'}}>TWO</div>
+            <div className="comp-bar-wrap"><div className="comp-bar highlight" style={{width:'60%'}}></div></div>
+            <div className="comp-label" style={{color:'var(--accent)'}}>Just right</div>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider"></div>
+
       <section className="cta" id="waitlist">
-        <h2>Ready to get<br /><em>organized?</em></h2>
-        <p>Join the waitlist for early access — free for the first 500.</p>
+        <h2>Finally built<br />for <em>iPad.</em></h2>
+        <p>Free for the first 500 people. No credit card, no spam.</p>
         <div className="wl-row">
           <input className="wl-input" type="email" placeholder="your@email.com" />
           <button className="wl-btn">Join waitlist</button>
         </div>
-        <div className="wl-note">No spam. Early access when we launch.</div>
+        <div className="wl-note">Early access when we launch. Unsubscribe anytime.</div>
       </section>
 
       <footer>
         <div className="fl">
           <img src="/logo.png" alt="TWO" className="footer-logo" />
-          TWO — A note-taking app by Strevius
+          TWO — A writing app by Strevius
         </div>
         <div className="fr">© 2025 Strevius. All rights reserved.</div>
       </footer>
