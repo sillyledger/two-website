@@ -3,7 +3,7 @@ export default function Home() {
     <>
       <nav>
         <a href="#" className="nav-logo">
-          <img src="/logo-transparent.png" alt="TWO" className="nav-logo-img" />
+          <img src="/logo-two.svg" alt="TWO" className="nav-logo-img" />
         </a>
         <ul className="nav-links">
           <li><a href="#">Product</a></li>
