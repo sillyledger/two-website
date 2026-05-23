@@ -198,7 +198,7 @@ export default function Home() {
               <div className="plan-feature"><span className="plan-check">✓</span> Shared collections</div>
               <div className="plan-feature"><span className="plan-check">✓</span> Doc sharing</div>
               <div className="plan-feature"><span className="plan-check">✓</span> Priority support</div>
-              <a href="https://app.two.so/signup" className="plan-btn plan-btn-accent">Start free trial →</a>
+              <a href="#" className="plan-btn plan-btn-accent">Available Soon →</a>
             </div>
           </div>
         </div>
