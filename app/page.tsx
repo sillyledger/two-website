@@ -78,8 +78,7 @@ export default function Home() {
           <div className="two-col">
             <div>
               <div className="eyebrow">The backstory</div>
-              <p className="pos-quote">&ldquo;I&apos;m a content creator who does 90% of my writing on an iPad Pro. Every app I tried either died, got bloated, or never took the iPad seriously. So I built the one I always <em>wanted.</em>&rdquo;</p>
-              <p className="pos-attr"><strong>Pieter</strong> — Founder, TWO</p>
+              <p className="pos-quote">Most writing apps were built for desktops, then reluctantly ported to iPad. TWO wasn&apos;t. It was built by someone who creates content full-time on an iPad Pro and got tired of apps that were either too complex, too basic, or never took the device seriously. TWO exists because the right tool didn&apos;t. One that&apos;s fast to open, beautiful to write in, and built for the way modern teams actually work across devices, across time zones, and across shared docs.</p>
             </div>
             <div>
               <div className="eyebrow">How we compare</div>
