@@ -23,13 +23,13 @@ nav {
 }
 
 .nav-logo {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   color: #1a1a18;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.5px;
   text-decoration: none;
+  display: block;
 }
-
 .nav-links {
   display: flex;
   gap: 28px;
@@ -37,9 +37,9 @@ nav {
 }
 
 .nav-links a {
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 400;
-  color: #888880;
+  color: #555552;
   text-decoration: none;
   transition: color 0.15s;
 }
@@ -98,8 +98,8 @@ nav {
   gap: 7px;
   font-size: 12px;
   letter-spacing: 0.05em;
-  color: #888880;
-  border: 1px solid #e0ddd6;
+  color: #555552;
+  border: 1px solid #d0cec8;
   border-radius: 100px;
   padding: 4px 13px;
   margin-bottom: 30px;
@@ -123,11 +123,11 @@ h1 {
 }
 
 .hero-sub {
-  font-size: 17px;
-  font-weight: 300;
-  color: #888880;
+  font-size: 18px;
+  font-weight: 400;
+  color: #555552;
   line-height: 1.65;
-  max-width: 460px;
+  max-width: 480px;
   margin: 0 auto 36px;
 }
 
