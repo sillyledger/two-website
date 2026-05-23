@@ -90,6 +90,20 @@ nav {
   color: var(--accent); margin-bottom: 40px;
 }
 
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-bottom: 12px;
+}
+
 .badge-dot {
   width: 6px; height: 6px; border-radius: 50%;
   background: var(--accent); animation: pulse 2.5s infinite;
