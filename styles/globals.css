@@ -743,6 +743,35 @@ footer {
   font-weight: 600;
   color: #1a1a18;
 }
+.roadmap-prev-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px 16px;
+  margin-bottom: 40px;
+}
+
+.roadmap-prev-item {
+  font-size: 13px;
+  color: #555552;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 0;
+}
+
+.roadmap-prev-check {
+  color: #4aad6e;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.roadmap-previously {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .roadmap-prev-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
 .rm-dot {
   width: 8px;
