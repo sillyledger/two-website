@@ -27,7 +27,7 @@ export default function Home() {
           Fast, focused, and nothing you don't need.
         </p>
         <div className="hero-actions">
-          <a href="https://app.two.so/signup" className="btn-hero">Start for free →</a>
+          <a href="#" className="btn-hero">Coming soon →</a>
           <a href="#features" className="btn-hero-ghost">See how it works</a>
         </div>
       </section>
