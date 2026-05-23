@@ -22,7 +22,7 @@ export default function Home() {
           <div className="badge-dot"></div>
           Private Beta — Coming Soon
         </div>
-        <h1>Docs that feel<br />like <em>thinking.</em></h1>
+        <h1>Write better.<br />Think clearer.<br /><em>Share instantly.</em></h1>
         <div className="hero-bottom">
           <p className="hero-sub">Beautiful docs for small teams who live on Apple devices. Fast, focused, and nothing you don&apos;t need.</p>
           <div className="hero-actions">
