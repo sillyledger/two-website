@@ -20,7 +20,7 @@ export default function Roadmap() {
       <section className="roadmap-hero">
         <div className="section-eyebrow">Public roadmap</div>
         <h1>What we&apos;re building</h1>
-        <p className="hero-sub">A live look at what&apos;s shipped, what&apos;s in progress, and what&apos;s coming next. No fluff — just the work.</p>
+        <p className="hero-sub">A live look at what&apos;s deployed, what&apos;s in progress, and what&apos;s coming next. No fluff — just the work.</p>
       </section>
 
       <section className="roadmap-section">
@@ -31,17 +31,7 @@ export default function Roadmap() {
             <div className="roadmap-col">
               <div className="roadmap-col-head">
                 <div className="rm-dot rm-dot-shipped"></div>
-                <span className="roadmap-col-label">Shipped</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Auth &amp; accounts</div>
-                <div className="rm-card-desc">Signup, login, logout, email verification</div>
-                <span className="rm-badge rm-badge-shipped">✓ Done</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Rich text editor</div>
-                <div className="rm-card-desc">Headings, bold, lists, code blocks, links</div>
-                <span className="rm-badge rm-badge-shipped">✓ Done</span>
+                <span className="roadmap-col-label">Deployed</span>
               </div>
               <div className="rm-card">
                 <div className="rm-card-title">Planner</div>
@@ -49,13 +39,18 @@ export default function Roadmap() {
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Activity feed</div>
-                <div className="rm-card-desc">Full history of edits and creates</div>
+                <div className="rm-card-title">Internal doc links</div>
+                <div className="rm-card-desc">Link directly to other docs in your workspace</div>
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">PWA &amp; home screen</div>
-                <div className="rm-card-desc">Add to home screen on iPad &amp; iPhone</div>
+                <div className="rm-card-title">Library</div>
+                <div className="rm-card-desc">Bento overview of your workspace at a glance</div>
+                <span className="rm-badge rm-badge-shipped">✓ Done</span>
+              </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Activity feed</div>
+                <div className="rm-card-desc">Full history of edits and creates</div>
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
             </div>
@@ -93,14 +88,9 @@ export default function Roadmap() {
                 <span className="rm-badge rm-badge-soon">Up next</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Trash &amp; restore</div>
-                <div className="rm-card-desc">Recover deleted docs</div>
+                <div className="rm-card-title">Restore recently deleted files</div>
+                <div className="rm-card-desc">Recover docs you&apos;ve deleted within the last 30 days</div>
                 <span className="rm-badge rm-badge-soon">Up next</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Collections</div>
-                <div className="rm-card-desc">Group and organize your docs</div>
-                <span className="rm-badge rm-badge-soon">Planned</span>
               </div>
               <div className="rm-card">
                 <div className="rm-card-title">Inline comments</div>
@@ -109,6 +99,22 @@ export default function Roadmap() {
               </div>
             </div>
 
+          </div>
+
+          <div className="roadmap-divider"></div>
+
+          <div className="roadmap-previously">
+            <div className="roadmap-later-title">Previously deployed</div>
+            <div className="roadmap-prev-grid">
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Auth &amp; accounts</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Rich text editor</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> PWA &amp; home screen</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Collections</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Notes scoped per user</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Autosave &amp; save indicator</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Settings &amp; appearance</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Dark &amp; light mode</div>
+            </div>
           </div>
 
           <div className="roadmap-divider"></div>
