@@ -2,7 +2,9 @@ export default function Home() {
   return (
     <>
       <nav>
-        <a href="/" className="nav-logo">TWO</a>
+        <a href="/" className="nav-logo">
+  <img src="/logo-two.svg" alt="TWO" className="nav-logo-img" />
+</a>
         <ul className="nav-links">
           <li><a href="#features">Product</a></li>
           <li><a href="#pricing">Pricing</a></li>
