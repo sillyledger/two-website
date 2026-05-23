@@ -72,38 +72,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOUNDER + COMPARISON */}
+      {/* BACKSTORY */}
       <section className="light-section">
         <div className="section-inner">
+          <div className="eyebrow">The backstory</div>
           <div className="two-col">
             <div>
-              <div className="eyebrow">The backstory</div>
-              <p className="pos-quote">Most writing apps were built for desktops, then reluctantly ported to iPad. TWO wasn&apos;t. It was built by someone who creates content full-time on an iPad Pro and got tired of apps that were either too complex, too basic, or never took the device seriously. TWO exists because the right tool didn&apos;t. One that&apos;s fast to open, beautiful to write in, and built for the way modern teams actually work across devices, across time zones, and across shared docs.</p>
+              <p className="pos-quote">Most writing apps were built for desktops, then reluctantly ported to iPad. TWO wasn&apos;t. It was built by someone who creates content full-time on an iPad Pro and got tired of apps that were either too complex, too basic, or never took the device seriously.</p>
             </div>
-            <div>
-              <div className="eyebrow">How we compare</div>
-              <div className="comp-rows">
-                <div className="comp-row">
-                  <div className="comp-name">Notion</div>
-                  <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'88%'}}></div></div>
-                  <div className="comp-label">Too complex</div>
-                </div>
-                <div className="comp-row">
-                  <div className="comp-name">Obsidian</div>
-                  <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'72%'}}></div></div>
-                  <div className="comp-label">Too steep</div>
-                </div>
-                <div className="comp-row">
-                  <div className="comp-name">Bear</div>
-                  <div className="comp-bar-wrap"><div className="comp-bar" style={{width:'38%'}}></div></div>
-                  <div className="comp-label">Notes only</div>
-                </div>
-                <div className="comp-row">
-                  <div className="comp-name hi">TWO</div>
-                  <div className="comp-bar-wrap"><div className="comp-bar hi" style={{width:'58%'}}></div></div>
-                  <div className="comp-label hi">Just right</div>
-                </div>
-              </div>
+            <div className="backstory-right">
+              <p className="pos-quote">TWO exists because the right tool didn&apos;t. One that&apos;s fast to open, beautiful to write in, and built for the way modern teams actually work across devices, across time zones, and across shared docs.</p>
+              <a href="https://app.two.so" className="btn-primary btn-lg backstory-cta">Try now</a>
             </div>
           </div>
         </div>
