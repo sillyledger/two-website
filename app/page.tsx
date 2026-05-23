@@ -5,11 +5,11 @@ export default function Home() {
         <a href="/" className="nav-logo">
           <img src="/logo-two.svg" alt="TWO" className="nav-logo-img" />
         </a>
-        <ul className="nav-links">
-          <li><a href="#features">Product</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
+      <ul className="nav-links">
+  <li><a href="#features">Product</a></li>
+  <li><a href="#pricing">Pricing</a></li>
+  <li><a href="/roadmap">Roadmap</a></li>
+</ul>
         <div className="nav-cta">
           <a href="https://app.two.so/login" className="btn-login">Log in</a>
           <a href="https://app.two.so/signup" className="btn-signup">Sign up</a>
