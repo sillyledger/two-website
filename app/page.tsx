@@ -22,12 +22,14 @@ export default function Home() {
           <div className="badge-dot"></div>
           Private Beta — Coming Soon
         </div>
-        <h1>Write better.<br />Think clearer.<br /><em>Share instantly.</em></h1>
-        <div className="hero-bottom">
-          <p className="hero-sub">Beautiful docs for small teams who live on Apple devices. Fast, focused, and nothing you don&apos;t need.</p>
-          <div className="hero-actions">
-            <a href="#waitlist" className="btn-primary btn-lg">Join the waitlist</a>
-            <a href="#" className="btn-ghost btn-lg">See how it works →</a>
+        <div className="hero-split">
+          <h1>Write better.<br />Think clearer.<br /><em>Share instantly.</em></h1>
+          <div className="hero-right">
+            <p className="hero-sub">Beautiful docs for small teams who live on Apple devices. Fast, focused, and nothing you don&apos;t need.</p>
+            <div className="hero-actions">
+              <a href="#waitlist" className="btn-primary btn-lg">Join the waitlist</a>
+              <a href="#" className="btn-ghost btn-lg">See how it works →</a>
+            </div>
           </div>
         </div>
       </section>
