@@ -117,7 +117,7 @@ export default function Home() {
       <section className="features-section" id="features">
         <div className="features-inner">
           <div className="section-eyebrow">Why TWO</div>
-          <h2>Built for how<br />founders actually work.</h2>
+          <h2>Built for how writers, founders, and small teams actually work in docs.</h2>
           <div className="feat-grid">
             <div className="feat-cell">
               <div className="feat-num">01</div>
