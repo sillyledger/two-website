@@ -53,6 +53,21 @@ export default function Home() {
               <div className="feat-title">Beautiful editing</div>
               <div className="feat-desc">A rich editor that stays out of your way. Format when you need it, not when you don&apos;t.</div>
             </div>
+            <div className="feat-cell">
+              <div className="feat-num">04</div>
+              <div className="feat-title">Interconnected docs</div>
+              <div className="feat-desc">Link between docs to build a second brain. Your notes work together, not in isolation.</div>
+            </div>
+            <div className="feat-cell">
+              <div className="feat-num">05</div>
+              <div className="feat-title">Workspaces</div>
+              <div className="feat-desc">Separate spaces for separate contexts. Keep personal, shared, and team work exactly where it belongs.</div>
+            </div>
+            <div className="feat-cell">
+              <div className="feat-num">06</div>
+              <div className="feat-title">Built for Apple</div>
+              <div className="feat-desc">Designed from the ground up for Mac and iPad. Native feel, no compromises.</div>
+            </div>
           </div>
         </div>
       </section>
