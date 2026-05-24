@@ -7,7 +7,7 @@ export function Navigation() {
   return (
     <nav>
       <a href="/" className="nav-logo">
-        <img src="/logo.png" alt="TWO" className="nav-logo-img" />
+        <img src="/logo-two.svg" alt="TWO" className="nav-logo-img" />
       </a>
 
       <ul className="nav-links">
