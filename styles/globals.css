@@ -1109,3 +1109,81 @@ footer {
   .help-sidebar { display: none; }
   .help-content { padding: 32px 24px; }
 }
+/* ── HELP INDEX ── */
+.help-index-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 48px 88px;
+}
+
+.help-index-group {
+  margin-bottom: 52px;
+}
+
+.help-index-group-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a18;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e8e6e0;
+}
+
+.help-index-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.help-index-card {
+  background: #fff;
+  border: 1px solid #e8e6e0;
+  border-radius: 10px;
+  padding: 20px 22px;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.15s;
+}
+
+.help-index-card:hover {
+  border-color: #bbb9b2;
+}
+
+.help-index-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a18;
+  margin-bottom: 6px;
+}
+
+.help-index-card-desc {
+  font-size: 13px;
+  color: #555552;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.help-index-card-meta {
+  font-size: 11px;
+  color: #aaa89e;
+}
+
+.help-index-cta {
+  background: #f0ede6;
+  border-radius: 14px;
+  padding: 48px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.help-index-cta p {
+  font-size: 16px;
+  color: #555552;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .help-index-wrap { padding: 0 24px 60px; }
+  .help-index-cards { grid-template-columns: 1fr; }
+  .help-index-cta { padding: 32px 24px; }
+}
