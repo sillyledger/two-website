@@ -1,20 +1,9 @@
+import { Navigation } from "@/components/navigation"
+
 export default function Home() {
   return (
     <>
-      <nav>
-        <a href="/" className="nav-logo">
-          <img src="/logo-two.svg" alt="TWO" className="nav-logo-img" />
-        </a>
-        <ul className="nav-links">
-          <li><a href="#features">Product</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="/roadmap">Roadmap</a></li>
-        </ul>
-        <div className="nav-cta">
-          <a href="https://app.two.so/login" className="btn-login">Log in</a>
-          <a href="https://app.two.so/signup" className="btn-signup">Sign up</a>
-        </div>
-      </nav>
+      <Navigation />
 
       <section className="hero">
         <div className="hero-eyebrow">
@@ -89,7 +78,6 @@ export default function Home() {
               borderRight: '1px solid rgba(255,255,255,0.08)',
               flexShrink: 0,
             }}>
-              {/* Avatar */}
               <div style={{
                 width: 28, height: 28,
                 borderRadius: '50%',
@@ -97,37 +85,27 @@ export default function Home() {
                 marginBottom: '8px',
                 flexShrink: 0,
               }} />
-
-              {/* Collapse toggle */}
               <SbIcon>
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M9 18l6-6-6-6"/>
                 </svg>
               </SbIcon>
-
-              {/* Home — active */}
               <SbIcon active>
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 12L12 4l9 8v8a1 1 0 01-1 1H5a1 1 0 01-1-1z"/>
                 </svg>
               </SbIcon>
-
-              {/* Tasks */}
               <SbIcon>
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="9 11 12 14 22 4"/>
                   <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
                 </svg>
               </SbIcon>
-
-              {/* Activity */}
               <SbIcon>
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                 </svg>
               </SbIcon>
-
-              {/* Workspaces */}
               <SbIcon>
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -135,8 +113,6 @@ export default function Home() {
                   <path d="M2 12l10 5 10-5"/>
                 </svg>
               </SbIcon>
-
-              {/* Bottom */}
               <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
                 <SbIcon>
                   <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -156,8 +132,6 @@ export default function Home() {
 
             {/* Main */}
             <div style={{ flex: 1, background: '#161618', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-
-              {/* Topbar */}
               <div style={{ padding: '16px 24px 10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
                 <div style={{ fontSize: '24px', fontWeight: 700, color: '#e8e8e8', letterSpacing: '-0.4px' }}>
                   Recent Docs
@@ -190,7 +164,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Pills */}
               <div style={{ display: 'flex', gap: '6px', padding: '0 24px 14px', flexShrink: 0 }}>
                 {['Recent', 'Favorites', 'Deleted'].map((p) => (
                   <div key={p} style={{
@@ -207,7 +180,6 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Doc grid */}
               <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(3, 1fr)',
