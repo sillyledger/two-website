@@ -12,7 +12,7 @@ export default function Home() {
         </div>
         <h1>The doc app built for iPad and Mac.</h1>
         <p className="hero-sub">
-          Beautiful, focused writing for creatives, solo operators, and small teams. Nothing you don't need.
+          Beautiful, focused writing for creatives, solo operators, and small teams.
         </p>
         <div className="hero-actions">
           <a href="https://app.two.so/signup" className="btn-hero">Start for free →</a>
