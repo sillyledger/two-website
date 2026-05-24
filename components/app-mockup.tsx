@@ -1,125 +1,216 @@
-import { Home, Activity, BookOpen, Settings } from "lucide-react"
-
 export function AppMockup() {
   return (
-    <div className="w-full max-w-4xl mx-auto">
-      <div className="rounded-2xl overflow-hidden border border-stone-700 shadow-xl shadow-black/30">
+    <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+      <div style={{
+        width: "100%",
+        maxWidth: "960px",
+        borderRadius: "12px",
+        overflow: "hidden",
+        border: "1px solid rgba(255,255,255,0.08)",
+        background: "#161618",
+        fontFamily: "-apple-system, BlinkMacSystemFont, 'Inter', sans-serif",
+      }}>
 
-        {/* Window Chrome */}
-        <div className="bg-stone-900 h-10 flex items-center px-4 gap-2 border-b border-stone-700">
-          <div className="flex gap-1.5">
-            <div className="w-3 h-3 rounded-full bg-red-400" />
-            <div className="w-3 h-3 rounded-full bg-yellow-400" />
-            <div className="w-3 h-3 rounded-full bg-green-400" />
+        {/* Browser bar */}
+        <div style={{
+          background: "#1c1c1e",
+          padding: "11px 16px",
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
+        }}>
+          <div style={{ display: "flex", gap: "6px" }}>
+            <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#ff5f57" }} />
+            <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#ffbd2e" }} />
+            <div style={{ width: 11, height: 11, borderRadius: "50%", background: "#28c840" }} />
           </div>
-          <div className="flex-1 flex justify-center">
-            <span className="text-xs text-stone-300 bg-stone-800 border border-stone-700 rounded-md px-3 py-0.5">
-              app.two.so
-            </span>
+          <div style={{
+            flex: 1,
+            textAlign: "center",
+            background: "#161618",
+            borderRadius: "6px",
+            padding: "4px 12px",
+            fontSize: "11px",
+            color: "#555",
+            fontFamily: "ui-monospace, monospace",
+            border: "1px solid rgba(255,255,255,0.06)",
+          }}>
+            app.two.so
           </div>
         </div>
 
-        {/* App Interior */}
-        <div className="flex h-[420px] bg-stone-950">
+        {/* App layout */}
+        <div style={{ display: "flex", height: "580px" }}>
 
           {/* Sidebar */}
-          <div className="w-48 bg-stone-950 border-r border-stone-700 flex flex-col p-3 flex-shrink-0">
+          <div style={{
+            width: "46px",
+            background: "#1c1c1e",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            padding: "10px 0",
+            gap: "2px",
+            borderRight: "1px solid rgba(255,255,255,0.08)",
+            flexShrink: 0,
+          }}>
+            {/* Avatar */}
+            <div style={{
+              width: 26,
+              height: 26,
+              borderRadius: "50%",
+              background: "linear-gradient(135deg,#4f8ef7,#f7a24f)",
+              marginBottom: "6px",
+              flexShrink: 0,
+            }} />
 
-            {/* Logo */}
-            <div className="flex items-center gap-2 px-2 mb-5">
-              <div className="w-6 h-6 bg-indigo-600 rounded-md flex items-center justify-center text-white font-serif text-xs">
-                T
-              </div>
-              <span className="text-sm font-semibold text-stone-100">TWO</span>
-            </div>
+            {/* Collapse toggle */}
+            <SidebarIcon>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 18l6-6-6-6" strokeWidth="2"/>
+              </svg>
+            </SidebarIcon>
 
-            {/* Nav Items */}
-            <div className="flex flex-col gap-0.5 flex-1">
-              <div className="flex items-center gap-2 h-8 px-2.5 rounded-lg bg-stone-800 border border-stone-700 shadow-sm text-stone-100">
-                <Home className="w-3.5 h-3.5" />
-                <span className="text-xs font-medium">Home</span>
-              </div>
-              <div className="flex items-center gap-2 h-8 px-2.5 rounded-lg text-stone-400 hover:bg-stone-800 transition">
-                <Activity className="w-3.5 h-3.5" />
-                <span className="text-xs">Activity</span>
-              </div>
-              <div className="flex items-center gap-2 h-8 px-2.5 rounded-lg text-stone-400 hover:bg-stone-800 transition">
-                <BookOpen className="w-3.5 h-3.5" />
-                <span className="text-xs">Library</span>
-              </div>
+            {/* Home — active */}
+            <SidebarIcon active>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3 12L12 4l9 8v8a1 1 0 01-1 1H5a1 1 0 01-1-1z"/>
+              </svg>
+            </SidebarIcon>
 
-              {/* Folders */}
-              <p className="text-[10px] font-semibold text-stone-400 uppercase tracking-widest px-2.5 pt-4 pb-1">Folders</p>
-              <div className="flex items-center gap-2 h-7 px-2.5 rounded-lg text-stone-400 text-xs">📁 Work</div>
-              <div className="flex items-center gap-2 h-7 px-2.5 rounded-lg text-stone-400 text-xs">📁 Personal</div>
-              <div className="flex items-center gap-2 h-7 px-2.5 rounded-lg text-stone-400 text-xs">📁 Ideas</div>
-            </div>
+            {/* Tasks */}
+            <SidebarIcon>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 11 12 14 22 4"/>
+                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+              </svg>
+            </SidebarIcon>
 
-            {/* User */}
-            <div className="mt-2 p-2 bg-stone-800 border border-stone-700 rounded-lg flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center text-white text-[10px] font-semibold flex-shrink-0">
-                J
-              </div>
-              <span className="text-[11px] text-stone-300 truncate">john@email.com</span>
+            {/* Activity */}
+            <SidebarIcon>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </SidebarIcon>
+
+            {/* Workspaces / layers */}
+            <SidebarIcon>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </SidebarIcon>
+
+            {/* Bottom icons */}
+            <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", alignItems: "center", gap: "2px" }}>
+              <SidebarIcon>
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+              </SidebarIcon>
+              <SidebarIcon>
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/>
+                  <polyline points="16 17 21 12 16 7"/>
+                  <line x1="21" y1="12" x2="9" y2="12"/>
+                </svg>
+              </SidebarIcon>
             </div>
           </div>
 
-          {/* Main Content */}
-          <div className="flex-1 flex flex-col p-6 overflow-hidden bg-stone-950">
+          {/* Main content */}
+          <div style={{ flex: 1, background: "#161618", display: "flex", flexDirection: "column", overflow: "hidden" }}>
 
-            {/* Top Bar */}
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <p className="text-sm font-semibold text-stone-100">Good morning, John</p>
-                <p className="text-xs text-stone-400 mt-0.5">Here's what's on your mind today.</p>
+            {/* Topbar */}
+            <div style={{ padding: "14px 22px 10px", display: "flex", alignItems: "center", justifyContent: "space-between", flexShrink: 0 }}>
+              <div style={{ fontSize: "22px", fontWeight: 700, color: "#e8e8e8", letterSpacing: "-0.3px" }}>
+                Recent Docs
               </div>
-              <button className="flex items-center gap-1.5 h-8 px-3 bg-indigo-600 text-white rounded-lg text-xs font-medium">
-                <span>+</span> New Note
-              </button>
+              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                <div style={{
+                  display: "flex", alignItems: "center", gap: "5px",
+                  background: "#242426", color: "#c4c4c4",
+                  borderRadius: "9px", padding: "6px 12px",
+                  fontSize: "11px", fontWeight: 500,
+                  border: "1px solid rgba(255,255,255,0.1)",
+                }}>
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+                    <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+                  </svg>
+                  Templates
+                </div>
+                <div style={{
+                  display: "flex", alignItems: "center", gap: "5px",
+                  background: "#e8e8e8", color: "#161618",
+                  borderRadius: "9px", padding: "6px 12px",
+                  fontSize: "11px", fontWeight: 600,
+                }}>
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#161618" strokeWidth="2.5" strokeLinecap="round">
+                    <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                  New Doc
+                </div>
+              </div>
             </div>
 
-            {/* Recently Edited */}
-            <div className="mb-5">
-              <div className="flex items-center justify-between mb-2.5">
-                <span className="text-xs font-semibold text-stone-100">Recently Edited</span>
-                <span className="text-[11px] text-stone-400">View all</span>
-              </div>
-              <div className="grid grid-cols-4 gap-2">
-                {[
-                  { title: "Product Roadmap Ideas", time: "2m ago" },
-                  { title: "Daily Journal – May 17", time: "1h ago" },
-                  { title: "Design Inspiration", time: "Yesterday" },
-                  { title: "Book Notes", time: "2d ago" },
-                ].map((card, i) => (
-                  <div key={i} className="aspect-square rounded-xl bg-stone-800 border border-stone-700 p-3 flex flex-col justify-between">
-                    <p className="text-[11px] font-medium text-stone-200 leading-snug">{card.title}</p>
-                    <p className="text-[10px] text-stone-400">{card.time}</p>
-                  </div>
-                ))}
-              </div>
+            {/* Pills */}
+            <div style={{ display: "flex", gap: "6px", padding: "0 22px 12px", flexShrink: 0 }}>
+              {["Recent", "Favorites", "Deleted"].map((p) => (
+                <div key={p} style={{
+                  padding: "4px 13px",
+                  borderRadius: "99px",
+                  fontSize: "11px",
+                  fontWeight: 500,
+                  color: p === "Recent" ? "#161618" : "#a0a0a0",
+                  background: p === "Recent" ? "#e8e8e8" : "transparent",
+                  border: p === "Recent" ? "1px solid #e8e8e8" : "1px solid rgba(255,255,255,0.08)",
+                }}>
+                  {p}
+                </div>
+              ))}
             </div>
 
-            {/* All Notes */}
-            <div>
-              <span className="text-xs font-semibold text-stone-100 block mb-2.5">All Notes</span>
-              <div className="flex flex-col gap-0.5">
-                {[
-                  { icon: "📄", bg: "bg-blue-50", title: "Marketing Strategy Overview", preview: "Outline of our marketing strategy and key channels.", date: "May 16" },
-                  { icon: "📊", bg: "bg-green-50", title: "Content Ideas Pipeline", preview: "Blog and social media content ideas list.", date: "May 16" },
-                  { icon: "💭", bg: "bg-yellow-50", title: "Weekly Reflection", preview: "What went well this week.", date: "May 15" },
-                ].map((note, i) => (
-                  <div key={i} className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-stone-800 transition group">
-                    <div className={`w-7 h-7 rounded-lg ${note.bg.replace('50','800')} flex items-center justify-center text-xs flex-shrink-0`}>
-                      {note.icon}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs font-medium text-stone-200 truncate">{note.title}</p>
-                      <p className="text-[10px] text-stone-400 truncate">{note.preview}</p>
-                    </div>
-                    <span className="text-[11px] text-stone-400 flex-shrink-0">{note.date}</span>
+            {/* Doc grid */}
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: "10px",
+              padding: "0 22px 22px",
+              overflow: "hidden",
+            }}>
+              {DOCS.map((doc) => (
+                <div key={doc.title} style={{
+                  background: "#242426",
+                  borderRadius: "10px",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  padding: "14px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "5px",
+                }}>
+                  <div style={{ height: "3px", borderRadius: "2px", background: doc.color, marginBottom: "4px" }} />
+                  <div style={{ fontSize: "12px", fontWeight: 600, color: "#e8e8e8", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                    {doc.title}
                   </div>
-                ))}
-              </div>
+                  <div style={{
+                    fontSize: "10px", color: "#a0a0a0", lineHeight: 1.55,
+                    display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden", flex: 1,
+                  }}>
+                    {doc.preview}
+                  </div>
+                  <div style={{
+                    fontSize: "10px", color: "rgba(255,255,255,0.2)",
+                    marginTop: "8px", paddingTop: "8px",
+                    borderTop: "1px solid rgba(255,255,255,0.06)",
+                  }}>
+                    {doc.date}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -127,3 +218,29 @@ export function AppMockup() {
     </div>
   )
 }
+
+function SidebarIcon({ children, active }: { children: React.ReactNode; active?: boolean }) {
+  return (
+    <div style={{
+      width: 30, height: 30,
+      borderRadius: "7px",
+      display: "flex", alignItems: "center", justifyContent: "center",
+      color: active ? "#e8e8e8" : "rgba(255,255,255,0.3)",
+      background: active ? "#2e2e30" : "transparent",
+    }}>
+      {children}
+    </div>
+  )
+}
+
+const DOCS = [
+  { title: "Q3 Investor Update",    color: "#e8c06e", preview: "Quarterly update covering revenue, growth metrics and product milestones for the board.", date: "May 24" },
+  { title: "2026 GTM Strategy",     color: "#4a8fd4", preview: "Go-to-market plan for the new year. Channels, ICP, and launch sequencing.", date: "May 24" },
+  { title: "Series A Deck — Draft 3", color: "#4aad6e", preview: "Latest pitch deck revision with updated traction slides and market sizing.", date: "May 23" },
+  { title: "Competitive Analysis",  color: "#c96b8c", preview: "Deep dive into Notion, Apple Notes, and Bear. Where TWO wins.", date: "May 23" },
+  { title: "Product Roadmap 2026",  color: "#7a6fd4", preview: "Feature priorities, team assignments, and shipping milestones for H1.", date: "May 22" },
+  { title: "Brand Guidelines",      color: "#d4943a", preview: "Typography, color system, tone of voice, and logo usage guidelines.", date: "May 22" },
+  { title: "Hiring Plan Q2",        color: "#4aadad", preview: "Open roles, interview process, and headcount targets for the quarter.", date: "May 21" },
+  { title: "Onboarding Docs",       color: "#ad4a4a", preview: "New hire checklist, tools setup, and first week expectations.", date: "May 21" },
+  { title: "Meeting Notes — May",   color: "#8aad4a", preview: "Weekly sync summaries, decisions made, and action items this month.", date: "May 20" },
+]
