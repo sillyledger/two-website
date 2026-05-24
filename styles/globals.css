@@ -895,6 +895,8 @@ footer {
   align-items: center;
   gap: 4px;
   transition: color 0.15s;
+  vertical-align: middle;
+  line-height: 1;
 }
 
 .nav-dropdown-btn:hover { color: #1a1a18; }
