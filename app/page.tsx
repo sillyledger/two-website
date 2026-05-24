@@ -5,11 +5,11 @@ export default function Home() {
         <a href="/" className="nav-logo">
           <img src="/logo-two.svg" alt="TWO" className="nav-logo-img" />
         </a>
-      <ul className="nav-links">
-  <li><a href="#features">Product</a></li>
-  <li><a href="#pricing">Pricing</a></li>
-  <li><a href="/roadmap">Roadmap</a></li>
-</ul>
+        <ul className="nav-links">
+          <li><a href="#features">Product</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="/roadmap">Roadmap</a></li>
+        </ul>
         <div className="nav-cta">
           <a href="https://app.two.so/login" className="btn-login">Log in</a>
           <a href="https://app.two.so/signup" className="btn-signup">Sign up</a>
@@ -32,82 +32,216 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── App mockup ── */}
       <div className="screen-wrap">
-        <div className="browser-frame">
-          <div className="browser-bar">
-            <div className="browser-dots">
-              <div className="bd bd-r"></div>
-              <div className="bd bd-y"></div>
-              <div className="bd bd-g"></div>
+        <div style={{
+          width: '100%',
+          maxWidth: '1080px',
+          margin: '0 auto',
+          borderRadius: '14px',
+          overflow: 'hidden',
+          border: '1px solid rgba(255,255,255,0.08)',
+          background: '#161618',
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Inter', sans-serif",
+          boxShadow: '0 40px 120px rgba(0,0,0,0.5)',
+        }}>
+
+          {/* Browser bar */}
+          <div style={{
+            background: '#1c1c1e',
+            padding: '12px 18px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            borderBottom: '1px solid rgba(255,255,255,0.08)',
+          }}>
+            <div style={{ display: 'flex', gap: '6px' }}>
+              <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#ff5f57' }} />
+              <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#ffbd2e' }} />
+              <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#28c840' }} />
             </div>
-            <div className="browser-url">app.two.so</div>
+            <div style={{
+              flex: 1, textAlign: 'center',
+              background: '#161618',
+              borderRadius: '6px',
+              padding: '4px 12px',
+              fontSize: '12px',
+              color: '#555',
+              fontFamily: 'ui-monospace, monospace',
+              border: '1px solid rgba(255,255,255,0.06)',
+            }}>
+              app.two.so
+            </div>
           </div>
-          <div className="app-layout">
-            <div className="app-sidebar">
-              <div className="sb-logo-icon">T</div>
-              <div className="sb-nav-icon active">
-                <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              </div>
-              <div className="sb-nav-icon">
-                <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-              </div>
-              <div className="sb-nav-icon">
-                <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="6" height="6" rx="1"/><path d="M3 17h18M3 12h18"/></svg>
-              </div>
-              <div className="sb-nav-icon">
-                <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+
+          {/* Layout */}
+          <div style={{ display: 'flex', height: '620px' }}>
+
+            {/* Sidebar */}
+            <div style={{
+              width: '48px',
+              background: '#1c1c1e',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              padding: '12px 0',
+              gap: '2px',
+              borderRight: '1px solid rgba(255,255,255,0.08)',
+              flexShrink: 0,
+            }}>
+              {/* Avatar */}
+              <div style={{
+                width: 28, height: 28,
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg,#4f8ef7,#f7a24f)',
+                marginBottom: '8px',
+                flexShrink: 0,
+              }} />
+
+              {/* Collapse toggle */}
+              <SbIcon>
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </SbIcon>
+
+              {/* Home — active */}
+              <SbIcon active>
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 12L12 4l9 8v8a1 1 0 01-1 1H5a1 1 0 01-1-1z"/>
+                </svg>
+              </SbIcon>
+
+              {/* Tasks */}
+              <SbIcon>
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="9 11 12 14 22 4"/>
+                  <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                </svg>
+              </SbIcon>
+
+              {/* Activity */}
+              <SbIcon>
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </SbIcon>
+
+              {/* Workspaces */}
+              <SbIcon>
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </SbIcon>
+
+              {/* Bottom */}
+              <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
+                <SbIcon>
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                  </svg>
+                </SbIcon>
+                <SbIcon>
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/>
+                    <polyline points="16 17 21 12 16 7"/>
+                    <line x1="21" y1="12" x2="9" y2="12"/>
+                  </svg>
+                </SbIcon>
               </div>
             </div>
-            <div className="app-main">
-              <div className="app-main-header">
-                <div className="app-main-title">Recent Docs</div>
-                <div className="app-new-btn">
-                  <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                  New Doc
+
+            {/* Main */}
+            <div style={{ flex: 1, background: '#161618', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+
+              {/* Topbar */}
+              <div style={{ padding: '16px 24px 10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
+                <div style={{ fontSize: '24px', fontWeight: 700, color: '#e8e8e8', letterSpacing: '-0.4px' }}>
+                  Recent Docs
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{
+                    display: 'flex', alignItems: 'center', gap: '6px',
+                    background: '#242426', color: '#c4c4c4',
+                    borderRadius: '9px', padding: '7px 14px',
+                    fontSize: '12px', fontWeight: 500,
+                    border: '1px solid rgba(255,255,255,0.1)',
+                  }}>
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+                      <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+                    </svg>
+                    Templates
+                  </div>
+                  <div style={{
+                    display: 'flex', alignItems: 'center', gap: '6px',
+                    background: '#e8e8e8', color: '#161618',
+                    borderRadius: '9px', padding: '7px 14px',
+                    fontSize: '12px', fontWeight: 600,
+                  }}>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#161618" strokeWidth="2.5" strokeLinecap="round">
+                      <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                    New Doc
+                  </div>
                 </div>
               </div>
-              <div className="app-pills">
-                <div className="app-pill active">Recent</div>
-                <div className="app-pill">Favorites</div>
-                <div className="app-pill">Deleted</div>
+
+              {/* Pills */}
+              <div style={{ display: 'flex', gap: '6px', padding: '0 24px 14px', flexShrink: 0 }}>
+                {['Recent', 'Favorites', 'Deleted'].map((p) => (
+                  <div key={p} style={{
+                    padding: '5px 14px',
+                    borderRadius: '99px',
+                    fontSize: '12px',
+                    fontWeight: 500,
+                    color: p === 'Recent' ? '#161618' : '#a0a0a0',
+                    background: p === 'Recent' ? '#e8e8e8' : 'transparent',
+                    border: p === 'Recent' ? '1px solid #e8e8e8' : '1px solid rgba(255,255,255,0.08)',
+                  }}>
+                    {p}
+                  </div>
+                ))}
               </div>
-              <div className="doc-grid">
-                <div className="doc-card">
-                  <div className="doc-card-bar" style={{background:'#e8c06e'}}></div>
-                  <div className="doc-card-title">Q3 Investor Update</div>
-                  <div className="doc-card-preview">Quarterly update covering revenue, growth metrics and product milestones.</div>
-                  <div className="doc-card-date">May 23</div>
-                </div>
-                <div className="doc-card">
-                  <div className="doc-card-bar" style={{background:'#4a8fd4'}}></div>
-                  <div className="doc-card-title">2026 GTM Strategy</div>
-                  <div className="doc-card-preview">Go-to-market plan for the new year. Channels, ICP, and launch sequencing.</div>
-                  <div className="doc-card-date">May 23</div>
-                </div>
-                <div className="doc-card">
-                  <div className="doc-card-bar" style={{background:'#4aad6e'}}></div>
-                  <div className="doc-card-title">Workspace Doc V1</div>
-                  <div className="doc-card-preview">Initial workspace setup and team conventions for the new product sprint.</div>
-                  <div className="doc-card-date">May 23</div>
-                </div>
-                <div className="doc-card">
-                  <div className="doc-card-bar" style={{background:'#c96b8c'}}></div>
-                  <div className="doc-card-title">Series A Deck — Draft 3</div>
-                  <div className="doc-card-preview">Latest pitch deck revision with updated traction slides and market sizing.</div>
-                  <div className="doc-card-date">May 22</div>
-                </div>
-                <div className="doc-card">
-                  <div className="doc-card-bar" style={{background:'#7a6fd4'}}></div>
-                  <div className="doc-card-title">Competitive Analysis</div>
-                  <div className="doc-card-preview">Deep dive into Notion, Apple Notes, and Bear. Where TWO wins.</div>
-                  <div className="doc-card-date">May 22</div>
-                </div>
-                <div className="doc-card">
-                  <div className="doc-card-bar" style={{background:'#d4943a'}}></div>
-                  <div className="doc-card-title">Product Roadmap 2026</div>
-                  <div className="doc-card-preview">Feature priorities, team assignments, and shipping milestones.</div>
-                  <div className="doc-card-date">May 21</div>
-                </div>
+
+              {/* Doc grid */}
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(3, 1fr)',
+                gap: '10px',
+                padding: '0 24px 24px',
+                overflow: 'hidden',
+              }}>
+                {DOCS.map((doc) => (
+                  <div key={doc.title} style={{
+                    background: '#242426',
+                    borderRadius: '10px',
+                    border: '1px solid rgba(255,255,255,0.08)',
+                    padding: '16px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '6px',
+                  }}>
+                    <div style={{ height: '3px', borderRadius: '2px', background: doc.color, marginBottom: '4px' }} />
+                    <div style={{ fontSize: '13px', fontWeight: 600, color: '#e8e8e8', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                      {doc.title}
+                    </div>
+                    <div style={{ fontSize: '11px', color: '#a0a0a0', lineHeight: 1.55, overflow: 'hidden', flex: 1,
+                      display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' as const }}>
+                      {doc.preview}
+                    </div>
+                    <div style={{
+                      fontSize: '11px', color: 'rgba(255,255,255,0.2)',
+                      marginTop: '8px', paddingTop: '8px',
+                      borderTop: '1px solid rgba(255,255,255,0.06)',
+                    }}>
+                      {doc.date}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -217,5 +351,31 @@ export default function Home() {
         <div className="footer-right">© 2026 Strevius. All rights reserved.</div>
       </footer>
     </>
-  );
+  )
 }
+
+function SbIcon({ children, active }: { children: React.ReactNode; active?: boolean }) {
+  return (
+    <div style={{
+      width: 32, height: 32,
+      borderRadius: '7px',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      color: active ? '#e8e8e8' : 'rgba(255,255,255,0.28)',
+      background: active ? '#2e2e30' : 'transparent',
+    }}>
+      {children}
+    </div>
+  )
+}
+
+const DOCS = [
+  { title: 'Q3 Investor Update',      color: '#e8c06e', preview: 'Quarterly update covering revenue, growth metrics and product milestones for the board.', date: 'May 24' },
+  { title: '2026 GTM Strategy',       color: '#4a8fd4', preview: 'Go-to-market plan for the new year. Channels, ICP, and launch sequencing.', date: 'May 24' },
+  { title: 'Series A Deck — Draft 3', color: '#4aad6e', preview: 'Latest pitch deck revision with updated traction slides and market sizing.', date: 'May 23' },
+  { title: 'Competitive Analysis',    color: '#c96b8c', preview: 'Deep dive into Notion, Apple Notes, and Bear. Where TWO wins.', date: 'May 23' },
+  { title: 'Product Roadmap 2026',    color: '#7a6fd4', preview: 'Feature priorities, team assignments, and shipping milestones for H1.', date: 'May 22' },
+  { title: 'Brand Guidelines',        color: '#d4943a', preview: 'Typography, color system, tone of voice, and logo usage guidelines.', date: 'May 22' },
+  { title: 'Hiring Plan Q2',          color: '#4aadad', preview: 'Open roles, interview process, and headcount targets for the quarter.', date: 'May 21' },
+  { title: 'Onboarding Docs',         color: '#ad4a4a', preview: 'New hire checklist, tools setup, and first week expectations.', date: 'May 21' },
+  { title: 'Meeting Notes — May',     color: '#8aad4a', preview: 'Weekly sync summaries, decisions made, and action items this month.', date: 'May 20' },
+]
