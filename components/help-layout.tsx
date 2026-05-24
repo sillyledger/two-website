@@ -2,11 +2,10 @@ import { Navigation } from "@/components/navigation"
 
 interface HelpLayoutProps {
   children: React.ReactNode
-  activeCategory?: string
   activeArticle?: string
 }
 
-export function HelpLayout({ children, activeCategory, activeArticle }: HelpLayoutProps) {
+export function HelpLayout({ children, activeArticle }: HelpLayoutProps) {
   return (
     <>
       <Navigation />
@@ -18,60 +17,36 @@ export function HelpLayout({ children, activeCategory, activeArticle }: HelpLayo
 
             <div className="help-sidebar-section">
               <div className="help-sidebar-label">Getting started</div>
-              
-                href="/resources/help/getting-started/your-first-doc"
-                className={`help-sidebar-item ${activeArticle === "your-first-doc" ? "active" : ""}`}
-              >
+              <a href="/resources/help/getting-started/your-first-doc" className={activeArticle === "your-first-doc" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Your first doc
               </a>
-              
-                href="/resources/help/getting-started/using-two-on-ipad"
-                className={`help-sidebar-item ${activeArticle === "using-two-on-ipad" ? "active" : ""}`}
-              >
+              <a href="/resources/help/getting-started/using-two-on-ipad" className={activeArticle === "using-two-on-ipad" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Using TWO on iPad
               </a>
-              
-                href="/resources/help/getting-started/syncing-across-devices"
-                className={`help-sidebar-item ${activeArticle === "syncing-across-devices" ? "active" : ""}`}
-              >
+              <a href="/resources/help/getting-started/syncing-across-devices" className={activeArticle === "syncing-across-devices" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Syncing across devices
               </a>
             </div>
 
             <div className="help-sidebar-section">
               <div className="help-sidebar-label">Docs &amp; editor</div>
-              
-                href="/resources/help/docs-editor/formatting"
-                className={`help-sidebar-item ${activeArticle === "formatting" ? "active" : ""}`}
-              >
+              <a href="/resources/help/docs-editor/formatting" className={activeArticle === "formatting" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Formatting
               </a>
-              
-                href="/resources/help/docs-editor/linking-docs"
-                className={`help-sidebar-item ${activeArticle === "linking-docs" ? "active" : ""}`}
-              >
+              <a href="/resources/help/docs-editor/linking-docs" className={activeArticle === "linking-docs" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Linking docs
               </a>
-              
-                href="/resources/help/docs-editor/images"
-                className={`help-sidebar-item ${activeArticle === "images" ? "active" : ""}`}
-              >
+              <a href="/resources/help/docs-editor/images" className={activeArticle === "images" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Images
               </a>
             </div>
 
             <div className="help-sidebar-section">
               <div className="help-sidebar-label">Account</div>
-              
-                href="/resources/help/account/settings"
-                className={`help-sidebar-item ${activeArticle === "settings" ? "active" : ""}`}
-              >
+              <a href="/resources/help/account/settings" className={activeArticle === "settings" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Settings
               </a>
-              
-                href="/resources/help/account/billing"
-                className={`help-sidebar-item ${activeArticle === "billing" ? "active" : ""}`}
-              >
+              <a href="/resources/help/account/billing" className={activeArticle === "billing" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Billing &amp; plans
               </a>
             </div>
