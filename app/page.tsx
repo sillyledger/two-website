@@ -10,10 +10,9 @@ export default function Home() {
           <div className="hero-dot"></div>
           Now in open beta
         </div>
-        <h1>Write better.<br />Think clearer.</h1>
+        <h1>The doc app built for iPad and Mac.</h1>
         <p className="hero-sub">
-          Beautiful docs for individuals and small teams who live on Apple devices.
-          Fast, focused, and nothing you don&apos;t need.
+          Beautiful, focused writing for creatives, solo operators, and small teams. Nothing you don't need.
         </p>
         <div className="hero-actions">
           <a href="https://app.two.so/signup" className="btn-hero">Start for free →</a>
