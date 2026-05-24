@@ -3,15 +3,37 @@ import { useState } from "react"
 
 export function Navigation() {
   const [downloadOpen, setDownloadOpen] = useState(false)
+  const [solutionsOpen, setSolutionsOpen] = useState(false)
 
   return (
     <nav>
       <a href="/" className="nav-logo">
         <img src="/logo-two.svg" alt="TWO" className="nav-logo-img" />
       </a>
-
       <ul className="nav-links">
         <li><a href="/#features">Product</a></li>
+        <li className="nav-dropdown-wrap">
+          <button
+            className="nav-dropdown-btn"
+            onClick={() => setSolutionsOpen(!solutionsOpen)}
+            onBlur={() => setTimeout(() => setSolutionsOpen(false), 150)}
+          >
+            Solutions <span className={`nav-chevron ${solutionsOpen ? "nav-chevron-open" : ""}`}>▾</span>
+          </button>
+          {solutionsOpen && (
+            <div className="nav-dropdown">
+              <a href="/solutions/creatives" className="nav-dropdown-item">
+                <span className="nav-dropdown-label">For Creatives</span>
+              </a>
+              <a href="/solutions/solo" className="nav-dropdown-item">
+                <span className="nav-dropdown-label">For Solo Operators</span>
+              </a>
+              <a href="/solutions/teams" className="nav-dropdown-item">
+                <span className="nav-dropdown-label">For Small Teams</span>
+              </a>
+            </div>
+          )}
+        </li>
         <li><a href="#">Resources</a></li>
         <li><a href="https://app.two.so">Web App</a></li>
         <li className="nav-dropdown-wrap">
@@ -38,7 +60,6 @@ export function Navigation() {
         <li><a href="/#pricing">Pricing</a></li>
         <li><a href="/roadmap">Roadmap</a></li>
       </ul>
-
       <div className="nav-cta">
         <a href="https://app.two.so/login" className="btn-login">Log in</a>
         <a href="https://app.two.so/signup" className="btn-signup">Sign up</a>
