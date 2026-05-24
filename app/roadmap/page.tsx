@@ -1,21 +1,9 @@
+import { Navigation } from "@/components/navigation"
+
 export default function Roadmap() {
   return (
     <>
-      <nav>
-        <a href="/" className="nav-logo">
-          <img src="/logo-two.svg" alt="TWO" className="nav-logo-img" />
-        </a>
-        <ul className="nav-links">
-          <li><a href="/#features">Product</a></li>
-          <li><a href="/#pricing">Pricing</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="/roadmap" style={{color:'#1a1a1a', fontWeight:600}}>Roadmap</a></li>
-        </ul>
-        <div className="nav-cta">
-          <a href="https://app.two.so/login" className="btn-login">Log in</a>
-          <a href="https://app.two.so/signup" className="btn-signup">Sign up</a>
-        </div>
-      </nav>
+      <Navigation />
 
       <section className="roadmap-hero">
         <div className="section-eyebrow">Public roadmap</div>
@@ -152,5 +140,5 @@ export default function Roadmap() {
         <div className="footer-right">© 2026 Strevius. All rights reserved.</div>
       </footer>
     </>
-  );
+  )
 }
