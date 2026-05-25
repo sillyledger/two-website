@@ -57,7 +57,7 @@ export default function Roadmap() {
               </div>
               <div className="rm-card">
                 <div className="rm-card-title">Public knowledge base</div>
-                <div className="rm-card-desc">Publish a workspace as a public-facing site anyone can browse.</div>
+                <div className="rm-card-desc">Improving the website with public help docs</div>
                 <span className="rm-badge rm-badge-progress">In progress</span>
               </div>
               <div className="rm-card">
