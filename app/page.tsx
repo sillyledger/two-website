@@ -298,7 +298,7 @@ export default function Home() {
                   <li><span className="pf-cross">✕</span> Shared workspaces</li>
                   <li><span className="pf-cross">✕</span> Collaboration</li>
                 </ul>
-                <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-ghost-new">Get started free</a>
+                <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-ghost-new" style={{pointerEvents:'none', opacity:0.4}}>Get started free</a>
               </div>
             </div>
 
@@ -321,7 +321,7 @@ export default function Home() {
                   <li><span className="pf-soon">◷</span> Version history <span className="pf-soon-tag">soon</span></li>
                   <li><span className="pf-soon">◷</span> Export PDF / MD <span className="pf-soon-tag">soon</span></li>
                 </ul>
-                <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-primary-new">Start free trial</a>
+                <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-primary-new" style={{pointerEvents:'none', opacity:0.4}}>Start free trial</a>
               </div>
             </div>
 
@@ -341,7 +341,7 @@ export default function Home() {
                   <li><span className="pf-check">✓</span> All future Pro features</li>
                   <li><span className="pf-check">✓</span> Priority support</li>
                 </ul>
-                <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-gold-new">Get lifetime access — $49</a>
+                <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-gold-new" style={{pointerEvents:'none', opacity:0.4}}>Get lifetime access — $49</a>
               </div>
             </div>
 
