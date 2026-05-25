@@ -274,37 +274,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── PRICING ── */}
       <section className="pricing-section" id="pricing">
         <div className="pricing-inner">
-          <div className="section-eyebrow" style={{textAlign:'center', color:'#555552'}}>Pricing</div>
-          <h2>Simple, honest pricing.</h2>
-          <p className="pricing-sub">Start free. Upgrade your team for less than a coffee.</p>
-          <div className="plan-grid">
-            <div className="plan-card">
-              <div className="plan-name">Free</div>
-              <div className="plan-price">$0<span className="plan-price-sub"> / month</span></div>
-              <div className="plan-desc">Everything you need to get started. No credit card, no catch.</div>
-              <div className="plan-divider"></div>
-              <div className="plan-feature"><span className="plan-check">✓</span> Up to 50 docs</div>
-              <div className="plan-feature"><span className="plan-check">✓</span> Rich text editor</div>
-              <div className="plan-feature"><span className="plan-check">✓</span> Planner &amp; activity</div>
-              <div className="plan-feature"><span className="plan-check">✓</span> Collections</div>
-              <div className="plan-feature"><span className="plan-check">✓</span> 1 workspace</div>
-              <a href="https://app.two.so/signup" className="plan-btn plan-btn-ghost">Get started</a>
+          <h2 className="pricing-heading">Pricing plans</h2>
+          <p className="pricing-sub">Start free. Upgrade when you&apos;re ready.</p>
+          <div className="plan-grid-new">
+
+            {/* Free */}
+            <div className="plan-card-new">
+              <div className="plan-card-bar" style={{ background: '#888780' }} />
+              <div className="plan-card-body">
+                <div className="plan-name-new">Free</div>
+                <div className="plan-desc-new">Everything you need to get started — with a content limit.</div>
+                <div className="plan-price-new">$0<span className="plan-period"> / month</span></div>
+                <div className="plan-divider-new" />
+                <ul className="plan-features-new">
+                  <li><span className="pf-check">✓</span> 30 docs</li>
+                  <li><span className="pf-check">✓</span> 1 private workspace</li>
+                  <li><span className="pf-check">✓</span> Rich text editor</li>
+                  <li><span className="pf-check">✓</span> Planner &amp; activity</li>
+                  <li><span className="pf-check">✓</span> 1GB storage</li>
+                  <li><span className="pf-cross">✕</span> Shared workspaces</li>
+                  <li><span className="pf-cross">✕</span> Collaboration</li>
+                </ul>
+                <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-ghost-new">Get started free</a>
+              </div>
             </div>
-            <div className="plan-card featured">
-              <div className="plan-badge">Pro &amp; Teams</div>
-              <div className="plan-name">Pro</div>
-              <div className="plan-price">$6<span className="plan-price-sub"> / mo per user</span></div>
-              <div className="plan-desc">Unlimited everything. Built for teams who move fast.</div>
-              <div className="plan-divider"></div>
-              <div className="plan-feature"><span className="plan-check">✓</span> Unlimited docs</div>
-              <div className="plan-feature"><span className="plan-check">✓</span> Team workspaces</div>
-              <div className="plan-feature"><span className="plan-check">✓</span> Shared collections</div>
-              <div className="plan-feature"><span className="plan-check">✓</span> Doc sharing</div>
-              <div className="plan-feature"><span className="plan-check">✓</span> Priority support</div>
-              <a href="#" className="plan-btn plan-btn-accent">Available Soon →</a>
+
+            {/* Pro */}
+            <div className="plan-card-new plan-card-featured-new">
+              <div className="plan-card-bar" style={{ background: '#534AB7' }} />
+              <div className="plan-card-body">
+                <div className="plan-name-new">Pro</div>
+                <div className="plan-desc-new">Unlimited everything. Built for people who write seriously.</div>
+                <div className="plan-price-new">$6<span className="plan-period"> / month</span></div>
+                <div className="plan-note-new">14-day free trial · no credit card required</div>
+                <div className="plan-divider-new" />
+                <ul className="plan-features-new">
+                  <li><span className="pf-check">✓</span> Unlimited docs</li>
+                  <li><span className="pf-check">✓</span> Unlimited workspaces</li>
+                  <li><span className="pf-check">✓</span> Shared workspaces</li>
+                  <li><span className="pf-check">✓</span> Collaboration</li>
+                  <li><span className="pf-check">✓</span> 10GB storage</li>
+                  <li><span className="pf-check">✓</span> Priority support</li>
+                  <li><span className="pf-soon">◷</span> Version history <span className="pf-soon-tag">soon</span></li>
+                  <li><span className="pf-soon">◷</span> Export PDF / MD <span className="pf-soon-tag">soon</span></li>
+                </ul>
+                <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-primary-new">Start free trial</a>
+              </div>
             </div>
+
+            {/* Founding Member */}
+            <div className="plan-card-new">
+              <div className="plan-card-bar" style={{ background: '#BA7517' }} />
+              <div className="plan-card-body">
+                <div className="plan-name-new">Founding member</div>
+                <div className="plan-desc-new">Everything in Pro, forever. For the first 500 people who believe in TWO.</div>
+                <div className="plan-price-new">$49<span className="plan-period"> one-time</span></div>
+                <div className="plan-note-new">500 slots only</div>
+                <div className="plan-divider-new" />
+                <ul className="plan-features-new">
+                  <li><span className="pf-check">✓</span> Everything in Pro</li>
+                  <li><span className="pf-check">✓</span> Lifetime access — no subscription</li>
+                  <li><span className="pf-check">✓</span> Founding member status</li>
+                  <li><span className="pf-check">✓</span> All future Pro features</li>
+                  <li><span className="pf-check">✓</span> Priority support</li>
+                </ul>
+                <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-gold-new">Get lifetime access — $49</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
