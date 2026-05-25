@@ -8,7 +8,7 @@ export default function Roadmap() {
       <section className="roadmap-hero">
         <div className="section-eyebrow">Public roadmap</div>
         <h1>What we&apos;re building</h1>
-        <p className="hero-sub">A live look at what&apos;s deployed, what&apos;s in progress, and what&apos;s coming next. No fluff — just the work.</p>
+        <p className="hero-sub">A live look at what&apos;s deployed, what&apos;s in progress, and what&apos;s coming next.</p>
       </section>
 
       <section className="roadmap-section">
