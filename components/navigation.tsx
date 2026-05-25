@@ -54,6 +54,9 @@ export function Navigation() {
                 <span className="nav-dropdown-label">iPad App</span>
                 <span className="nav-dropdown-soon">Soon</span>
               </div>
+              <a href="/install" className="nav-dropdown-item">
+                <span className="nav-dropdown-label">Install Web App</span>
+              </a>
             </div>
           )}
         </li>
