@@ -8,7 +8,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-eyebrow">
           <div className="hero-dot"></div>
-          Now in open beta
+          Now in open beta (web only)
         </div>
         <h1>The doc app built for iPad and Mac.</h1>
         <p className="hero-sub">
