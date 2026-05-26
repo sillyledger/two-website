@@ -110,12 +110,6 @@ export default function TemplatesPage() {
             marginBottom: '20px',
           }}>Templates</p>
           <h1 style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(40px, 5vw, 64px)',
-            fontWeight: 700,
-            letterSpacing: '-0.02em',
-            lineHeight: 1.05,
-            color: 'var(--foreground)',
             marginBottom: '16px',
             maxWidth: '600px',
           }}>Start faster. Write better.</h1>
