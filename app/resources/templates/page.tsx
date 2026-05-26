@@ -96,7 +96,6 @@ export default function TemplatesPage() {
 
       <div style={{ paddingTop: '60px' }}>
 
-        {/* Hero */}
         <section style={{
           maxWidth: '1100px',
           margin: '0 auto',
@@ -129,7 +128,6 @@ export default function TemplatesPage() {
           }}>Free, structured docs for every workflow. Open any template in TWO and make it yours in seconds.</p>
         </section>
 
-        {/* Filter pills */}
         <div style={{
           maxWidth: '1100px',
           margin: '0 auto',
@@ -148,7 +146,7 @@ export default function TemplatesPage() {
                 fontFamily: 'var(--font-body)',
                 padding: '7px 16px',
                 borderRadius: '999px',
-                border: `1px solid ${active === cat ? 'var(--accent)' : 'var(--border)'}`,
+                border: active === cat ? '1px solid var(--accent)' : '1px solid var(--border)',
                 background: active === cat ? 'var(--accent)' : 'transparent',
                 color: active === cat ? '#0c0c0b' : 'var(--muted-foreground)',
                 cursor: 'pointer',
@@ -160,7 +158,6 @@ export default function TemplatesPage() {
           ))}
         </div>
 
-        {/* Grid */}
         <div style={{
           maxWidth: '1100px',
           margin: '0 auto',
@@ -180,8 +177,6 @@ export default function TemplatesPage() {
           }}>
             {filtered.map(t => (
               <div key={t.key} className="template-card">
-
-                {/* Preview image */}
                 <div style={{
                   height: '200px',
                   overflow: 'hidden',
@@ -190,7 +185,7 @@ export default function TemplatesPage() {
                 }}>
                   <img
                     src={t.img}
-                    alt={t.title + ' template preview'}
+                    alt={t.title}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -198,13 +193,8 @@ export default function TemplatesPage() {
                       objectPosition: 'top center',
                       display: 'block',
                     }}
-                    onError={e => {
-                      (e.currentTarget as HTMLImageElement).style.display = 'none'
-                    }}
                   />
                 </div>
-
-                {/* Body */}
                 <div style={{ padding: '18px 20px 14px' }}>
                   <p style={{
                     fontSize: '11px',
@@ -228,17 +218,11 @@ export default function TemplatesPage() {
                     lineHeight: 1.5,
                   }}>{t.desc}</p>
                 </div>
-
-                {/* Footer */}
                 <div style={{ padding: '12px 20px 18px' }}>
-                  
-                    href={'https://app.two.so/new?template=' + t.slug}
-                    className="template-btn"
-                  >
+                  <a href={'/app-redirect?t=' + t.slug} className="template-btn">
                     Use template
                   </a>
                 </div>
-
               </div>
             ))}
           </div>
