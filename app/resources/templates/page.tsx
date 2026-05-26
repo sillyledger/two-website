@@ -146,7 +146,7 @@ export default function TemplatesPage() {
                 fontFamily: 'var(--font-body)',
                 padding: '7px 16px',
                 borderRadius: '999px',
-                border: active === cat ? '1px solid var(--accent)' : '1px solid var(--border)',
+                border: active === cat ? '1px solid var(--accent)' : '1px solid rgba(0,0,0,0.2)',
                 background: active === cat ? 'var(--accent)' : 'transparent',
                 color: active === cat ? '#0c0c0b' : 'var(--muted-foreground)',
                 cursor: 'pointer',
