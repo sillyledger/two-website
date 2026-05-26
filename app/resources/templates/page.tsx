@@ -63,6 +63,37 @@ export default function TemplatesPage() {
     <>
       <Navigation />
 
+      <style>{`
+        .template-card {
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          overflow: hidden;
+          transition: border-color 0.15s, transform 0.15s;
+        }
+        .template-card:hover {
+          border-color: rgba(232,217,160,0.3);
+          transform: translateY(-2px);
+        }
+        .template-btn {
+          display: inline-block;
+          font-size: 13px;
+          font-weight: 500;
+          color: var(--accent);
+          background: transparent;
+          border: 1px solid rgba(232,217,160,0.25);
+          border-radius: 7px;
+          padding: 7px 14px;
+          text-decoration: none;
+          transition: background 0.1s, border-color 0.1s;
+          font-family: var(--font-body);
+        }
+        .template-btn:hover {
+          background: rgba(232,217,160,0.08);
+          border-color: rgba(232,217,160,0.5);
+        }
+      `}</style>
+
       <div style={{ paddingTop: '60px' }}>
 
         {/* Hero */}
@@ -148,31 +179,14 @@ export default function TemplatesPage() {
             gap: '16px',
           }}>
             {filtered.map(t => (
-              <div
-                key={t.key}
-                style={{
-                  background: 'var(--surface)',
-                  border: '1px solid var(--border)',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  transition: 'border-color 0.15s, transform 0.15s',
-                }}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(232,217,160,0.3)'
-                  ;(e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)'
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--border)'
-                  ;(e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'
-                }}
-              >
+              <div key={t.key} className="template-card">
+
                 {/* Preview image */}
                 <div style={{
                   height: '200px',
                   overflow: 'hidden',
                   borderBottom: '1px solid var(--border)',
                   background: '#0d0d0d',
-                  position: 'relative',
                 }}>
                   <img
                     src={t.img}
@@ -219,29 +233,12 @@ export default function TemplatesPage() {
                 <div style={{ padding: '12px 20px 18px' }}>
                   
                     href={`https://app.two.so/new?template=${t.slug}`}
-                    onMouseEnter={e => {
-                      (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(232,217,160,0.08)'
-                      ;(e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(232,217,160,0.5)'
-                    }}
-                    onMouseLeave={e => {
-                      (e.currentTarget as HTMLAnchorElement).style.background = 'transparent'
-                      ;(e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(232,217,160,0.25)'
-                    }}
-                    style={{
-                      display: 'inline-block',
-                      fontSize: '13px',
-                      fontWeight: 500,
-                      color: 'var(--accent)',
-                      background: 'transparent',
-                      border: '1px solid rgba(232,217,160,0.25)',
-                      borderRadius: '7px',
-                      padding: '7px 14px',
-                      textDecoration: 'none',
-                      transition: 'background 0.1s, border-color 0.1s',
-                      fontFamily: 'var(--font-body)',
-                    }}
-                  >{"Use template \u2192"}</a>
+                    className="template-btn"
+                  >
+                    Use template
+                  </a>
                 </div>
+
               </div>
             ))}
           </div>
