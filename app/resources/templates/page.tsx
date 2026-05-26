@@ -190,7 +190,7 @@ export default function TemplatesPage() {
                 }}>
                   <img
                     src={t.img}
-                    alt={`${t.title} template preview`}
+                    alt={t.title + ' template preview'}
                     style={{
                       width: '100%',
                       height: '100%',
@@ -232,7 +232,7 @@ export default function TemplatesPage() {
                 {/* Footer */}
                 <div style={{ padding: '12px 20px 18px' }}>
                   
-                    href={`https://app.two.so/new?template=${t.slug}`}
+                    href={'https://app.two.so/new?template=' + t.slug}
                     className="template-btn"
                   >
                     Use template
