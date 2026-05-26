@@ -219,6 +219,14 @@ export default function TemplatesPage() {
                 <div style={{ padding: '12px 20px 18px' }}>
                   
                     href={`https://app.two.so/new?template=${t.slug}`}
+                    onMouseEnter={e => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(232,217,160,0.08)'
+                      ;(e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(232,217,160,0.5)'
+                    }}
+                    onMouseLeave={e => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = 'transparent'
+                      ;(e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(232,217,160,0.25)'
+                    }}
                     style={{
                       display: 'inline-block',
                       fontSize: '13px',
@@ -232,16 +240,8 @@ export default function TemplatesPage() {
                       transition: 'background 0.1s, border-color 0.1s',
                       fontFamily: 'var(--font-body)',
                     }}
-                    onMouseEnter={e => {
-                      (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(232,217,160,0.08)'
-                      ;(e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(232,217,160,0.5)'
-                    }}
-                    onMouseLeave={e => {
-                      (e.currentTarget as HTMLAnchorElement).style.background = 'transparent'
-                      ;(e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(232,217,160,0.25)'
-                    }}
                   >
-                    Use template →
+                    Use template &#8594;
                   </a>
                 </div>
               </div>
