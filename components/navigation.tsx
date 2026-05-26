@@ -46,7 +46,7 @@ export function Navigation() {
               <a href="/resources/templates" className="nav-dropdown-item">
                 <span className="nav-dropdown-label">Templates</span>
               </a>
-              <a href="/resources/guides" className="nav-dropdown-item">
+              <a href="/resources/help" className="nav-dropdown-item">
                 <span className="nav-dropdown-label">Help & Guides</span>
               </a>
             </div>
