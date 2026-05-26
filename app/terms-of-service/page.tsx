@@ -23,12 +23,12 @@ export default function TermsOfService() {
 
       <h2 style={{ fontSize: 20, fontWeight: 600, marginTop: 40, marginBottom: 12, scrollMarginTop: 80 }} id="refunds">Refund Policy</h2>
       <p>We offer a <strong>14-day free trial</strong> on all paid plans — no credit card required. This gives you full access before any payment is taken.</p>
-      <p style={{ marginTop: 12 }}>If you are charged and feel it was in error, contact us at <strong>hello@two.so</strong> within 14 days of the charge and we will issue a full refund, no questions asked.</p>
+      <p style={{ marginTop: 12 }}>If you are charged and feel it was in error, contact us at <strong>hey@two.so</strong> within 14 days of the charge and we will issue a full refund, no questions asked.</p>
       <p style={{ marginTop: 12 }}>For the Founding Member one-time purchase: refunds are available within 30 days of purchase if you are unsatisfied with the service.</p>
-      <p style={{ marginTop: 12 }}>Refund requests after these windows will be considered on a case-by-case basis. To request a refund, email <strong>hello@two.so</strong>.</p>
+      <p style={{ marginTop: 12 }}>Refund requests after these windows will be considered on a case-by-case basis. To request a refund, email <strong>hey@two.so</strong>.</p>
 
       <h2 style={{ fontSize: 20, fontWeight: 600, marginTop: 40, marginBottom: 12 }}>Contact</h2>
-      <p>Questions? Email us at <strong>hello@two.so</strong>.</p>
+      <p>Questions? Email us at <strong>hey@two.so</strong>.</p>
 
       <div style={{ marginTop: 60, paddingTop: 24, borderTop: '1px solid var(--border)', display: 'flex', gap: 24, fontSize: 13, color: 'var(--muted-foreground)' }}>
         <a href="/" style={{ color: 'inherit', textDecoration: 'none' }}>← Back to two.so</a>
