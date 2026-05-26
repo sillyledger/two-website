@@ -133,15 +133,15 @@ export default function Roadmap() {
 
           <div className="roadmap-cta">
             <p>Have a feature request? We&apos;d love to hear it.</p>
-            <a href="mailto:two@strevius.com" className="btn-hero">Suggest a feature →</a>
+            <a href="mailto:hey@two.so" className="btn-hero">Suggest a feature →</a>
           </div>
 
         </div>
       </section>
 
       <footer>
-        <div className="footer-left">TWO — A docs app by Strevius</div>
-        <div className="footer-right">© 2026 Strevius. All rights reserved.</div>
+        <div className="footer-left">TWO — A better place to think and write.</div>
+        <div className="footer-right">© 2026 TWO. All rights reserved.</div>
       </footer>
     </>
   )
