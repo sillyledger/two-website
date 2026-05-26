@@ -10,6 +10,7 @@ const templates = [
     catKey: 'business',
     desc: 'Agenda, decisions, and action items — all in one structured doc.',
     slug: 'meeting-notes',
+    img: '/template-meeting.png',
   },
   {
     key: 'blog',
@@ -18,6 +19,7 @@ const templates = [
     catKey: 'creative',
     desc: 'Hook, three sections, CTA, and a pre-publish checklist.',
     slug: 'blog-post',
+    img: '/template-blog.png',
   },
   {
     key: 'product',
@@ -26,6 +28,7 @@ const templates = [
     catKey: 'strategy',
     desc: 'Problem, users, goals, scope, and risk — in one tight doc.',
     slug: 'product-brief',
+    img: '/template-product.png',
   },
   {
     key: 'weekly',
@@ -34,6 +37,7 @@ const templates = [
     catKey: 'personal',
     desc: 'Wins, blockers, priorities, and metrics — every week, sorted.',
     slug: 'weekly-review',
+    img: '/template-weekly.png',
   },
   {
     key: 'okr',
@@ -42,6 +46,7 @@ const templates = [
     catKey: 'strategy',
     desc: 'Three objectives, key results, and progress targets — all tracked.',
     slug: 'okr-tracker',
+    img: '/template-okr.png',
   },
 ]
 
@@ -167,6 +172,7 @@ export default function TemplatesPage() {
                   overflow: 'hidden',
                   borderBottom: '1px solid var(--border)',
                   background: '#0d0d0d',
+                  position: 'relative',
                 }}>
                   <img
                     src={t.img}
@@ -177,6 +183,9 @@ export default function TemplatesPage() {
                       objectFit: 'cover',
                       objectPosition: 'top center',
                       display: 'block',
+                    }}
+                    onError={e => {
+                      (e.currentTarget as HTMLImageElement).style.display = 'none'
                     }}
                   />
                 </div>
@@ -208,7 +217,7 @@ export default function TemplatesPage() {
 
                 {/* Footer */}
                 <div style={{ padding: '12px 20px 18px' }}>
-                  <a
+                  
                     href={`https://app.two.so/new?template=${t.slug}`}
                     style={{
                       display: 'inline-block',
@@ -222,6 +231,14 @@ export default function TemplatesPage() {
                       textDecoration: 'none',
                       transition: 'background 0.1s, border-color 0.1s',
                       fontFamily: 'var(--font-body)',
+                    }}
+                    onMouseEnter={e => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(232,217,160,0.08)'
+                      ;(e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(232,217,160,0.5)'
+                    }}
+                    onMouseLeave={e => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = 'transparent'
+                      ;(e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(232,217,160,0.25)'
                     }}
                   >
                     Use template →
