@@ -27,10 +27,10 @@ export default function PrivacyPolicy() {
       <p>We use cookies solely for authentication purposes (to keep you logged in). We do not use tracking or advertising cookies.</p>
 
       <h2 style={{ fontSize: 20, fontWeight: 600, marginTop: 40, marginBottom: 12 }}>Your Rights</h2>
-      <p>You may request deletion of your account and associated data at any time by contacting us at <strong>hello@two.so</strong>. We will process your request within 30 days.</p>
+      <p>You may request deletion of your account and associated data at any time by contacting us at <strong>hey@two.so</strong>. We will process your request within 30 days.</p>
 
       <h2 style={{ fontSize: 20, fontWeight: 600, marginTop: 40, marginBottom: 12 }}>Contact</h2>
-      <p>Questions about this policy? Email us at <strong>hello@two.so</strong>.</p>
+      <p>Questions about this policy? Email us at <strong>hey@two.so</strong>.</p>
 
       <div style={{ marginTop: 60, paddingTop: 24, borderTop: '1px solid var(--border)', display: 'flex', gap: 24, fontSize: 13, color: 'var(--muted-foreground)' }}>
         <a href="/" style={{ color: 'inherit', textDecoration: 'none' }}>← Back to two.so</a>
