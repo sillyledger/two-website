@@ -357,9 +357,35 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <div className="footer-left">TWO — A docs app by Strevius</div>
-        <div className="footer-right">© 2026 Strevius. All rights reserved.</div>
+      <footer className="footer-new">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <span className="footer-wordmark">TWO</span>
+            <span className="footer-tagline">A better place to think and write.</span>
+          </div>
+          <div className="footer-cols">
+            <div className="footer-col">
+              <div className="footer-col-heading">Product</div>
+              <a href="https://two.so/#features">Features</a>
+              <a href="https://two.so/#pricing">Pricing</a>
+              <a href="https://two.so/roadmap">Roadmap</a>
+            </div>
+            <div className="footer-col">
+              <div className="footer-col-heading">Account</div>
+              <a href="https://app.two.so/login">Log in</a>
+              <a href="https://app.two.so/signup">Sign up</a>
+            </div>
+            <div className="footer-col">
+              <div className="footer-col-heading">Legal</div>
+              <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/terms-of-service">Terms of Service</a>
+              <a href="/terms-of-service#refunds">Refund Policy</a>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span>© 2026 TWO. All rights reserved.</span>
+        </div>
       </footer>
     </>
   )
