@@ -240,9 +240,7 @@ export default function TemplatesPage() {
                       transition: 'background 0.1s, border-color 0.1s',
                       fontFamily: 'var(--font-body)',
                     }}
-                  >
-                    Use template &#8594;
-                  </a>
+                  >{"Use template \u2192"}</a>
                 </div>
               </div>
             ))}
