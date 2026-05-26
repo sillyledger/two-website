@@ -1,10 +1,9 @@
 "use client"
 import { useState } from "react"
-
 export function Navigation() {
   const [downloadOpen, setDownloadOpen] = useState(false)
   const [solutionsOpen, setSolutionsOpen] = useState(false)
-
+  const [resourcesOpen, setResourcesOpen] = useState(false)
   return (
     <nav>
       <a href="/" className="nav-logo">
@@ -34,7 +33,25 @@ export function Navigation() {
             </div>
           )}
         </li>
-        <li><a href="#">Resources</a></li>
+        <li className="nav-dropdown-wrap">
+          <button
+            className="nav-dropdown-btn"
+            onClick={() => setResourcesOpen(!resourcesOpen)}
+            onBlur={() => setTimeout(() => setResourcesOpen(false), 150)}
+          >
+            Resources <span className={`nav-chevron ${resourcesOpen ? "nav-chevron-open" : ""}`}>▾</span>
+          </button>
+          {resourcesOpen && (
+            <div className="nav-dropdown">
+              <a href="/resources/templates" className="nav-dropdown-item">
+                <span className="nav-dropdown-label">Templates</span>
+              </a>
+              <a href="/resources/guides" className="nav-dropdown-item">
+                <span className="nav-dropdown-label">Help & Guides</span>
+              </a>
+            </div>
+          )}
+        </li>
         <li><a href="https://app.two.so">Web App</a></li>
         <li className="nav-dropdown-wrap">
           <button
