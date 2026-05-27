@@ -1314,3 +1314,75 @@ footer {
   opacity: 0.6;
   margin: 0;
 }
+/* ── Help Category Pages ── */
+
+.help-category-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 24px 120px;
+}
+
+.help-category-back {
+  margin-bottom: 40px;
+}
+
+.help-category-back a {
+  font-size: 14px;
+  opacity: 0.5;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.help-category-back a:hover {
+  opacity: 1;
+}
+
+.help-category-header {
+  margin-bottom: 48px;
+}
+
+.help-category-header h1 {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.help-article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border, #e5e5e5);
+}
+
+.help-article-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border, #e5e5e5);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.15s ease;
+}
+
+.help-article-row:hover {
+  opacity: 0.6;
+}
+
+.help-article-row-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.help-article-row-desc {
+  font-size: 13px;
+  opacity: 0.55;
+  line-height: 1.5;
+}
+
+.help-article-row-arrow {
+  font-size: 16px;
+  opacity: 0.3;
+  flex-shrink: 0;
+  margin-left: 24px;
+}
