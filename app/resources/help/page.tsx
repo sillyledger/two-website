@@ -8,70 +8,43 @@ export default function HelpCenter() {
       <section className="roadmap-hero">
         <div className="section-eyebrow">Help Center</div>
         <h1>How can we help?</h1>
-        <p className="hero-sub">Everything you need to get the most out of TWO.</p>
+        <p className="hero-sub">Guides and answers to get the most out of TWO.</p>
       </section>
 
-      <div className="help-index-wrap">
+      <div className="help-hub-wrap">
 
-        <div className="help-index-group">
-          <div className="help-index-group-title">Getting started</div>
-          <div className="help-index-cards">
-            <a href="/resources/help/getting-started/your-first-doc" className="help-index-card">
-              <div className="help-index-card-title">Your first doc</div>
-              <div className="help-index-card-desc">How to create, name, and organise your first document in TWO.</div>
-              <div className="help-index-card-meta">2 min read</div>
-            </a>
-            <a href="/resources/help/getting-started/using-two-on-ipad" className="help-index-card">
-              <div className="help-index-card-title">Using TWO on iPad</div>
-              <div className="help-index-card-desc">Tips for getting the most out of TWO on your iPad.</div>
-              <div className="help-index-card-meta">4 min read</div>
-            </a>
-            <a href="/resources/help/getting-started/syncing-across-devices" className="help-index-card">
-              <div className="help-index-card-title">Syncing across devices</div>
-              <div className="help-index-card-desc">How your docs stay in sync between your iPad and Mac automatically.</div>
-              <div className="help-index-card-meta">2 min read</div>
-            </a>
-          </div>
+        <div className="help-hub-grid">
+
+          <a href="/resources/help/getting-started" className="help-hub-card">
+            <div className="help-hub-card-icon">✦</div>
+            <div className="help-hub-card-body">
+              <div className="help-hub-card-title">Getting Started</div>
+              <div className="help-hub-card-desc">New to TWO? Start here. Create your first doc, use templates, and set up the web app.</div>
+              <div className="help-hub-card-meta">3 articles</div>
+            </div>
+          </a>
+
+          <a href="/resources/help/docs-editor" className="help-hub-card">
+            <div className="help-hub-card-icon">✐</div>
+            <div className="help-hub-card-body">
+              <div className="help-hub-card-title">Docs &amp; Editor</div>
+              <div className="help-hub-card-desc">Everything about writing and formatting — headers, links, code blocks, and more.</div>
+              <div className="help-hub-card-meta">2 articles</div>
+            </div>
+          </a>
+
+          <a href="/resources/help/account" className="help-hub-card">
+            <div className="help-hub-card-icon">◎</div>
+            <div className="help-hub-card-body">
+              <div className="help-hub-card-title">Account</div>
+              <div className="help-hub-card-desc">Manage your settings, appearance preferences, and billing plan.</div>
+              <div className="help-hub-card-meta">2 articles</div>
+            </div>
+          </a>
+
         </div>
 
-        <div className="help-index-group">
-          <div className="help-index-group-title">Docs &amp; editor</div>
-          <div className="help-index-cards">
-            <a href="/resources/help/docs-editor/formatting" className="help-index-card">
-              <div className="help-index-card-title">Formatting</div>
-              <div className="help-index-card-desc">Headers, bold, lists, code blocks — everything the editor supports.</div>
-              <div className="help-index-card-meta">3 min read</div>
-            </a>
-            <a href="/resources/help/docs-editor/linking-docs" className="help-index-card">
-              <div className="help-index-card-title">Linking docs</div>
-              <div className="help-index-card-desc">How to link directly to other docs inside your workspace.</div>
-              <div className="help-index-card-meta">2 min read</div>
-            </a>
-            <a href="/resources/help/docs-editor/images" className="help-index-card">
-              <div className="help-index-card-title">Images</div>
-              <div className="help-index-card-desc">Inserting and managing images inside your docs.</div>
-              <div className="help-index-card-meta">2 min read · Coming soon</div>
-            </a>
-          </div>
-        </div>
-
-        <div className="help-index-group">
-          <div className="help-index-group-title">Account</div>
-          <div className="help-index-cards">
-            <a href="/resources/help/account/settings" className="help-index-card">
-              <div className="help-index-card-title">Settings</div>
-              <div className="help-index-card-desc">Managing your account, appearance, and preferences.</div>
-              <div className="help-index-card-meta">2 min read</div>
-            </a>
-            <a href="/resources/help/account/billing" className="help-index-card">
-              <div className="help-index-card-title">Billing &amp; plans</div>
-              <div className="help-index-card-desc">Everything about Free and Pro — what&apos;s included and how to upgrade.</div>
-              <div className="help-index-card-meta">3 min read</div>
-            </a>
-          </div>
-        </div>
-
-        <div className="help-index-cta">
+        <div className="help-hub-cta">
           <p>Can&apos;t find what you&apos;re looking for?</p>
           <a href="mailto:two@strevius.com" className="btn-hero">Contact support →</a>
         </div>
