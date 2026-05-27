@@ -1016,6 +1016,21 @@ footer {
   top: 72px;
 }
 
+.help-sidebar-back {
+  display: block;
+  font-size: 13px;
+  color: #888880;
+  text-decoration: none;
+  margin: 0 0 20px;
+  padding: 0 24px 20px;
+  border-bottom: 1px solid #e8e6e0;
+  transition: color 0.15s;
+}
+
+.help-sidebar-back:hover {
+  color: #1a1a18;
+}
+
 .help-sidebar-section {
   margin-bottom: 28px;
 }
@@ -1112,6 +1127,12 @@ footer {
   margin-bottom: 6px;
 }
 
+.help-body a {
+  color: #1a1a18;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .help-tip {
   background: #f0ede6;
   border-radius: 10px;
@@ -1156,7 +1177,6 @@ footer {
   .help-sidebar { display: none; }
   .help-content { padding: 32px 24px; }
 }
-/* ── HELP INDEX ── */
 .help-index-wrap {
   max-width: 860px;
   margin: 0 auto;
