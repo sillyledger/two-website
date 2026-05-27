@@ -1412,3 +1412,13 @@ footer {
   border: 1px solid #e8e6e0;
   margin: 24px 0;
 }
+.help-ol {
+  margin: 0 0 16px 20px;
+}
+
+.help-ol li {
+  font-size: 15px;
+  color: #333331;
+  line-height: 1.75;
+  margin-bottom: 8px;
+}
