@@ -298,7 +298,7 @@ export default function Home() {
                   <li><span className="pf-cross">✕</span> Shared workspaces</li>
                   <li><span className="pf-cross">✕</span> Collaboration</li>
                 </ul>
-                <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-ghost-new" style={{pointerEvents:'none', opacity:0.4}}>Get started free</a>
+                <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-ghost-new">Get started free</a>
               </div>
             </div>
 
