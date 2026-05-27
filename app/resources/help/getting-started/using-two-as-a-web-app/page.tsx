@@ -17,12 +17,7 @@ export default function UsingTwoAsAWebApp() {
         <h2>Mac — Add to your Dock</h2>
         <p>The Mac web app opens in its own standalone window, completely separate from your browser. You can launch it directly from the Dock like any native app.</p>
 
-        <img
-          src="/install-mac.png"
-          alt="Adding TWO to the Mac Dock via Safari"
-          className="help-image"
-        />
-
+      
         <ol className="help-ol">
           <li><strong>Open Safari</strong> and go to <a href="https://app.two.so">app.two.so</a>.</li>
           <li>In the menu bar, click <strong>File → Add to Dock</strong>.</li>
