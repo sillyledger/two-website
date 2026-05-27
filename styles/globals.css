@@ -1065,12 +1065,15 @@ footer {
 }
 
 .help-main {
-  background: #fff;
+  background: #f9f8f6;
+  display: flex;
+  justify-content: center;
 }
 
 .help-content {
-  max-width: 680px;
-  padding: 52px 56px;
+  width: 100%;
+  max-width: 640px;
+  padding: 52px 40px;
 }
 
 .help-eyebrow {
