@@ -29,12 +29,17 @@ export default function Roadmap() {
               </div>
               <div className="rm-card">
                 <div className="rm-card-title">Image upload</div>
-                <div className="rm-card-desc">Drop images and galleries directly into any doc.</div>
+                <div className="rm-card-desc">Insert images and galleries directly into any doc.</div>
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
               <div className="rm-card">
                 <div className="rm-card-title">Restore deleted files</div>
                 <div className="rm-card-desc">Recover any doc you&apos;ve deleted within the last 30 days.</div>
+                <span className="rm-badge rm-badge-shipped">✓ Done</span>
+              </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Billing &amp; Pro tier</div>
+                <div className="rm-card-desc">Paddle-powered Pro plan and Founding Member plan for early supporters.</div>
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
             </div>
@@ -55,16 +60,6 @@ export default function Roadmap() {
                 <div className="rm-card-desc">A guided first-run experience so new users hit the ground running.</div>
                 <span className="rm-badge rm-badge-progress">In progress</span>
               </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Public knowledge base</div>
-                <div className="rm-card-desc">Improving the website with public help docs</div>
-                <span className="rm-badge rm-badge-progress">In progress</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Doc sharing</div>
-                <div className="rm-card-desc">Share a link to any doc — no account required to view.</div>
-                <span className="rm-badge rm-badge-progress">In progress</span>
-              </div>
             </div>
 
             {/* Coming Soon */}
@@ -81,17 +76,12 @@ export default function Roadmap() {
               <div className="rm-card">
                 <div className="rm-card-title">Export to Markdown</div>
                 <div className="rm-card-desc">Take your docs anywhere — export as plain Markdown in one click.</div>
-                <span className="rm-badge rm-badge-soon">Planned</span>
+                <span className="rm-badge rm-badge-soon">Up next</span>
               </div>
               <div className="rm-card">
                 <div className="rm-card-title">Team workspaces</div>
                 <div className="rm-card-desc">Invite your team and collaborate in a shared workspace.</div>
-                <span className="rm-badge rm-badge-soon">Planned</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Inline comments</div>
-                <div className="rm-card-desc">Highlight any text and leave a comment — Google Docs-style.</div>
-                <span className="rm-badge rm-badge-soon">Planned</span>
+                <span className="rm-badge rm-badge-soon">Up next</span>
               </div>
             </div>
 
@@ -114,6 +104,8 @@ export default function Roadmap() {
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Planner</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Internal doc links</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Library</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Public knowledge base</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Doc sharing</div>
             </div>
           </div>
 
@@ -126,8 +118,8 @@ export default function Roadmap() {
               <div className="roadmap-later-desc">Full functionality without an internet connection — always.</div>
             </div>
             <div className="roadmap-later-item">
-              <div className="roadmap-later-name">Billing &amp; Pro tier</div>
-              <div className="roadmap-later-desc">Stripe-powered Pro plan with advanced features for power users.</div>
+              <div className="roadmap-later-name">Inline comments</div>
+              <div className="roadmap-later-desc">Highlight any text and leave a comment — Google Docs-style.</div>
             </div>
           </div>
 
