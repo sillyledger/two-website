@@ -23,23 +23,23 @@ export default function Roadmap() {
                 <span className="roadmap-col-label">Deployed</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Favorites</div>
-                <div className="rm-card-desc">Pin your most-used docs to the top for instant access.</div>
-                <span className="rm-badge rm-badge-shipped">✓ Done</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Image upload</div>
-                <div className="rm-card-desc">Insert images and galleries directly into any doc.</div>
-                <span className="rm-badge rm-badge-shipped">✓ Done</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Restore deleted files</div>
-                <div className="rm-card-desc">Recover any doc you&apos;ve deleted within the last 30 days.</div>
-                <span className="rm-badge rm-badge-shipped">✓ Done</span>
-              </div>
-              <div className="rm-card">
                 <div className="rm-card-title">Billing &amp; Pro tier</div>
-                <div className="rm-card-desc">Paddle-powered Pro plan and Founding Member plan for early supporters.</div>
+                <div className="rm-card-desc">Paddle integration for Pro plan &amp; Founding Member plan for early supporters.</div>
+                <span className="rm-badge rm-badge-shipped">✓ Done</span>
+              </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Export to PDF</div>
+                <div className="rm-card-desc">Download any doc as a clean, print-ready PDF.</div>
+                <span className="rm-badge rm-badge-shipped">✓ Done</span>
+              </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Export to Markdown</div>
+                <div className="rm-card-desc">Take your docs anywhere — export as plain Markdown in one click.</div>
+                <span className="rm-badge rm-badge-shipped">✓ Done</span>
+              </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Storage tracking</div>
+                <div className="rm-card-desc">Per-user storage usage tracked and visible in Settings.</div>
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
             </div>
@@ -60,6 +60,16 @@ export default function Roadmap() {
                 <div className="rm-card-desc">A guided first-run experience so new users hit the ground running.</div>
                 <span className="rm-badge rm-badge-progress">In progress</span>
               </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Public knowledge base</div>
+                <div className="rm-card-desc">Publish a workspace as a public-facing knowledge base.</div>
+                <span className="rm-badge rm-badge-progress">In progress</span>
+              </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Doc sharing</div>
+                <div className="rm-card-desc">Share a link to any doc with anyone, no account required.</div>
+                <span className="rm-badge rm-badge-progress">In progress</span>
+              </div>
             </div>
 
             {/* Coming Soon */}
@@ -69,19 +79,14 @@ export default function Roadmap() {
                 <span className="roadmap-col-label">Coming soon</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Export to PDF</div>
-                <div className="rm-card-desc">Download any doc as a clean, print-ready PDF.</div>
-                <span className="rm-badge rm-badge-soon">Up next</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Export to Markdown</div>
-                <div className="rm-card-desc">Take your docs anywhere — export as plain Markdown in one click.</div>
-                <span className="rm-badge rm-badge-soon">Up next</span>
-              </div>
-              <div className="rm-card">
                 <div className="rm-card-title">Team workspaces</div>
                 <div className="rm-card-desc">Invite your team and collaborate in a shared workspace.</div>
                 <span className="rm-badge rm-badge-soon">Up next</span>
+              </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Password protected folders</div>
+                <div className="rm-card-desc">Lock sensitive folders behind a password for extra privacy.</div>
+                <span className="rm-badge rm-badge-soon">Planned</span>
               </div>
             </div>
 
@@ -104,8 +109,9 @@ export default function Roadmap() {
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Planner</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Internal doc links</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Library</div>
-              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Public knowledge base</div>
-              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Doc sharing</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Favorites</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Restore recently deleted files</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Image upload</div>
             </div>
           </div>
 
