@@ -138,13 +138,13 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="pricing-cta-section">
-        <div className="pricing-cta-inner">
-          <h2>Start writing today.</h2>
-          <p>Free to start. No credit card required.</p>
-          <a href="https://app.two.so/signup" className="btn-hero">Get started free →</a>
-        </div>
-      </section>
+      <section className="cta-section">
+  <div className="cta-inner">
+    <h2>Start writing today.</h2>
+    <p className="cta-sub">Free to start. No credit card required.</p>
+    <a href="https://app.two.so/signup" className="btn-hero">Get started free →</a>
+  </div>
+</section>
 
       <footer style={{ borderTop: "1px solid var(--border)" }}>
         <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", padding: "48px 40px 40px", gap: 40 }}>
