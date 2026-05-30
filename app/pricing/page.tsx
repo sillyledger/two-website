@@ -1,10 +1,47 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Navigation } from "@/components/navigation"
+
+declare global {
+  interface Window {
+    Paddle?: {
+      Initialize: (opts: { token: string }) => void
+      Checkout: {
+        open: (opts: { items: { priceId: string; quantity: number }[] }) => void
+      }
+    }
+  }
+}
+
+const PADDLE_CLIENT_TOKEN = "live_5d79c55970d6730fce490b94bc1"
+const PRICE_PRO_MONTHLY = "pri_01ksjx3b0n6pg6fw44hbq9r03p"
+const PRICE_PRO_ANNUAL = "pri_01ksxjysx4n6ewv4dq2mxn5kjr"
+const PRICE_FOUNDING = "pri_01ksjx6e6xtrmq324ama45zyr0"
 
 export default function Pricing() {
   const [yearly, setYearly] = useState(false)
+
+  useEffect(() => {
+    if (document.getElementById("paddle-js")) return
+    const script = document.createElement("script")
+    script.id = "paddle-js"
+    script.src = "https://cdn.paddle.com/paddle/v2/paddle.js"
+    script.async = true
+    script.onload = () => {
+      window.Paddle?.Initialize({ token: PADDLE_CLIENT_TOKEN })
+    }
+    document.head.appendChild(script)
+  }, [])
+
+  function openProCheckout() {
+    const priceId = yearly ? PRICE_PRO_ANNUAL : PRICE_PRO_MONTHLY
+    window.Paddle?.Checkout.open({ items: [{ priceId, quantity: 1 }] })
+  }
+
+  function openFoundingCheckout() {
+    window.Paddle?.Checkout.open({ items: [{ priceId: PRICE_FOUNDING, quantity: 1 }] })
+  }
 
   return (
     <>
@@ -83,7 +120,9 @@ export default function Pricing() {
                   <li><span className="pf-check">✓</span> Priority support</li>
                   <li><span className="pf-soon">◷</span> Version history <span className="pf-soon-tag">soon</span></li>
                 </ul>
-                <a href="https://app.two.so/signup?plan=pro" className="plan-btn-new plan-btn-primary-new">Start free trial</a>
+                <button onClick={openProCheckout} className="plan-btn-new plan-btn-primary-new">
+                  {yearly ? "Start free trial — $60/yr" : "Start free trial"}
+                </button>
               </div>
             </div>
 
@@ -103,7 +142,9 @@ export default function Pricing() {
                   <li><span className="pf-check">✓</span> All future Pro features</li>
                   <li><span className="pf-check">✓</span> Priority support</li>
                 </ul>
-                <a href="https://app.two.so/signup?plan=founding" className="plan-btn-new plan-btn-gold-new">Get lifetime access — $49</a>
+                <button onClick={openFoundingCheckout} className="plan-btn-new plan-btn-gold-new">
+                  Get lifetime access — $49
+                </button>
               </div>
             </div>
 
