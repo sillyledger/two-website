@@ -77,7 +77,7 @@ export function Navigation() {
             </div>
           )}
         </li>
-        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/pricing">Pricing</a></li>
         <li><a href="/roadmap">Roadmap</a></li>
       </ul>
       <div className="nav-cta">
