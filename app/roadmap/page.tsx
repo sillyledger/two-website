@@ -28,18 +28,8 @@ export default function Roadmap() {
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Export to PDF</div>
-                <div className="rm-card-desc">Download any doc as a clean, print-ready PDF.</div>
-                <span className="rm-badge rm-badge-shipped">✓ Done</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Export to Markdown</div>
-                <div className="rm-card-desc">Take your docs anywhere — export as plain Markdown in one click.</div>
-                <span className="rm-badge rm-badge-shipped">✓ Done</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Storage tracking</div>
-                <div className="rm-card-desc">Per-user storage usage tracked and visible in Settings.</div>
+                <div className="rm-card-title">Team Workspaces</div>
+                <div className="rm-card-desc">Invite your team and collaborate in a shared workspace.</div>
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
             </div>
@@ -52,7 +42,7 @@ export default function Roadmap() {
               </div>
               <div className="rm-card">
                 <div className="rm-card-title">Templates</div>
-                <div className="rm-card-desc">Starter docs for meeting notes, product briefs, and more.</div>
+                <div className="rm-card-desc">Expanding template library for meeting notes, product briefs, and more.</div>
                 <span className="rm-badge rm-badge-progress">In progress</span>
               </div>
               <div className="rm-card">
@@ -61,13 +51,8 @@ export default function Roadmap() {
                 <span className="rm-badge rm-badge-progress">In progress</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Public knowledge base</div>
-                <div className="rm-card-desc">Publish a workspace as a public-facing knowledge base.</div>
-                <span className="rm-badge rm-badge-progress">In progress</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Doc sharing</div>
-                <div className="rm-card-desc">Share a link to any doc with anyone, no account required.</div>
+                <div className="rm-card-title">Live sync</div>
+                <div className="rm-card-desc">Instantly sync docs across all your devices in real time.</div>
                 <span className="rm-badge rm-badge-progress">In progress</span>
               </div>
             </div>
@@ -79,14 +64,14 @@ export default function Roadmap() {
                 <span className="roadmap-col-label">Coming soon</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Team workspaces</div>
-                <div className="rm-card-desc">Invite your team and collaborate in a shared workspace.</div>
-                <span className="rm-badge rm-badge-soon">Up next</span>
-              </div>
-              <div className="rm-card">
                 <div className="rm-card-title">Password protected folders</div>
                 <div className="rm-card-desc">Lock sensitive folders behind a password for extra privacy.</div>
                 <span className="rm-badge rm-badge-soon">Planned</span>
+              </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Inline comments</div>
+                <div className="rm-card-desc">Highlight any text and leave a comment — Google Docs-style.</div>
+                <span className="rm-badge rm-badge-soon">Up next</span>
               </div>
             </div>
 
@@ -112,6 +97,10 @@ export default function Roadmap() {
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Favorites</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Restore recently deleted files</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Image upload</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Billing &amp; Pro tier</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Export to PDF &amp; Markdown</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Storage tracking</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Team Workspaces</div>
             </div>
           </div>
 
@@ -124,8 +113,8 @@ export default function Roadmap() {
               <div className="roadmap-later-desc">Full functionality without an internet connection — always.</div>
             </div>
             <div className="roadmap-later-item">
-              <div className="roadmap-later-name">Inline comments</div>
-              <div className="roadmap-later-desc">Highlight any text and leave a comment — Google Docs-style.</div>
+              <div className="roadmap-later-name">Native iPad app</div>
+              <div className="roadmap-later-desc">A dedicated iPad experience built for the way you think and write.</div>
             </div>
           </div>
 
