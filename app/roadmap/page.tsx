@@ -23,8 +23,13 @@ export default function Roadmap() {
                 <span className="roadmap-col-label">Deployed</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Billing &amp; Pro tier</div>
-                <div className="rm-card-desc">Paddle integration for Pro plan &amp; Founding Member plan for early supporters.</div>
+                <div className="rm-card-title">Real-time collaboration</div>
+                <div className="rm-card-desc">Edit documents together with your team, live. See collaborator cursors as they type — no page reloads, no conflicts.</div>
+                <span className="rm-badge rm-badge-shipped">✓ Done</span>
+              </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Multiple tabs</div>
+                <div className="rm-card-desc">Keep several docs open at once and switch between them instantly — no losing your place.</div>
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
               <div className="rm-card">
@@ -41,18 +46,18 @@ export default function Roadmap() {
                 <span className="roadmap-col-label">In progress</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Templates</div>
-                <div className="rm-card-desc">Expanding template library for meeting notes, product briefs, and more.</div>
+                <div className="rm-card-title">Live sync</div>
+                <div className="rm-card-desc">Changes appear instantly across all your devices — iPad, Mac, browser. Always in sync, even mid-sentence.</div>
+                <span className="rm-badge rm-badge-progress">In progress</span>
+              </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Inline comments</div>
+                <div className="rm-card-desc">Highlight any text and leave a comment — Google Docs-style threaded feedback, built right into the doc.</div>
                 <span className="rm-badge rm-badge-progress">In progress</span>
               </div>
               <div className="rm-card">
                 <div className="rm-card-title">Onboarding flow</div>
                 <div className="rm-card-desc">A guided first-run experience so new users hit the ground running.</div>
-                <span className="rm-badge rm-badge-progress">In progress</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Live sync</div>
-                <div className="rm-card-desc">Instantly sync docs across all your devices in real time.</div>
                 <span className="rm-badge rm-badge-progress">In progress</span>
               </div>
             </div>
@@ -64,14 +69,9 @@ export default function Roadmap() {
                 <span className="roadmap-col-label">Coming soon</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Password protected folders</div>
-                <div className="rm-card-desc">Lock sensitive folders behind a password for extra privacy.</div>
+                <div className="rm-card-title">Password-protected folders</div>
+                <div className="rm-card-desc">Lock sensitive folders behind a password for an extra layer of privacy.</div>
                 <span className="rm-badge rm-badge-soon">Planned</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Inline comments</div>
-                <div className="rm-card-desc">Highlight any text and leave a comment — Google Docs-style.</div>
-                <span className="rm-badge rm-badge-soon">Up next</span>
               </div>
             </div>
 
@@ -101,6 +101,8 @@ export default function Roadmap() {
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Export to PDF &amp; Markdown</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Storage tracking</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Team Workspaces</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Real-time collaboration</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Multiple tabs</div>
             </div>
           </div>
 
