@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { PricingSection } from "@/components/pricing-section"
 import { FeaturesBento } from "@/components/features-bento"
+import { FaqSection } from "@/components/faq-section"
 
 export default function Home() {
   return (
@@ -241,6 +242,8 @@ export default function Home() {
 
       {/* ── PRICING ── */}
       <PricingSection />
+
+      <FaqSection />
 
       <section className="cta-section">
         <div className="cta-inner">
