@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { PricingSection } from "@/components/pricing-section"
+import { FeaturesBento } from "@/components/features-bento"
 
 export default function Home() {
   return (
@@ -220,44 +221,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="features-section" id="features">
-        <div className="features-inner">
-          <div className="section-eyebrow">Why TWO</div>
-          <h2>Built for how writers, founders, and small teams actually work in docs.</h2>
-          <div className="feat-grid">
-            <div className="feat-cell">
-              <div className="feat-num">01</div>
-              <div className="feat-name">Open in a second</div>
-              <div className="feat-desc">Blank doc, ready to write. Never lose a thought while it&apos;s still sharp.</div>
-            </div>
-            <div className="feat-cell">
-              <div className="feat-num">02</div>
-              <div className="feat-name">Everything in one place</div>
-              <div className="feat-desc">Docs, tasks, and activity — organized without the setup tax.</div>
-            </div>
-            <div className="feat-cell">
-              <div className="feat-num">03</div>
-              <div className="feat-name">Beautiful on any device</div>
-              <div className="feat-desc">Designed for iPad, Mac, and web. No compromises on any screen.</div>
-            </div>
-            <div className="feat-cell">
-              <div className="feat-num">04</div>
-              <div className="feat-name">Rich editor, zero clutter</div>
-              <div className="feat-desc">Format when you need it. Stays out of your way when you don&apos;t.</div>
-            </div>
-            <div className="feat-cell">
-              <div className="feat-num">05</div>
-              <div className="feat-name">Tasks tied to docs</div>
-              <div className="feat-desc">Every task lives next to the doc it belongs to. Nothing gets lost.</div>
-            </div>
-            <div className="feat-cell">
-              <div className="feat-num">06</div>
-              <div className="feat-name">Not Notion</div>
-              <div className="feat-desc">No databases. No blocks. No setup. Just write and get things done.</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FeaturesBento />
 
       <section className="backstory-section">
         <div className="backstory-inner">
