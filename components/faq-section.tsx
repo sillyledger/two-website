@@ -41,41 +41,44 @@ export function FaqSection() {
   return (
     <section className="faq-section">
       <div className="faq-inner">
-        <div className="section-eyebrow">FAQ</div>
-        <h2 className="faq-heading">Things people ask.</h2>
-        <p className="faq-sub">
-          Can&apos;t find what you&apos;re looking for?{" "}
-          <a href="https://www.two.so/resources/help">Browse our Help &amp; Guides →</a>
-        </p>
 
-        <div className="faq-list">
-          {FAQS.map((item, i) => (
-            <div
-              key={i}
-              className="faq-item"
-              onClick={() => setOpen(open === i ? null : i)}
-            >
-              <div className="faq-item-left">
-                <div className="faq-q-row">
-                  <span className={`faq-tag ${item.tagClass}`}>{item.tag}</span>
-                  <div className="faq-q">{item.q}</div>
-                </div>
-                {open === i && <div className="faq-a">{item.a}</div>}
-              </div>
-              <div className={`faq-toggle${open === i ? " faq-toggle-open" : ""}`}>+</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="faq-bottom">
-          <div className="faq-bottom-left">
+        <div className="faq-left">
+          <div className="section-eyebrow">FAQ</div>
+          <h2 className="faq-heading">Things people ask.</h2>
+          <p className="faq-sub">
+            Can&apos;t find what you&apos;re looking for?{" "}
+            <a href="https://www.two.so/resources/help">Browse our Help &amp; Guides →</a>
+          </p>
+          <div className="faq-bottom">
             <div className="faq-bottom-title">Still have questions?</div>
-            <div className="faq-bottom-sub">Everything you need to get started is in our guides.</div>
+            <div className="faq-bottom-sub">Everything you need is in our guides.</div>
+            <a href="https://www.two.so/resources/help" className="faq-bottom-btn">
+              Help &amp; Guides →
+            </a>
           </div>
-          <a href="https://www.two.so/resources/help" className="faq-bottom-btn">
-            Help &amp; Guides →
-          </a>
         </div>
+
+        <div className="faq-right">
+          <div className="faq-list">
+            {FAQS.map((item, i) => (
+              <div
+                key={i}
+                className="faq-item"
+                onClick={() => setOpen(open === i ? null : i)}
+              >
+                <div className="faq-item-left">
+                  <div className="faq-q-row">
+                    <span className={`faq-tag ${item.tagClass}`}>{item.tag}</span>
+                    <div className="faq-q">{item.q}</div>
+                  </div>
+                  {open === i && <div className="faq-a">{item.a}</div>}
+                </div>
+                <div className={`faq-toggle${open === i ? " faq-toggle-open" : ""}`}>+</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   )
