@@ -1169,6 +1169,25 @@ footer {
   .backstory-cols { grid-template-columns: 1fr; gap: 32px; }
   .backstory-left { font-size: 22px; }
 }
+/* ── MISSION STATEMENT ── */
+.mission-statement {
+  padding: 88px 48px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.mission-statement p {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #1a1a18;
+  letter-spacing: -0.3px;
+}
+
+@media (max-width: 768px) {
+  .mission-statement { padding: 60px 24px; }
+  .mission-statement p { font-size: 22px; }
+}
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
