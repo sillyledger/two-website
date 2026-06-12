@@ -1209,28 +1209,23 @@ footer {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 22px 0;
-  border-top: 1px solid #e8e6e0;
+  padding: 28px 0;
   text-decoration: none;
   transition: opacity 0.15s;
-}
-
-.audience-row:last-child {
-  border-bottom: 1px solid #e8e6e0;
 }
 
 .audience-row:hover { opacity: 0.6; }
 
 .audience-row-title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: #1a1a18;
-  margin-bottom: 4px;
-  letter-spacing: -0.2px;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
 }
 
 .audience-row-desc {
-  font-size: 14px;
+  font-size: 16px;
   color: #1a1a18;
   line-height: 1.6;
   margin: 0;
