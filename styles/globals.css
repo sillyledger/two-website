@@ -2870,3 +2870,95 @@ footer {
 @media (max-width: 768px) {
   .cta-band { padding: 64px 24px; }
 }
+/* ── LIVE SYNC FEATURE PAGE ── */
+.ls-app-bleed {
+  border-radius: 12px 12px 0 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-bottom: none;
+  background: #161618;
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.ls-frame-badge {
+  font-size: 10px;
+  color: #3daf7a;
+  background: rgba(61,175,122,0.15);
+  border: 1px solid rgba(61,175,122,0.3);
+  padding: 2px 9px;
+  border-radius: 20px;
+}
+
+.ls-devices {
+  display: flex;
+  height: 300px;
+}
+
+.ls-device-panel {
+  flex: 1;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.ls-device-panel:last-child { border-right: none; }
+
+.ls-device-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 16px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  background: #111113;
+}
+
+.ls-sync-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3daf7a;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.ls-doc-content {
+  flex: 1;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.ls-colorbar { height: 2.5px; border-radius: 2px; width: 48%; margin-bottom: 6px; flex-shrink: 0; }
+.ls-title-line { height: 8px; border-radius: 4px; background: rgba(255,255,255,0.18); margin-bottom: 10px; }
+.ls-sl { height: 5px; border-radius: 3px; background: rgba(255,255,255,0.07); flex-shrink: 0; }
+.ls-sl-hi { background: rgba(255,255,255,0.14); }
+
+.ls-cursor-row { display: flex; align-items: center; gap: 4px; }
+
+.ls-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background: #3daf7a;
+  border-radius: 1px;
+  flex-shrink: 0;
+  animation: ls-blink 1s step-end infinite;
+}
+
+@keyframes ls-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .ls-devices { flex-direction: column; height: auto; }
+  .ls-device-panel { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .ls-device-panel:last-child { border-bottom: none; }
+}
