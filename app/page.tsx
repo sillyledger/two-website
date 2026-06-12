@@ -222,7 +222,7 @@ export default function Home() {
         </div>
       </div>
       <section className="mission-statement">
-        <p>Somewhere along the way, iPad became the device people actually reach for. Writers. Founders. Solo operators. The ones who think better when they&apos;re away from their desk. And yet every doc app still treats it like a second screen. TWO exists because that never made sense to us.</p>
+        <p>Somewhere along the way, iPad became the device people actually reach for. The ones who think better when they&apos;re away from their desk. And yet every doc app still treats it like a second screen. TWO exists because that never made sense to us.</p>
       </section>
 
       <FeaturesBento />
