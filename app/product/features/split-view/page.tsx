@@ -5,23 +5,16 @@ export default function SplitViewPage() {
     <>
       <Navigation />
 
-      {/* Breadcrumb */}
-      <div className="sv-nav">
-        <a href="/product/features" className="sv-nav-back">Features</a>
-        <span className="sv-nav-sep">/</span>
-        <span className="sv-nav-cur">Split View</span>
-      </div>
-
       {/* Hero — full dark, app bleeds off bottom */}
       <div className="sv-hero">
         <div className="sv-hero-inner">
-          <div className="sv-hero-tag">Split View</div>
+          <div className="sv-hero-breadcrumb">
+            <a href="/product/features" className="sv-hero-bc-back">Features</a>
+            <span className="sv-hero-bc-sep">/</span>
+            <span className="sv-hero-bc-cur">Split View</span>
+          </div>
           <h1 className="sv-hero-title">Two docs.<br />One screen.</h1>
           <p className="sv-hero-sub">Research on the left, writing on the right. Drag the divider and reshape your workspace however you think.</p>
-          <div className="sv-hero-btns">
-            <a href="https://app.two.so/signup" className="sv-btn-white">Try for free</a>
-            <a href="/product/features" className="sv-btn-ghost">See all features →</a>
-          </div>
         </div>
 
         {/* Full-width app frame bleeds off bottom */}
