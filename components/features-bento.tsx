@@ -35,6 +35,13 @@ export function FeaturesBento() {
                     <div className="sl sl-hi" style={{ width: '91%' }} />
                     <div className="sl" style={{ width: '56%' }} />
                     <div className="sl sl-hi" style={{ width: '74%' }} />
+                    <div className="sl" style={{ width: '88%' }} />
+                    <div className="sl sl-hi" style={{ width: '60%' }} />
+                    <div className="sl" style={{ width: '78%' }} />
+                    <div className="sl sl-hi" style={{ width: '45%' }} />
+                    <div className="sl" style={{ width: '92%' }} />
+                    <div className="sl sl-hi" style={{ width: '68%' }} />
+                    <div className="sl" style={{ width: '83%' }} />
                   </div>
                 </div>
                 <div className="sp-divider"><div className="sp-handle" /></div>
@@ -47,6 +54,13 @@ export function FeaturesBento() {
                     <div className="sl sl-hi" style={{ width: '60%' }} />
                     <div className="sl" style={{ width: '79%' }} />
                     <div className="sl sl-hi" style={{ width: '48%' }} />
+                    <div className="sl" style={{ width: '93%' }} />
+                    <div className="sl sl-hi" style={{ width: '66%' }} />
+                    <div className="sl" style={{ width: '55%' }} />
+                    <div className="sl sl-hi" style={{ width: '82%' }} />
+                    <div className="sl" style={{ width: '40%' }} />
+                    <div className="sl sl-hi" style={{ width: '75%' }} />
+                    <div className="sl" style={{ width: '89%' }} />
                   </div>
                 </div>
               </div>
