@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 
 const FAQS = [
@@ -41,7 +40,6 @@ export function FaqSection() {
   return (
     <section className="faq-section">
       <div className="faq-inner">
-
         <div className="faq-left">
           <div className="section-eyebrow">FAQ</div>
           <h2 className="faq-heading">Things people ask.</h2>
@@ -49,15 +47,7 @@ export function FaqSection() {
             Can&apos;t find what you&apos;re looking for?{" "}
             <a href="https://www.two.so/resources/help">Browse our Help &amp; Guides →</a>
           </p>
-          <div className="faq-bottom">
-            <div className="faq-bottom-title">Still have questions?</div>
-            <div className="faq-bottom-sub">Everything you need is in our guides.</div>
-            <a href="https://www.two.so/resources/help" className="faq-bottom-btn">
-              Help &amp; Guides →
-            </a>
-          </div>
         </div>
-
         <div className="faq-right">
           <div className="faq-list">
             {FAQS.map((item, i) => (
@@ -78,7 +68,6 @@ export function FaqSection() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   )
