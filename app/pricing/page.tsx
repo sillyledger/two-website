@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Navigation } from "@/components/navigation"
+import { CtaBand } from "@/components/cta-band"
 
 declare global {
   interface Window {
@@ -179,14 +180,8 @@ export default function Pricing() {
           </div>
         </div>
       </section>
-
-      <section className="cta-section">
-        <div className="cta-inner">
-          <h2>Start writing today.</h2>
-          <p className="cta-sub">Free to start. No credit card required.</p>
-          <a href="https://app.two.so/signup" className="btn-hero">Get started free →</a>
-        </div>
-      </section>
+      
+<CtaBand />
 
       <footer>
         <div className="footer-left">TWO — A better place to think and write.</div>
