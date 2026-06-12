@@ -20,7 +20,7 @@ export default function Home() {
         </p>
         <div className="hero-actions">
           <a href="https://app.two.so/signup" className="btn-hero">Start for free →</a>
-          <a href="#features" className="btn-hero-ghost">See how it works</a>
+          <a href="/product/features" className="btn-hero-ghost">Explore features</a>
         </div>
       </section>
 
