@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/navigation"
+import { CtaBand } from "@/components/cta-band"
 
 export default function ForTeams() {
   return (
@@ -82,11 +83,7 @@ export default function ForTeams() {
               <div className="roadmap-later-desc">Keep your roadmap, strategy, and decisions documented and accessible</div>
             </div>
           </div>
-
-          <div className="roadmap-cta">
-            <p>Ready to give your team a workspace they&apos;ll love?</p>
-            <a href="https://app.two.so/signup" className="btn-hero">Start for free →</a>
-          </div>
+          <CtaBand />
 
         </div>
       </section>
