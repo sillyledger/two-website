@@ -35,7 +35,6 @@ export default function Home() {
           border: '1px solid rgba(255,255,255,0.08)',
           background: '#161618',
           fontFamily: "-apple-system, BlinkMacSystemFont, 'Inter', sans-serif",
-          boxShadow: '0 40px 120px rgba(0,0,0,0.5)',
         }}>
 
           {/* Browser bar */}
