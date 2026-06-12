@@ -2,10 +2,12 @@
 import { useState } from "react"
 
 export function Navigation() {
-  const [downloadOpen, setDownloadOpen] = useState(false)
-  const [solutionsOpen, setSolutionsOpen] = useState(false)
-  const [resourcesOpen, setResourcesOpen] = useState(false)
-  const [productOpen, setProductOpen] = useState(false)
+  const [openMenu, setOpenMenu] = useState<string | null>(null)
+
+  const toggle = (menu: string) =>
+    setOpenMenu(prev => (prev === menu ? null : menu))
+
+  const close = () => setTimeout(() => setOpenMenu(null), 150)
 
   return (
     <nav>
@@ -16,12 +18,12 @@ export function Navigation() {
         <li className="nav-dropdown-wrap">
           <button
             className="nav-dropdown-btn"
-            onClick={() => setProductOpen(!productOpen)}
-            onBlur={() => setTimeout(() => setProductOpen(false), 150)}
+            onClick={() => toggle("product")}
+            onBlur={close}
           >
-            Product <span className={`nav-chevron ${productOpen ? "nav-chevron-open" : ""}`}>▾</span>
+            Product <span className={`nav-chevron ${openMenu === "product" ? "nav-chevron-open" : ""}`}>▾</span>
           </button>
-          {productOpen && (
+          {openMenu === "product" && (
             <div className="nav-dropdown">
               <a href="/product/features/split-view" className="nav-dropdown-item">
                 <span className="nav-dropdown-label">Split View</span>
@@ -41,12 +43,12 @@ export function Navigation() {
         <li className="nav-dropdown-wrap">
           <button
             className="nav-dropdown-btn"
-            onClick={() => setSolutionsOpen(!solutionsOpen)}
-            onBlur={() => setTimeout(() => setSolutionsOpen(false), 150)}
+            onClick={() => toggle("solutions")}
+            onBlur={close}
           >
-            Solutions <span className={`nav-chevron ${solutionsOpen ? "nav-chevron-open" : ""}`}>▾</span>
+            Solutions <span className={`nav-chevron ${openMenu === "solutions" ? "nav-chevron-open" : ""}`}>▾</span>
           </button>
-          {solutionsOpen && (
+          {openMenu === "solutions" && (
             <div className="nav-dropdown">
               <a href="/solutions/creatives" className="nav-dropdown-item">
                 <span className="nav-dropdown-label">For Creatives</span>
@@ -63,12 +65,12 @@ export function Navigation() {
         <li className="nav-dropdown-wrap">
           <button
             className="nav-dropdown-btn"
-            onClick={() => setResourcesOpen(!resourcesOpen)}
-            onBlur={() => setTimeout(() => setResourcesOpen(false), 150)}
+            onClick={() => toggle("resources")}
+            onBlur={close}
           >
-            Resources <span className={`nav-chevron ${resourcesOpen ? "nav-chevron-open" : ""}`}>▾</span>
+            Resources <span className={`nav-chevron ${openMenu === "resources" ? "nav-chevron-open" : ""}`}>▾</span>
           </button>
-          {resourcesOpen && (
+          {openMenu === "resources" && (
             <div className="nav-dropdown">
               <a href="/resources/templates" className="nav-dropdown-item">
                 <span className="nav-dropdown-label">Templates</span>
@@ -83,12 +85,12 @@ export function Navigation() {
         <li className="nav-dropdown-wrap">
           <button
             className="nav-dropdown-btn"
-            onClick={() => setDownloadOpen(!downloadOpen)}
-            onBlur={() => setTimeout(() => setDownloadOpen(false), 150)}
+            onClick={() => toggle("download")}
+            onBlur={close}
           >
-            Download <span className={`nav-chevron ${downloadOpen ? "nav-chevron-open" : ""}`}>▾</span>
+            Download <span className={`nav-chevron ${openMenu === "download" ? "nav-chevron-open" : ""}`}>▾</span>
           </button>
-          {downloadOpen && (
+          {openMenu === "download" && (
             <div className="nav-dropdown">
               <div className="nav-dropdown-item">
                 <span className="nav-dropdown-label">Mac App</span>
