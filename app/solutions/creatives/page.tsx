@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/navigation"
+import { CtaBand } from "@/components/cta-band"
 
 export default function ForCreatives() {
   return (
@@ -82,11 +83,7 @@ export default function ForCreatives() {
               <div className="roadmap-later-desc">A private space to reflect, write, and think without distractions</div>
             </div>
           </div>
-
-          <div className="roadmap-cta">
-            <p>Ready to simplify your creative workflow?</p>
-            <a href="https://app.two.so/signup" className="btn-hero">Start for free →</a>
-          </div>
+<CtaBand />
 
         </div>
       </section>
