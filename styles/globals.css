@@ -2627,8 +2627,8 @@ footer {
 }
 
 .sv-intro-right p {
-  font-size: 16px;
-  color: #555552;
+  font-size: 17px;
+  color: #333331;
   line-height: 1.75;
 }
 
@@ -2662,8 +2662,8 @@ footer {
 }
 
 .sv-block-desc {
-  font-size: 14px;
-  color: #555552;
+  font-size: 15px;
+  color: #333331;
   line-height: 1.65;
 }
 
@@ -2729,8 +2729,8 @@ footer {
 }
 
 .sv-use-desc {
-  font-size: 13px;
-  color: rgba(255,255,255,0.3);
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
   line-height: 1.6;
 }
 
