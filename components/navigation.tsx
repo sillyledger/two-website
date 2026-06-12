@@ -1,16 +1,43 @@
 "use client"
 import { useState } from "react"
+
 export function Navigation() {
   const [downloadOpen, setDownloadOpen] = useState(false)
   const [solutionsOpen, setSolutionsOpen] = useState(false)
   const [resourcesOpen, setResourcesOpen] = useState(false)
+  const [productOpen, setProductOpen] = useState(false)
+
   return (
     <nav>
       <a href="/" className="nav-logo">
         <img src="/logo-two.svg" alt="TWO" className="nav-logo-img" />
       </a>
       <ul className="nav-links">
-        <li><a href="/#features">Product</a></li>
+        <li className="nav-dropdown-wrap">
+          <button
+            className="nav-dropdown-btn"
+            onClick={() => setProductOpen(!productOpen)}
+            onBlur={() => setTimeout(() => setProductOpen(false), 150)}
+          >
+            Product <span className={`nav-chevron ${productOpen ? "nav-chevron-open" : ""}`}>▾</span>
+          </button>
+          {productOpen && (
+            <div className="nav-dropdown">
+              <a href="/product/features/split-view" className="nav-dropdown-item">
+                <span className="nav-dropdown-label">Split View</span>
+              </a>
+              <a href="/product/features/live-sync" className="nav-dropdown-item">
+                <span className="nav-dropdown-label">Live Sync</span>
+              </a>
+              <a href="/product/features/shared-workspaces" className="nav-dropdown-item">
+                <span className="nav-dropdown-label">Shared Workspaces</span>
+              </a>
+              <a href="/product/features" className="nav-dropdown-item">
+                <span className="nav-dropdown-label">View all features →</span>
+              </a>
+            </div>
+          )}
+        </li>
         <li className="nav-dropdown-wrap">
           <button
             className="nav-dropdown-btn"
