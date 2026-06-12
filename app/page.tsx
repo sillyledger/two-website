@@ -226,18 +226,34 @@ export default function Home() {
       </section>
 
       <FeaturesBento />
-      <section className="backstory-section">
-        <div className="backstory-inner">
-          <div className="section-eyebrow">The backstory</div>
-          <div className="backstory-cols">
-            <div className="backstory-left">
-              Most writing apps were built for desktops, then reluctantly ported to iPad. TWO wasn&apos;t.
-            </div>
-            <div className="backstory-right">
-              <p>It was built by someone who creates content full-time on an iPad Pro and got tired of apps that were either too complex, too basic, or never took the device seriously.</p>
-              <p>TWO exists because the right tool didn&apos;t. One that&apos;s fast to open, beautiful to write in, and built for the way modern teams actually work — across devices, across time zones, and across shared docs.</p>
-              <a href="https://app.two.so/signup" className="backstory-cta">Try it now →</a>
-            </div>
+     <section className="audience-section">
+        <div className="audience-inner">
+          <div className="audience-left">
+            <p className="section-eyebrow">Who it&apos;s for</p>
+            <p className="audience-statement">TWO is built for a specific kind of person. You&apos;ll know if that&apos;s you.</p>
+          </div>
+          <div className="audience-right">
+            <a href="/solutions/creatives" className="audience-row">
+              <div>
+                <p className="audience-row-title">Creatives</p>
+                <p className="audience-row-desc">Writers, designers, and makers who need a quiet place to think and create.</p>
+              </div>
+              <span className="audience-arrow">→</span>
+            </a>
+            <a href="/solutions/solo" className="audience-row">
+              <div>
+                <p className="audience-row-title">Solo operators</p>
+                <p className="audience-row-desc">Founders and freelancers running everything themselves, who need one place for it all.</p>
+              </div>
+              <span className="audience-arrow">→</span>
+            </a>
+            <a href="/solutions/teams" className="audience-row">
+              <div>
+                <p className="audience-row-title">Small teams</p>
+                <p className="audience-row-desc">Teams that move fast and don&apos;t want their docs app to slow them down.</p>
+              </div>
+              <span className="audience-arrow">→</span>
+            </a>
           </div>
         </div>
       </section>
