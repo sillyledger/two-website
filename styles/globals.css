@@ -2828,3 +2828,46 @@ footer {
 @media (max-width: 768px) {
   .sv-hero-cols { grid-template-columns: 1fr; gap: 16px; }
 }
+/* ── CTA BAND (shared) ── */
+.cta-band {
+  background: #f9f8f6;
+  padding: 96px 64px;
+  text-align: center;
+  border-top: 1px solid #e8e6e0;
+}
+
+.cta-band-title {
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  line-height: 1.0;
+  color: #1a1a18;
+  margin-bottom: 16px;
+}
+
+.cta-band-sub {
+  font-size: 16px;
+  color: #888880;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.cta-band-btn {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #f9f8f6;
+  background: #1a1a18;
+  border: none;
+  border-radius: 9px;
+  padding: 13px 28px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.cta-band-btn:hover { background: #2e2e2c; }
+
+@media (max-width: 768px) {
+  .cta-band { padding: 64px 24px; }
+}
