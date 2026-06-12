@@ -116,11 +116,10 @@ export default function Roadmap() {
               <div className="roadmap-later-desc">Full functionality without an internet connection — always.</div>
             </div>
           </div>
-
-          <CtaBand />
-
-        </div>
+</div>
       </section>
+
+      <CtaBand />
 
       <footer>
         <div className="footer-left">TWO — A better place to think and write.</div>
