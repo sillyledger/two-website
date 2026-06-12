@@ -2810,3 +2810,21 @@ footer {
   .sv-cta-box { padding: 40px 24px; }
   .sv-feature-nav { padding: 24px; }
 }
+.sv-hero-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 760px;
+  margin-bottom: 56px;
+}
+
+.sv-hero-col {
+  font-size: 16px;
+  color: rgba(255,255,255,0.38);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .sv-hero-cols { grid-template-columns: 1fr; gap: 16px; }
+}
