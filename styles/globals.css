@@ -2962,3 +2962,222 @@ footer {
   .ls-device-panel { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .ls-device-panel:last-child { border-bottom: none; }
 }
+/* ── SHARED WORKSPACES FEATURE PAGE ── */
+.ws-visual {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ws-invite-card {
+  background: #1a1a1c;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px 14px 0 0;
+  border-bottom: none;
+  overflow: hidden;
+}
+
+.ws-card-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: #1e1e20;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.ws-card-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.04em;
+}
+
+.ws-card-body { padding: 20px; }
+
+.ws-invite-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.22);
+  margin-bottom: 12px;
+}
+
+.ws-invite-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 9px 12px;
+  margin-bottom: 10px;
+}
+
+.ws-invite-input-text {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  flex: 1;
+}
+
+.ws-invite-input-pill {
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.07);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.ws-invite-btn {
+  width: 100%;
+  background: #fff;
+  color: #111;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.ws-members-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.22);
+  margin-bottom: 12px;
+}
+
+.ws-member-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.ws-member-row:last-child { border-bottom: none; }
+
+.ws-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.ws-member-info { flex: 1; }
+.ws-member-name { font-size: 12px; color: rgba(255,255,255,0.65); font-weight: 500; }
+.ws-member-email { font-size: 11px; color: rgba(255,255,255,0.28); }
+
+.ws-member-role {
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.06);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.ws-doc-side {
+  background: #161618;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px 14px 0 0;
+  border-bottom: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ws-doc-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: #1e1e20;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  gap: 8px;
+}
+
+.ws-doc-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  flex: 1;
+}
+
+.ws-presence { display: flex; }
+
+.ws-presence-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #1e1e20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 600;
+  margin-left: -4px;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.ws-presence-avatar:first-child { margin-left: 0; }
+
+.ws-doc-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.ws-doc-heading {
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.22);
+  width: 45%;
+  margin-bottom: 8px;
+}
+
+.ws-line { height: 5px; border-radius: 3px; background: rgba(255,255,255,0.07); }
+.ws-line-hi { background: rgba(255,255,255,0.14); }
+
+.ws-cursor-block {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  padding-top: 18px;
+}
+
+.ws-inline-cursor {
+  width: 2px;
+  height: 16px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.ws-cursor-label {
+  font-size: 9px;
+  font-weight: 600;
+  padding: 1px 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .ws-visual { grid-template-columns: 1fr; }
+}
