@@ -3,7 +3,7 @@ export function FeaturesBento() {
     <section className="features-section" id="features">
       <div className="features-inner">
         <div className="section-eyebrow">Why TWO</div>
-        <h2>Built for how writers and founders actually work.</h2>
+        <h2>Built for focused writing. Nothing else.</h2>
 
         <div className="bento-grid">
 
