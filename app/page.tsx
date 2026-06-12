@@ -2,6 +2,7 @@ import { Navigation } from "@/components/navigation"
 import { PricingSection } from "@/components/pricing-section"
 import { FeaturesBento } from "@/components/features-bento"
 import { FaqSection } from "@/components/faq-section"
+import { CtaBand } from "@/components/cta-band"
 
 export default function Home() {
   return (
@@ -245,13 +246,7 @@ export default function Home() {
 
       <FaqSection />
 
-      <section className="cta-section">
-        <div className="cta-inner">
-          <h2>Start writing.<br />Everything else follows.</h2>
-          <p className="cta-sub">Free forever. No credit card. No Notion migration required.</p>
-          <a href="https://app.two.so/signup" className="btn-hero">Get started free →</a>
-        </div>
-      </section>
+     <CtaBand />
 
       <footer style={{ borderTop: '1px solid var(--border)' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', padding: '48px 40px 40px', gap: 40 }}>
