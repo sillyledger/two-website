@@ -23,18 +23,13 @@ export default function Roadmap() {
                 <span className="roadmap-col-label">Deployed</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Real-time collaboration</div>
-                <div className="rm-card-desc">Edit documents together with your team, live. See collaborator cursors as they type — no page reloads, no conflicts.</div>
+                <div className="rm-card-title">Split View</div>
+                <div className="rm-card-desc">Open two documents side by side in a single window. Drag the divider to resize — research on one side, writing on the other.</div>
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Multiple tabs</div>
-                <div className="rm-card-desc">Keep several docs open at once and switch between them instantly — no losing your place.</div>
-                <span className="rm-badge rm-badge-shipped">✓ Done</span>
-              </div>
-              <div className="rm-card">
-                <div className="rm-card-title">Team Workspaces</div>
-                <div className="rm-card-desc">Invite your team and collaborate in a shared workspace.</div>
+                <div className="rm-card-title">Live sync</div>
+                <div className="rm-card-desc">Changes appear instantly across all your devices — iPad, Mac, browser. Always in sync, even mid-sentence.</div>
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
             </div>
@@ -46,8 +41,8 @@ export default function Roadmap() {
                 <span className="roadmap-col-label">In progress</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Live sync</div>
-                <div className="rm-card-desc">Changes appear instantly across all your devices — iPad, Mac, browser. Always in sync, even mid-sentence.</div>
+                <div className="rm-card-title">Onboarding flow</div>
+                <div className="rm-card-desc">A guided first-run experience so new users hit the ground running.</div>
                 <span className="rm-badge rm-badge-progress">In progress</span>
               </div>
               <div className="rm-card">
@@ -56,8 +51,8 @@ export default function Roadmap() {
                 <span className="rm-badge rm-badge-progress">In progress</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Onboarding flow</div>
-                <div className="rm-card-desc">A guided first-run experience so new users hit the ground running.</div>
+                <div className="rm-card-title">Native Mac app</div>
+                <div className="rm-card-desc">A dedicated Mac experience — fast, native, lives in your dock.</div>
                 <span className="rm-badge rm-badge-progress">In progress</span>
               </div>
             </div>
@@ -73,6 +68,11 @@ export default function Roadmap() {
                 <div className="rm-card-desc">Lock sensitive folders behind a password for an extra layer of privacy.</div>
                 <span className="rm-badge rm-badge-soon">Planned</span>
               </div>
+              <div className="rm-card">
+                <div className="rm-card-title">Native iPad app</div>
+                <div className="rm-card-desc">A dedicated iPad experience built for the way you think and write.</div>
+                <span className="rm-badge rm-badge-soon">Planned</span>
+              </div>
             </div>
 
           </div>
@@ -82,6 +82,13 @@ export default function Roadmap() {
           <div className="roadmap-previously">
             <div className="roadmap-later-title">Previously deployed</div>
             <div className="roadmap-prev-grid">
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Activity feed</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Real-time collaboration</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Multiple tabs</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Team Workspaces</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Planner</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Internal doc links</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Library</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Auth &amp; accounts</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Rich text editor</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> PWA &amp; home screen</div>
@@ -90,19 +97,12 @@ export default function Roadmap() {
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Autosave &amp; save indicator</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Settings &amp; appearance</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Dark &amp; light mode</div>
-              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Activity feed</div>
-              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Planner</div>
-              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Internal doc links</div>
-              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Library</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Favorites</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Restore recently deleted files</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Image upload</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Billing &amp; Pro tier</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Export to PDF &amp; Markdown</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Storage tracking</div>
-              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Team Workspaces</div>
-              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Real-time collaboration</div>
-              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Multiple tabs</div>
             </div>
           </div>
 
@@ -113,10 +113,6 @@ export default function Roadmap() {
             <div className="roadmap-later-item">
               <div className="roadmap-later-name">Offline-first</div>
               <div className="roadmap-later-desc">Full functionality without an internet connection — always.</div>
-            </div>
-            <div className="roadmap-later-item">
-              <div className="roadmap-later-name">Native iPad app</div>
-              <div className="roadmap-later-desc">A dedicated iPad experience built for the way you think and write.</div>
             </div>
           </div>
 
