@@ -989,12 +989,11 @@ h2 {
 
 .faq-q {
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 500;
   color: #1a1a18;
   letter-spacing: -0.2px;
   line-height: 1.35;
 }
-
 .faq-a {
   font-size: 17px;
   color: #1a1a18;
