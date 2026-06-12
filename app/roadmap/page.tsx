@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/navigation"
+import { CtaBand } from "@/components/cta-band"
 
 export default function Roadmap() {
   return (
@@ -116,10 +117,7 @@ export default function Roadmap() {
             </div>
           </div>
 
-          <div className="roadmap-cta">
-            <p>Have a feature request? We&apos;d love to hear it.</p>
-            <a href="mailto:hey@two.so" className="btn-hero">Suggest a feature →</a>
-          </div>
+          <CtaBand />
 
         </div>
       </section>
