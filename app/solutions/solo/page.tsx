@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/navigation"
+import { CtaBand } from "@/components/cta-band"
 
 export default function ForSolo() {
   return (
@@ -82,11 +83,7 @@ export default function ForSolo() {
               <div className="roadmap-later-desc">Build a second brain that actually stays organised</div>
             </div>
           </div>
-
-          <div className="roadmap-cta">
-            <p>Ready to simplify how you work?</p>
-            <a href="https://app.two.so/signup" className="btn-hero">Start for free →</a>
-          </div>
+<CtaBand />
 
         </div>
       </section>
