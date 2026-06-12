@@ -14,7 +14,10 @@ export default function SplitViewPage() {
             <span className="sv-hero-bc-cur">Split View</span>
           </div>
           <h1 className="sv-hero-title">Two docs.<br />One screen.</h1>
-          <p className="sv-hero-sub">Research on the left, writing on the right. Drag the divider and reshape your workspace however you think.</p>
+          <div className="sv-hero-cols">
+            <p className="sv-hero-col">Research on the left, writing on the right. Drag the divider and reshape your workspace however you think.</p>
+            <p className="sv-hero-col">Open any two docs from your library. Your layout saves automatically. No setup, no reconfiguring. Just open TWO and pick up exactly where you left off.</p>
+          </div>
         </div>
 
         {/* Full-width app frame bleeds off bottom */}
