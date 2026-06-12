@@ -16,7 +16,7 @@ export default function Home() {
         </div>
         <h1>Beautiful docs for people who care about their work.</h1>
         <p className="hero-sub">
-          Beautiful, focused writing for creatives, solo operators, and small teams. Web now. Mac and iPad coming soon.
+          Web now. Mac and iPad coming soon.
         </p>
         <div className="hero-actions">
           <a href="https://app.two.so/signup" className="btn-hero">Start for free →</a>
