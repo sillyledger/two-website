@@ -44,7 +44,7 @@ export function FaqSection() {
           <div className="section-eyebrow">FAQ</div>
           <h2 className="faq-heading">Things people ask.</h2>
           <p className="faq-sub">
-            Can&apos;t find what you&apos;re looking for?{" "}
+            Can&apos;t find what you&apos;re looking for?<br />
             <a href="https://www.two.so/resources/help">Browse our Help &amp; Guides →</a>
           </p>
         </div>
