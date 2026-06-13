@@ -3218,7 +3218,7 @@ footer {
 }
 
 .compare-verdict-card {
-  background: #f7f6f2;
+  background: #f9f8f6;
   border: 0.5px solid #e4e2dc;
   border-radius: 12px;
   padding: 22px;
@@ -3279,7 +3279,7 @@ footer {
 }
 
 .compare-bento-cell {
-  background: #f7f6f2;
+  background: #f9f8f6;
   border-radius: 12px;
   padding: 22px;
   border: 0.5px solid #e4e2dc;
@@ -3345,7 +3345,7 @@ footer {
 }
 
 .compare-table thead tr {
-  background: #f0ede6;
+  background: #f9f8f6;
 }
 
 .compare-th {
