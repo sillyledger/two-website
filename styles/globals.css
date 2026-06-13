@@ -3196,7 +3196,7 @@ footer {
 }
 
 .compare-tab {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   padding: 5px 14px;
   border-radius: 100px;
@@ -3218,7 +3218,7 @@ footer {
 }
 
 .compare-verdict-card {
-  background: #fff;
+  background: #f7f6f2;
   border: 0.5px solid #e4e2dc;
   border-radius: 12px;
   padding: 22px;
@@ -3242,9 +3242,9 @@ footer {
 }
 
 .compare-app-tagline {
-  font-size: 15px;
+  font-size: 16px;
   color: #1a1a18;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 14px;
 }
 
@@ -3255,7 +3255,7 @@ footer {
 }
 
 .compare-pill {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   padding: 3px 10px;
   border-radius: 100px;
@@ -3267,8 +3267,8 @@ footer {
 }
 
 .compare-pill-neutral {
-  background: #f0ede6;
-  color: #888880;
+  background: #e4e2dc;
+  color: #555552;
 }
 
 .compare-bento {
@@ -3291,7 +3291,7 @@ footer {
 }
 
 .compare-bento-label {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -3300,7 +3300,7 @@ footer {
 }
 
 .compare-bento-dark .compare-bento-label {
-  color: #444442;
+  color: #555552;
 }
 
 .compare-bento-stat {
@@ -3309,13 +3309,13 @@ footer {
   letter-spacing: -2px;
   color: #1a1a18;
   line-height: 1;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .compare-bento-sub {
   font-size: 16px;
   color: #888880;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .compare-bento-body {
@@ -3345,17 +3345,17 @@ footer {
 }
 
 .compare-table thead tr {
-  background: #f7f6f2;
+  background: #f0ede6;
 }
 
 .compare-th {
-  padding: 10px 16px;
+  padding: 12px 16px;
   text-align: left;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: #aaa89e;
+  color: #888880;
   border-bottom: 0.5px solid #e4e2dc;
 }
 
@@ -3364,9 +3364,9 @@ footer {
 }
 
 .compare-td {
-  padding: 12px 16px;
+  padding: 14px 16px;
   border-bottom: 0.5px solid #e4e2dc;
-  font-size: 14px;
+  font-size: 16px;
   color: #1a1a18;
 }
 
@@ -3375,21 +3375,22 @@ footer {
 }
 
 .compare-td-feature {
-  color: #1a1a18;
-  font-size: 16px;
+  color: #555552;
 }
 
 .compare-check {
   color: #1D9E75;
+  font-size: 16px;
   font-weight: 600;
 }
 
 .compare-cross {
-  color: #888880;
+  color: #aaa89e;
+  font-size: 16px;
 }
 
 .compare-soon {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: #BA7517;
 }
