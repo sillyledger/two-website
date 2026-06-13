@@ -3183,7 +3183,7 @@ footer {
 
 .compare-sub-dark {
   font-size: 16px;
-  color: #666662;
+  color: #888880;
   line-height: 1.6;
   max-width: 500px;
   margin-bottom: 28px;
@@ -3197,11 +3197,11 @@ footer {
 
 .compare-tab {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   padding: 5px 14px;
   border-radius: 100px;
   border: 0.5px solid #2e2e2c;
-  color: #666662;
+  color: #555552;
   cursor: pointer;
 }
 
@@ -3221,31 +3221,28 @@ footer {
   background: #f9f8f6;
   border: 0.5px solid #e4e2dc;
   border-radius: 12px;
-  padding: 22px;
+  padding: 24px;
 }
 
 .compare-verdict-two {
-  border: 1.5px solid #1a1a18;
+  border: 0.5px solid #1a1a18;
 }
 
 .compare-app-name {
   font-size: 11px;
   font-weight: 600;
   color: #888880;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-.compare-verdict-two .compare-app-name {
-  color: #1a1a18;
-}
-
 .compare-app-tagline {
   font-size: 16px;
+  font-weight: 400;
   color: #1a1a18;
   line-height: 1.6;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .compare-pill-row {
@@ -3256,19 +3253,11 @@ footer {
 
 .compare-pill {
   font-size: 12px;
-  font-weight: 500;
-  padding: 3px 10px;
+  font-weight: 400;
+  padding: 4px 12px;
   border-radius: 100px;
-}
-
-.compare-pill-dark {
-  background: #1a1a18;
-  color: #f5f5f0;
-}
-
-.compare-pill-neutral {
-  background: #e4e2dc;
-  color: #555552;
+  border: 0.5px solid #e4e2dc;
+  color: #1a1a18;
 }
 
 .compare-bento {
@@ -3281,7 +3270,7 @@ footer {
 .compare-bento-cell {
   background: #f9f8f6;
   border-radius: 12px;
-  padding: 22px;
+  padding: 24px;
   border: 0.5px solid #e4e2dc;
 }
 
@@ -3295,7 +3284,7 @@ footer {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #aaa89e;
+  color: #888880;
   margin-bottom: 10px;
 }
 
@@ -3314,14 +3303,16 @@ footer {
 
 .compare-bento-sub {
   font-size: 16px;
-  color: #888880;
+  font-weight: 400;
+  color: #1a1a18;
   line-height: 1.6;
 }
 
 .compare-bento-body {
   font-size: 16px;
+  font-weight: 400;
   color: #f5f5f0;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .compare-table-label {
@@ -3329,7 +3320,7 @@ footer {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #aaa89e;
+  color: #888880;
   margin-bottom: 14px;
 }
 
@@ -3367,6 +3358,7 @@ footer {
   padding: 14px 16px;
   border-bottom: 0.5px solid #e4e2dc;
   font-size: 16px;
+  font-weight: 400;
   color: #1a1a18;
 }
 
@@ -3381,7 +3373,6 @@ footer {
 .compare-check {
   color: #1D9E75;
   font-size: 16px;
-  font-weight: 600;
 }
 
 .compare-cross {
@@ -3390,8 +3381,8 @@ footer {
 }
 
 .compare-soon {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 400;
   color: #BA7517;
 }
 
