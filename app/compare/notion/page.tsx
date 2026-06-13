@@ -6,23 +6,29 @@ export default function CompareNotion() {
     <>
       <Navigation />
 
-      <section className="compare-hero">
-        <div className="section-eyebrow">Comparisons</div>
-        <h1 className="compare-h1">TWO vs Notion</h1>
-        <p className="compare-sub">Notion is a database tool that happens to have a text editor. TWO is a writing app — fast to open, zero setup, nothing to configure.</p>
-      </section>
-
       <section className="compare-section">
         <div className="compare-inner">
+
+          <div className="compare-hero-dark">
+            <div className="section-eyebrow" style={{ color: '#555552' }}>Comparisons</div>
+            <h1 className="compare-h1-dark">TWO vs Notion.</h1>
+            <p className="compare-sub-dark">One is a writing app. The other is a database that also lets you write. They&apos;re not the same thing.</p>
+            <div className="compare-tabs">
+              <span className="compare-tab compare-tab-active">vs Notion</span>
+              <span className="compare-tab">vs Apple Notes</span>
+              <span className="compare-tab">vs Bear</span>
+              <span className="compare-tab">vs Obsidian</span>
+            </div>
+          </div>
 
           <div className="compare-verdict-grid">
             <div className="compare-verdict-card compare-verdict-two">
               <div className="compare-app-name">TWO</div>
               <div className="compare-app-tagline">A writing app that opens fast and gets out of your way. No setup. No blocks. Just write.</div>
               <div className="compare-pill-row">
-                <span className="compare-pill compare-pill-two">Writing-first</span>
-                <span className="compare-pill compare-pill-two">No setup</span>
-                <span className="compare-pill compare-pill-two">Focused</span>
+                <span className="compare-pill compare-pill-dark">Writing-first</span>
+                <span className="compare-pill compare-pill-dark">No setup</span>
+                <span className="compare-pill compare-pill-dark">Focused</span>
               </div>
             </div>
             <div className="compare-verdict-card">
@@ -36,13 +42,31 @@ export default function CompareNotion() {
             </div>
           </div>
 
+          <div className="compare-bento">
+            <div className="compare-bento-cell">
+              <div className="compare-bento-label">Time to first word in TWO</div>
+              <div className="compare-bento-stat">2s</div>
+              <div className="compare-bento-sub">Open, start typing. Nothing to configure first.</div>
+            </div>
+            <div className="compare-bento-cell">
+              <div className="compare-bento-label">Notion setup time</div>
+              <div className="compare-bento-stat">~20m</div>
+              <div className="compare-bento-sub">Workspace, template, database — then you write.</div>
+            </div>
+            <div className="compare-bento-cell compare-bento-dark">
+              <div className="compare-bento-label">The honest take</div>
+              <p className="compare-bento-body">Notion is powerful for databases and wikis. If you just want to write, TWO is faster and built for exactly that.</p>
+            </div>
+          </div>
+
+          <div className="compare-table-label">Feature comparison</div>
           <div className="compare-table-wrap">
             <table className="compare-table">
               <thead>
                 <tr>
-                  <th className="compare-th">Feature</th>
-                  <th className="compare-th compare-th-two">TWO</th>
-                  <th className="compare-th">Notion</th>
+                  <th className="compare-th" style={{ width: '44%' }}>Feature</th>
+                  <th className="compare-th compare-th-two" style={{ width: '28%' }}>TWO</th>
+                  <th className="compare-th" style={{ width: '28%' }}>Notion</th>
                 </tr>
               </thead>
               <tbody>
@@ -93,23 +117,6 @@ export default function CompareNotion() {
                 </tr>
               </tbody>
             </table>
-          </div>
-
-          <div className="compare-bento">
-            <div className="compare-bento-cell compare-bento-accent">
-              <div className="compare-bento-label">Time to first word</div>
-              <div className="compare-bento-stat">2s</div>
-              <div className="compare-bento-sub">Open TWO, start typing. No template picker, no block chooser.</div>
-            </div>
-            <div className="compare-bento-cell">
-              <div className="compare-bento-label">Notion setup time</div>
-              <div className="compare-bento-stat">~20 min</div>
-              <div className="compare-bento-sub">Create a workspace, pick a template, configure your database, then write.</div>
-            </div>
-            <div className="compare-bento-cell compare-bento-wide">
-              <div className="compare-honest-take-label">The honest take</div>
-              <p className="compare-honest-take-body">Notion is genuinely powerful if you need databases, project tracking, or wikis. If you just want to write — TWO is faster, cleaner, and built specifically for that.</p>
-            </div>
           </div>
 
         </div>
