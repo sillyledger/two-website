@@ -14,11 +14,11 @@ export default function CompareNotion() {
             <h1 className="compare-h1-dark">TWO vs Notion.</h1>
             <p className="compare-sub-dark">One is a writing app. The other is a database that also lets you write. They&apos;re not the same thing.</p>
             <div className="compare-tabs">
-              <span className="compare-tab compare-tab-active">vs Notion</span>
-              <span className="compare-tab">vs Apple Notes</span>
-              <span className="compare-tab">vs Bear</span>
-              <span className="compare-tab">vs Obsidian</span>
-            </div>
+  <span className="compare-tab compare-tab-active">vs Notion</span>
+  <a href="/compare/apple-notes" className="compare-tab">vs Apple Notes</a>
+  <a href="/compare/bear" className="compare-tab">vs Bear</a>
+  <a href="/compare/obsidian" className="compare-tab">vs Obsidian</a>
+</div>
           </div>
 
           <div className="compare-verdict-grid">
