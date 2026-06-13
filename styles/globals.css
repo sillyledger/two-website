@@ -3313,14 +3313,14 @@ footer {
 }
 
 .compare-bento-sub {
-  font-size: 13px;
+  font-size: 16px;
   color: #888880;
   line-height: 1.5;
 }
 
 .compare-bento-body {
-  font-size: 14px;
-  color: #888880;
+  font-size: 16px;
+  color: #f5f5f0;
   line-height: 1.65;
 }
 
@@ -3375,8 +3375,8 @@ footer {
 }
 
 .compare-td-feature {
-  color: #555552;
-  font-size: 13px;
+  color: #1a1a18;
+  font-size: 16px;
 }
 
 .compare-check {
@@ -3385,7 +3385,7 @@ footer {
 }
 
 .compare-cross {
-  color: #ccc9c0;
+  color: #888880;
 }
 
 .compare-soon {
