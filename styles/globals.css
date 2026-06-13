@@ -3203,6 +3203,7 @@ footer {
   border: 0.5px solid #2e2e2c;
   color: #555552;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .compare-tab-active {
