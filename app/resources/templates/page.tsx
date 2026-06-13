@@ -6,47 +6,52 @@ import { CtaBand } from "@/components/cta-band"
 const templates = [
   {
     key: 'meeting',
-    title: 'Meeting Notes',
+    title: 'Meeting notes',
     category: 'Business',
+    catKey: 'business',
     desc: 'Agenda, decisions, and action items — all in one structured doc.',
     slug: 'meeting-notes',
-    color: '#4a8fd4',
+    img: '/template-meeting.png',
   },
   {
     key: 'blog',
-    title: 'Blog Post',
+    title: 'Blog post',
     category: 'Creative',
+    catKey: 'creative',
     desc: 'Hook, three sections, CTA, and a pre-publish checklist.',
     slug: 'blog-post',
-    color: '#c96b8c',
+    img: '/template-blog.png',
   },
   {
     key: 'product',
-    title: 'Product Brief',
+    title: 'Product brief',
     category: 'Strategy',
+    catKey: 'strategy',
     desc: 'Problem, users, goals, scope, and risk — in one tight doc.',
     slug: 'product-brief',
-    color: '#7a6fd4',
+    img: '/template-product.png',
   },
   {
     key: 'weekly',
-    title: 'Weekly Review',
+    title: 'Weekly review',
     category: 'Personal',
+    catKey: 'personal',
     desc: 'Wins, blockers, priorities, and metrics — every week, sorted.',
     slug: 'weekly-review',
-    color: '#4aad6e',
+    img: '/template-weekly.png',
   },
   {
     key: 'okr',
-    title: 'OKR Tracker',
+    title: 'OKR tracker',
     category: 'Strategy',
+    catKey: 'strategy',
     desc: 'Three objectives, key results, and progress targets — all tracked.',
     slug: 'okr-tracker',
-    color: '#d4943a',
+    img: '/template-okr.png',
   },
 ]
 
-const categories = ['All', 'Strategy', 'Business', 'Creative', 'Personal']
+const categories = ['All', 'Strategy', 'Business', 'Creative', 'Personal', 'Finance', 'Research']
 
 export default function TemplatesPage() {
   const [active, setActive] = useState('All')
@@ -81,11 +86,11 @@ export default function TemplatesPage() {
         .templates-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 12px;
+          gap: 16px;
         }
         .template-card {
           background: #fff;
-          border: 0.5px solid #e4e2dc;
+          border: 1px solid #e8e6e0;
           border-radius: 12px;
           overflow: hidden;
           display: flex;
@@ -100,25 +105,27 @@ export default function TemplatesPage() {
           display: inline-block;
           font-size: 13px;
           font-weight: 500;
-          color: #f9f8f6;
-          background: #1a1a18;
-          border: none;
+          color: #1a1a18;
+          background: transparent;
+          border: 1px solid #dddbd4;
           border-radius: 7px;
           padding: 8px 16px;
           text-decoration: none;
           font-family: 'DM Sans', system-ui, sans-serif;
-          transition: background 0.15s;
+          transition: background 0.15s, border-color 0.15s;
         }
-        .template-use-btn:hover { background: #2e2e2c; }
+        .template-use-btn:hover {
+          background: #f0ede6;
+          border-color: #bbb9b2;
+        }
         @media (max-width: 768px) {
-          .templates-hero { padding: 56px 24px 36px; }
-          .templates-filters { padding: 0 24px 24px; }
+          .templates-hero { padding: 48px 24px 32px; }
+          .templates-filters { padding: 0 24px 20px; }
           .templates-grid-wrap { padding: 0 24px 72px; }
           .templates-grid { grid-template-columns: 1fr; }
         }
       `}</style>
 
-      {/* Hero */}
       <section className="templates-hero">
         <p className="section-eyebrow">Templates</p>
         <h1 style={{
@@ -138,7 +145,6 @@ export default function TemplatesPage() {
         }}>Free, structured docs for every workflow. Open any template in TWO and make it yours in seconds.</p>
       </section>
 
-      {/* Filter pills */}
       <div className="templates-filters">
         {categories.map(cat => (
           <button
@@ -162,47 +168,37 @@ export default function TemplatesPage() {
         ))}
       </div>
 
-      {/* Grid */}
       <div className="templates-grid-wrap">
         <p style={{
           fontSize: '12px',
           color: '#aaa89e',
           marginBottom: '20px',
-          letterSpacing: '0.02em',
         }}>{filtered.length} template{filtered.length !== 1 ? 's' : ''}</p>
 
         <div className="templates-grid">
           {filtered.map(t => (
             <div key={t.key} className="template-card">
-              {/* Doc preview */}
               <div style={{
-                height: '160px',
-                background: '#f9f8f6',
-                borderBottom: '0.5px solid #e4e2dc',
-                padding: '20px 20px 0',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '8px',
+                height: '200px',
                 overflow: 'hidden',
+                borderBottom: '1px solid #e8e6e0',
+                background: '#0d0d0d',
               }}>
-                <div style={{ height: '3px', width: '40%', borderRadius: '2px', background: t.color }} />
-                <div style={{ height: '9px', width: '65%', borderRadius: '4px', background: 'rgba(26,26,24,0.12)' }} />
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', marginTop: '4px' }}>
-                  {[80, 95, 70, 85, 60].map((w, i) => (
-                    <div key={i} style={{ height: '5px', width: w + '%', borderRadius: '3px', background: 'rgba(26,26,24,0.07)' }} />
-                  ))}
-                </div>
-                <div style={{ marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '5px' }}>
-                  {[75, 90].map((w, i) => (
-                    <div key={i} style={{ height: '5px', width: w + '%', borderRadius: '3px', background: 'rgba(26,26,24,0.05)' }} />
-                  ))}
-                </div>
+                <img
+                  src={t.img}
+                  alt={t.title}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'top center',
+                    display: 'block',
+                  }}
+                />
               </div>
-
-              {/* Info */}
               <div style={{ padding: '18px 20px 14px', flex: 1 }}>
                 <p style={{
-                  fontSize: '10px',
+                  fontSize: '11px',
                   fontWeight: 600,
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
@@ -223,8 +219,6 @@ export default function TemplatesPage() {
                   opacity: 0.6,
                 }}>{t.desc}</p>
               </div>
-
-              {/* CTA */}
               <div style={{ padding: '0 20px 18px' }}>
                 <a href={`https://app.two.so/new?template=${t.slug}`} className="template-use-btn">
                   Use template →
