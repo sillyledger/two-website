@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Navigation } from "@/components/navigation"
 import { CtaBand } from "@/components/cta-band"
+import { FaqSection } from "@/components/faq-section"
 
 declare global {
   interface Window {
@@ -153,35 +154,9 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="faq-section">
-        <div className="pricing-inner">
-          <h2 className="faq-heading">Frequently asked questions</h2>
-          <div className="faq-list">
-            <div className="faq-item">
-              <div className="faq-q">Can I switch plans later?</div>
-              <div className="faq-a">Yes — upgrade or downgrade at any time. If you upgrade mid-cycle, you&apos;re only charged the difference.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">What happens after my free trial?</div>
-              <div className="faq-a">You&apos;re moved to the Free plan automatically. No surprise charges, no credit card needed to start.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">Is the Founding Member deal really lifetime?</div>
-              <div className="faq-a">Yes. One payment, full Pro access forever — including every feature added to the Pro tier in the future.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">Do you offer refunds?</div>
-              <div className="faq-a">We offer a 14-day money-back guarantee on all paid plans. Email hey@two.so and we&apos;ll sort it out.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">What&apos;s the difference between monthly and yearly?</div>
-              <div className="faq-a">Yearly billing works out to $5/month ($60/year) — saving you $12 compared to paying monthly. Same features, same access.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-<CtaBand />
+      <FaqSection />
+
+      <CtaBand />
 
       <footer>
         <div className="footer-left">TWO — A better place to think and write.</div>
