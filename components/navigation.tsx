@@ -110,6 +110,7 @@ export function Navigation() {
           </li>
           <li><a href="/pricing">Pricing</a></li>
           <li><a href="/roadmap">Roadmap</a></li>
+          <li><a href="https://www.sorano.space/two-docs/changelog" target="_blank" rel="noopener noreferrer">Changelog</a></li>
         </ul>
         <div className="nav-cta">
           <a href="https://app.two.so/login" className="btn-login">Log in</a>
@@ -156,6 +157,7 @@ export function Navigation() {
             <a href="https://app.two.so" className="mobile-menu-item" onClick={() => setMobileOpen(false)}>Web App</a>
             <a href="/pricing" className="mobile-menu-item" onClick={() => setMobileOpen(false)}>Pricing</a>
             <a href="/roadmap" className="mobile-menu-item" onClick={() => setMobileOpen(false)}>Roadmap</a>
+            <a href="https://www.sorano.space/two-docs/changelog" target="_blank" rel="noopener noreferrer" className="mobile-menu-item" onClick={() => setMobileOpen(false)}>Changelog</a>
           </div>
           <div className="mobile-menu-actions">
             <a href="https://app.two.so/login" className="btn-login" style={{ flex: 1, textAlign: 'center' }}>Log in</a>
