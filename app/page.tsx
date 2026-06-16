@@ -277,6 +277,7 @@ export default function Home() {
               <a href="https://two.so/#features" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Features</a>
               <a href="https://two.so/#pricing" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Pricing</a>
               <a href="https://two.so/roadmap" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Roadmap</a>
+              <a href="https://www.sorano.space/two-docs/changelog" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Changelog</a>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted-foreground)', marginBottom: 4 }}>Compare</span>
