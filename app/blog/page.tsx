@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { supabase } from '../../lib/supabase'
 
-export const revalidate = 3600
+export const revalidate = 0
 
 type Post = {
   id: string
