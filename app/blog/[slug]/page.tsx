@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { supabase } from '../../../lib/supabase'
+import { createClient } from '../../../lib/supabase'
 
 export const revalidate = 0
 
@@ -9,6 +9,8 @@ type Props = {
 }
 
 export default async function BlogPostPage({ params }: Props) {
+  const supabase = createClient()
+
   const { data: post } = await supabase
     .from('posts')
     .select('*')
