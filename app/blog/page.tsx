@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { supabase } from '../../lib/supabase'
+import { createClient } from '../../lib/supabase'
 
 export const revalidate = 0
 
@@ -12,6 +12,8 @@ type Post = {
 }
 
 export default async function BlogPage() {
+  const supabase = createClient()
+
   const { data: posts } = await supabase
     .from('posts')
     .select('id, title, slug, seo_description, published_at')
