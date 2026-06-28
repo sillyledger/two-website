@@ -4,17 +4,14 @@ import { createClient } from '../../../lib/supabase'
 
 export const revalidate = 0
 
-type Props = {
-  params: { slug: string }
-}
-
-export default async function BlogPostPage({ params }: Props) {
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
   const supabase = createClient()
 
   const { data: post } = await supabase
     .from('posts')
     .select('*')
-    .eq('slug', params.slug)
+    .eq('slug', slug)
     .eq('target_site', 'two.so')
     .eq('status', 'published')
     .single()
