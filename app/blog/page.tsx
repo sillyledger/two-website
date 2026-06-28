@@ -7,15 +7,16 @@ type Post = {
   id: string
   title: string
   slug: string
-  excerpt: string | null
+  seo_description: string | null
   published_at: string | null
 }
 
 export default async function BlogPage() {
   const { data: posts } = await supabase
-    .from('two_posts')
-    .select('id, title, slug, excerpt, published_at')
-    .eq('published', true)
+    .from('posts')
+    .select('id, title, slug, seo_description, published_at')
+    .eq('target_site', 'two.so')
+    .eq('status', 'published')
     .order('published_at', { ascending: false })
 
   return (
@@ -48,9 +49,9 @@ export default async function BlogPage() {
                   <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 400, lineHeight: 1.15, letterSpacing: '-0.02em', color: 'var(--foreground)', marginBottom: '16px' }}>
                     {post.title}
                   </h2>
-                  {post.excerpt && (
+                  {post.seo_description && (
                     <p style={{ fontSize: '15px', fontWeight: 300, color: 'var(--muted-foreground)', lineHeight: 1.65, marginBottom: '20px' }}>
-                      {post.excerpt}
+                      {post.seo_description}
                     </p>
                   )}
                   <span style={{ fontSize: '13px', fontWeight: 500, color: 'var(--accent-dim)', letterSpacing: '0.01em' }}>
