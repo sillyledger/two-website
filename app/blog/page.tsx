@@ -32,213 +32,208 @@ export default async function BlogPage() {
   const rest = posts?.slice(1) ?? []
 
   return (
-    <main style={{ paddingTop: '120px', minHeight: '100vh', background: 'var(--background)' }}>
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 32px 120px' }}>
+    <>
+      <style>{`
+        .blog-card {
+          background: var(--card, #111);
+          border: 1px solid var(--border);
+          border-radius: 16px;
+          transition: border-color 0.2s ease;
+          cursor: pointer;
+          text-decoration: none;
+          display: block;
+        }
+        .blog-card:hover {
+          border-color: var(--foreground);
+        }
+      `}</style>
 
-        {/* Header */}
-        <div style={{ marginBottom: '64px' }}>
-          <p style={{
-            fontSize: '11px',
-            fontWeight: 500,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            color: 'var(--muted-foreground)',
-            marginBottom: '20px',
-          }}>
-            Blog
-          </p>
-          <h1 style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(36px, 5vw, 60px)',
-            fontWeight: 400,
-            lineHeight: 1.05,
-            letterSpacing: '-0.03em',
-            color: 'var(--foreground)',
-            marginBottom: '16px',
-            maxWidth: '640px',
-          }}>
-            Thoughts on writing<br />and building TWO.
-          </h1>
-          <p style={{
-            fontSize: '16px',
-            fontWeight: 300,
-            color: 'var(--muted-foreground)',
-            lineHeight: 1.6,
-          }}>
-            Ideas on collaboration, focus, and the tools we use to think.
-          </p>
-        </div>
+      <main style={{ paddingTop: '120px', minHeight: '100vh', background: 'var(--background)' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 32px 120px' }}>
 
-        {/* Empty state */}
-        {!posts || posts.length === 0 ? (
-          <div style={{
-            background: 'var(--card)',
-            border: '1px solid var(--border)',
-            borderRadius: '16px',
-            padding: '48px',
-            color: 'var(--muted-foreground)',
-            fontSize: '15px',
-          }}>
-            No posts yet. Check back soon.
+          {/* Header */}
+          <div style={{ marginBottom: '64px' }}>
+            <p style={{
+              fontSize: '11px',
+              fontWeight: 500,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: 'var(--muted-foreground)',
+              marginBottom: '20px',
+            }}>
+              Blog
+            </p>
+            <h1 style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(36px, 5vw, 60px)',
+              fontWeight: 400,
+              lineHeight: 1.05,
+              letterSpacing: '-0.03em',
+              color: 'var(--foreground)',
+              marginBottom: '16px',
+              maxWidth: '640px',
+            }}>
+              Thoughts on writing<br />and building TWO.
+            </h1>
+            <p style={{
+              fontSize: '16px',
+              fontWeight: 300,
+              color: 'var(--muted-foreground)',
+              lineHeight: 1.6,
+            }}>
+              Ideas on collaboration, focus, and the tools we use to think.
+            </p>
           </div>
-        ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
 
-            {/* Featured post — full width tall card */}
-            {featured && (
-              <Link
-                href={`/blog/${featured.slug}`}
-                style={{ textDecoration: 'none', display: 'block' }}
-              >
-                <article style={{
-                  background: 'var(--card, #111)',
-                  border: '1px solid var(--border)',
-                  borderRadius: '16px',
-                  padding: '48px',
-                  transition: 'border-color 0.2s ease',
-                  cursor: 'pointer',
-                }}
-                  onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--foreground)')}
-                  onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border)')}
-                >
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '640px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                      <span style={{
-                        fontSize: '10px',
-                        fontWeight: 600,
-                        letterSpacing: '0.1em',
-                        textTransform: 'uppercase',
-                        color: 'var(--foreground)',
-                        background: 'var(--border)',
-                        padding: '4px 10px',
-                        borderRadius: '999px',
-                      }}>
-                        Latest
-                      </span>
-                      {featured.published_at && (
+          {/* Empty state */}
+          {!posts || posts.length === 0 ? (
+            <div style={{
+              background: 'var(--card, #111)',
+              border: '1px solid var(--border)',
+              borderRadius: '16px',
+              padding: '48px',
+              color: 'var(--muted-foreground)',
+              fontSize: '15px',
+            }}>
+              No posts yet. Check back soon.
+            </div>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+
+              {/* Featured post */}
+              {featured && (
+                <Link href={`/blog/${featured.slug}`} className="blog-card">
+                  <div style={{ padding: '48px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '640px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                         <span style={{
-                          fontSize: '11px',
-                          fontWeight: 400,
-                          letterSpacing: '0.06em',
+                          fontSize: '10px',
+                          fontWeight: 600,
+                          letterSpacing: '0.1em',
                           textTransform: 'uppercase',
-                          color: 'var(--muted-foreground)',
+                          color: 'var(--foreground)',
+                          background: 'var(--border)',
+                          padding: '4px 10px',
+                          borderRadius: '999px',
                         }}>
-                          {formatDate(featured.published_at)}
+                          Latest
                         </span>
-                      )}
-                    </div>
-                    <h2 style={{
-                      fontFamily: 'var(--font-display)',
-                      fontSize: 'clamp(28px, 4vw, 44px)',
-                      fontWeight: 400,
-                      lineHeight: 1.1,
-                      letterSpacing: '-0.02em',
-                      color: 'var(--foreground)',
-                    }}>
-                      {featured.title}
-                    </h2>
-                    {featured.seo_description && (
-                      <p style={{
-                        fontSize: '15px',
-                        fontWeight: 300,
-                        color: 'var(--muted-foreground)',
-                        lineHeight: 1.65,
-                      }}>
-                        {featured.seo_description}
-                      </p>
-                    )}
-                    <span style={{
-                      fontSize: '13px',
-                      fontWeight: 500,
-                      color: 'var(--foreground)',
-                      marginTop: '8px',
-                    }}>
-                      Read more →
-                    </span>
-                  </div>
-                </article>
-              </Link>
-            )}
-
-            {/* Rest — bento grid */}
-            {rest.length > 0 && (
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-                gap: '16px',
-              }}>
-                {rest.map((post: Post) => (
-                  <Link
-                    key={post.id}
-                    href={`/blog/${post.slug}`}
-                    style={{ textDecoration: 'none', display: 'block' }}
-                  >
-                    <article
-                      style={{
-                        background: 'var(--card, #111)',
-                        border: '1px solid var(--border)',
-                        borderRadius: '16px',
-                        padding: '32px',
-                        height: '100%',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '12px',
-                        transition: 'border-color 0.2s ease',
-                        cursor: 'pointer',
-                        boxSizing: 'border-box',
-                      }}
-                      onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--foreground)')}
-                      onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border)')}
-                    >
-                      {post.published_at && (
-                        <p style={{
-                          fontSize: '11px',
-                          fontWeight: 400,
-                          letterSpacing: '0.06em',
-                          textTransform: 'uppercase',
-                          color: 'var(--muted-foreground)',
-                        }}>
-                          {formatDate(post.published_at)}
-                        </p>
-                      )}
+                        {featured.published_at && (
+                          <span style={{
+                            fontSize: '11px',
+                            fontWeight: 400,
+                            letterSpacing: '0.06em',
+                            textTransform: 'uppercase',
+                            color: 'var(--muted-foreground)',
+                          }}>
+                            {formatDate(featured.published_at)}
+                          </span>
+                        )}
+                      </div>
                       <h2 style={{
                         fontFamily: 'var(--font-display)',
-                        fontSize: 'clamp(20px, 2.5vw, 26px)',
+                        fontSize: 'clamp(28px, 4vw, 44px)',
                         fontWeight: 400,
-                        lineHeight: 1.15,
+                        lineHeight: 1.1,
                         letterSpacing: '-0.02em',
                         color: 'var(--foreground)',
-                        flex: 1,
                       }}>
-                        {post.title}
+                        {featured.title}
                       </h2>
-                      {post.seo_description && (
+                      {featured.seo_description && (
                         <p style={{
-                          fontSize: '14px',
+                          fontSize: '15px',
                           fontWeight: 300,
                           color: 'var(--muted-foreground)',
-                          lineHeight: 1.6,
+                          lineHeight: 1.65,
                         }}>
-                          {post.seo_description}
+                          {featured.seo_description}
                         </p>
                       )}
                       <span style={{
-                        fontSize: '12px',
+                        fontSize: '13px',
                         fontWeight: 500,
                         color: 'var(--foreground)',
-                        marginTop: '4px',
+                        marginTop: '8px',
                       }}>
                         Read more →
                       </span>
-                    </article>
-                  </Link>
-                ))}
-              </div>
-            )}
+                    </div>
+                  </div>
+                </Link>
+              )}
 
-          </div>
-        )}
-      </div>
-    </main>
+              {/* Bento grid */}
+              {rest.length > 0 && (
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+                  gap: '16px',
+                }}>
+                  {rest.map((post: Post) => (
+                    <Link
+                      key={post.id}
+                      href={`/blog/${post.slug}`}
+                      className="blog-card"
+                    >
+                      <div style={{
+                        padding: '32px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '12px',
+                        height: '100%',
+                        boxSizing: 'border-box',
+                      }}>
+                        {post.published_at && (
+                          <p style={{
+                            fontSize: '11px',
+                            fontWeight: 400,
+                            letterSpacing: '0.06em',
+                            textTransform: 'uppercase',
+                            color: 'var(--muted-foreground)',
+                          }}>
+                            {formatDate(post.published_at)}
+                          </p>
+                        )}
+                        <h2 style={{
+                          fontFamily: 'var(--font-display)',
+                          fontSize: 'clamp(20px, 2.5vw, 26px)',
+                          fontWeight: 400,
+                          lineHeight: 1.15,
+                          letterSpacing: '-0.02em',
+                          color: 'var(--foreground)',
+                          flex: 1,
+                        }}>
+                          {post.title}
+                        </h2>
+                        {post.seo_description && (
+                          <p style={{
+                            fontSize: '14px',
+                            fontWeight: 300,
+                            color: 'var(--muted-foreground)',
+                            lineHeight: 1.6,
+                          }}>
+                            {post.seo_description}
+                          </p>
+                        )}
+                        <span style={{
+                          fontSize: '12px',
+                          fontWeight: 500,
+                          color: 'var(--foreground)',
+                          marginTop: '4px',
+                        }}>
+                          Read more →
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+            </div>
+          )}
+        </div>
+      </main>
+    </>
   )
 }
