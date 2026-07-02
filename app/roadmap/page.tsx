@@ -24,13 +24,13 @@ export default function Roadmap() {
                 <span className="roadmap-col-label">Deployed</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Split View</div>
-                <div className="rm-card-desc">Open two documents side by side in a single window. Drag the divider to resize — research on one side, writing on the other.</div>
+                <div className="rm-card-title">Split View Docs</div>
+                <div className="rm-card-desc">View two documents side by side in one window. Drag the divider to resize — reference one doc while you write in the other.</div>
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
               <div className="rm-card">
-                <div className="rm-card-title">Live sync</div>
-                <div className="rm-card-desc">Changes appear instantly across all your devices — iPad, Mac, browser. Always in sync, even mid-sentence.</div>
+                <div className="rm-card-title">Close All Tabs</div>
+                <div className="rm-card-desc">One click to close every open tab at once, with a confirmation prompt to prevent accidental closes.</div>
                 <span className="rm-badge rm-badge-shipped">✓ Done</span>
               </div>
             </div>
@@ -103,7 +103,8 @@ export default function Roadmap() {
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Image upload</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Billing &amp; Pro tier</div>
               <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Export to PDF &amp; Markdown</div>
-              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Storage tracking</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Storage tracking &amp; settings section</div>
+              <div className="roadmap-prev-item"><span className="roadmap-prev-check">✓</span> Live sync</div>
             </div>
           </div>
 
