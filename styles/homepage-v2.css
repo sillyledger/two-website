@@ -32,7 +32,7 @@
 .homepage-v2 .hero-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:72px;align-items:center;padding-top:64px;}
 .homepage-v2 .eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;}
 .homepage-v2 .h1{font-family:var(--font-heading),'Fira Sans',sans-serif;font-weight:600;line-height:1.04;letter-spacing:-.025em;color:var(--ink);margin-bottom:26px;font-size:clamp(48px,5.6vw,76px);}
-.homepage-v2 .sub{font-size:18.5px;line-height:1.65;color:var(--muted);max-width:440px;margin-bottom:40px;}
+.homepage-v2 .sub{font-size:18.5px;line-height:1.65;color:var(--ink);max-width:440px;margin-bottom:40px;}
 .homepage-v2 .actions{display:flex;gap:14px;}
 
 .homepage-v2 .platforms{display:flex;gap:28px;padding:26px 0 46px;margin-top:64px;border-top:1px solid var(--border);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
@@ -61,7 +61,7 @@
 .homepage-v2 .s-dot{width:6px;height:6px;border-radius:50%;background:var(--indigo);}
 .homepage-v2 .s-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:48px;}
 .homepage-v2 .s-h2{font-family:var(--font-heading),'Fira Sans',sans-serif;font-weight:600;font-size:clamp(28px,3vw,40px);line-height:1.2;letter-spacing:-.01em;max-width:460px;}
-.homepage-v2 .s-desc{font-size:17px;line-height:1.65;color:var(--muted);max-width:420px;}
+.homepage-v2 .s-desc{font-size:17px;line-height:1.65;color:var(--ink);max-width:420px;}
 
 /* ---- how it works ---- */
 .homepage-v2 .how{padding-top:150px;}
@@ -80,7 +80,7 @@
 .homepage-v2 .how-pill{font-size:12.5px;color:var(--muted);background:var(--paper);border:1px solid var(--border);border-radius:100px;padding:7px 15px;}
 .homepage-v2 .how-pill.active{color:var(--indigo);background:var(--indigo-soft);border-color:transparent;}
 .homepage-v2 .how-white h3{font-family:var(--font-heading),'Fira Sans',sans-serif;font-size:22px;font-weight:600;letter-spacing:-.01em;margin-top:40px;margin-bottom:12px;}
-.homepage-v2 .how-white p{font-size:15.5px;line-height:1.65;color:var(--muted);}
+.homepage-v2 .how-white p{font-size:15.5px;line-height:1.65;color:var(--ink);}
 
 @media (max-width:900px){
   .homepage-v2 .hero-grid{grid-template-columns:1fr;}
