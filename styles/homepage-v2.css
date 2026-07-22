@@ -1,0 +1,81 @@
+/*
+  Homepage redesign (phase 1: hero + "How TWO works").
+  Everything here is nested under .homepage-v2 so it can't leak onto other
+  routes and can't be overridden by / override the shared class names
+  (.hero, .doc-card, .section-eyebrow, etc.) already defined in
+  styles/globals.css and used by pricing, roadmap, compare, and help pages.
+  Import this file only from app/page.tsx.
+*/
+
+.homepage-v2{
+  --paper:#f9f8f6;
+  --ink:#1a1a18;
+  --muted:#88847b;
+  --border:#e3e0d8;
+  --indigo:#414b8a;
+  --indigo-soft:#eceefa;
+  --clay:#b9764e;
+  --clay-soft:#f8ede3;
+
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+}
+.homepage-v2 *,.homepage-v2 *::before,.homepage-v2 *::after{box-sizing:border-box;}
+.homepage-v2 a{color:inherit;}
+
+.homepage-v2 .btn-primary{font-family:'DM Sans',sans-serif;font-size:15.5px;font-weight:500;color:var(--paper);background:var(--ink);border:none;border-radius:10px;padding:15px 28px;text-decoration:none;display:inline-block;cursor:pointer;}
+.homepage-v2 .btn-ghost{font-family:'DM Sans',sans-serif;font-size:15.5px;font-weight:500;color:var(--ink);background:none;border:1px solid var(--border);border-radius:10px;padding:15px 28px;text-decoration:none;display:inline-block;}
+
+/* ---- hero ---- */
+.homepage-v2 .hero{padding:100px 56px 0;max-width:1360px;margin:0 auto;border-top:1px solid var(--border);}
+.homepage-v2 .hero-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:72px;align-items:center;padding-top:64px;}
+.homepage-v2 .eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;}
+.homepage-v2 .h1{font-family:var(--font-heading),'Fira Sans',sans-serif;font-weight:600;line-height:1.04;letter-spacing:-.025em;color:var(--ink);margin-bottom:26px;font-size:clamp(48px,5.6vw,76px);}
+.homepage-v2 .sub{font-size:18.5px;line-height:1.65;color:var(--muted);max-width:440px;margin-bottom:40px;}
+.homepage-v2 .actions{display:flex;gap:14px;}
+
+.homepage-v2 .platforms{display:flex;gap:28px;padding:26px 0 46px;margin-top:64px;border-top:1px solid var(--border);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.homepage-v2 .platforms b{color:var(--ink);font-weight:600;}
+
+.homepage-v2 .panels{display:flex;align-items:stretch;gap:0;}
+.homepage-v2 .doc-card{background:#ffffff;border:1px solid var(--border);border-radius:16px;padding:28px 28px 32px;box-shadow:0 1px 2px rgba(20,18,10,.03), 0 16px 40px rgba(20,18,10,.05);width:100%;}
+.homepage-v2 .doc-tag{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.05em;border-radius:6px;padding:6px 12px;margin-bottom:24px;}
+.homepage-v2 .doc-tag.a{background:var(--indigo-soft);color:var(--indigo);}
+.homepage-v2 .doc-tag.b{background:var(--clay-soft);color:var(--clay);}
+.homepage-v2 .doc-line{height:10px;border-radius:5px;background:#efece5;margin-bottom:14px;}
+.homepage-v2 .doc-line.pale{background:#f3f1eb;}
+.homepage-v2 .seam{width:1px;align-self:stretch;background:repeating-linear-gradient(to bottom, #c9c6bc 0 5px, transparent 5px 12px);margin:0 32px;}
+
+/* ---- shared section scaffold (used by "how it works") ---- */
+.homepage-v2 .section{max-width:1360px;margin:0 auto;padding:0 56px 130px;}
+.homepage-v2 .section-eyebrow{display:flex;align-items:center;justify-content:center;gap:9px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:22px;}
+.homepage-v2 .section-eyebrow.left{justify-content:flex-start;}
+.homepage-v2 .s-dot{width:6px;height:6px;border-radius:50%;background:var(--indigo);}
+.homepage-v2 .s-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:48px;}
+.homepage-v2 .s-h2{font-family:var(--font-heading),'Fira Sans',sans-serif;font-weight:600;font-size:clamp(28px,3vw,40px);line-height:1.2;letter-spacing:-.01em;max-width:460px;}
+.homepage-v2 .s-desc{font-size:17px;line-height:1.65;color:var(--muted);max-width:420px;}
+
+/* ---- how it works ---- */
+.homepage-v2 .how{padding-top:150px;}
+.homepage-v2 .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+.homepage-v2 .how-card{border-radius:20px;padding:40px;min-height:360px;}
+.homepage-v2 .how-dark{background:var(--ink);}
+.homepage-v2 .how-mock{display:flex;flex-direction:column;gap:12px;}
+.homepage-v2 .how-mock-row{display:flex;gap:10px;}
+.homepage-v2 .how-mock-col{flex:1;border-radius:10px;padding:16px;background:rgba(255,255,255,.06);}
+.homepage-v2 .how-mock-col.on{background:rgba(65,75,138,.35);}
+.homepage-v2 .how-mock-line{height:6px;border-radius:3px;background:rgba(255,255,255,.16);margin-bottom:8px;}
+.homepage-v2 .how-mock-line.short{width:55%;}
+.homepage-v2 .how-mock-label{display:inline-block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.55);background:rgba(255,255,255,.08);border-radius:5px;padding:5px 10px;margin-bottom:22px;}
+.homepage-v2 .how-white{background:#ffffff;border:1px solid var(--border);display:flex;flex-direction:column;justify-content:space-between;}
+.homepage-v2 .how-pills{display:flex;gap:8px;margin-bottom:auto;}
+.homepage-v2 .how-pill{font-size:12.5px;color:var(--muted);background:var(--paper);border:1px solid var(--border);border-radius:100px;padding:7px 15px;}
+.homepage-v2 .how-pill.active{color:var(--indigo);background:var(--indigo-soft);border-color:transparent;}
+.homepage-v2 .how-white h3{font-family:var(--font-heading),'Fira Sans',sans-serif;font-size:22px;font-weight:600;letter-spacing:-.01em;margin-top:40px;margin-bottom:12px;}
+.homepage-v2 .how-white p{font-size:15.5px;line-height:1.65;color:var(--muted);}
+
+@media (max-width:900px){
+  .homepage-v2 .hero-grid{grid-template-columns:1fr;}
+  .homepage-v2 .how-grid{grid-template-columns:1fr;}
+}

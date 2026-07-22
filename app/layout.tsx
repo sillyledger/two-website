@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Fira_Sans } from "next/font/google";
 import "../styles/globals.css";
+
+const firaSans = Fira_Sans({ subsets: ["latin"], weight: ["500", "600"], variable: "--font-heading" });
 
 export const metadata: Metadata = {
   title: "TWO — Write better. Think clearer.",
@@ -13,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={firaSans.variable}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

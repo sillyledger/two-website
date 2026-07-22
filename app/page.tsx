@@ -3,26 +3,104 @@ import { PricingSection } from "@/components/pricing-section"
 import { FeaturesBento } from "@/components/features-bento"
 import { FaqSection } from "@/components/faq-section"
 import { CtaBand } from "@/components/cta-band"
+import "@/styles/homepage-v2.css"
 
 export default function Home() {
   return (
     <>
       <Navigation />
 
-      <section className="hero">
-        <div className="hero-eyebrow">
-          <div className="hero-dot"></div>
-          Now in open beta (web only)
-        </div>
-        <h1>Beautiful docs for people who care about their work.</h1>
-        <p className="hero-sub">
-          Web now. Mac and iPad coming soon.
-        </p>
-        <div className="hero-actions">
-          <a href="https://app.two.so/signup" className="btn-hero">Start for free →</a>
-          <a href="/product/features" className="btn-hero-ghost">Explore features</a>
-        </div>
-      </section>
+      <div className="homepage-v2">
+        {/* ============ HERO ============ */}
+        <section className="hero">
+          <div className="hero-grid">
+            <div>
+              <div className="eyebrow">Writing app · Web, Mac &amp; iPad</div>
+              <h1 className="h1">Two docs,<br />one screen.</h1>
+              <p className="sub">TWO puts two docs side by side on a single screen — no tabs to hunt through, no context lost switching windows.</p>
+              <div className="actions">
+                <a className="btn-primary" href="https://app.two.so/signup">Start for free</a>
+                <a className="btn-ghost" href="/roadmap">View the roadmap</a>
+              </div>
+            </div>
+            <div className="panels">
+              <div className="doc-card">
+                <span className="doc-tag a">Q3 INVESTOR UPDATE</span>
+                <div className="doc-line" style={{ width: '88%' }}></div>
+                <div className="doc-line" style={{ width: '76%' }}></div>
+                <div className="doc-line" style={{ width: '82%' }}></div>
+                <div className="doc-line" style={{ width: '60%' }}></div>
+                <div className="doc-line pale" style={{ width: '80%', marginTop: '10px' }}></div>
+                <div className="doc-line pale" style={{ width: '66%' }}></div>
+                <div className="doc-line pale" style={{ width: '72%' }}></div>
+              </div>
+              <div className="seam"></div>
+              <div className="doc-card">
+                <span className="doc-tag b">2026 GTM STRATEGY</span>
+                <div className="doc-line" style={{ width: '90%' }}></div>
+                <div className="doc-line" style={{ width: '70%' }}></div>
+                <div className="doc-line" style={{ width: '84%' }}></div>
+                <div className="doc-line" style={{ width: '58%' }}></div>
+                <div className="doc-line pale" style={{ width: '78%', marginTop: '10px' }}></div>
+                <div className="doc-line pale" style={{ width: '64%' }}></div>
+                <div className="doc-line pale" style={{ width: '70%' }}></div>
+              </div>
+            </div>
+          </div>
+          <div className="platforms">
+            <span><b>Web</b> — available now</span>
+            <span><b>Mac</b> — coming soon</span>
+            <span><b>iPad</b> — coming soon</span>
+          </div>
+        </section>
+
+        {/* ============ HOW TWO WORKS ============ */}
+        <section className="section how">
+          <div className="section-eyebrow left"><span className="s-dot"></span>How TWO works</div>
+          <div className="s-row">
+            <h2 className="s-h2">Two docs, kept in sync, out of your way.</h2>
+            <p className="s-desc">TWO holds two documents open side by side and keeps every keystroke in sync between them — so you can move between related work without breaking focus or hunting through tabs.</p>
+          </div>
+          <div className="how-grid">
+            <div className="how-card how-dark">
+              <span className="how-mock-label">Split View</span>
+              <div className="how-mock">
+                <div className="how-mock-row">
+                  <div className="how-mock-col on">
+                    <div className="how-mock-line" style={{ width: '60%' }}></div>
+                    <div className="how-mock-line short"></div>
+                  </div>
+                  <div className="how-mock-col">
+                    <div className="how-mock-line" style={{ width: '60%' }}></div>
+                    <div className="how-mock-line short"></div>
+                  </div>
+                </div>
+                <div className="how-mock-row">
+                  <div className="how-mock-col">
+                    <div className="how-mock-line" style={{ width: '70%' }}></div>
+                    <div className="how-mock-line" style={{ width: '45%' }}></div>
+                  </div>
+                  <div className="how-mock-col on">
+                    <div className="how-mock-line" style={{ width: '70%' }}></div>
+                    <div className="how-mock-line" style={{ width: '45%' }}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="how-card how-white">
+              <div className="how-pills">
+                <span className="how-pill active">✓ Sync</span>
+                <span className="how-pill">Autosave</span>
+                <span className="how-pill">Offline</span>
+              </div>
+              <div>
+                <h3>Real-time, without the lag</h3>
+                <p>Every keystroke syncs across your docs and devices the moment you type — no spinner to wait on, no version to reconcile, nothing to lose.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
       {/* ── App mockup ── */}
       <div className="screen-wrap">
