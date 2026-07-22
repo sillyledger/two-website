@@ -20,7 +20,7 @@ export default function Home() {
               <p className="sub">TWO puts two docs side by side on a single screen — no tabs to hunt through, no context lost switching windows.</p>
               <div className="actions">
                 <a className="btn-primary" href="https://app.two.so/signup">Start for free</a>
-                <a className="btn-ghost" href="/roadmap">View the roadmap</a>
+                <a className="btn-ghost" href="#features">Features</a>
               </div>
             </div>
             <div className="panels">
