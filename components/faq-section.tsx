@@ -34,8 +34,60 @@ const FAQS = [
   },
 ]
 
-export function FaqSection() {
+const CATEGORIES = ["All", "Pricing", "Product", "Account", "General"]
+
+export function FaqSection({ variant = "default" }: { variant?: "default" | "sidebar" }) {
   const [open, setOpen] = useState<number | null>(null)
+  const [activeCat, setActiveCat] = useState("All")
+
+  if (variant === "sidebar") {
+    const visible = FAQS
+      .map((item, i) => ({ ...item, i }))
+      .filter((item) => activeCat === "All" || item.tag === activeCat)
+
+    return (
+      <section className="section faq-wrap">
+        <div className="panel">
+          <div className="side">
+            <div className="faq-eyebrow"><span className="s-dot"></span>FAQ</div>
+            <div className="h2side">Things people ask.</div>
+            <div>
+              {CATEGORIES.map((cat) => (
+                <div
+                  key={cat}
+                  className={`cat${activeCat === cat ? " active" : ""}`}
+                  onClick={() => setActiveCat(cat)}
+                >
+                  {cat}
+                </div>
+              ))}
+            </div>
+            <div className="side-footer">
+              <a href="https://www.two.so/resources/help">Browse our Help &amp; Guides →</a>
+            </div>
+          </div>
+          <div className="main">
+            {visible.map((item) => (
+              <div key={item.i} className="item">
+                <div className="q-row" onClick={() => setOpen(open === item.i ? null : item.i)}>
+                  <span className={`faq-tag ${item.tag.toLowerCase()}`}>{item.tag}</span>
+                  <span className="faq-q">{item.q}</span>
+                  <div className="plus">
+                    {open === item.i ? (
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" strokeWidth="1.6"><path d="M5 12h14"/></svg>
+                    ) : (
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" strokeWidth="1.6"><path d="M12 5v14M5 12h14"/></svg>
+                    )}
+                  </div>
+                </div>
+                {open === item.i && <div className="answer">{item.a}</div>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <section className="faq-section">

@@ -214,9 +214,10 @@ export default function Home() {
 
         {/* ── PRICING ── */}
         <PricingSection />
-      </div>
 
-      <FaqSection />
+        {/* ── FAQ ── */}
+        <FaqSection variant="sidebar" />
+      </div>
 
      <CtaBand />
 
