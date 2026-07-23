@@ -1,6 +1,5 @@
 import { Navigation } from "@/components/navigation"
 import { PricingSection } from "@/components/pricing-section"
-import { FeaturesBento } from "@/components/features-bento"
 import { FaqSection } from "@/components/faq-section"
 import { CtaBand } from "@/components/cta-band"
 import "@/styles/homepage-v2.css"
@@ -96,6 +95,76 @@ export default function Home() {
               <div>
                 <h3>Real-time, without the lag</h3>
                 <p>Every keystroke syncs across your docs and devices the moment you type — no spinner to wait on, no version to reconcile, nothing to lose.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============ WHY TWO (bento) ============ */}
+        <section className="section" id="features">
+          <div className="section-eyebrow"><span className="s-dot" style={{ background: 'var(--clay)' }}></span>Why TWO</div>
+          <div className="s-row">
+            <h2 className="s-h2">Built for focused writing. Nothing else.</h2>
+            <p className="s-desc">No blocks to configure, no databases to design. Every screen is built to get out of your way.</p>
+          </div>
+
+          <div className="bento">
+            {/* DARK, hero: Tabs */}
+            <div className="card card-dark">
+              <span className="pill-label on-dark">Tabs</span>
+              <h3>Multiple docs open at once.</h3>
+              <p>Switch context without losing your place — each tab remembers exactly where you left off.</p>
+              <div className="tab-row">
+                <span className="tab active">Weekly Review</span>
+                <span className="tab">OKR Tracker</span>
+                <span className="tab">Product Brief</span>
+              </div>
+              <div className="tab-body">
+                <div className="tab-line" style={{ width: '85%' }}></div>
+                <div className="tab-line" style={{ width: '65%' }}></div>
+                <div className="tab-line" style={{ width: '76%' }}></div>
+                <div className="tab-line" style={{ width: '52%' }}></div>
+                <div className="tab-line pale" style={{ width: '80%', marginTop: '6px' }}></div>
+                <div className="tab-line pale" style={{ width: '60%' }}></div>
+                <div className="tab-line pale" style={{ width: '68%', marginBottom: 0 }}></div>
+              </div>
+            </div>
+
+            <div className="bento-stack">
+              {/* LIGHT: Templates */}
+              <div className="card card-light">
+                <span className="pill-label on-light">Templates</span>
+                <h3>Start fast. Every time.</h3>
+                <p>Meeting notes, briefs, and blog posts — one click away.</p>
+                <div className="tpl-grid">
+                  <div className="tpl-tile"><span className="tpl-tag a">MEETING</span><div className="tpl-line" style={{ width: '80%' }}></div><div className="tpl-line" style={{ width: '55%' }}></div></div>
+                  <div className="tpl-tile"><span className="tpl-tag b">OKR</span><div className="tpl-line" style={{ width: '80%' }}></div><div className="tpl-line" style={{ width: '55%' }}></div></div>
+                </div>
+              </div>
+
+              {/* DARK: Shared workspaces */}
+              <div className="card card-dark">
+                <span className="pill-label on-dark">Shared workspaces</span>
+                <h3>Invite your team in.</h3>
+                <p>One place, with the same instant sync as your own.</p>
+                <div className="avatar-row">
+                  <div className="avatar a">P</div>
+                  <div className="avatar b">R</div>
+                  <div className="avatar c">+2</div>
+                </div>
+                <div className="presence"><span className="presence-dot"></span><span className="presence-text">Pieter is editing Product Brief — Q3</span></div>
+              </div>
+
+              {/* LIGHT: Quiet editor */}
+              <div className="card card-light">
+                <h3>A quiet editor</h3>
+                <p>No sidebars you don&apos;t need, no blocks to assemble before you can write.</p>
+                <div className="page-mock">
+                  <div className="page-title"></div>
+                  <div className="page-line" style={{ width: '92%' }}></div>
+                  <div className="page-line" style={{ width: '78%' }}></div>
+                  <div className="page-cursor-row"><div className="txt"></div><div className="blink"></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -303,7 +372,6 @@ export default function Home() {
         <p>Somewhere along the way, iPad became the device people actually reach for. The ones who think better when they&apos;re away from their desk. And yet every doc app still treats it like a second screen. TWO exists because that never made sense to us.</p>
       </section>
 
-      <FeaturesBento />
      <section className="audience-section">
         <div className="audience-inner">
           <div className="audience-left">
