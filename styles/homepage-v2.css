@@ -215,6 +215,19 @@
 .homepage-v2 .plus svg{width:12px;height:12px;}
 .homepage-v2 .answer{padding:16px 0 0 66px;font-size:14.5px;line-height:1.65;color:var(--muted);max-width:520px;}
 
+/* ---- footer ---- */
+.homepage-v2 footer{display:block;padding:0;border-top:none;background:none;}
+.homepage-v2 .footer-top{max-width:1360px;margin:0 auto;padding:70px 56px 48px;display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;border-top:1px solid var(--border);}
+.homepage-v2 .footer-brand{display:flex;flex-direction:column;gap:12px;min-width:200px;}
+.homepage-v2 .footer-brand-row{display:flex;align-items:center;gap:10px;}
+.homepage-v2 .footer-word{font-family:var(--font-heading),'Fira Sans',sans-serif;font-weight:600;font-size:18px;letter-spacing:-.02em;}
+.homepage-v2 .footer-tag{font-size:13.5px;color:var(--muted);max-width:220px;line-height:1.5;}
+.homepage-v2 .footer-cols{display:flex;gap:64px;flex-wrap:wrap;}
+.homepage-v2 .footer-col{display:flex;flex-direction:column;gap:11px;}
+.homepage-v2 .footer-col-h{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px;}
+.homepage-v2 .footer-col a{font-size:13.5px;color:var(--muted);text-decoration:none;}
+.homepage-v2 .footer-bottom{border-top:1px solid var(--border);max-width:1360px;margin:0 auto;padding:22px 56px;font-size:12.5px;color:var(--muted);}
+
 @media (max-width:900px){
   .homepage-v2 .panel{grid-template-columns:1fr;}
   .homepage-v2 .side{min-height:auto;}
@@ -224,4 +237,8 @@
   .homepage-v2 .bento{grid-template-columns:1fr;}
   .homepage-v2 .who-grid{grid-template-columns:1fr;gap:32px;}
   .homepage-v2 .pricing-grid{grid-template-columns:1fr;}
+}
+
+@media (max-width:860px){
+  .homepage-v2 .footer-top{flex-direction:column;}
 }

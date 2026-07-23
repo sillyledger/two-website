@@ -221,44 +221,47 @@ export default function Home() {
 
      <CtaBand />
 
-      <footer style={{ borderTop: '1px solid var(--border)' }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', padding: '48px 40px 40px', gap: 40 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 160 }}>
-            <span style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.03em', color: 'var(--foreground)' }}>TWO</span>
-            <span style={{ fontSize: 13, color: 'var(--muted-foreground)', maxWidth: 200, lineHeight: 1.5 }}>A better place to think and write.</span>
+      <div className="homepage-v2">
+        <footer>
+          <div className="footer-top">
+            <div className="footer-brand">
+              <div className="footer-brand-row">
+                <svg width="22" height="22" viewBox="0 0 120 120"><rect x="12" y="8" width="58" height="76" rx="14" fill="#1a1a18" opacity="0.85"/><rect x="38" y="28" width="58" height="76" rx="14" fill="#1a1a18" opacity="0.55"/></svg>
+                <span className="footer-word">two</span>
+              </div>
+              <span className="footer-tag">A better place to think and write.</span>
+            </div>
+            <div className="footer-cols">
+              <div className="footer-col">
+                <span className="footer-col-h">Product</span>
+                <a href="https://two.so/#features">Features</a>
+                <a href="https://two.so/#pricing">Pricing</a>
+                <a href="https://two.so/roadmap">Roadmap</a>
+                <a href="https://www.sorano.space/two-docs/changelog" target="_blank" rel="noopener noreferrer">Changelog</a>
+              </div>
+              <div className="footer-col">
+                <span className="footer-col-h">Compare</span>
+                <a href="/compare/notion">TWO vs Notion</a>
+                <a href="/compare/apple-notes">TWO vs Apple Notes</a>
+                <a href="/compare/bear">TWO vs Bear</a>
+                <a href="/compare/obsidian">TWO vs Obsidian</a>
+              </div>
+              <div className="footer-col">
+                <span className="footer-col-h">Account</span>
+                <a href="https://app.two.so/login">Log in</a>
+                <a href="https://app.two.so/signup">Sign up</a>
+              </div>
+              <div className="footer-col">
+                <span className="footer-col-h">Legal</span>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-of-service">Terms of Service</a>
+                <a href="/terms-of-service#refunds">Refund Policy</a>
+              </div>
+            </div>
           </div>
-          <div style={{ display: 'flex', gap: 60 }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted-foreground)', marginBottom: 4 }}>Product</span>
-              <a href="https://two.so/#features" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Features</a>
-              <a href="https://two.so/#pricing" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Pricing</a>
-              <a href="https://two.so/roadmap" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Roadmap</a>
-              <a href="https://www.sorano.space/two-docs/changelog" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Changelog</a>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted-foreground)', marginBottom: 4 }}>Compare</span>
-              <a href="/compare/notion" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>TWO vs Notion</a>
-              <a href="/compare/apple-notes" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>TWO vs Apple Notes</a>
-              <a href="/compare/bear" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>TWO vs Bear</a>
-              <a href="/compare/obsidian" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>TWO vs Obsidian</a>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted-foreground)', marginBottom: 4 }}>Account</span>
-              <a href="https://app.two.so/login" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Log in</a>
-              <a href="https://app.two.so/signup" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Sign up</a>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted-foreground)', marginBottom: 4 }}>Legal</span>
-              <a href="/privacy-policy" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Privacy Policy</a>
-              <a href="/terms-of-service" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Terms of Service</a>
-              <a href="/terms-of-service#refunds" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Refund Policy</a>
-            </div>
-          </div>
-        </div>
-        <div style={{ borderTop: '1px solid var(--border)', padding: '16px 40px', fontSize: 12, color: 'var(--muted-foreground)' }}>
-          © 2026 TWO. All rights reserved.
-        </div>
-      </footer>
+          <div className="footer-bottom">© 2026 TWO. All rights reserved.</div>
+        </footer>
+      </div>
     </>
   )
 }
