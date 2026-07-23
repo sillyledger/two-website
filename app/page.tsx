@@ -15,7 +15,7 @@ export default function Home() {
         <section className="hero">
           <div className="hero-grid">
             <div>
-              <div className="eyebrow">Writing app · Web, Mac &amp; iPad</div>
+              <div className="eyebrow">Currently in beta on Web</div>
               <h1 className="h1">Two docs,<br />one screen.</h1>
               <p className="sub">TWO puts two docs side by side on a single screen — no tabs to hunt through, no context lost switching windows.</p>
               <div className="actions">
