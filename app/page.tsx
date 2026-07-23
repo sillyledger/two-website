@@ -91,7 +91,7 @@ export default function Home() {
               <div className="how-pills">
                 <span className="how-pill active">✓ Sync</span>
                 <span className="how-pill">Autosave</span>
-                <span className="how-pill">Offline</span>
+                <span className="how-pill">Offline (soon)</span>
               </div>
               <div>
                 <h3>Real-time, without the lag</h3>
