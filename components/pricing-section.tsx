@@ -32,108 +32,84 @@ export function PricingSection() {
   }
 
   return (
-    <section className="pricing-section" id="pricing">
-      <div className="pricing-inner">
-        <h2 className="pricing-heading">Pricing plans</h2>
-        <p className="pricing-sub">Start free. Upgrade when you&apos;re ready.</p>
+    <section className="section pricing-wrap" id="pricing">
+      <div className="section-eyebrow"><span className="s-dot"></span>Pricing</div>
+      <div className="head">
+        <h2>Simple pricing, no surprises.</h2>
+        <p>Start free. Upgrade when you&apos;re ready — or lock in Pro for life as a Founding Member.</p>
+      </div>
 
-        {/* Toggle */}
-        <div className="pricing-toggle-wrap">
-          <div className="pricing-toggle-pill">
-            <button
-              className={`pricing-toggle-opt${!yearly ? " pricing-toggle-active" : ""}`}
-              onClick={() => setYearly(false)}
-            >
-              Monthly
-            </button>
-            <button
-              className={`pricing-toggle-opt${yearly ? " pricing-toggle-active" : ""}`}
-              onClick={() => setYearly(true)}
-            >
-              Yearly
-            </button>
-          </div>
-          <span className="pricing-save-badge">Save 20%</span>
+      <div className="toggle-wrap">
+        <div className="toggle-pill">
+          <button
+            className={`toggle-opt${!yearly ? " active" : ""}`}
+            onClick={() => setYearly(false)}
+          >
+            Monthly
+          </button>
+          <button
+            className={`toggle-opt${yearly ? " active" : ""}`}
+            onClick={() => setYearly(true)}
+          >
+            Yearly
+          </button>
+        </div>
+        <span className="save-badge">Save 20% yearly</span>
+      </div>
+
+      <div className="pricing-grid">
+
+        {/* Free */}
+        <div className="pricing-card">
+          <div className="plan-name"><span className="dot" style={{ background: "var(--muted)" }}></span>Free</div>
+          <div className="desc">Everything you need to get started, with a content limit.</div>
+          <div><span className="amount">$0</span><span className="period"> / month</span></div>
+          <div className="note">No credit card required</div>
+          <div className="divider"></div>
+          <ul className="feats">
+            <li><span className="check">✓</span> 30 docs</li>
+            <li><span className="check">✓</span> 1 private workspace</li>
+            <li><span className="check">✓</span> Rich text editor</li>
+            <li><span className="check">✓</span> Planner &amp; activity</li>
+            <li><span className="check">✓</span> 1GB storage</li>
+          </ul>
+          <a href="https://app.two.so/signup" className="pricing-btn-ghost">Get started free</a>
         </div>
 
-        <div className="plan-grid-new">
-
-          {/* Free */}
-          <div className="plan-card-new">
-            <div className="plan-card-bar" style={{ background: "#888780" }} />
-            <div className="plan-card-body">
-              <div className="plan-name-new">Free</div>
-              <div className="plan-desc-new">Everything you need to get started — with a content limit.</div>
-              <div className="plan-price-new">$0<span className="plan-period"> / month</span></div>
-              <div className="plan-divider-new" />
-              <ul className="plan-features-new">
-                <li><span className="pf-check">✓</span> 30 docs</li>
-                <li><span className="pf-check">✓</span> 1 private workspace</li>
-                <li><span className="pf-check">✓</span> Rich text editor</li>
-                <li><span className="pf-check">✓</span> Planner &amp; activity</li>
-                <li><span className="pf-check">✓</span> 1GB storage</li>
-                <li><span className="pf-cross">✕</span> Shared workspaces</li>
-                <li><span className="pf-cross">✕</span> Collaboration</li>
-              </ul>
-              <a href="https://app.two.so/signup" className="plan-btn-new plan-btn-ghost-new">Get started free</a>
-            </div>
-          </div>
-
-          {/* Pro */}
-          <div className="plan-card-new plan-card-featured-new">
-            <div className="plan-card-bar" style={{ background: "#534AB7" }} />
-            <div className="plan-card-body">
-              <div className="plan-name-new">
-                Pro
-                <span className="plan-popular-badge">Most popular</span>
-              </div>
-              <div className="plan-desc-new">Unlimited everything. Built for people who write seriously.</div>
-              <div className="plan-price-new">
-                {yearly ? "$5" : "$6"}<span className="plan-period"> / month</span>
-              </div>
-              <div className="plan-note-new">
-                {yearly ? "Billed $60 / year · save $12" : "14-day free trial · no credit card required"}
-              </div>
-              <div className="plan-divider-new" />
-              <ul className="plan-features-new">
-                <li><span className="pf-check">✓</span> Unlimited docs</li>
-                <li><span className="pf-check">✓</span> Unlimited workspaces</li>
-                <li><span className="pf-check">✓</span> Shared workspaces</li>
-                <li><span className="pf-check">✓</span> Collaboration</li>
-                <li><span className="pf-check">✓</span> 10GB storage</li>
-                <li><span className="pf-check">✓</span> Priority support</li>
-                <li><span className="pf-check">✓</span> Export PDF / MD</li>
-                <li><span className="pf-soon">◷</span> Version history <span className="pf-soon-tag">soon</span></li>
-              </ul>
-              <button onClick={openProCheckout} className="plan-btn-new plan-btn-primary-new">
-                {yearly ? "Start free trial — $60/yr" : "Start free trial"}
-              </button>
-            </div>
-          </div>
-
-          {/* Founding Member */}
-          <div className="plan-card-new">
-            <div className="plan-card-bar" style={{ background: "#BA7517" }} />
-            <div className="plan-card-body">
-              <div className="plan-name-new">Founding member</div>
-              <div className="plan-desc-new">Everything in Pro, forever. For the first 500 people who believe in TWO.</div>
-              <div className="plan-price-new">$49<span className="plan-period"> one-time</span></div>
-              <div className="plan-note-new">500 slots only</div>
-              <div className="plan-divider-new" />
-              <ul className="plan-features-new">
-                <li><span className="pf-check">✓</span> Everything in Pro</li>
-                <li><span className="pf-check">✓</span> Lifetime access — no subscription</li>
-                <li><span className="pf-check">✓</span> Founding member status</li>
-                <li><span className="pf-check">✓</span> All future Pro features</li>
-                <li><span className="pf-check">✓</span> Priority support</li>
-              </ul>
-              <button onClick={openFoundingCheckout} className="plan-btn-new plan-btn-gold-new">
-                Get lifetime access — $49
-              </button>
-            </div>
-          </div>
-
+        {/* Pro */}
+        <div className="pricing-card dark">
+          <div className="plan-name"><span className="dot" style={{ background: "#8890d6" }}></span>Pro <span className="badge">Most popular</span></div>
+          <div className="desc">Unlimited everything. Built for people who write seriously.</div>
+          <div><span className="amount">{yearly ? "$5" : "$6"}</span><span className="period"> / month</span></div>
+          <div className="note">{yearly ? "Billed $60 / year · save $12" : "14-day free trial · no credit card required"}</div>
+          <div className="divider"></div>
+          <ul className="feats">
+            <li><span className="check">✓</span> Unlimited docs &amp; workspaces</li>
+            <li><span className="check">✓</span> Shared workspaces &amp; collaboration</li>
+            <li><span className="check">✓</span> 10GB storage</li>
+            <li><span className="check">✓</span> Export to PDF / Markdown</li>
+            <li><span className="check">✓</span> Priority support</li>
+          </ul>
+          <button onClick={openProCheckout} className="btn-dark-cta">Start free trial</button>
         </div>
+
+        {/* Founding Member */}
+        <div className="pricing-card">
+          <div className="plan-name"><span className="dot" style={{ background: "var(--clay)" }}></span>Founding member</div>
+          <div className="desc">Everything in Pro, forever. For the first 500 people who believe in TWO.</div>
+          <div><span className="amount">$49</span><span className="period"> one-time</span></div>
+          <div className="note">500 slots only</div>
+          <div className="divider"></div>
+          <ul className="feats">
+            <li><span className="check clay">✓</span> Everything in Pro</li>
+            <li><span className="check clay">✓</span> Lifetime access — no subscription</li>
+            <li><span className="check clay">✓</span> Founding member status</li>
+            <li><span className="check clay">✓</span> All future Pro features</li>
+            <li><span className="check clay">✓</span> Priority support</li>
+          </ul>
+          <button onClick={openFoundingCheckout} className="btn-clay">Get lifetime access</button>
+        </div>
+
       </div>
     </section>
   )

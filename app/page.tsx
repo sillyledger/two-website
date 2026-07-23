@@ -169,42 +169,52 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ============ WHO IT'S FOR ============ */}
+        <section className="section who-for">
+          <div className="who-grid">
+            <div>
+              <div className="section-eyebrow left"><span className="s-dot"></span>Who it&apos;s for</div>
+              <h2 className="h2">TWO is built for a specific kind of person. You&apos;ll know if that&apos;s you.</h2>
+            </div>
+            <div className="rows">
+              <a href="/solutions/creatives" className="row">
+                <div className="bar" style={{ background: 'var(--indigo)' }}></div>
+                <div className="row-body">
+                  <div className="row-title">Creatives</div>
+                  <div className="row-desc">Writers, designers, and makers who need a quiet place to think and create.</div>
+                </div>
+                <div className="arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </div>
+              </a>
+              <a href="/solutions/solo" className="row">
+                <div className="bar" style={{ background: 'var(--clay)' }}></div>
+                <div className="row-body">
+                  <div className="row-title">Solo operators</div>
+                  <div className="row-desc">Founders and freelancers running everything themselves, who need one place for it all.</div>
+                </div>
+                <div className="arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </div>
+              </a>
+              <a href="/solutions/teams" className="row">
+                <div className="bar" style={{ background: 'var(--ink)', opacity: .35 }}></div>
+                <div className="row-body">
+                  <div className="row-title">Small teams</div>
+                  <div className="row-desc">Teams that move fast and don&apos;t want their docs app to slow them down.</div>
+                </div>
+                <div className="arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── PRICING ── */}
+        <PricingSection />
       </div>
-
-     <section className="audience-section">
-        <div className="audience-inner">
-          <div className="audience-left">
-            <p className="section-eyebrow">Who it&apos;s for</p>
-            <p className="audience-statement">TWO is built for a specific kind of person. You&apos;ll know if that&apos;s you.</p>
-          </div>
-          <div className="audience-right">
-            <a href="/solutions/creatives" className="audience-row">
-              <div>
-                <p className="audience-row-title">Creatives</p>
-                <p className="audience-row-desc">Writers, designers, and makers who need a quiet place to think and create.</p>
-              </div>
-              <span className="audience-arrow">→</span>
-            </a>
-            <a href="/solutions/solo" className="audience-row">
-              <div>
-                <p className="audience-row-title">Solo operators</p>
-                <p className="audience-row-desc">Founders and freelancers running everything themselves, who need one place for it all.</p>
-              </div>
-              <span className="audience-arrow">→</span>
-            </a>
-            <a href="/solutions/teams" className="audience-row">
-              <div>
-                <p className="audience-row-title">Small teams</p>
-                <p className="audience-row-desc">Teams that move fast and don&apos;t want their docs app to slow them down.</p>
-              </div>
-              <span className="audience-arrow">→</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PRICING ── */}
-      <PricingSection />
 
       <FaqSection />
 

@@ -136,8 +136,62 @@
 .homepage-v2 .page-cursor-row .blink{width:1.5px;height:14px;background:var(--ink);animation:homepage-v2-blink 1.1s step-end infinite;}
 @keyframes homepage-v2-blink{50%{opacity:0;}}
 
+/* ---- who it's for ---- */
+.homepage-v2 .who-for{padding-top:150px;}
+.homepage-v2 .who-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:80px;}
+.homepage-v2 .h2{font-family:var(--font-heading),'Fira Sans',sans-serif;font-weight:600;font-size:clamp(30px,3.4vw,42px);line-height:1.2;letter-spacing:-.015em;max-width:420px;}
+.homepage-v2 .rows{display:flex;flex-direction:column;}
+.homepage-v2 .row{display:flex;align-items:flex-start;gap:22px;padding:34px 0;border-bottom:1px solid var(--border);text-decoration:none;}
+.homepage-v2 .rows .row:first-child{padding-top:0;}
+.homepage-v2 .rows .row:last-child{border-bottom:none;}
+.homepage-v2 .bar{width:3px;align-self:stretch;border-radius:2px;flex-shrink:0;min-height:64px;}
+.homepage-v2 .row-body{flex:1;}
+.homepage-v2 .row-title{font-family:var(--font-heading),'Fira Sans',sans-serif;font-weight:600;font-size:21px;letter-spacing:-.01em;margin-bottom:8px;color:var(--ink);}
+.homepage-v2 .row-desc{font-size:15px;line-height:1.6;color:var(--muted);max-width:440px;}
+.homepage-v2 .arrow{width:38px;height:38px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.homepage-v2 .arrow svg{width:15px;height:15px;}
+
+/* ---- pricing ---- */
+.homepage-v2 .pricing-wrap{padding-top:130px;}
+.homepage-v2 .head{text-align:center;max-width:560px;margin:0 auto 48px;}
+.homepage-v2 .head h2{font-family:var(--font-heading),'Fira Sans',sans-serif;font-weight:600;font-size:clamp(30px,3.4vw,42px);letter-spacing:-.015em;margin-bottom:14px;color:var(--ink);}
+.homepage-v2 .head p{font-size:17px;line-height:1.6;color:var(--muted);}
+
+.homepage-v2 .toggle-wrap{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:56px;}
+.homepage-v2 .toggle-pill{display:inline-flex;background:#fff;border:1px solid var(--border);border-radius:100px;padding:4px;}
+.homepage-v2 .toggle-opt{font-family:'DM Sans',sans-serif;font-size:13.5px;color:var(--muted);background:none;border:none;border-radius:100px;padding:9px 22px;cursor:pointer;}
+.homepage-v2 .toggle-opt.active{background:var(--ink);color:var(--paper);}
+.homepage-v2 .save-badge{font-size:12px;font-weight:500;color:#3f8a5c;background:#e9f4ec;border-radius:100px;padding:6px 13px;}
+
+.homepage-v2 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;}
+.homepage-v2 .pricing-card{border-radius:20px;padding:36px 32px 32px;border:1px solid var(--border);background:#fff;display:flex;flex-direction:column;}
+.homepage-v2 .pricing-card.dark{background:var(--ink);border-color:var(--ink);color:var(--paper);}
+.homepage-v2 .plan-name{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:22px;}
+.homepage-v2 .pricing-card.dark .plan-name{color:rgba(255,255,255,.6);}
+.homepage-v2 .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.homepage-v2 .badge{font-size:10px;font-weight:600;letter-spacing:.04em;background:rgba(255,255,255,.12);color:#fff;border-radius:100px;padding:4px 10px;}
+.homepage-v2 .desc{font-size:14px;color:var(--muted);margin-bottom:26px;line-height:1.55;}
+.homepage-v2 .pricing-card.dark .desc{color:rgba(255,255,255,.6);}
+.homepage-v2 .amount{font-family:var(--font-heading),'Fira Sans',sans-serif;font-weight:600;font-size:42px;letter-spacing:-.02em;}
+.homepage-v2 .period{font-size:14px;color:var(--muted);}
+.homepage-v2 .pricing-card.dark .period{color:rgba(255,255,255,.55);}
+.homepage-v2 .note{font-size:12.5px;color:var(--muted);margin:8px 0 26px;}
+.homepage-v2 .pricing-card.dark .note{color:rgba(255,255,255,.55);}
+.homepage-v2 .divider{height:1px;background:var(--border);margin-bottom:24px;}
+.homepage-v2 .pricing-card.dark .divider{background:rgba(255,255,255,.12);}
+.homepage-v2 .feats{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px;flex:1;}
+.homepage-v2 .feats li{display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.4;}
+.homepage-v2 .check{color:var(--indigo);flex-shrink:0;}
+.homepage-v2 .pricing-card.dark .check{color:#a9b0e6;}
+.homepage-v2 .check.clay{color:var(--clay);}
+.homepage-v2 .pricing-btn-ghost{border:1px solid var(--border);border-radius:10px;padding:13px 24px;font-size:14.5px;font-weight:500;text-align:center;background:none;text-decoration:none;color:inherit;font-family:'DM Sans',sans-serif;}
+.homepage-v2 .btn-dark-cta{background:#fff;color:var(--ink);border:none;border-radius:10px;padding:13px 24px;font-size:14.5px;font-weight:500;text-align:center;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.homepage-v2 .btn-clay{border:1px solid var(--clay);color:var(--clay);border-radius:10px;padding:13px 24px;font-size:14.5px;font-weight:500;text-align:center;background:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
+
 @media (max-width:900px){
   .homepage-v2 .hero-grid{grid-template-columns:1fr;}
   .homepage-v2 .how-grid{grid-template-columns:1fr;}
   .homepage-v2 .bento{grid-template-columns:1fr;}
+  .homepage-v2 .who-grid{grid-template-columns:1fr;gap:32px;}
+  .homepage-v2 .pricing-grid{grid-template-columns:1fr;}
 }
