@@ -28,7 +28,7 @@
 .homepage-v2 .btn-ghost{font-family:'DM Sans',sans-serif;font-size:15.5px;font-weight:500;color:var(--ink);background:none;border:1px solid var(--border);border-radius:10px;padding:15px 28px;text-decoration:none;display:inline-block;}
 
 /* ---- hero ---- */
-.homepage-v2 .hero{padding:100px 56px 0;max-width:1360px;margin:0 auto;border-top:1px solid var(--border);text-align:left;}
+.homepage-v2 .hero{padding:100px 56px 0;max-width:1360px;margin:0 auto;text-align:left;}
 .homepage-v2 .hero-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:72px;align-items:center;padding-top:64px;}
 .homepage-v2 .eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;}
 .homepage-v2 .h1{font-family:var(--font-heading),'Fira Sans',sans-serif;font-weight:600;line-height:1.04;letter-spacing:-.025em;color:var(--ink);margin-bottom:26px;font-size:clamp(48px,5.6vw,76px);}
