@@ -226,11 +226,6 @@ export default function SplitViewPage() {
           Start writing for free
         </a>
       </div>
-
-      <div className="fn">
-        <a href="/product/features">← All features</a>
-        <a href="/product/features/live-sync">Next: Live Sync →</a>
-      </div>
     </div>
   );
 }
