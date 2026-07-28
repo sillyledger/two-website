@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "TWO — Write better. Think clearer.",
@@ -31,7 +32,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="TWO" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </head>
-      <body style={{ background: "#161618" }}>{children}</body>
+      <body style={{ background: "#161618" }}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
