@@ -59,8 +59,8 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 
 .la { position: absolute; left: 540px; top: 280px; }
 .la .tick { left: -1.5px; top: -1.5px; }
-.la .line { left: 0; top: 0; width: 1px; height: 42px; }
-.la .lbl { top: 46px; left: 50%; transform: translateX(-50%); text-align: center; }
+.la .line { left: 0; top: 0; width: 1px; height: 64px; }
+.la .lbl { top: 76px; left: 50%; transform: translateX(-50%); text-align: center; }
 
 .lb { position: absolute; left: 132px; top: -14px; }
 .lb .tick { left: -1.5px; top: -1.5px; }
