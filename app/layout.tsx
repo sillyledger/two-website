@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </head>
       <body style={{ background: "#161618" }}>
+        <Navigation />
         {children}
         <Footer />
       </body>
