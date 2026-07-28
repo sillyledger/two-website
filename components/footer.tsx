@@ -43,11 +43,9 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="footer-bottom-border">
-        <div className="footer-frame">
-          <div className="footer-bottom-row">
-            <p>© 2026 TWO. All rights reserved.</p>
-          </div>
+      <div className="footer-frame">
+        <div className="footer-bottom-row">
+          <p>© 2026 TWO. All rights reserved.</p>
         </div>
       </div>
     </footer>

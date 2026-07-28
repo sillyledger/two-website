@@ -150,9 +150,9 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 
 /* ============ FOOTER ============ */
 .footer-frame { max-width: 1180px; margin: 0 auto; padding: 0 48px; }
-.site-footer { border-top: 1px solid var(--border); margin-top: 100px; }
+.site-footer { margin-top: 100px; }
 
-.footer-top { display: flex; justify-content: space-between; gap: 60px; padding-top: 64px; padding-bottom: 48px; }
+.footer-top { display: flex; justify-content: space-between; gap: 60px; padding-top: 64px; padding-bottom: 48px; border-top: 1px solid var(--border); }
 
 .footer-brand { display: flex; flex-direction: column; gap: 10px; max-width: 240px; }
 .footer-brand-mark { display: flex; align-items: center; gap: 10px; }
@@ -165,7 +165,6 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .footer-col a { font-size: 13px; color: var(--text-muted); text-decoration: none; }
 .footer-col a:hover { color: var(--text-primary); }
 
-.footer-bottom-border { border-top: 1px solid var(--border); }
 .footer-bottom-row { padding-top: 20px; padding-bottom: 20px; }
 .footer-bottom-row p { font-size: 12px; color: var(--text-muted); margin: 0; }
 
