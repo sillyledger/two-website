@@ -28,7 +28,7 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .btn.solid { background: var(--text-primary); color: var(--bg); }
 .btn.outline { border: 1px solid var(--border-strong); color: var(--text-primary); }
 
-.stage { position: relative; width: 1080px; margin: 96px auto 0; height: 700px; }
+.stage { position: relative; width: 1080px; margin: 96px auto 0; height: 400px; }
 .cards { display: flex; gap: 48px; justify-content: center; position: relative; }
 .card {
   width: 500px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px;
@@ -61,6 +61,9 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .la .tick { left: -1.5px; top: -1.5px; }
 .la .line { left: 0; top: 0; width: 1px; height: 42px; }
 .la .lbl { top: 46px; left: 50%; transform: translateX(-50%); text-align: center; }
+
+.la-icon { position: absolute; left: 22px; top: 8px; width: 26px; height: 26px; border-radius: 7px; background: var(--bg-tertiary); border: 1px solid var(--border-strong); display: flex; align-items: center; justify-content: center; }
+.la-icon svg { width: 13px; height: 13px; }
 
 .lb { position: absolute; left: 132px; top: -14px; }
 .lb .tick { left: -1.5px; top: -1.5px; }

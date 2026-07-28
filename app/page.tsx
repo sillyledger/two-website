@@ -91,6 +91,11 @@ export default function Home() {
           <div className="leader la">
             <div className="tick"></div>
             <div className="line"></div>
+            <div className="la-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#a0a0a0" strokeWidth="1.6">
+                <path d="M8 9l-4 4 4 4M16 9l4 4-4 4M4 13h16" />
+              </svg>
+            </div>
             <div className="lbl">
               Split view — <b>drag to resize</b>
             </div>
