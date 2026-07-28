@@ -303,6 +303,51 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div className="pricing-teaser">
+          <div className="pt-head">
+            <p className="micro">Pricing</p>
+            <h2 className="display">Free to start. $6/mo when you&apos;re ready.</h2>
+            <p>14-day free trial on Pro. No credit card required.</p>
+          </div>
+
+          <div className="pt-row">
+            <div className="pt-block">
+              <div>
+                <p className="pt-name">FREE</p>
+                <div className="pt-price">
+                  <span className="amt display">$0</span>
+                  <span className="per">/ month</span>
+                </div>
+              </div>
+              <div className="pt-btn outline">Start free</div>
+            </div>
+            <div className="pt-block pro">
+              <div>
+                <p className="pt-name">PRO</p>
+                <div className="pt-price">
+                  <span className="amt display">$6</span>
+                  <span className="per">/ month</span>
+                </div>
+              </div>
+              <div className="pt-btn solid">Start free trial</div>
+            </div>
+            <div className="pt-block">
+              <div>
+                <p className="pt-name">FOUNDING</p>
+                <div className="pt-price">
+                  <span className="amt display">$49</span>
+                  <span className="per">/ once</span>
+                </div>
+              </div>
+              <div className="pt-btn outline">Join</div>
+            </div>
+          </div>
+
+          <div className="pt-compare">
+            <a href="/pricing">Compare all plans and features →</a>
+          </div>
+        </div>
       </div>
     </>
   );

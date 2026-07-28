@@ -214,3 +214,23 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
   .btn { width: 100%; text-align: center; }
   .card { padding: 22px 20px; }
 }
+
+.pricing-teaser { border-top: 1px solid var(--border); padding-top: 80px; }
+.pt-head { text-align: center; margin-bottom: 44px; }
+.pt-head h2 { font-size: 30px; margin: 14px 0 10px; }
+.pt-head p { font-size: 14.5px; color: var(--text-muted); margin: 0; }
+
+.pt-row { display: flex; justify-content: center; gap: 20px; max-width: 940px; margin: 0 auto; }
+.pt-block { flex: 1; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 22px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+.pt-block.pro { border-color: var(--border-strong); }
+.pt-name { font-size: 12.5px; font-weight: 600; color: var(--text-muted); margin: 0 0 6px; letter-spacing: 0.02em; }
+.pt-price { display: flex; align-items: baseline; gap: 4px; }
+.pt-price .amt { font-size: 28px; font-weight: 600; font-family: 'Fira Sans', sans-serif; }
+.pt-price .per { font-size: 12px; color: var(--text-muted); }
+.pt-btn { font-size: 12.5px; font-weight: 500; padding: 9px 16px; border-radius: 999px; white-space: nowrap; width: 100%; text-align: center; }
+.pt-btn.outline { border: 1px solid var(--border-strong); color: var(--text-primary); }
+.pt-btn.solid { background: var(--text-primary); color: var(--bg); }
+
+.pt-compare { text-align: center; margin-top: 28px; }
+.pt-compare a { font-size: 13px; color: var(--text-muted); text-decoration: none; border-bottom: 1px dashed var(--border-strong); padding-bottom: 2px; }
+.pt-compare a:hover { color: var(--indigo); border-color: var(--indigo); }
