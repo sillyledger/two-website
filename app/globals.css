@@ -454,3 +454,20 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   .mobile-menu .mm-cta { display: flex; gap: 10px; padding-top: 16px; }
   .mobile-menu .mm-cta a { flex: 1; text-align: center; }
 }
+
+.ls-stage { display: flex; align-items: center; gap: 0; margin-bottom: 20px; }
+.ls-dev { flex: 1; background: var(--bg-card); border: 1px solid var(--border-strong); border-radius: 12px; padding: 16px 18px; position: relative; z-index: 2; }
+.ls-dev-label { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 600; margin-bottom: 12px; }
+.ls-sync-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); margin-left: auto; box-shadow: 0 0 0 3px rgba(111,181,135,0.2); }
+.ls-dev-bar { height: 2px; width: 55%; border-radius: 1px; background: rgba(80,140,255,0.6); margin-bottom: 8px; }
+.ls-dev-sl { height: 1.5px; background: var(--border-strong); border-radius: 1px; margin-bottom: 7px; }
+.ls-dev-sl.hi { background: var(--text-muted); }
+.ls-signal { flex: 0 0 90px; position: relative; height: 2px; display: flex; align-items: center; justify-content: center; }
+.ls-signal::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px dashed var(--border-strong); }
+.ls-signal .pulse { position: relative; z-index: 2; background: var(--bg); padding: 0 6px; font-size: 10px; color: var(--indigo); font-weight: 500; white-space: nowrap; }
+.hero-sub { font-size: 15px; color: var(--text-muted); max-width: 540px; line-height: 1.65; margin: 0 0 50px; }
+.ls-spec-title { font-size: 12px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 24px; }
+.ls-spec-row { display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid var(--border); }
+.ls-spec-row:first-of-type { padding-top: 0; }
+.ls-spec-row .label { font-size: 13px; }
+.ls-spec-row .value { font-size: 13px; color: var(--text-muted); text-align: right; }
