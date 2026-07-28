@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../styles/globals.css";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "TWO — Write better. Think clearer.",
@@ -18,7 +18,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&family=DM+Sans:wght@400;500&display=swap"
           rel="stylesheet"
         />
         <link rel="icon" href="/logo-two.svg" type="image/svg+xml" />
@@ -26,7 +26,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="TWO" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </head>
-      <body>{children}</body>
+      <body style={{ background: "#161618" }}>{children}</body>
     </html>
   );
 }

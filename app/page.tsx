@@ -1,334 +1,309 @@
-import { Navigation } from "@/components/navigation"
-import { PricingSection } from "@/components/pricing-section"
-import { FeaturesBento } from "@/components/features-bento"
-import { FaqSection } from "@/components/faq-section"
-import { CtaBand } from "@/components/cta-band"
-
 export default function Home() {
   return (
     <>
-      <Navigation />
-
-      <section className="hero">
-        <div className="hero-eyebrow">
-          <div className="hero-dot"></div>
-          Now in open beta (web only)
+      {/* ============ HERO ============ */}
+      <div className="hero-frame">
+        <div className="hero">
+          <p className="micro">Currently in beta on web</p>
+          <h1 className="display headline">
+            Two docs.
+            <br />
+            <span className="accent">One</span> screen.
+          </h1>
+          <p className="body-copy">Write in one. Reference the other. Never alt-tab to find your place again.</p>
+          <div className="cta-row">
+            <div className="btn solid">Start for free</div>
+            <div className="btn outline">See split view</div>
+          </div>
         </div>
-        <h1>Beautiful docs for people who care about their work.</h1>
-        <p className="hero-sub">
-          Web now. Mac and iPad coming soon.
-        </p>
-        <div className="hero-actions">
-          <a href="https://app.two.so/signup" className="btn-hero">Start for free →</a>
-          <a href="/product/features" className="btn-hero-ghost">Explore features</a>
-        </div>
-      </section>
 
-      {/* ── App mockup ── */}
-      <div className="screen-wrap">
-        <div style={{
-          width: '100%',
-          maxWidth: '1080px',
-          margin: '0 auto',
-          borderRadius: '14px',
-          overflow: 'hidden',
-          border: '1px solid rgba(255,255,255,0.08)',
-          background: '#161618',
-          fontFamily: "-apple-system, BlinkMacSystemFont, 'Inter', sans-serif",
-        }}>
-
-          {/* Browser bar */}
-          <div style={{
-            background: '#1c1c1e',
-            padding: '12px 18px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            borderBottom: '1px solid rgba(255,255,255,0.08)',
-          }}>
-            <div style={{ display: 'flex', gap: '6px' }}>
-              <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#ff5f57' }} />
-              <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#ffbd2e' }} />
-              <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#28c840' }} />
+        <div className="stage">
+          <div className="cards">
+            <div className="card">
+              <div className="folder tl">
+                <svg viewBox="0 0 64 56">
+                  <path
+                    d="M4 14a4 4 0 014-4h14l6 8h28a4 4 0 014 4v26a4 4 0 01-4 4H8a4 4 0 01-4-4z"
+                    fill="#8f89e6"
+                    opacity="0.9"
+                  />
+                </svg>
+              </div>
+              <div className="doc-bar">
+                <i></i>
+                <i></i>
+                <i></i>
+                <span className="pill roadmap">ROADMAP</span>
+              </div>
+              <div className="ln title w46"></div>
+              <div className="ln w97"></div>
+              <div className="ln w91"></div>
+              <div className="ln w88"></div>
+              <div className="ln w72"></div>
+              <div className="gap"></div>
+              <div className="ln w95"></div>
+              <div className="ln w83"></div>
+              <div className="ln w91"></div>
+              <div className="ln w64"></div>
+              <div className="gap"></div>
+              <div className="ln w55"></div>
+              <div className="ln w70"></div>
+              <div className="ln w40">
+                &nbsp;<span className="cursor"></span>
+              </div>
             </div>
-            <div style={{
-              flex: 1, textAlign: 'center',
-              background: '#161618',
-              borderRadius: '6px',
-              padding: '4px 12px',
-              fontSize: '12px',
-              color: '#555',
-              fontFamily: 'ui-monospace, monospace',
-              border: '1px solid rgba(255,255,255,0.06)',
-            }}>
-              app.two.so
+            <div className="card">
+              <div className="folder br">
+                <svg viewBox="0 0 64 56">
+                  <path
+                    d="M4 14a4 4 0 014-4h14l6 8h28a4 4 0 014 4v26a4 4 0 01-4 4H8a4 4 0 01-4-4z"
+                    fill="#c98a5e"
+                    opacity="0.9"
+                  />
+                </svg>
+              </div>
+              <div className="doc-bar">
+                <i></i>
+                <i></i>
+                <i></i>
+                <span className="pill notes">MEETING NOTES</span>
+              </div>
+              <div className="ln title w46"></div>
+              <div className="ln w88"></div>
+              <div className="ln w95"></div>
+              <div className="ln w72"></div>
+              <div className="ln w91"></div>
+              <div className="gap"></div>
+              <div className="ln w80"></div>
+              <div className="ln w97"></div>
+              <div className="ln w64"></div>
+              <div className="ln w83"></div>
+              <div className="gap"></div>
+              <div className="ln w70"></div>
+              <div className="ln w55"></div>
+            </div>
+            <div className="seam-wrap">
+              <div className="line"></div>
+            </div>
+            <div className="seam-dot"></div>
+          </div>
+
+          <div className="leader la">
+            <div className="tick"></div>
+            <div className="line"></div>
+            <div className="lbl">
+              Split view — <b>drag to resize</b>
+            </div>
+          </div>
+          <div className="leader lb">
+            <div className="tick"></div>
+            <div className="line"></div>
+            <div className="lbl">
+              <b>Folders</b> — keep things tidy
+            </div>
+          </div>
+          <div className="leader lc">
+            <div className="tick"></div>
+            <div className="line"></div>
+            <div className="lbl">
+              Live, <b>as you type</b>
+            </div>
+          </div>
+        </div>
+
+        <div className="bottom-bar">
+          <div>
+            <span className="k">Platforms</span>
+            <span className="v">Web · Mac &amp; iPad soon</span>
+          </div>
+          <div>
+            <span className="k">Price</span>
+            <span className="v">Free to start</span>
+          </div>
+        </div>
+      </div>
+
+      {/* ============ FEATURES ============ */}
+      <div className="features-frame">
+        <div className="section-head">
+          <p className="micro">Beyond split view</p>
+          <h2 className="display">Two more reasons to switch.</h2>
+          <p>Tabs keep every doc one click away. Linking keeps your notes and docs from living apart.</p>
+        </div>
+
+        <div className="flagships">
+          <div className="flag">
+            <div className="flag-leader">
+              <div className="tick"></div>
+              <div className="line"></div>
+              <div className="lbl">
+                Tabs — <b>never lose your place</b>
+              </div>
+            </div>
+            <div className="demo">
+              <div className="tabbar">
+                <span className="active">Weekly Review</span>
+                <span>OKR Tracker</span>
+                <span>Product Brief</span>
+              </div>
+              <div className="fakeln w90"></div>
+              <div className="fakeln w70"></div>
+              <div className="fakeln w80"></div>
+              <div className="fakeln w55"></div>
+            </div>
+          </div>
+          <div className="flag">
+            <div className="flag-leader">
+              <div className="tick"></div>
+              <div className="line"></div>
+              <div className="lbl">
+                Linking — <b>jump straight there</b>
+              </div>
+            </div>
+            <div className="demo">
+              <div className="fakeln w90"></div>
+              <div className="link-row">
+                <div className="fakeln" style={{ width: "44%" }}></div>
+                <span className="fakeln linked">the meeting notes</span>
+              </div>
+              <div className="fakeln w70"></div>
+              <div className="fakeln w80"></div>
+              <div className="ref-drop">
+                <div className="ref-connector"></div>
+              </div>
+              <div className="ref-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#c98a5e" strokeWidth="1.6">
+                  <path d="M4 4h13l3 3v13H4z" />
+                  <line x1="8" y1="9" x2="14" y2="9" />
+                </svg>
+                <span>Meeting Notes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="support-head">
+          <p className="micro">And the rest of the toolkit</p>
+          <h3 className="display">Four smaller things, all worth having.</h3>
+        </div>
+
+        <div className="bento2">
+          <div className="tile t-tpl">
+            <div className="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4">
+                <rect x="4" y="3" width="16" height="18" rx="2" />
+                <line x1="4" y1="8" x2="20" y2="8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+              </svg>
+            </div>
+            <h4>Start fast, every time</h4>
+            <p className="desc">Meeting notes, briefs, roadmaps — one click away.</p>
+            <div className="tpl-grid">
+              <div className="tpl-cell">
+                <div className="dot" style={{ background: "var(--clay)" }}></div>
+                <p>Meeting Notes</p>
+              </div>
+              <div className="tpl-cell">
+                <div className="dot" style={{ background: "var(--indigo)" }}></div>
+                <p>OKR Tracker</p>
+              </div>
+              <div className="tpl-cell">
+                <div className="dot" style={{ background: "#5b9bd6" }}></div>
+                <p>Product Brief</p>
+              </div>
+              <div className="tpl-cell">
+                <div className="dot" style={{ background: "var(--green)" }}></div>
+                <p>Blog Post</p>
+              </div>
             </div>
           </div>
 
-          {/* Layout */}
-          <div style={{ display: 'flex', height: '620px' }}>
-
-            {/* Sidebar */}
-            <div style={{
-              width: '48px',
-              background: '#1c1c1e',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              padding: '12px 0',
-              gap: '2px',
-              borderRight: '1px solid rgba(255,255,255,0.08)',
-              flexShrink: 0,
-            }}>
-              <div style={{
-                width: 28, height: 28,
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg,#4f8ef7,#f7a24f)',
-                marginBottom: '8px',
-                flexShrink: 0,
-              }} />
-              <SbIcon>
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M9 18l6-6-6-6"/>
-                </svg>
-              </SbIcon>
-              <SbIcon active>
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3 12L12 4l9 8v8a1 1 0 01-1 1H5a1 1 0 01-1-1z"/>
-                </svg>
-              </SbIcon>
-              <SbIcon>
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="9 11 12 14 22 4"/>
-                  <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
-                </svg>
-              </SbIcon>
-              <SbIcon>
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                </svg>
-              </SbIcon>
-              <SbIcon>
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                  <path d="M2 17l10 5 10-5"/>
-                  <path d="M2 12l10 5 10-5"/>
-                </svg>
-              </SbIcon>
-              <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
-                <SbIcon>
-                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="3"/>
-                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                  </svg>
-                </SbIcon>
-                <SbIcon>
-                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/>
-                    <polyline points="16 17 21 12 16 7"/>
-                    <line x1="21" y1="12" x2="9" y2="12"/>
-                  </svg>
-                </SbIcon>
-              </div>
+          <div className="tile t-sync">
+            <div className="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4">
+                <path d="M3 12a9 9 0 0115-6.7M21 12a9 9 0 01-15 6.7" />
+                <path d="M18 3v4h-4M6 21v-4h4" />
+              </svg>
             </div>
-
-            {/* Main */}
-            <div style={{ flex: 1, background: '#161618', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-              <div style={{ padding: '16px 24px 10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
-                <div style={{ fontSize: '24px', fontWeight: 700, color: '#e8e8e8', letterSpacing: '-0.4px' }}>
-                  Recent Docs
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{
-                    display: 'flex', alignItems: 'center', gap: '6px',
-                    background: '#242426', color: '#c4c4c4',
-                    borderRadius: '9px', padding: '7px 14px',
-                    fontSize: '12px', fontWeight: 500,
-                    border: '1px solid rgba(255,255,255,0.1)',
-                  }}>
-                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
-                      <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
-                    </svg>
-                    Templates
-                  </div>
-                  <div style={{
-                    display: 'flex', alignItems: 'center', gap: '6px',
-                    background: '#e8e8e8', color: '#161618',
-                    borderRadius: '9px', padding: '7px 14px',
-                    fontSize: '12px', fontWeight: 600,
-                  }}>
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#161618" strokeWidth="2.5" strokeLinecap="round">
-                      <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-                    </svg>
-                    New Doc
-                  </div>
-                </div>
+            <h4>Every device, always current</h4>
+            <p className="desc">Changes push instantly across Mac, web, and iPad.</p>
+            <div className="sync-row">
+              <span className="lbl">Mac</span>
+              <div className="track">
+                <div className="fill" style={{ width: "96%" }}></div>
               </div>
-
-              <div style={{ display: 'flex', gap: '6px', padding: '0 24px 14px', flexShrink: 0 }}>
-                {['Recent', 'Favorites', 'Deleted'].map((p) => (
-                  <div key={p} style={{
-                    padding: '5px 14px',
-                    borderRadius: '99px',
-                    fontSize: '12px',
-                    fontWeight: 500,
-                    color: p === 'Recent' ? '#161618' : '#a0a0a0',
-                    background: p === 'Recent' ? '#e8e8e8' : 'transparent',
-                    border: p === 'Recent' ? '1px solid #e8e8e8' : '1px solid rgba(255,255,255,0.08)',
-                  }}>
-                    {p}
-                  </div>
-                ))}
+              <span className="dot"></span>
+            </div>
+            <div className="sync-row">
+              <span className="lbl">Web</span>
+              <div className="track">
+                <div className="fill" style={{ width: "96%" }}></div>
               </div>
+              <span className="dot"></span>
+            </div>
+            <div className="sync-row">
+              <span className="lbl">iPad</span>
+              <div className="track">
+                <div className="fill" style={{ width: "96%" }}></div>
+              </div>
+              <span className="dot"></span>
+            </div>
+          </div>
 
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: '10px',
-                padding: '0 24px 24px',
-                overflow: 'hidden',
-              }}>
-                {DOCS.map((doc) => (
-                  <div key={doc.title} style={{
-                    background: '#242426',
-                    borderRadius: '10px',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    padding: '16px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '6px',
-                  }}>
-                    <div style={{ height: '3px', borderRadius: '2px', background: doc.color, marginBottom: '4px' }} />
-                    <div style={{ fontSize: '13px', fontWeight: 600, color: '#e8e8e8', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                      {doc.title}
-                    </div>
-                    <div style={{ fontSize: '11px', color: '#a0a0a0', lineHeight: 1.55, overflow: 'hidden', flex: 1,
-                      display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' as const }}>
-                      {doc.preview}
-                    </div>
-                    <div style={{
-                      fontSize: '11px', color: 'rgba(255,255,255,0.2)',
-                      marginTop: '8px', paddingTop: '8px',
-                      borderTop: '1px solid rgba(255,255,255,0.06)',
-                    }}>
-                      {doc.date}
-                    </div>
-                  </div>
-                ))}
+          <div className="tile t-shared">
+            <div className="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+              </svg>
+            </div>
+            <h4>Shared, when you want it</h4>
+            <p className="desc">Bring one or two people into a doc — not a whole workspace of noise.</p>
+            <div className="avatars">
+              <div className="av a1">P</div>
+              <div className="av a2">R</div>
+              <div className="av a3">+2</div>
+            </div>
+          </div>
+
+          <div className="tile t-log">
+            <div className="log-copy">
+              <div className="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 3" />
+                </svg>
+              </div>
+              <h4>Know what changed, and when</h4>
+              <p className="desc" style={{ marginBottom: 0 }}>
+                A running log of every edit, across every workspace.
+              </p>
+            </div>
+            <div className="timeline">
+              <div className="tl-node">
+                <div className="line2"></div>
+                <div className="dot2"></div>
+                <span className="cap">Mon</span>
+              </div>
+              <div className="tl-node active">
+                <div className="line2"></div>
+                <div className="dot2"></div>
+                <span className="cap">Edited</span>
+              </div>
+              <div className="tl-node">
+                <div className="line2"></div>
+                <div className="dot2"></div>
+                <span className="cap">Sun</span>
+              </div>
+              <div className="tl-node">
+                <div className="dot2"></div>
+                <span className="cap">Sat</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <section className="mission-statement">
-        <p>Somewhere along the way, iPad became the device people actually reach for. The ones who think better when they&apos;re away from their desk. And yet every doc app still treats it like a second screen. TWO exists because that never made sense to us.</p>
-      </section>
-
-      <FeaturesBento />
-     <section className="audience-section">
-        <div className="audience-inner">
-          <div className="audience-left">
-            <p className="section-eyebrow">Who it&apos;s for</p>
-            <p className="audience-statement">TWO is built for a specific kind of person. You&apos;ll know if that&apos;s you.</p>
-          </div>
-          <div className="audience-right">
-            <a href="/solutions/creatives" className="audience-row">
-              <div>
-                <p className="audience-row-title">Creatives</p>
-                <p className="audience-row-desc">Writers, designers, and makers who need a quiet place to think and create.</p>
-              </div>
-              <span className="audience-arrow">→</span>
-            </a>
-            <a href="/solutions/solo" className="audience-row">
-              <div>
-                <p className="audience-row-title">Solo operators</p>
-                <p className="audience-row-desc">Founders and freelancers running everything themselves, who need one place for it all.</p>
-              </div>
-              <span className="audience-arrow">→</span>
-            </a>
-            <a href="/solutions/teams" className="audience-row">
-              <div>
-                <p className="audience-row-title">Small teams</p>
-                <p className="audience-row-desc">Teams that move fast and don&apos;t want their docs app to slow them down.</p>
-              </div>
-              <span className="audience-arrow">→</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PRICING ── */}
-      <PricingSection />
-
-      <FaqSection />
-
-     <CtaBand />
-
-      <footer style={{ borderTop: '1px solid var(--border)' }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', padding: '48px 40px 40px', gap: 40 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minWidth: 160 }}>
-            <span style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.03em', color: 'var(--foreground)' }}>TWO</span>
-            <span style={{ fontSize: 13, color: 'var(--muted-foreground)', maxWidth: 200, lineHeight: 1.5 }}>A better place to think and write.</span>
-          </div>
-          <div style={{ display: 'flex', gap: 60 }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted-foreground)', marginBottom: 4 }}>Product</span>
-              <a href="https://two.so/#features" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Features</a>
-              <a href="https://two.so/#pricing" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Pricing</a>
-              <a href="https://two.so/roadmap" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Roadmap</a>
-              <a href="https://www.sorano.space/two-docs/changelog" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Changelog</a>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted-foreground)', marginBottom: 4 }}>Compare</span>
-              <a href="/compare/notion" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>TWO vs Notion</a>
-              <a href="/compare/apple-notes" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>TWO vs Apple Notes</a>
-              <a href="/compare/bear" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>TWO vs Bear</a>
-              <a href="/compare/obsidian" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>TWO vs Obsidian</a>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted-foreground)', marginBottom: 4 }}>Account</span>
-              <a href="https://app.two.so/login" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Log in</a>
-              <a href="https://app.two.so/signup" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Sign up</a>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted-foreground)', marginBottom: 4 }}>Legal</span>
-              <a href="/privacy-policy" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Privacy Policy</a>
-              <a href="/terms-of-service" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Terms of Service</a>
-              <a href="/terms-of-service#refunds" style={{ fontSize: 13, color: 'var(--muted-foreground)', textDecoration: 'none' }}>Refund Policy</a>
-            </div>
-          </div>
-        </div>
-        <div style={{ borderTop: '1px solid var(--border)', padding: '16px 40px', fontSize: 12, color: 'var(--muted-foreground)' }}>
-          © 2026 TWO. All rights reserved.
-        </div>
-      </footer>
     </>
-  )
+  );
 }
-
-function SbIcon({ children, active }: { children: React.ReactNode; active?: boolean }) {
-  return (
-    <div style={{
-      width: 32, height: 32,
-      borderRadius: '7px',
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      color: active ? '#e8e8e8' : 'rgba(255,255,255,0.28)',
-      background: active ? '#2e2e30' : 'transparent',
-    }}>
-      {children}
-    </div>
-  )
-}
-
-const DOCS = [
-  { title: 'Q3 Investor Update',      color: '#e8c06e', preview: 'Quarterly update covering revenue, growth metrics and product milestones for the board.', date: 'May 24' },
-  { title: '2026 GTM Strategy',       color: '#4a8fd4', preview: 'Go-to-market plan for the new year. Channels, ICP, and launch sequencing.', date: 'May 24' },
-  { title: 'Series A Deck — Draft 3', color: '#4aad6e', preview: 'Latest pitch deck revision with updated traction slides and market sizing.', date: 'May 23' },
-  { title: 'Competitive Analysis',    color: '#c96b8c', preview: 'Deep dive into Notion, Apple Notes, and Bear. Where TWO wins.', date: 'May 23' },
-  { title: 'Product Roadmap 2026',    color: '#7a6fd4', preview: 'Feature priorities, team assignments, and shipping milestones for H1.', date: 'May 22' },
-  { title: 'Brand Guidelines',        color: '#d4943a', preview: 'Typography, color system, tone of voice, and logo usage guidelines.', date: 'May 22' },
-  { title: 'Hiring Plan Q2',          color: '#4aadad', preview: 'New hire checklist, tools setup, and first week expectations.', date: 'May 21' },
-  { title: 'Onboarding Docs',         color: '#ad4a4a', preview: 'New hire checklist, tools setup, and first week expectations.', date: 'May 21' },
-  { title: 'Meeting Notes — May',     color: '#8aad4a', preview: 'Weekly sync summaries, decisions made, and action items this month.', date: 'May 20' },
-]
