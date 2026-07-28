@@ -282,3 +282,40 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .faq-row .q-tag { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--indigo); margin-right: 10px; }
 .faq-row .a { font-size: 13.5px; color: var(--text-muted); margin: 12px 0 0; line-height: 1.6; }
 .faq-row .plus { color: var(--text-muted); font-size: 16px; flex-shrink: 0; }
+
+.roadmap-head { text-align: center; padding: 72px 0 8px; }
+.roadmap-head h1 { font-size: 44px; margin: 16px 0 14px; }
+.roadmap-head p { font-size: 15px; color: var(--text-muted); max-width: 440px; margin: 0 auto; line-height: 1.6; }
+
+.roadmap-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 64px 0 70px; }
+.roadmap-col-head { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; }
+.roadmap-col-head .dot { width: 7px; height: 7px; border-radius: 50%; }
+.roadmap-col-head span { font-size: 13px; font-weight: 600; }
+.dot.shipped { background: var(--green); }
+.dot.progress { background: var(--indigo); }
+.dot.soon { background: var(--text-muted); }
+
+.roadmap-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; margin-bottom: 14px; position: relative; }
+.roadmap-card .t { font-size: 14.5px; font-weight: 600; margin: 0 0 8px; }
+.roadmap-card .d { font-size: 12.5px; color: var(--text-muted); line-height: 1.55; margin: 0 0 16px; }
+.rm-badge { font-size: 10.5px; font-weight: 500; padding: 3px 9px; border-radius: 6px; }
+.rm-badge.shipped { color: var(--green); background: rgba(111,181,135,0.14); }
+.rm-badge.progress { color: var(--indigo); background: rgba(143,137,230,0.15); }
+.rm-badge.soon { color: var(--text-muted); background: var(--bg-tertiary); }
+
+.roadmap-flagship { position: relative; }
+.roadmap-flag-leader { position: absolute; right: -8px; top: -34px; }
+.roadmap-flag-leader .line { position: absolute; background: var(--border-strong); right: 34px; top: 0; width: 1px; height: 30px; }
+.roadmap-flag-leader .tick { position: absolute; width: 4px; height: 4px; border-radius: 50%; border: 1px solid var(--text-muted); background: var(--bg); right: 30px; top: 30px; }
+.roadmap-flag-leader .lbl { position: absolute; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; right: 40px; top: -6px; text-align: right; }
+.roadmap-flag-leader .lbl b { color: var(--clay); font-weight: 500; }
+
+.roadmap-divider { border-top: 1px solid var(--border); margin: 0 0 50px; }
+.roadmap-prev-title { font-size: 18px; font-weight: 600; margin: 0 0 24px; }
+.roadmap-prev-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px 24px; margin-bottom: 70px; }
+.roadmap-prev-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-secondary); padding: 6px 0; }
+.roadmap-prev-item svg { width: 13px; height: 13px; flex-shrink: 0; color: var(--indigo); }
+
+.roadmap-horizon-card { background: var(--bg-card); border: 1px dashed var(--border-strong); border-radius: 12px; padding: 24px 26px; max-width: 400px; }
+.roadmap-horizon-card .t { font-size: 15px; font-weight: 600; margin: 0 0 8px; }
+.roadmap-horizon-card .d { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.55; }
