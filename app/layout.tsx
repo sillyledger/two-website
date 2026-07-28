@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "TWO — Write better. Think clearer.",
   description: "Beautiful docs for individuals and small teams who live on Apple devices. Fast, focused, and nothing you don't need.",
   applicationName: "TWO",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
