@@ -1,7 +1,7 @@
 :root {
   --bg: #161618; --bg-card: #1c1c1e; --bg-tertiary: #242426;
   --border: rgba(255,255,255,0.08); --border-strong: rgba(255,255,255,0.16);
-  --text-primary: #e8e8e8; --text-secondary: #c4c4c4; --text-muted: #a0a0a0;
+  --text-primary: #e8e8e8; --text-secondary: #d8d8d8; --text-muted: #a0a0a0;
   --indigo: #8f89e6; --clay: #c98a5e; --green: #6fb587;
   --indigo-pill: rgba(143,137,230,0.15); --clay-pill: rgba(201,138,94,0.15);
 }
@@ -22,7 +22,7 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .hero { text-align: center; padding: 60px 0 8px; }
 .headline { font-size: 58px; line-height: 0.98; margin: 20px 0 22px; }
 .headline .accent { color: var(--indigo); }
-.body-copy { font-size: 15px; color: var(--text-muted); max-width: 460px; margin: 0 auto 30px; line-height: 1.6; }
+.body-copy { font-size: 16px; color: var(--text-secondary); max-width: 460px; margin: 0 auto 30px; line-height: 1.6; }
 .cta-row { display: flex; align-items: center; justify-content: center; gap: 12px; }
 .btn { font-size: 13.5px; font-weight: 500; padding: 12px 24px; border-radius: 999px; }
 .btn.solid { background: var(--text-primary); color: var(--bg); }
@@ -81,7 +81,7 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 
 .section-head { text-align: center; margin-bottom: 64px; }
 .section-head h2 { font-size: 34px; line-height: 1.1; margin: 14px 0 12px; }
-.section-head p { font-size: 14.5px; color: var(--text-muted); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+.section-head p { font-size: 16px; color: var(--text-secondary); max-width: 480px; margin: 0 auto; line-height: 1.6; }
 
 .flagships { display: flex; justify-content: center; gap: 44px; margin-bottom: 30px; }
 .flag { width: 500px; position: relative; padding-top: 46px; }
@@ -120,7 +120,7 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .tile .icon { width: 32px; height: 32px; border-radius: 8px; background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
 .tile .icon svg { width: 16px; height: 16px; }
 .tile h4 { font-size: 16px; font-weight: 600; margin: 0 0 6px; font-family: 'DM Sans', sans-serif; }
-.tile p.desc { font-size: 13px; color: var(--text-muted); margin: 0 0 22px; line-height: 1.55; }
+.tile p.desc { font-size: 13px; color: var(--text-secondary); margin: 0 0 22px; line-height: 1.55; }
 
 .tpl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .tpl-cell { background: var(--bg-tertiary); border-radius: 8px; padding: 12px; }
