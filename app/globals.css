@@ -62,7 +62,7 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .la .line { left: 0; top: 0; width: 1px; height: 42px; }
 .la .lbl { top: 46px; left: 50%; transform: translateX(-50%); text-align: center; }
 
-.la-icon { position: absolute; left: 22px; top: 8px; width: 26px; height: 26px; border-radius: 7px; background: var(--bg-tertiary); border: 1px solid var(--border-strong); display: flex; align-items: center; justify-content: center; }
+.la-icon { position: absolute; left: -13px; top: 12px; width: 26px; height: 26px; border-radius: 7px; background: var(--bg-tertiary); border: 1px solid var(--border-strong); display: flex; align-items: center; justify-content: center; }
 .la-icon svg { width: 13px; height: 13px; }
 
 .lb { position: absolute; left: 132px; top: -14px; }
