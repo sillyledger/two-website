@@ -1,0 +1,121 @@
+"use client";
+
+import { useState } from "react";
+
+type Article = {
+  category: string;
+  title: string;
+  desc: string;
+  href: string;
+};
+
+const ARTICLES: Article[] = [
+  {
+    category: "Getting Started",
+    title: "Your first doc",
+    desc: "Create and start writing your very first document in TWO.",
+    href: "/resources/help/getting-started/your-first-doc",
+  },
+  {
+    category: "Getting Started",
+    title: "Using templates",
+    desc: "Start from a template instead of a blank page.",
+    href: "/resources/help/getting-started/using-templates",
+  },
+  {
+    category: "Getting Started",
+    title: "Using TWO as a web app",
+    desc: "Install TWO to your home screen for a native-like feel.",
+    href: "/resources/help/getting-started/using-two-as-a-web-app",
+  },
+  {
+    category: "Docs & Editor",
+    title: "Formatting",
+    desc: "Headers, bold, lists, code blocks — everything the editor supports.",
+    href: "/resources/help/docs-editor/formatting",
+  },
+];
+
+export default function HelpCenterPage() {
+  const [query, setQuery] = useState("");
+
+  const filtered = ARTICLES.filter((a) => {
+    const q = query.trim().toLowerCase();
+    if (!q) return true;
+    return a.title.toLowerCase().includes(q) || a.desc.toLowerCase().includes(q) || a.category.toLowerCase().includes(q);
+  });
+
+  return (
+    <div className="features-frame">
+      <section className="hc-hero">
+        <div className="hc-hero-left">
+          <p className="micro">Help Center</p>
+          <h1 className="display">How can we help?</h1>
+          <p>Guides and answers to get the most out of TWO.</p>
+        </div>
+        <div className="hc-search-small">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="7" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            placeholder="Search articles"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+        </div>
+      </section>
+
+      <div className="hc-cats">
+        <a href="/resources/help/getting-started" className="hc-cat linked">
+          <div className="hc-cat-mark" />
+          <div className="hc-cat-title">Getting Started</div>
+          <div className="hc-cat-desc">New to TWO? Start here. Create your first doc, use templates, and set up the web app.</div>
+          <div className="hc-cat-meta">3 articles →</div>
+        </a>
+        <a href="/resources/help/docs-editor" className="hc-cat linked docs">
+          <div className="hc-cat-mark" />
+          <div className="hc-cat-title">Docs &amp; Editor</div>
+          <div className="hc-cat-desc">Everything about writing and formatting in TWO.</div>
+          <div className="hc-cat-meta">1 article →</div>
+        </a>
+        <div className="hc-cat soon">
+          <div className="hc-cat-mark" />
+          <div className="hc-cat-title">
+            Account <span className="hc-soon-tag">Soon</span>
+          </div>
+          <div className="hc-cat-desc">Settings, appearance, and billing guides — on the way.</div>
+          <div className="hc-cat-meta">0 articles</div>
+        </div>
+      </div>
+
+      <div className="hc-popular">
+        <div className="hc-popular-head">
+          <h2 className="display">Popular articles</h2>
+        </div>
+        <div className="hc-article-list">
+          {filtered.length === 0 ? (
+            <p className="hc-no-results">No articles match &quot;{query}&quot;.</p>
+          ) : (
+            filtered.map((a) => (
+              <a href={a.href} className="hc-article-row" key={a.title}>
+                <div className="mark" />
+                <div>
+                  <span className="hc-article-cat">{a.category}</span>
+                  <p className="hc-article-row-title">{a.title}</p>
+                  <p className="hc-article-row-desc">{a.desc}</p>
+                </div>
+              </a>
+            ))
+          )}
+        </div>
+      </div>
+
+      <div className="hc-cta">
+        <p>Can&apos;t find what you&apos;re looking for?</p>
+        <a href="mailto:two@strevius.com">Contact support →</a>
+      </div>
+    </div>
+  );
+}
