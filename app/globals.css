@@ -912,6 +912,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   .ws-stage { grid-template-columns: 1fr; gap: 20px; }
 
   .bottom-bar { flex-wrap: wrap; row-gap: 16px; }
+  .sv-bottom-bar { flex-wrap: wrap; row-gap: 16px; }
 }
 
 /* ============ MOBILE: ROADMAP PAGE ============ */
@@ -924,4 +925,9 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 
 @media (max-width: 480px) {
   .roadmap-prev-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 860px) {
+  .mega-inner { grid-template-columns: 1fr; }
+  .mega-preview { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 24px; margin-top: 8px; }
 }
