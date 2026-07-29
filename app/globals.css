@@ -931,3 +931,40 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   .mega-inner { grid-template-columns: 1fr; }
   .mega-preview { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 24px; margin-top: 8px; }
 }
+
+/* ============ PRODUCT FEATURES HUB ============ */
+.pf-hero { text-align: center; padding: 76px 0 60px; }
+.pf-hero h1 { font-size: 48px; line-height: 1.08; margin: 0 0 18px; }
+.pf-hero p { font-size: 15.5px; color: var(--text-muted); max-width: 520px; margin: 0 auto; line-height: 1.6; }
+
+.pf-bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; padding-bottom: 100px; }
+.pf-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px 30px; position: relative; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+.pf-card.linked { border-color: var(--border-strong); }
+.pf-card.linked:hover { border-color: var(--indigo); }
+
+.pf-hero-card { grid-column: span 8; }
+.pf-tall-card { grid-column: span 4; grid-row: span 2; }
+.pf-wide-card { grid-column: span 8; }
+.pf-third-card { grid-column: span 4; }
+
+.pf-badge { position: absolute; top: 22px; right: 24px; font-size: 9.5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--indigo); background: var(--indigo-pill); padding: 3px 9px; border-radius: 999px; }
+.pf-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+.pf-title { font-size: 19px; font-weight: 600; font-family: 'Fira Sans', sans-serif; margin-bottom: 8px; }
+.pf-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+.pf-cta { font-size: 12.5px; color: var(--indigo); font-weight: 500; margin-top: auto; }
+.pf-card:not(.linked) .pf-cta { color: var(--text-muted); }
+
+.pf-mini-explode { position: relative; height: 90px; margin: 4px 0 18px; }
+.pf-mini-core { position: absolute; left: 0; top: 10px; width: 60%; background: var(--bg-tertiary); border: 1px solid var(--border-strong); border-radius: 8px; padding: 10px 12px; }
+.pf-mini-core .l { height: 2px; border-radius: 1px; background: var(--border-strong); margin-bottom: 6px; }
+.pf-mini-core .l:first-child { background: var(--indigo); width: 50%; height: 3px; }
+.pf-mini-piece { position: absolute; right: 0; top: 0; width: 34%; background: var(--bg); border: 1px solid var(--border-strong); border-radius: 8px; padding: 8px 10px; z-index: 2; }
+.pf-mini-piece .l { height: 2px; border-radius: 1px; background: var(--border-strong); margin-bottom: 5px; }
+.pf-mini-line { position: absolute; left: 60%; top: 26px; width: 24%; height: 1px; background: var(--border-strong); }
+.pf-mini-tick { position: absolute; left: calc(60% - 3px); top: 23px; width: 4px; height: 4px; border-radius: 50%; border: 1px solid var(--text-muted); background: var(--bg-card); }
+
+@media (max-width: 860px) {
+  .pf-hero h1 { font-size: 32px; }
+  .pf-bento { grid-template-columns: 1fr; }
+  .pf-hero-card, .pf-tall-card, .pf-wide-card, .pf-third-card { grid-column: span 1; grid-row: span 1; }
+}
