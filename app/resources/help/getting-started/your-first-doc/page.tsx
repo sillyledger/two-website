@@ -37,6 +37,11 @@ export default function YourFirstDocArticle() {
           you&apos;ve typed it.
         </p>
 
+        <div className="harticle-pn">
+          <span />
+          <a href="/resources/help/getting-started/using-templates" className="next">Using templates →</a>
+        </div>
+
         <HelpFeedback />
       </article>
     </div>
