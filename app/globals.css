@@ -6,7 +6,8 @@
   --indigo-pill: rgba(143,137,230,0.15); --clay-pill: rgba(201,138,94,0.15);
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text-primary); font-family: 'DM Sans', system-ui, sans-serif; }
+html { overflow-x: hidden; width: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text-primary); font-family: 'DM Sans', system-ui, sans-serif; overflow-x: hidden; width: 100%; }
 .display { font-family: 'Fira Sans', sans-serif; font-weight: 600; letter-spacing: -0.02em; }
 .micro { font-size: 11px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); }
 
@@ -862,4 +863,65 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   .cmp-bento { grid-template-columns: 1fr; }
   .cmp-th-row, .cmp-spec-row { grid-template-columns: 1.1fr 1fr 1fr; }
   .cmp-th-row > div, .cmp-spec-row > div { padding: 12px 14px; }
+}
+
+/* ============ MOBILE: PRICING PAGE ============ */
+@media (max-width: 860px) {
+  .pricing-hero h1 { font-size: 32px; }
+  .pricing-toggle { flex-wrap: wrap; justify-content: center; }
+
+  .pricing-annot { position: static; text-align: left; margin-bottom: 16px; }
+  .pricing-annot .line, .pricing-annot .tick { display: none; }
+
+  .plan-row { grid-template-columns: 1fr; border-bottom: none; }
+  .plan-row > .spacer { display: none; }
+  .plan-col { border-left: none; border-top: 1px solid var(--border); padding: 24px 4px; }
+  .plan-col:first-of-type { border-top: none; }
+
+  .spec-row { grid-template-columns: 1fr; border-bottom: none; }
+  .spec-row > div:not(.label) { display: none; }
+  .spec-row .label { padding: 10px 4px; border-bottom: 1px solid var(--border); width: 100%; }
+  .spec-row.cat .label { padding-top: 20px; }
+
+  /* Since per-plan feature checks are hidden above (no room on mobile),
+     show a condensed note directing people to tap a plan for details */
+  .pricing-sheet::after {
+    content: "Full feature breakdown shown per plan above.";
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+/* ============ MOBILE: PRODUCT FEATURE PAGES ============ */
+@media (max-width: 860px) {
+  /* shared "How it works / Details" section used on all three feature pages */
+  .split { grid-template-columns: 1fr; gap: 40px; padding-bottom: 50px; }
+
+  /* Split View stage was a fixed 1084px — this was overflowing on every phone */
+  .sv-stage { width: 100%; }
+
+  /* Live Sync stage was a flex row of two devices + a signal line — stack it */
+  .ls-stage { flex-direction: column; gap: 20px; }
+  .ls-signal { flex: none; width: 100%; height: 30px; }
+  .ls-signal::before { left: 50%; right: auto; top: 0; bottom: 0; border-top: none; border-left: 1px dashed var(--border-strong); width: 0; }
+
+  /* Shared Workspaces stage was a 2-col grid — stack it */
+  .ws-stage { grid-template-columns: 1fr; gap: 20px; }
+
+  .bottom-bar { flex-wrap: wrap; row-gap: 16px; }
+}
+
+/* ============ MOBILE: ROADMAP PAGE ============ */
+@media (max-width: 860px) {
+  .roadmap-head h1 { font-size: 32px; }
+  .roadmap-board { grid-template-columns: 1fr; gap: 32px; }
+  .roadmap-prev-grid { grid-template-columns: 1fr 1fr; gap: 10px 16px; }
+  .roadmap-flag-leader { display: none; }
+}
+
+@media (max-width: 480px) {
+  .roadmap-prev-grid { grid-template-columns: 1fr; }
 }
