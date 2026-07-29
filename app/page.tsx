@@ -12,8 +12,8 @@ export default function Home() {
           </h1>
           <p className="body-copy">Write in one. Reference the other. Never alt-tab to find your place again.</p>
           <div className="cta-row">
-            <div className="btn solid">Start for free</div>
-            <div className="btn outline">See split view</div>
+            <a href="https://app.two.so/signup" className="btn solid">Start for free</a>
+            <a href="/product/features/split-view" className="btn outline">See split view</a>
           </div>
         </div>
 
@@ -320,7 +320,7 @@ export default function Home() {
                   <span className="per">/ month</span>
                 </div>
               </div>
-              <div className="pt-btn outline">Start free</div>
+              <a href="https://app.two.so/signup" className="pt-btn outline">Start free</a>
             </div>
             <div className="pt-block pro">
               <div>
@@ -330,7 +330,7 @@ export default function Home() {
                   <span className="per">/ month</span>
                 </div>
               </div>
-              <div className="pt-btn solid">Start free trial</div>
+              <a href="/pricing" className="pt-btn solid">Start free trial</a>
             </div>
             <div className="pt-block">
               <div>
@@ -340,7 +340,7 @@ export default function Home() {
                   <span className="per">/ once</span>
                 </div>
               </div>
-              <div className="pt-btn outline">Join</div>
+              <a href="/pricing" className="pt-btn outline">Join</a>
             </div>
           </div>
 
