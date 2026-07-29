@@ -14,7 +14,7 @@ export function Footer() {
           <div className="footer-cols">
             <div className="footer-col">
               <span className="footer-col-title">Product</span>
-              <a href="https://two.so/#features">Features</a>
+              <a href="/product/features">Features</a>
               <a href="https://two.so/#pricing">Pricing</a>
               <a href="https://two.so/roadmap">Roadmap</a>
               <a href="https://www.sorano.space/two-docs/changelog" target="_blank" rel="noopener noreferrer">
