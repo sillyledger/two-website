@@ -116,31 +116,6 @@ export function Navigation() {
             <button className={openMenu === "solutions" ? "nl-open" : ""} onClick={() => toggle("solutions")} onBlur={close}>
               Solutions <span className="nav-chevron">{CHEVRON}</span>
             </button>
-            {openMenu === "solutions" && (
-              <div className="simple-dd">
-                <a href="/solutions/creatives" className="simple-item">
-                  <span className="icon">{ICON_PEN}</span>
-                  <div>
-                    <p className="t">For Creatives</p>
-                    <p className="d">Writers, designers, and makers who need a quiet place to think.</p>
-                  </div>
-                </a>
-                <a href="/solutions/solo" className="simple-item">
-                  <span className="icon">{ICON_SOLO}</span>
-                  <div>
-                    <p className="t">For Solo Operators</p>
-                    <p className="d">Founders and freelancers running everything themselves.</p>
-                  </div>
-                </a>
-                <a href="/solutions/teams" className="simple-item">
-                  <span className="icon">{ICON_TEAM}</span>
-                  <div>
-                    <p className="t">For Small Teams</p>
-                    <p className="d">Teams that move fast and don&apos;t want their docs app to slow them down.</p>
-                  </div>
-                </a>
-              </div>
-            )}
           </li>
           <li>
             <button className={openMenu === "resources" ? "nl-open" : ""} onClick={() => toggle("resources")} onBlur={close}>
@@ -291,6 +266,54 @@ export function Navigation() {
 
               <div className="mega-all">
                 <a href="/product/features">View all features →</a>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {openMenu === "solutions" && (
+          <div className="mega">
+            <div className="mega-inner">
+              <a href="/solutions/creatives" className="mega-item">
+                <span className="icon">{ICON_PEN}</span>
+                <div>
+                  <p className="t">For Creatives</p>
+                  <p className="d">Writers, designers, and makers who need a quiet place to think.</p>
+                </div>
+              </a>
+              <a href="/solutions/solo" className="mega-item">
+                <span className="icon">{ICON_SOLO}</span>
+                <div>
+                  <p className="t">For Solo Operators</p>
+                  <p className="d">Founders and freelancers running everything themselves.</p>
+                </div>
+              </a>
+              <a href="/solutions/teams" className="mega-item">
+                <span className="icon">{ICON_TEAM}</span>
+                <div>
+                  <p className="t">For Small Teams</p>
+                  <p className="d">Teams that move fast and don&apos;t want their docs app to slow them down.</p>
+                </div>
+              </a>
+
+              <div className="mega-preview">
+                <p className="lbl">Preview</p>
+                <div className="mini-device">
+                  <div className="mini-panes">
+                    <div className="mini-pane">
+                      <div className="mini-bar" style={{ background: "var(--indigo)" }}></div>
+                      <div className="mini-sl" style={{ width: "90%" }}></div>
+                      <div className="mini-sl" style={{ width: "70%" }}></div>
+                      <div className="mini-sl" style={{ width: "80%" }}></div>
+                      <div className="mini-sl" style={{ width: "55%" }}></div>
+                    </div>
+                  </div>
+                  <div className="mp-annot">Shared, however you work</div>
+                </div>
+                <p className="cap">
+                  One app, three ways to use it.{" "}
+                  <a href="/product/features/shared-workspaces">See how sharing works →</a>
+                </p>
               </div>
             </div>
           </div>
