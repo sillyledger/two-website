@@ -122,7 +122,7 @@ export function Navigation() {
               Resources <span className="nav-chevron">{CHEVRON}</span>
             </button>
             {openMenu === "resources" && (
-              <div className="simple-dd">
+              <div className="simple-dd rd-dd">
                 <a href="/resources/templates" className="simple-item">
                   <span className="icon">{ICON_TEMPLATE}</span>
                   <div>
