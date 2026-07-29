@@ -1062,3 +1062,26 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   .hc-cats { grid-template-columns: 1fr; }
   .hc-article-list { grid-template-columns: 1fr; }
 }
+
+/* ============ HELP CATEGORY PAGES (shared across /resources/help/*) ============ */
+.hcat-back { padding: 40px 0 0; }
+.hcat-back a { font-size: 13px; color: var(--text-muted); text-decoration: none; }
+.hcat-back a:hover { color: var(--indigo); }
+
+.hcat-header { padding: 24px 0 50px; border-bottom: 1px solid var(--border); }
+.hcat-header h1 { font-size: 38px; margin: 12px 0 12px; }
+.hcat-header p { font-size: 15px; color: var(--text-muted); margin: 0; max-width: 460px; line-height: 1.6; }
+
+.hcat-list { padding: 10px 0 100px; }
+.hcat-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; }
+.hcat-row:last-child { border-bottom: none; }
+.hcat-row-title { font-size: 16.5px; font-weight: 600; margin: 0 0 6px; }
+.hcat-row-desc { font-size: 13.5px; color: var(--text-muted); margin: 0; line-height: 1.55; max-width: 520px; }
+.hcat-row-arrow { font-size: 15px; color: var(--text-muted); flex-shrink: 0; transition: color 0.15s, transform 0.15s; }
+.hcat-row:hover .hcat-row-arrow { color: var(--indigo); transform: translateX(3px); }
+
+@media (max-width: 860px) {
+  .hcat-header h1 { font-size: 28px; }
+  .hcat-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .hcat-row-arrow { display: none; }
+}
