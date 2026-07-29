@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Minimalist Docs Editor & Writing App for iPad, Mac & Web",
+};
+
 export default function Home() {
   return (
     <>

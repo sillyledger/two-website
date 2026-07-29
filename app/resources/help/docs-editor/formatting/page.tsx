@@ -1,5 +1,10 @@
 import { HelpSidebar } from "@/components/help-sidebar";
 import { HelpFeedback } from "@/components/help-feedback";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Document Formatting & Markdown Guide | TWO Help",
+};
 
 export default function FormattingArticle() {
   return (

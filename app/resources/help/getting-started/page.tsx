@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Getting Started Guide | TWO Help Center",
+};
+
 const ARTICLES: { title: string; desc: string; href: string }[] = [
   {
     title: "Your first doc",

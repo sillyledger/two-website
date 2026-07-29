@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TWO vs Notion: Faster, Distraction-Free Docs Editor",
+};
+
 const CHECK = (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="check-ic" style={{ color: "var(--indigo)" }}>
     <polyline points="20 6 9 17 4 12" />

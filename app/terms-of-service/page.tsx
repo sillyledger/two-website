@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | TWO",
+};
+
 export default function TermsOfService() {
   return (
     <main className="legal-page">

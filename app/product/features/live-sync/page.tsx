@@ -1,4 +1,9 @@
 import { Fragment } from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Live Sync: Instant Real-Time Document Sync | TWO",
+};
 
 const DEVICES = [
   { icon: "💻", name: "Mac" },

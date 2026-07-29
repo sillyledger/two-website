@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Split View Docs: Multi-Task & Compare Documents | TWO",
+};
+
 const PANE_1_LINES = [
   { width: "92%" },
   { width: "58%" },

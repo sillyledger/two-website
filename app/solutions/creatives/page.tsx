@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TWO for Creatives: Distraction-Free Writing & Notes",
+};
+
 const GALLERY: { key: string; title: string; desc: string }[] = [
   { key: "ipad", title: "iPad-first writing", desc: "Native-feeling on the couch, in a café, or on a flight — not an afterthought bolted onto a desktop app." },
   { key: "tabs", title: "Tabs, not tab-switching", desc: "Every doc for a project open at once, inside the app — not across five browser tabs." },

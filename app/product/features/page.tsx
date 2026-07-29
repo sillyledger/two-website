@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Product Features: Minimal Docs App, Sync & More | TWO",
+};
+
 export default function ProductFeaturesPage() {
   return (
     <div className="features-frame">

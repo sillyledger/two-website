@@ -1,5 +1,10 @@
 import { HelpSidebar } from "@/components/help-sidebar";
 import { HelpFeedback } from "@/components/help-feedback";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "How to Use Document Templates | TWO Help",
+};
 
 export default function UsingTemplatesArticle() {
   return (

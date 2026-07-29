@@ -1,5 +1,10 @@
 import { HelpSidebar } from "@/components/help-sidebar";
 import { HelpFeedback } from "@/components/help-feedback";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Using TWO as a Web App | TWO Help",
+};
 
 export default function UsingTwoAsAWebAppArticle() {
   return (

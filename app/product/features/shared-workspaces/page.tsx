@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Shared Workspaces: Real-Time Team Collaboration | TWO",
+};
+
 const MEMBERS = [
   { initial: "P", bg: "#3C3489", color: "#CECBF6", name: "Pieter", email: "pieter@strevius.co", role: "Owner" },
   { initial: "S", bg: "#085041", color: "#9FE1CB", name: "Sarah", email: "sarah@company.com", role: "Editor" },

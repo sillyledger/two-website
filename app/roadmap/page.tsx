@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Product Roadmap & Upcoming Features | TWO",
+};
+
 const PREV_ITEMS = [
   "Activity feed",
   "Real-time collaboration",

@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TWO for Teams: Fast, Collaborative Workspace Docs",
+};
+
 const GALLERY: { key: string; title: string; desc: string }[] = [
   { key: "shared", title: "Shared workspaces", desc: "Everyone works from the same place — no hunting through email or Slack for the latest version." },
   { key: "sync", title: "Live, as you type", desc: "Edits sync in real time — see what your teammates are writing as they write it." },

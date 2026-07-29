@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TWO for Solo Founders & Builders | Minimalist Docs Editor",
+};
+
 const TOOLKIT = [
   { title: "Always with you", desc: "iPad on the go, Mac at your desk. Live Sync means your work follows you, not the other way around." },
   { title: "Fast to open, fast to write", desc: "No loading screens, no setup. Open TWO and you're writing within a second, every time." },
