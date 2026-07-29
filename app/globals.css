@@ -807,3 +807,59 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   .tw-filmstrip { flex-direction: column; }
   .tw-price-inner { flex-direction: column; align-items: flex-start; }
 }
+
+/* ============ COMPARE PAGES (shared across /compare/*) ============ */
+.cmp-hero { text-align: center; padding: 72px 0 8px; }
+.cmp-hero h1 { font-size: 44px; line-height: 1.05; margin: 16px 0 14px; }
+.cmp-hero p { font-size: 15px; color: var(--text-muted); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+.cmp-tabs { display: inline-flex; padding: 4px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 999px; margin-top: 32px; }
+.cmp-tabs a, .cmp-tabs span { border: none; background: none; padding: 8px 20px; border-radius: 999px; font-size: 13px; font-weight: 500; color: var(--text-muted); text-decoration: none; }
+.cmp-tabs .active { background: var(--text-primary); color: var(--bg); }
+
+.cmp-verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 60px 0; }
+.cmp-verdict-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 30px 32px; }
+.cmp-verdict-card.two { border-color: var(--indigo); box-shadow: 0 0 0 1px var(--indigo); }
+.cmp-verdict-card .name { font-size: 17px; font-weight: 600; font-family: 'Fira Sans', sans-serif; margin: 0 0 12px; }
+.cmp-verdict-card.two .name { color: var(--indigo); }
+.cmp-verdict-card p.tag { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; margin: 0 0 18px; }
+.cmp-pill-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.cmp-pill { font-size: 11px; font-weight: 500; padding: 5px 11px; border-radius: 999px; }
+.cmp-pill.two { background: var(--indigo-pill); color: var(--indigo); }
+.cmp-pill.other { background: var(--bg-tertiary); color: var(--text-muted); }
+
+.cmp-bento { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 20px; margin: 0 0 90px; }
+.cmp-bento-cell { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 26px 28px; }
+.cmp-bento-cell .lbl { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
+.cmp-bento-cell .num { font-size: 32px; font-weight: 600; font-family: 'Fira Sans', sans-serif; margin-bottom: 8px; }
+.cmp-bento-cell .sub { font-size: 12.5px; color: var(--text-muted); line-height: 1.55; }
+.cmp-bento-cell.dark { background: var(--bg); border-color: var(--border-strong); }
+.cmp-bento-cell.dark p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; margin: 0; }
+
+.cmp-table-label { font-size: 11px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+.cmp-sheet { border: 1px solid var(--border); border-radius: 12px; margin: 0 0 90px; }
+
+.cmp-th-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; border-bottom: 1px solid var(--border); }
+.cmp-th-row > div { padding: 18px 26px; }
+.cmp-th-row .th-label { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+.cmp-th-cell { border-left: 1px solid var(--border); text-align: center; font-size: 13px; font-weight: 600; font-family: 'Fira Sans', sans-serif; }
+.cmp-th-cell.two { color: var(--indigo); }
+
+.cmp-spec-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; border-bottom: 1px solid var(--border); }
+.cmp-spec-row:last-child { border-bottom: none; }
+.cmp-spec-row > div { padding: 14px 26px; display: flex; align-items: center; }
+.cmp-spec-row .label { font-size: 13.5px; color: var(--text-secondary); }
+.cmp-spec-cell { border-left: 1px solid var(--border); justify-content: center; }
+.cmp-spec-cell svg { width: 15px; height: 15px; }
+.cmp-spec-cell .val { font-size: 12.5px; color: var(--text-secondary); }
+.cmp-spec-cell .dash { color: var(--text-muted); font-size: 14px; }
+.cmp-spec-cell .soon { font-size: 11.5px; color: var(--clay); font-weight: 500; }
+
+@media (max-width: 860px) {
+  .cmp-hero h1 { font-size: 30px; }
+  .cmp-tabs { flex-wrap: wrap; justify-content: center; }
+  .cmp-verdict-grid { grid-template-columns: 1fr; }
+  .cmp-bento { grid-template-columns: 1fr; }
+  .cmp-th-row, .cmp-spec-row { grid-template-columns: 1.1fr 1fr 1fr; }
+  .cmp-th-row > div, .cmp-spec-row > div { padding: 12px 14px; }
+}
