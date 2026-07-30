@@ -18,41 +18,46 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!post) notFound()
 
-  return (
-    <main style={{ paddingTop: '120px', minHeight: '100vh' }}>
-      <div style={{ maxWidth: '680px', margin: '0 auto', padding: '0 40px 120px' }}>
+  const { data: others } = await supabase
+    .from('posts')
+    .select('id, title, slug')
+    .eq('target_site', 'two.so')
+    .eq('status', 'published')
+    .neq('slug', slug)
 
-        <Link href="/blog" style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '6px',
-          fontSize: '13px',
-          fontWeight: 400,
-          color: 'var(--muted-foreground)',
-          textDecoration: 'none',
-          marginBottom: '64px',
-          letterSpacing: '0.01em',
-        }}>
-          ← Back to blog
-        </Link>
+  const related = (others || [])
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 3)
+
+  return (
+    <div className="features-frame">
+      <div className="frame-narrow">
+        <Link href="/blog" className="bc">← Back to blog</Link>
 
         <article>
-          <header style={{ marginBottom: '56px' }}>
-            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 400, lineHeight: 1.08, letterSpacing: '-0.02em', color: 'var(--foreground)', marginBottom: '24px' }}>
-              {post.title}
-            </h1>
-            {post.seo_description && (
-              <p style={{ fontSize: '18px', fontWeight: 300, color: 'var(--muted-foreground)', lineHeight: 1.65 }}>
-                {post.seo_description}
-              </p>
-            )}
-          </header>
+          <h1 className="post-title display">{post.title}</h1>
+          {post.seo_description && <p className="post-dek">{post.seo_description}</p>}
 
-          <div style={{ fontSize: '16px', fontWeight: 300, lineHeight: 1.8, color: 'var(--foreground)' }}
-            dangerouslySetInnerHTML={{ __html: post.content || '' }}
-          />
+          <div className="post-body" dangerouslySetInnerHTML={{ __html: post.content || '' }} />
+
+          <div className="post-footer">
+            <Link href="/blog">← Back to all posts</Link>
+          </div>
         </article>
+
+        {related.length > 0 && (
+          <section className="bl-related">
+            <p className="bl-related-label">More from the blog</p>
+            <div className="bl-related-grid">
+              {related.map((r) => (
+                <Link key={r.id} href={`/blog/${r.slug}`} className="bl-related-card">
+                  <div className="bl-related-title display">{r.title}</div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
-    </main>
+    </div>
   )
 }
