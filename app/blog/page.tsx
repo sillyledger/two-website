@@ -48,7 +48,6 @@ export default async function BlogPage() {
               <span className="bl-tag">Latest</span>
               <div className="bl-title display">{featured.title}</div>
               {featured.seo_description && <p className="bl-desc">{featured.seo_description}</p>}
-              <div className="bl-meta">{featured.published_at ? formatDate(featured.published_at) : ""}</div>
             </Link>
           )}
 
@@ -62,7 +61,6 @@ export default async function BlogPage() {
                 <Link href={`/blog/${post.slug}`} className="bl-item-link bl-content">
                   <div className="bl-title display">{post.title}</div>
                   {post.seo_description && <p className="bl-desc">{post.seo_description}</p>}
-                  {post.published_at && <div className="bl-meta">{formatDate(post.published_at)}</div>}
                 </Link>
               </div>
             ))}

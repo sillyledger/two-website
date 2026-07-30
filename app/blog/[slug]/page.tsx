@@ -38,11 +38,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
         <article>
           <header style={{ marginBottom: '56px' }}>
-            {post.published_at && (
-              <p style={{ fontSize: '12px', fontWeight: 400, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--muted-foreground)', marginBottom: '20px' }}>
-                {new Date(post.published_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-              </p>
-            )}
             <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 400, lineHeight: 1.08, letterSpacing: '-0.02em', color: 'var(--foreground)', marginBottom: '24px' }}>
               {post.title}
             </h1>
