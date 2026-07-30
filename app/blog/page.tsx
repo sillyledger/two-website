@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { createClient } from '../../lib/supabase'
-import { Navigation } from '@/components/navigation'
 
 export const revalidate = 0
 
@@ -33,57 +32,43 @@ export default async function BlogPage() {
   const rest = posts?.slice(1) ?? []
 
   return (
-    <>
-      <Navigation />
-
-      <section className="features-page-hero">
-        <div className="section-eyebrow">Blog</div>
-        <h1>Thoughts on writing.<br />And building TWO.</h1>
-        <p className="hero-sub">Ideas on collaboration, focus, and the tools we use to think.</p>
+    <div className="features-frame">
+      <section className="bl-hero">
+        <p className="micro">Blog</p>
+        <h1 className="display">Thoughts on writing.<br />And building TWO.</h1>
+        <p className="body-copy">Ideas on collaboration, focus, and the tools we use to think.</p>
       </section>
 
-      <section className="features-page-section">
-        <div className="features-page-inner">
-
-          {!posts || posts.length === 0 ? (
-            <div className="fp-card" style={{ textAlign: 'center', padding: '48px' }}>
-              <p className="fp-desc">No posts yet. Check back soon.</p>
-            </div>
-          ) : (
-            <div className="fp-bento">
-
-              {/* Featured post — spans 2 cols like the hero card */}
-              {featured && (
-                <Link href={`/blog/${featured.slug}`} className="fp-card fp-card-hero">
-                  <div className="fp-eyebrow">
-                    Latest{featured.published_at ? ` · ${formatDate(featured.published_at)}` : ''}
-                  </div>
-                  <div className="fp-title" style={{ fontSize: '28px' }}>{featured.title}</div>
-                  {featured.seo_description && (
-                    <div className="fp-desc">{featured.seo_description}</div>
-                  )}
-                  <div className="fp-cta">Read more →</div>
-                </Link>
-              )}
-
-              {/* Rest — regular cards in the bento grid */}
-              {rest.map((post: Post) => (
-                <Link key={post.id} href={`/blog/${post.slug}`} className="fp-card">
-                  {post.published_at && (
-                    <div className="fp-eyebrow">{formatDate(post.published_at)}</div>
-                  )}
-                  <div className="fp-title">{post.title}</div>
-                  {post.seo_description && (
-                    <div className="fp-desc">{post.seo_description}</div>
-                  )}
-                  <div className="fp-cta">Read more →</div>
-                </Link>
-              ))}
-
-            </div>
+      {!posts || posts.length === 0 ? (
+        <div className="bl-empty">No posts yet. Check back soon.</div>
+      ) : (
+        <>
+          {featured && (
+            <Link href={`/blog/${featured.slug}`} className="bl-featured">
+              <span className="bl-tag">Latest</span>
+              <div className="bl-title display">{featured.title}</div>
+              {featured.seo_description && <p className="bl-desc">{featured.seo_description}</p>}
+              <div className="bl-meta">{featured.published_at ? formatDate(featured.published_at) : ""}</div>
+            </Link>
           )}
-        </div>
-      </section>
-    </>
+
+          <div className="bl-index">
+            {rest.map((post, i) => (
+              <div key={post.id} className="bl-item">
+                <div className="bl-rail">
+                  <span className="bl-num">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="bl-dot"></span>
+                </div>
+                <Link href={`/blog/${post.slug}`} className="bl-item-link bl-content">
+                  <div className="bl-title display">{post.title}</div>
+                  {post.seo_description && <p className="bl-desc">{post.seo_description}</p>}
+                  {post.published_at && <div className="bl-meta">{formatDate(post.published_at)}</div>}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
   )
 }
