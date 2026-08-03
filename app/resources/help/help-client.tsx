@@ -58,6 +58,48 @@ const ARTICLES: Article[] = [
     desc: "Reference one doc from inside another.",
     href: "/resources/help/docs-editor/linked-docs",
   },
+  {
+    category: "Organizing",
+    title: "Folders",
+    desc: "Create, pin, and nest folders to keep docs organized.",
+    href: "/resources/help/organizing/folders",
+  },
+  {
+    category: "Organizing",
+    title: "Library",
+    desc: "Browse everything you've written in one place.",
+    href: "/resources/help/organizing/library",
+  },
+  {
+    category: "Organizing",
+    title: "Favorites & Quick Jump",
+    desc: "Pin what matters and jump to any doc with ⌘K.",
+    href: "/resources/help/organizing/favorites-quick-jump",
+  },
+  {
+    category: "Collaboration",
+    title: "Shared workspaces",
+    desc: "Invite teammates and work in the same space together.",
+    href: "/resources/help/collaboration/shared-workspaces",
+  },
+  {
+    category: "Collaboration",
+    title: "Activity",
+    desc: "See what's changed across your docs and who changed it.",
+    href: "/resources/help/collaboration/activity",
+  },
+  {
+    category: "Studio",
+    title: "Wall",
+    desc: "Pin docs, notes, and images to a bounded board.",
+    href: "/resources/help/studio/wall",
+  },
+  {
+    category: "Studio",
+    title: "Canvas",
+    desc: "An infinite pan-and-zoom surface for freeform thinking.",
+    href: "/resources/help/studio/canvas",
+  },
 ];
 
 export function HelpCenterClient() {
@@ -103,6 +145,24 @@ export function HelpCenterClient() {
           <div className="hc-cat-title">Docs &amp; Editor</div>
           <div className="hc-cat-desc">Everything about writing and formatting in TWO.</div>
           <div className="hc-cat-meta">5 articles →</div>
+        </a>
+        <a href="/resources/help/organizing" className="hc-cat linked">
+          <div className="hc-cat-mark" style={{ background: "var(--green)" }} />
+          <div className="hc-cat-title">Organizing</div>
+          <div className="hc-cat-desc">Folders, your Library, favorites, and finding things fast.</div>
+          <div className="hc-cat-meta">3 articles →</div>
+        </a>
+        <a href="/resources/help/collaboration" className="hc-cat linked">
+          <div className="hc-cat-mark" style={{ background: "var(--indigo)" }} />
+          <div className="hc-cat-title">Collaboration</div>
+          <div className="hc-cat-desc">Shared workspaces and staying on top of what&apos;s changed.</div>
+          <div className="hc-cat-meta">2 articles →</div>
+        </a>
+        <a href="/resources/help/studio" className="hc-cat linked">
+          <div className="hc-cat-mark" style={{ background: "var(--clay)" }} />
+          <div className="hc-cat-title">Studio</div>
+          <div className="hc-cat-desc">Wall and Canvas — two ways to pin, sketch, and connect ideas.</div>
+          <div className="hc-cat-meta">2 articles →</div>
         </a>
         <div className="hc-cat soon">
           <div className="hc-cat-mark" />
