@@ -52,6 +52,22 @@ const TEMPLATES: Template[] = [
     desc: "Three objectives, key results, and progress targets — all tracked.",
     slug: "okr-tracker",
   },
+  {
+    key: "competitor",
+    title: "Competitor analysis",
+    category: "Research",
+    catKey: "research",
+    desc: "Compare competitors side by side — strengths, weaknesses, and pricing at a glance.",
+    slug: "competitor-analysis",
+  },
+  {
+    key: "podcast",
+    title: "Podcast episode",
+    category: "Creative",
+    catKey: "creative",
+    desc: "Plan an episode end to end — outline, guest notes, and show notes ready to publish.",
+    slug: "podcast-episode",
+  },
 ];
 
 const CATEGORIES = ["All", "Strategy", "Business", "Creative", "Personal", "Finance", "Research"];
