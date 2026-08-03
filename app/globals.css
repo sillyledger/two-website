@@ -1382,3 +1382,13 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .wl-item.swatch { width: 50px; height: 50px; border-radius: 6px; }
 .wl-connector { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .wl-connector line { stroke: var(--border-strong); stroke-width: 1.5; }
+
+/* ============ HELP ARTICLE: CANVAS DIAGRAM ============ */
+.cv-stage { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin: 28px 0; }
+.cv-canvas { position: relative; height: 160px; background: var(--bg-tertiary); background-image: radial-gradient(var(--border-strong) 1px, transparent 1px); background-size: 16px 16px; border-radius: 8px; overflow: hidden; }
+.cv-item { position: absolute; font-size: 11px; padding: 8px 10px; border-radius: 6px; width: 90px; }
+.cv-item.doc { background: var(--bg-card); border: 1px solid rgba(143,137,230,.4); color: var(--text-primary); }
+.cv-item.note { background: var(--bg-card); border: 1px solid rgba(201,138,94,.4); color: var(--text-primary); }
+.cv-item.swatch { width: 40px; height: 40px; border-radius: 6px; }
+.cv-controls { position: absolute; bottom: 24px; right: 24px; display: flex; gap: 4px; background: var(--bg-tertiary); border: 1px solid var(--border-strong); border-radius: 8px; padding: 4px; }
+.cv-controls span { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--text-muted); }
