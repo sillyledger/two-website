@@ -13,6 +13,7 @@ const NAV = {
       { title: "Formatting", href: "/resources/help/docs-editor/formatting" },
       { title: "Split view", href: "/resources/help/docs-editor/split-view" },
       { title: "Multiple tabs", href: "/resources/help/docs-editor/multiple-tabs" },
+      { title: "Version history", href: "/resources/help/docs-editor/version-history" },
     ],
   },
 };

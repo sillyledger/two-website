@@ -20,6 +20,11 @@ const ARTICLES: { title: string; desc: string; href: string }[] = [
     desc: "View two docs side by side and drag to resize.",
     href: "/resources/help/docs-editor/split-view",
   },
+  {
+    title: "Version history",
+    desc: "View and restore past versions of any doc.",
+    href: "/resources/help/docs-editor/version-history",
+  },
 ];
 
 export default function DocsEditorCategoryPage() {

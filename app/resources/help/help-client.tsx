@@ -46,6 +46,12 @@ const ARTICLES: Article[] = [
     desc: "View two docs side by side and drag to resize.",
     href: "/resources/help/docs-editor/split-view",
   },
+  {
+    category: "Docs & Editor",
+    title: "Version history",
+    desc: "View and restore past versions of any doc.",
+    href: "/resources/help/docs-editor/version-history",
+  },
 ];
 
 export function HelpCenterClient() {
@@ -90,7 +96,7 @@ export function HelpCenterClient() {
           <div className="hc-cat-mark" />
           <div className="hc-cat-title">Docs &amp; Editor</div>
           <div className="hc-cat-desc">Everything about writing and formatting in TWO.</div>
-          <div className="hc-cat-meta">3 articles →</div>
+          <div className="hc-cat-meta">4 articles →</div>
         </a>
         <div className="hc-cat soon">
           <div className="hc-cat-mark" />
