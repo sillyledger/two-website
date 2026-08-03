@@ -27,6 +27,10 @@ const PREV_ITEMS = [
   "Export to PDF & Markdown",
   "Storage tracking & settings section",
   "Live sync",
+  "Close All Tabs",
+  "Folder structure improvements",
+  "Sidebar redesign",
+  "Layout improvements",
 ];
 
 const CHECK = (
@@ -68,10 +72,28 @@ export default function Roadmap() {
             </div>
           </div>
           <div className="roadmap-card">
-            <p className="t">Close All Tabs</p>
-            <p className="d">
-              One click to close every open tab at once, with a confirmation prompt to prevent accidental closes.
-            </p>
+            <p className="t">Studio</p>
+            <p className="d">A dedicated space for freeform thinking — pin docs, notes, and images to a board and connect them however you like.</p>
+            <span className="rm-badge shipped">✓ Done</span>
+          </div>
+          <div className="roadmap-card">
+            <p className="t">Canvas</p>
+            <p className="d">An infinite pan-and-zoom surface inside Studio, built for the way you&apos;d sketch and rearrange ideas on iPad.</p>
+            <span className="rm-badge shipped">✓ Done</span>
+          </div>
+          <div className="roadmap-card">
+            <p className="t">Activity redesign</p>
+            <p className="d">A rebuilt activity log — see everything you and your team have touched, filterable by workspace.</p>
+            <span className="rm-badge shipped">✓ Done</span>
+          </div>
+          <div className="roadmap-card">
+            <p className="t">Library redesign</p>
+            <p className="d">A cleaner, faster way to browse everything you&apos;ve written, restyled top to bottom.</p>
+            <span className="rm-badge shipped">✓ Done</span>
+          </div>
+          <div className="roadmap-card">
+            <p className="t">Version history</p>
+            <p className="d">Every doc now keeps a history of past versions, so you can look back and restore an earlier draft.</p>
             <span className="rm-badge shipped">✓ Done</span>
           </div>
         </div>
@@ -113,6 +135,11 @@ export default function Roadmap() {
           <div className="roadmap-card">
             <p className="t">Native iPad app</p>
             <p className="d">A dedicated iPad experience built for the way you think and write.</p>
+            <span className="rm-badge soon">Planned</span>
+          </div>
+          <div className="roadmap-card">
+            <p className="t">Doc panel improvements</p>
+            <p className="d">Refinements to the slide-in side panel — smoother open and close, better use of space.</p>
             <span className="rm-badge soon">Planned</span>
           </div>
         </div>
