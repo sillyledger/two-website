@@ -15,6 +15,11 @@ const ARTICLES: { title: string; desc: string; href: string }[] = [
     desc: "Open several docs at once and switch between them without losing your place.",
     href: "/resources/help/docs-editor/multiple-tabs",
   },
+  {
+    title: "Split view",
+    desc: "View two docs side by side and drag to resize.",
+    href: "/resources/help/docs-editor/split-view",
+  },
 ];
 
 export default function DocsEditorCategoryPage() {

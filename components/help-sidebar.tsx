@@ -11,6 +11,7 @@ const NAV = {
     label: "Docs & Editor",
     links: [
       { title: "Formatting", href: "/resources/help/docs-editor/formatting" },
+      { title: "Split view", href: "/resources/help/docs-editor/split-view" },
       { title: "Multiple tabs", href: "/resources/help/docs-editor/multiple-tabs" },
     ],
   },

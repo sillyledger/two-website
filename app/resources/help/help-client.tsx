@@ -40,6 +40,12 @@ const ARTICLES: Article[] = [
     desc: "Open several docs at once and switch between them without losing your place.",
     href: "/resources/help/docs-editor/multiple-tabs",
   },
+  {
+    category: "Docs & Editor",
+    title: "Split view",
+    desc: "View two docs side by side and drag to resize.",
+    href: "/resources/help/docs-editor/split-view",
+  },
 ];
 
 export function HelpCenterClient() {
@@ -84,7 +90,7 @@ export function HelpCenterClient() {
           <div className="hc-cat-mark" />
           <div className="hc-cat-title">Docs &amp; Editor</div>
           <div className="hc-cat-desc">Everything about writing and formatting in TWO.</div>
-          <div className="hc-cat-meta">2 articles →</div>
+          <div className="hc-cat-meta">3 articles →</div>
         </a>
         <div className="hc-cat soon">
           <div className="hc-cat-mark" />

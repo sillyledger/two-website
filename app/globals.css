@@ -1238,3 +1238,18 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .mt-col .line { width: 1px; height: 16px; background: var(--border-strong); margin: 0 0 8px 2.5px; }
 .mt-col .lbl { font-size: 11px; letter-spacing: 0.04em; color: var(--text-muted); line-height: 1.4; }
 .mt-col .lbl b { color: var(--text-primary); font-weight: 500; display: block; margin-bottom: 2px; }
+
+/* ============ HELP ARTICLE: SPLIT VIEW DIAGRAM ============ */
+.svh-stage { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 28px 0; }
+.svh-panes { display: flex; align-items: stretch; height: 130px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 20px; }
+.svh-pane { flex: 1; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+.svh-bar { display: flex; gap: 4px; margin-bottom: 4px; }
+.svh-bar i { width: 5px; height: 5px; border-radius: 50%; background: var(--border-strong); display: block; }
+.svh-ln { height: 5px; background: var(--border-strong); border-radius: 2px; }
+.svh-divider { width: 4px; background: var(--indigo); opacity: 0.5; flex-shrink: 0; }
+.svh-annot { display: flex; }
+.svh-col { flex: 1; padding: 0 8px; }
+.svh-col .tick { width: 6px; height: 6px; border: 1px solid var(--indigo); border-radius: 50%; background: var(--bg-card); margin-bottom: 8px; }
+.svh-col .line { width: 1px; height: 16px; background: var(--border-strong); margin: 0 0 8px 2.5px; }
+.svh-col .lbl { font-size: 11px; letter-spacing: 0.04em; color: var(--text-muted); line-height: 1.4; }
+.svh-col .lbl b { color: var(--text-primary); font-weight: 500; display: block; margin-bottom: 2px; }
