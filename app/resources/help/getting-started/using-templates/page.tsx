@@ -14,7 +14,7 @@ export default function UsingTemplatesArticle() {
       <article className="harticle">
         <p className="harticle-eyebrow">Getting Started</p>
         <h1 className="display">Using templates</h1>
-        <p className="harticle-meta">2 min read · Last updated May 2026</p>
+        <p className="harticle-meta">2 min read · Last updated Aug 2026</p>
 
         <p>
           Templates give you a head start on any doc. Instead of starting from a blank page, you can open a
@@ -34,14 +34,103 @@ export default function UsingTemplatesArticle() {
         </div>
 
         <h2 className="display">Available templates</h2>
-        <p>TWO currently includes five templates:</p>
-        <ul>
-          <li><b>Meeting Notes</b> — Capture agenda, decisions, and action items.</li>
-          <li><b>Blog Post</b> — Structure your ideas into a compelling article.</li>
-          <li><b>Product Brief</b> — Define the problem, solution, and scope.</li>
-          <li><b>Weekly Review</b> — Reflect on the week and plan what&apos;s next.</li>
-          <li><b>OKR Tracker</b> — Set objectives, track key results, measure progress.</li>
-        </ul>
+        <p>Some of our popular templates are:</p>
+
+        <div className="tp-grid htpl-grid">
+          <a href="https://app.two.so/new?template=meeting-notes" className="tp-card business">
+            <div className="tp-doc">
+              <div className="tp-doc-bar"><i /><i /><i /></div>
+              <div className="tp-doc-title">Meeting notes</div>
+              <div className="tp-ln tp-w90" />
+              <div className="tp-ln tp-w60" />
+              <div className="tp-ln tp-w75" />
+            </div>
+            <div className="tp-card-body">
+              <p className="tp-cat-label">Business</p>
+              <p className="tp-card-title">Meeting notes</p>
+              <p className="tp-card-desc">Agenda, decisions, and action items — all in one structured doc.</p>
+              <span className="tp-use">Use template →</span>
+            </div>
+          </a>
+          <a href="https://app.two.so/new?template=blog-post" className="tp-card creative">
+            <div className="tp-doc">
+              <div className="tp-doc-bar"><i /><i /><i /></div>
+              <div className="tp-doc-title">Blog post</div>
+              <div className="tp-ln tp-w90" />
+              <div className="tp-ln tp-w60" />
+              <div className="tp-ln tp-w75" />
+            </div>
+            <div className="tp-card-body">
+              <p className="tp-cat-label">Creative</p>
+              <p className="tp-card-title">Blog post</p>
+              <p className="tp-card-desc">Hook, three sections, CTA, and a pre-publish checklist.</p>
+              <span className="tp-use">Use template →</span>
+            </div>
+          </a>
+          <a href="https://app.two.so/new?template=product-brief" className="tp-card strategy">
+            <div className="tp-doc">
+              <div className="tp-doc-bar"><i /><i /><i /></div>
+              <div className="tp-doc-title">Product brief</div>
+              <div className="tp-ln tp-w90" />
+              <div className="tp-ln tp-w60" />
+              <div className="tp-ln tp-w75" />
+            </div>
+            <div className="tp-card-body">
+              <p className="tp-cat-label">Strategy</p>
+              <p className="tp-card-title">Product brief</p>
+              <p className="tp-card-desc">Problem, users, goals, scope, and risk — in one tight doc.</p>
+              <span className="tp-use">Use template →</span>
+            </div>
+          </a>
+          <a href="https://app.two.so/new?template=weekly-review" className="tp-card personal">
+            <div className="tp-doc">
+              <div className="tp-doc-bar"><i /><i /><i /></div>
+              <div className="tp-doc-title">Weekly review</div>
+              <div className="tp-ln tp-w90" />
+              <div className="tp-ln tp-w60" />
+              <div className="tp-ln tp-w75" />
+            </div>
+            <div className="tp-card-body">
+              <p className="tp-cat-label">Personal</p>
+              <p className="tp-card-title">Weekly review</p>
+              <p className="tp-card-desc">Wins, blockers, priorities, and metrics — every week, sorted.</p>
+              <span className="tp-use">Use template →</span>
+            </div>
+          </a>
+          <a href="https://app.two.so/new?template=okr-tracker" className="tp-card strategy">
+            <div className="tp-doc">
+              <div className="tp-doc-bar"><i /><i /><i /></div>
+              <div className="tp-doc-title">OKR tracker</div>
+              <div className="tp-ln tp-w90" />
+              <div className="tp-ln tp-w60" />
+              <div className="tp-ln tp-w75" />
+            </div>
+            <div className="tp-card-body">
+              <p className="tp-cat-label">Strategy</p>
+              <p className="tp-card-title">OKR tracker</p>
+              <p className="tp-card-desc">Three objectives, key results, and progress targets — all tracked.</p>
+              <span className="tp-use">Use template →</span>
+            </div>
+          </a>
+          <a href="https://app.two.so/new?template=competitor-analysis" className="tp-card research">
+            <div className="tp-doc">
+              <div className="tp-doc-bar"><i /><i /><i /></div>
+              <div className="tp-doc-title">Competitor analysis</div>
+              <div className="tp-ln tp-w90" />
+              <div className="tp-ln tp-w60" />
+              <div className="tp-ln tp-w75" />
+            </div>
+            <div className="tp-card-body">
+              <p className="tp-cat-label">Research</p>
+              <p className="tp-card-title">Competitor analysis</p>
+              <p className="tp-card-desc">Compare competitors side by side — strengths, weaknesses, and pricing.</p>
+              <span className="tp-use">Use template →</span>
+            </div>
+          </a>
+        </div>
+
+        <a href="/resources/templates" className="btn-dark htpl-cta">See all templates →</a>
+
         <p>Need a blank doc instead? Just click <b>+ New Doc</b> from your dashboard — no template required.</p>
 
         <h2 className="display">Using a template</h2>

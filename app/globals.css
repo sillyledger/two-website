@@ -1158,10 +1158,17 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .htpl-tile .l:first-child { background: var(--indigo); width: 50%; height: 3px; }
 .htpl-tile p { font-size: 10.5px; color: var(--text-muted); margin: 8px 0 0; }
 
+.htpl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0 24px; padding-bottom: 0; }
+.htpl-cta { margin: 4px 0 28px; }
+
 @media (max-width: 860px) {
   .harticle-pn { flex-direction: column; }
   .harticle-pn .next { text-align: left; margin-left: 0; }
   .htpl-picker { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .htpl-grid { grid-template-columns: 1fr; }
 }
 
 .bl-hero{max-width:640px;margin-bottom:56px;}
