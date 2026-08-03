@@ -9,7 +9,10 @@ const NAV = {
   },
   docs: {
     label: "Docs & Editor",
-    links: [{ title: "Formatting", href: "/resources/help/docs-editor/formatting" }],
+    links: [
+      { title: "Formatting", href: "/resources/help/docs-editor/formatting" },
+      { title: "Multiple tabs", href: "/resources/help/docs-editor/multiple-tabs" },
+    ],
   },
 };
 

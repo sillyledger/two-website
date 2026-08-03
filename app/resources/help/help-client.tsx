@@ -34,6 +34,12 @@ const ARTICLES: Article[] = [
     desc: "Headers, bold, lists, code blocks — everything the editor supports.",
     href: "/resources/help/docs-editor/formatting",
   },
+  {
+    category: "Docs & Editor",
+    title: "Multiple tabs",
+    desc: "Open several docs at once and switch between them without losing your place.",
+    href: "/resources/help/docs-editor/multiple-tabs",
+  },
 ];
 
 export function HelpCenterClient() {
@@ -78,7 +84,7 @@ export function HelpCenterClient() {
           <div className="hc-cat-mark" />
           <div className="hc-cat-title">Docs &amp; Editor</div>
           <div className="hc-cat-desc">Everything about writing and formatting in TWO.</div>
-          <div className="hc-cat-meta">1 article →</div>
+          <div className="hc-cat-meta">2 articles →</div>
         </a>
         <div className="hc-cat soon">
           <div className="hc-cat-mark" />
