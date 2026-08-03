@@ -103,7 +103,7 @@ export function PricingSection() {
                 <li><span className="pf-check">✓</span> 10GB storage</li>
                 <li><span className="pf-check">✓</span> Priority support</li>
                 <li><span className="pf-check">✓</span> Export PDF / MD</li>
-                <li><span className="pf-soon">◷</span> Version history <span className="pf-soon-tag">soon</span></li>
+                <li><span className="pf-check">✓</span> Version history — 30 days</li>
               </ul>
               <button onClick={openProCheckout} className="plan-btn-new plan-btn-primary-new">
                 {yearly ? "Start free trial — $60/yr" : "Start free trial"}

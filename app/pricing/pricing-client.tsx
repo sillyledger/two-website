@@ -208,13 +208,13 @@ export function PricingClient() {
         <div className="spec-row">
           <div className="label">Version history</div>
           <div className="spec-cell">
-            <span className="dash">—</span>
+            <span className="val">3 versions</span>
           </div>
           <div className="spec-cell">
-            <span className="val">Soon</span>
+            <span className="val">30 days</span>
           </div>
           <div className="spec-cell">
-            <span className="val">Soon</span>
+            <span className="val">30 days</span>
           </div>
         </div>
 
