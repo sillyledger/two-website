@@ -10,6 +10,11 @@ const ARTICLES: { title: string; desc: string; href: string }[] = [
     desc: "Headers, bold, lists, code blocks — everything the editor supports.",
     href: "/resources/help/docs-editor/formatting",
   },
+  {
+    title: "Multiple tabs",
+    desc: "Open several docs at once and switch between them without losing your place.",
+    href: "/resources/help/docs-editor/multiple-tabs",
+  },
 ];
 
 export default function DocsEditorCategoryPage() {
