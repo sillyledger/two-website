@@ -52,6 +52,12 @@ const ARTICLES: Article[] = [
     desc: "View and restore past versions of any doc.",
     href: "/resources/help/docs-editor/version-history",
   },
+  {
+    category: "Docs & Editor",
+    title: "Linked docs",
+    desc: "Reference one doc from inside another.",
+    href: "/resources/help/docs-editor/linked-docs",
+  },
 ];
 
 export function HelpCenterClient() {
@@ -96,7 +102,7 @@ export function HelpCenterClient() {
           <div className="hc-cat-mark" />
           <div className="hc-cat-title">Docs &amp; Editor</div>
           <div className="hc-cat-desc">Everything about writing and formatting in TWO.</div>
-          <div className="hc-cat-meta">4 articles →</div>
+          <div className="hc-cat-meta">5 articles →</div>
         </a>
         <div className="hc-cat soon">
           <div className="hc-cat-mark" />

@@ -14,6 +14,7 @@ const NAV = {
       { title: "Split view", href: "/resources/help/docs-editor/split-view" },
       { title: "Multiple tabs", href: "/resources/help/docs-editor/multiple-tabs" },
       { title: "Version history", href: "/resources/help/docs-editor/version-history" },
+      { title: "Linked docs", href: "/resources/help/docs-editor/linked-docs" },
     ],
   },
 };

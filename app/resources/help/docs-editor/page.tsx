@@ -25,6 +25,11 @@ const ARTICLES: { title: string; desc: string; href: string }[] = [
     desc: "View and restore past versions of any doc.",
     href: "/resources/help/docs-editor/version-history",
   },
+  {
+    title: "Linked docs",
+    desc: "Reference one doc from inside another.",
+    href: "/resources/help/docs-editor/linked-docs",
+  },
 ];
 
 export default function DocsEditorCategoryPage() {
