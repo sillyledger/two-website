@@ -1308,3 +1308,20 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   .ld-stage { flex-direction: column; align-items: stretch; }
   .ld-arrow { transform: rotate(90deg); align-self: center; }
 }
+
+/* ============ HELP ARTICLE: FOLDERS DIAGRAM ============ */
+.fd-stage { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 10px; margin: 28px 0; max-width: 280px; }
+.fd-row { display: flex; align-items: center; gap: 8px; padding: 7px 8px; border-radius: 8px; font-size: 13px; color: var(--text-secondary); }
+.fd-row:first-child { background: var(--bg-tertiary); color: var(--text-primary); }
+.fd-swatch { width: 14px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+.fd-name { flex: 1; }
+.fd-dots { color: var(--text-muted); font-size: 12px; }
+.fd-menu { position: absolute; top: 44px; right: -160px; width: 140px; background: var(--bg-tertiary); border: 1px solid var(--border-strong); border-radius: 8px; padding: 6px; box-shadow: 0 8px 24px rgba(0,0,0,.3); }
+.fd-menu-item { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--text-secondary); padding: 6px 8px; border-radius: 5px; }
+.fd-menu-item.danger { color: #e05252; }
+.fd-pin { font-size: 10px; }
+
+@media (max-width: 640px) {
+  .fd-stage { max-width: 100%; }
+  .fd-menu { position: static; margin-top: 8px; width: 100%; box-shadow: none; }
+}
