@@ -39,6 +39,13 @@ const NAV = {
       { title: "Canvas", href: "/resources/help/studio/canvas" },
     ],
   },
+  account: {
+    label: "Account",
+    links: [
+      { title: "Settings & appearance", href: "/resources/help/account/settings-appearance" },
+      { title: "Billing & plans", href: "/resources/help/account/billing-plans" },
+    ],
+  },
 };
 
 export function HelpSidebar({ activeHref }: { activeHref: string }) {
@@ -121,10 +128,15 @@ export function HelpSidebar({ activeHref }: { activeHref: string }) {
       <div className="hsb-group account">
         <div className="hsb-group-head">
           <span className="hsb-dot" />
-          <span className="hsb-group-label">Account</span>
-          <span className="hsb-soon-tag">Soon</span>
+          <span className="hsb-group-label">{NAV.account.label}</span>
         </div>
-        <div className="hsb-links empty">Guides coming soon</div>
+        <div className="hsb-links">
+          {NAV.account.links.map((l) => (
+            <a href={l.href} className={`hsb-link${l.href === activeHref ? " active" : ""}`} key={l.href}>
+              {l.title}
+            </a>
+          ))}
+        </div>
       </div>
     </aside>
   );

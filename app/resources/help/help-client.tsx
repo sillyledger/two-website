@@ -100,6 +100,18 @@ const ARTICLES: Article[] = [
     desc: "An infinite pan-and-zoom surface for freeform thinking.",
     href: "/resources/help/studio/canvas",
   },
+  {
+    category: "Account",
+    title: "Settings & appearance",
+    desc: "Your profile, theme, font size, and regional preferences.",
+    href: "/resources/help/account/settings-appearance",
+  },
+  {
+    category: "Account",
+    title: "Billing & plans",
+    desc: "Plans, upgrading, and tracking your storage.",
+    href: "/resources/help/account/billing-plans",
+  },
 ];
 
 export function HelpCenterClient() {
@@ -164,14 +176,12 @@ export function HelpCenterClient() {
           <div className="hc-cat-desc">Wall and Canvas — two ways to pin, sketch, and connect ideas.</div>
           <div className="hc-cat-meta">2 articles →</div>
         </a>
-        <div className="hc-cat soon">
-          <div className="hc-cat-mark" />
-          <div className="hc-cat-title">
-            Account <span className="hc-soon-tag">Soon</span>
-          </div>
-          <div className="hc-cat-desc">Settings, appearance, and billing guides — on the way.</div>
-          <div className="hc-cat-meta">0 articles</div>
-        </div>
+        <a href="/resources/help/account" className="hc-cat linked">
+          <div className="hc-cat-mark" style={{ background: "var(--indigo)" }} />
+          <div className="hc-cat-title">Account</div>
+          <div className="hc-cat-desc">Profile, appearance, regional settings, and billing.</div>
+          <div className="hc-cat-meta">2 articles →</div>
+        </a>
       </div>
 
       <div className="hc-popular">
