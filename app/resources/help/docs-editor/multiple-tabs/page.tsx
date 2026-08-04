@@ -28,8 +28,9 @@ export default function MultipleTabsArticle() {
           time to switch to it — your place in every other open tab is preserved exactly as you left it.
         </p>
         <p>
-          Need to jump to a doc that isn&apos;t open yet? Click the <b>+</b> at the end of the tab bar to search
-          your existing docs or start a new one, without leaving the doc you&apos;re currently on.
+          Need to jump to a doc that isn&apos;t open yet? Click the <b>+</b>{" "}
+          at the end of the tab bar to search your existing docs or start a new one, without leaving the doc
+          you&apos;re currently on.
         </p>
 
         <div className="mt-stage">

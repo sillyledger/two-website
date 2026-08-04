@@ -65,8 +65,9 @@ export default function VersionHistoryArticle() {
         </p>
 
         <div className="harticle-tip">
-          <p><b>Tip:</b> Restoring doesn&apos;t just undo your last change — it replaces the doc with the exact
-          title and content from that saved version, no matter how long ago it was.</p>
+          <p><b>Tip:</b>{" "}
+          Restoring doesn&apos;t just undo your last change — it replaces the doc with the exact title and
+          content from that saved version, no matter how long ago it was.</p>
         </div>
 
         <h2 className="display">How often versions are saved</h2>
