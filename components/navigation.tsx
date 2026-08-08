@@ -102,7 +102,7 @@ export function Navigation() {
     <>
       <nav>
         <a href="/" className="nav-logo">
-          <img src="/logo-two.svg" alt="" width={22} height={22} />
+          <img src="/logo-two.svg" alt="" width={26} height={26} />
           <span>TWO</span>
         </a>
 
