@@ -13,6 +13,7 @@ const staticRoutes = [
   '/product/features/split-view',
   '/product/features/live-sync',
   '/product/features/shared-workspaces',
+  '/solutions',
   '/solutions/creatives',
   '/solutions/solo',
   '/solutions/teams',
