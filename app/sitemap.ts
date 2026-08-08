@@ -6,6 +6,7 @@ const baseUrl = 'https://www.two.so'
 const staticRoutes = [
   '',
   '/pricing',
+  '/install',
   '/roadmap',
   '/terms-of-service',
   '/privacy-policy',
