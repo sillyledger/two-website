@@ -62,6 +62,15 @@ const ICON_HELP = (
   </svg>
 );
 
+const ICON_BLOG = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 19.5V5a2 2 0 012-2h9l5 5v11.5a2 2 0 01-2 2H6a2 2 0 01-2-2z" />
+    <path d="M15 3v5h5" />
+    <line x1="8" y1="12.5" x2="16" y2="12.5" />
+    <line x1="8" y1="16" x2="13" y2="16" />
+  </svg>
+);
+
 const ICON_LAPTOP = (
   <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
     <rect x="4" y="4" width="16" height="11" rx="1.5" />
@@ -135,6 +144,13 @@ export function Navigation() {
                   <div>
                     <p className="t">Help &amp; Guides</p>
                     <p className="d">Docs on getting the most from TWO.</p>
+                  </div>
+                </a>
+                <a href="/blog" className="simple-item">
+                  <span className="icon">{ICON_BLOG}</span>
+                  <div>
+                    <p className="t">Blog</p>
+                    <p className="d">Thoughts on writing and building TWO.</p>
                   </div>
                 </a>
               </div>
@@ -352,6 +368,9 @@ export function Navigation() {
         </a>
         <a href="/resources/help" onClick={closeMobile}>
           Help &amp; Guides
+        </a>
+        <a href="/blog" onClick={closeMobile}>
+          Blog
         </a>
 
         <span className="mm-group-label">Download</span>
