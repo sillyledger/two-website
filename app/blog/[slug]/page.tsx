@@ -4,6 +4,10 @@ import { createClient } from '../../../lib/supabase'
 
 export const revalidate = 0
 
+function formatMonthYear(dateString: string) {
+  return new Date(dateString).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+}
+
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const supabase = createClient()
@@ -36,6 +40,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
         <article>
           <h1 className="post-title display">{post.title}</h1>
+          {post.published_at && <p className="post-meta">{formatMonthYear(post.published_at)}</p>}
           {post.seo_description && <p className="post-dek">{post.seo_description}</p>}
 
           <div className="post-body" dangerouslySetInnerHTML={{ __html: post.content || '' }} />

@@ -11,12 +11,8 @@ type Post = {
   published_at: string | null
 }
 
-function formatDate(dateString: string) {
-  return new Date(dateString).toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  })
+function formatMonthYear(dateString: string) {
+  return new Date(dateString).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
 }
 
 export default async function BlogPage() {
@@ -48,6 +44,7 @@ export default async function BlogPage() {
               <span className="bl-tag">Latest</span>
               <div className="bl-title display">{featured.title}</div>
               {featured.seo_description && <p className="bl-desc">{featured.seo_description}</p>}
+              {featured.published_at && <p className="bl-meta">{formatMonthYear(featured.published_at)}</p>}
             </Link>
           )}
 
@@ -61,6 +58,7 @@ export default async function BlogPage() {
                 <Link href={`/blog/${post.slug}`} className="bl-item-link bl-content">
                   <div className="bl-title display">{post.title}</div>
                   {post.seo_description && <p className="bl-desc">{post.seo_description}</p>}
+                  {post.published_at && <p className="bl-meta">{formatMonthYear(post.published_at)}</p>}
                 </Link>
               </div>
             ))}
