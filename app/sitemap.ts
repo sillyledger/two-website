@@ -20,6 +20,7 @@ const staticRoutes = [
   '/compare/apple-notes',
   '/compare/bear',
   '/compare/obsidian',
+  '/resources',
   '/resources/templates',
   '/resources/help',
   '/resources/help/getting-started',
