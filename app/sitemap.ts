@@ -9,6 +9,7 @@ const staticRoutes = [
   '/roadmap',
   '/terms-of-service',
   '/privacy-policy',
+  '/product',
   '/product/features',
   '/product/features/split-view',
   '/product/features/live-sync',
