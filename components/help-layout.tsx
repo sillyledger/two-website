@@ -33,16 +33,16 @@ export function HelpLayout({ children, activeArticle }: HelpLayoutProps) {
               <a href="/resources/help/docs-editor/formatting" className={activeArticle === "formatting" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Formatting
               </a>
-              <a href="/resources/help/docs-editor/linking-docs" className={activeArticle === "linking-docs" ? "help-sidebar-item active" : "help-sidebar-item"}>
+              <a href="/resources/help/docs-editor/linked-docs" className={activeArticle === "linked-docs" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Linking docs
               </a>
             </div>
             <div className="help-sidebar-section">
               <div className="help-sidebar-label">Account</div>
-              <a href="/resources/help/account/settings" className={activeArticle === "settings" ? "help-sidebar-item active" : "help-sidebar-item"}>
+              <a href="/resources/help/account/settings-appearance" className={activeArticle === "settings-appearance" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Settings
               </a>
-              <a href="/resources/help/account/billing" className={activeArticle === "billing" ? "help-sidebar-item active" : "help-sidebar-item"}>
+              <a href="/resources/help/account/billing-plans" className={activeArticle === "billing-plans" ? "help-sidebar-item active" : "help-sidebar-item"}>
                 Billing &amp; plans
               </a>
             </div>
