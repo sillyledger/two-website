@@ -1215,6 +1215,8 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .post-body blockquote p{font-size:20px;color:var(--text-primary);line-height:1.5;margin:0;font-family:'Fira Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;}
 .post-body ul{margin:0 0 28px;padding-left:22px;}
 .post-body li{margin-bottom:4px;}
+.post-body li p{margin:0;}
+.post-body li > p:last-child{margin:0;}
 
 .post-footer{margin-top:80px;padding-top:32px;border-top:1px solid var(--border);}
 .post-footer a{font-size:13px;color:var(--text-muted);text-decoration:none;}
