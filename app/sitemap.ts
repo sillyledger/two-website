@@ -18,6 +18,7 @@ const staticRoutes = [
   '/solutions/creatives',
   '/solutions/solo',
   '/solutions/teams',
+  '/compare',
   '/compare/notion',
   '/compare/apple-notes',
   '/compare/bear',
