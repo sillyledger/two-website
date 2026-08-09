@@ -1067,7 +1067,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .hc-article-row-title { font-size: 14.5px; font-weight: 600; margin: 0 0 3px; }
 .hc-article-row-desc { font-size: 17px; color: var(--text-muted); margin: 0; line-height: 1.6; }
 
-.hc-cta { text-align: center; padding: 60px 0 90px; border-top: 1px solid var(--border); }
+.hc-cta { text-align: center; padding: 60px 0 90px; }
 .hc-cta p { font-size: 14px; color: var(--text-muted); margin: 0 0 18px; }
 .hc-cta a { display: inline-block; font-size: 13.5px; font-weight: 500; padding: 12px 24px; border-radius: 999px; background: var(--text-primary); color: var(--bg); text-decoration: none; }
 
