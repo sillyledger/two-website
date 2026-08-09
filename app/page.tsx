@@ -16,7 +16,7 @@ export default function Home() {
             <br />
             <span className="accent">One</span> screen.
           </h1>
-          <p className="body-copy">Write in one. Reference the other. Never alt-tab to find your place again.</p>
+          <p className="body-copy">Write in one. Reference the other. No AI. No alt-tab, ever.</p>
           <div className="cta-row">
             <a href="https://app.two.so/signup" className="btn solid">Start for free</a>
             <a href="/product/features/split-view" className="btn outline">See split view</a>
