@@ -311,7 +311,7 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .rm-badge.soon { color: var(--text-muted); background: var(--bg-tertiary); }
 
 .roadmap-flagship { position: relative; }
-.roadmap-flag-leader { position: absolute; right: -8px; top: -34px; }
+.roadmap-flag-leader { position: absolute; right: -8px; top: -48px; }
 .roadmap-flag-leader .line { position: absolute; background: var(--border-strong); right: 34px; top: 0; width: 1px; height: 30px; }
 .roadmap-flag-leader .tick { position: absolute; width: 4px; height: 4px; border-radius: 50%; border: 1px solid var(--text-muted); background: var(--bg); right: 30px; top: 30px; }
 .roadmap-flag-leader .lbl { position: absolute; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; right: 40px; top: -6px; text-align: right; }

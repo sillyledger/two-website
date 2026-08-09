@@ -31,6 +31,9 @@ const PREV_ITEMS = [
   "Folder structure improvements",
   "Sidebar redesign",
   "Layout improvements",
+  "Activity redesign",
+  "Library redesign",
+  "Version history",
 ];
 
 const CHECK = (
@@ -79,21 +82,6 @@ export default function Roadmap() {
           <div className="roadmap-card">
             <p className="t">Canvas</p>
             <p className="d">An infinite pan-and-zoom surface inside Studio, built for the way you&apos;d sketch and rearrange ideas on iPad.</p>
-            <span className="rm-badge shipped">✓ Done</span>
-          </div>
-          <div className="roadmap-card">
-            <p className="t">Activity redesign</p>
-            <p className="d">A rebuilt activity log — see everything you and your team have touched, filterable by workspace.</p>
-            <span className="rm-badge shipped">✓ Done</span>
-          </div>
-          <div className="roadmap-card">
-            <p className="t">Library redesign</p>
-            <p className="d">A cleaner, faster way to browse everything you&apos;ve written, restyled top to bottom.</p>
-            <span className="rm-badge shipped">✓ Done</span>
-          </div>
-          <div className="roadmap-card">
-            <p className="t">Version history</p>
-            <p className="d">Every doc now keeps a history of past versions, so you can look back and restore an earlier draft.</p>
             <span className="rm-badge shipped">✓ Done</span>
           </div>
         </div>
