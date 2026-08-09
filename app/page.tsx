@@ -314,7 +314,6 @@ export default function Home() {
 
         <div className="pricing-teaser">
           <div className="pt-head">
-            <p className="micro">Pricing</p>
             <h2 className="display">Free to start. $6/mo when you&apos;re ready.</h2>
             <p>14-day free trial on Pro. No credit card required.</p>
           </div>
