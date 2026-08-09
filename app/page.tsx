@@ -129,7 +129,6 @@ export default function Home() {
       {/* ============ FEATURES ============ */}
       <div className="features-frame">
         <div className="section-head">
-          <p className="micro">Beyond split view</p>
           <h2 className="display">Two more reasons to switch.</h2>
           <p>Tabs keep every doc one click away. Linking keeps your notes and docs from living apart.</p>
         </div>
