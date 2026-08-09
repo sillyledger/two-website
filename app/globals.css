@@ -265,6 +265,7 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .plan-col.pro .btn { background: var(--text-primary); color: var(--bg); }
 .plan-col:not(.pro) .btn { border: 1px solid var(--border-strong); color: var(--text-primary); background: none; }
 .plan-col.team .btn { border-style: dashed; color: var(--text-muted); cursor: default; }
+.plan-col.team .note { color: var(--indigo); }
 
 .spec-row { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); border-bottom: 1px solid var(--border); }
 .spec-row:last-child { border-bottom: none; }
