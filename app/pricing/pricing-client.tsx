@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 declare global {
   interface Window {
@@ -256,6 +257,11 @@ export function PricingClient() {
             {openFaq === i && <p className="a">{item.a}</p>}
           </div>
         ))}
+        <div className="faq-cta">
+          <p className="t">Still have questions?</p>
+          <p className="s">Browse guides and answers in the Help Center.</p>
+          <Link href="/resources/help" className="btn">Visit Help Center</Link>
+        </div>
       </section>
     </div>
   );
