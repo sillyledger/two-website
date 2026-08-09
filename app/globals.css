@@ -221,14 +221,19 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .pt-head h2 { font-size: 28px; margin: 14px 0 10px; line-height: 1.3; }
 .pt-head p { font-size: 17px; line-height: 1.6; color: var(--text-muted); margin: 0; }
 
-.pt-row { display: flex; justify-content: center; gap: 20px; max-width: 940px; margin: 0 auto; }
-.pt-block { flex: 1; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 22px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
-.pt-block.pro { border-color: var(--border-strong); }
+.pt-row { display: flex; justify-content: center; align-items: stretch; gap: 20px; max-width: 940px; margin: 0 auto; }
+.pt-block { flex: 1; background: var(--bg-card); border: 2px solid var(--border); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.pt-block.pro { border-color: var(--indigo); }
+.pt-badge { align-self: flex-start; font-size: 11px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; background: var(--indigo-pill); color: var(--indigo); padding: 3px 10px; border-radius: 999px; }
+.pt-badge.spacer { visibility: hidden; }
+.pt-features { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.pt-features li { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-secondary); }
+.pt-features li svg { flex-shrink: 0; }
 .pt-name { font-size: 13px; font-weight: 600; color: var(--text-muted); margin: 0 0 6px; letter-spacing: 0.02em; }
 .pt-price { display: flex; align-items: baseline; gap: 4px; }
 .pt-price .amt { font-size: 28px; font-weight: 600; font-family: 'Fira Sans', sans-serif; }
 .pt-price .per { font-size: 13px; color: var(--text-muted); }
-.pt-btn { font-size: 13px; font-weight: 500; padding: 9px 16px; border-radius: 999px; white-space: nowrap; width: 100%; text-align: center; text-decoration: none; }
+.pt-btn { font-size: 13px; font-weight: 500; padding: 9px 16px; border-radius: 999px; white-space: nowrap; width: 100%; text-align: center; text-decoration: none; margin-top: auto; }
 .pt-btn.outline { border: 1px solid var(--border-strong); color: var(--text-primary); }
 .pt-btn.solid { background: var(--text-primary); color: var(--bg); }
 

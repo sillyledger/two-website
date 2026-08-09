@@ -4,6 +4,12 @@ export const metadata: Metadata = {
   title: "Minimalist Docs Editor & Writing App for iPad, Mac & Web",
 };
 
+const PT_CHECK = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="#8f89e6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+    <polyline points="20 6 9 17 4 12" />
+  </svg>
+);
+
 export default function Home() {
   return (
     <>
@@ -315,6 +321,7 @@ export default function Home() {
 
           <div className="pt-row">
             <div className="pt-block">
+              <span className="pt-badge spacer" aria-hidden="true">Most popular</span>
               <div>
                 <p className="pt-name">FREE</p>
                 <div className="pt-price">
@@ -322,9 +329,16 @@ export default function Home() {
                   <span className="per">/ month</span>
                 </div>
               </div>
+              <ul className="pt-features">
+                <li>{PT_CHECK} Split view</li>
+                <li>{PT_CHECK} 30 docs</li>
+                <li>{PT_CHECK} 3-version history</li>
+              </ul>
               <a href="https://app.two.so/signup" className="pt-btn outline">Start free</a>
             </div>
+
             <div className="pt-block pro">
+              <span className="pt-badge">Most popular</span>
               <div>
                 <p className="pt-name">PRO</p>
                 <div className="pt-price">
@@ -332,17 +346,29 @@ export default function Home() {
                   <span className="per">/ month</span>
                 </div>
               </div>
+              <ul className="pt-features">
+                <li>{PT_CHECK} Unlimited docs</li>
+                <li>{PT_CHECK} Shared workspaces</li>
+                <li>{PT_CHECK} 30-day version history</li>
+              </ul>
               <a href="/pricing" className="pt-btn solid">Start free trial</a>
             </div>
+
             <div className="pt-block">
+              <span className="pt-badge spacer" aria-hidden="true">Most popular</span>
               <div>
-                <p className="pt-name">FOUNDING</p>
+                <p className="pt-name">TEAM</p>
                 <div className="pt-price">
-                  <span className="amt display">$49</span>
-                  <span className="per">/ once</span>
+                  <span className="amt display">$10</span>
+                  <span className="per">/ month</span>
                 </div>
               </div>
-              <a href="/pricing" className="pt-btn outline">Join</a>
+              <ul className="pt-features">
+                <li>{PT_CHECK} Everything in Pro</li>
+                <li>{PT_CHECK} 10 members</li>
+                <li>{PT_CHECK} 50GB storage</li>
+              </ul>
+              <a href="/pricing" className="pt-btn outline">Get Team</a>
             </div>
           </div>
 
