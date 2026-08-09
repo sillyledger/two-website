@@ -1071,6 +1071,17 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .hc-cta p { font-size: 14px; color: var(--text-muted); margin: 0 0 18px; }
 .hc-cta a { display: inline-block; font-size: 13.5px; font-weight: 500; padding: 12px 24px; border-radius: 999px; background: var(--text-primary); color: var(--bg); text-decoration: none; }
 
+.ct-hero { padding: 80px 0 44px; max-width: 480px; }
+.ct-hero .ct-sub { font-size: 17px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+.ct-card { max-width: 480px; border: 1px solid var(--border); border-radius: 14px; background: var(--bg-card); padding: 34px; margin-bottom: 90px; }
+.ct-card .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin: 0 0 8px; }
+.ct-card .email { font-family: 'Fira Sans', sans-serif; font-size: 24px; font-weight: 600; margin: 0 0 8px; }
+.ct-card .email a { color: var(--indigo); text-decoration: none; }
+.ct-card .email a:hover { text-decoration: underline; }
+.ct-card .note { font-size: 13.5px; color: var(--text-muted); margin: 0; }
+.ct-crosslink { font-size: 13.5px; color: var(--text-muted); margin-top: -60px; padding-bottom: 90px; }
+.ct-crosslink a { color: var(--indigo); text-decoration: underline; }
+
 @media (max-width: 860px) {
   .hc-hero { flex-direction: column; align-items: flex-start; }
   .hc-search-small { width: 100%; }

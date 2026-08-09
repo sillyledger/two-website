@@ -38,6 +38,7 @@ export function Footer() {
             </div>
             <div className="footer-col">
               <span className="footer-col-title">Company</span>
+              <a href="/contact">Contact</a>
               <a href="https://app.two.so/login">Log in</a>
               <a href="https://app.two.so/signup">Sign up</a>
               <a href="/privacy-policy">Privacy Policy</a>
