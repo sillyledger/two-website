@@ -238,7 +238,7 @@ export function HelpCenterClient() {
 
       <div className="hc-cta">
         <p>Can&apos;t find what you&apos;re looking for?</p>
-        <a href="mailto:hey@two.so">Contact support →</a>
+        <a href="/contact">Contact support →</a>
       </div>
     </div>
   );
