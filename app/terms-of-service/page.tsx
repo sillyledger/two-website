@@ -53,21 +53,21 @@ export default function TermsOfService() {
         full access before any payment is taken.
       </p>
       <p>
-        If you are charged and feel it was in error, contact us at <strong>hey@two.so</strong> within 14 days of the
+        If you are charged and feel it was in error, contact us at <a href="mailto:hey@two.so">hey@two.so</a> within 14 days of the
         charge and we will issue a full refund, no questions asked.
       </p>
       <p>
-        For the Founding Member one-time purchase: refunds are available within 30 days of purchase if you are
+        For the Founding Member one-time purchase: refunds are available within 14 days of purchase if you are
         unsatisfied with the service.
       </p>
       <p>
         Refund requests after these windows will be considered on a case-by-case basis. To request a refund, email{" "}
-        <strong>hey@two.so</strong>.
+        <a href="mailto:hey@two.so">hey@two.so</a>.
       </p>
 
       <h2>Contact</h2>
       <p>
-        Questions? Email us at <strong>hey@two.so</strong>.
+        Questions? Email us at <a href="mailto:hey@two.so">hey@two.so</a>.
       </p>
     </main>
   );
