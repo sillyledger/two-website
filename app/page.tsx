@@ -123,10 +123,6 @@ export default function Home() {
             <span className="k">Platforms</span>
             <span className="v">Web · Mac &amp; iPad soon</span>
           </div>
-          <div>
-            <span className="k">Price</span>
-            <span className="v">Free to start</span>
-          </div>
         </div>
       </div>
 
