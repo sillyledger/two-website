@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
     <main className="legal-page">
       <p className="legal-eyebrow">Legal</p>
       <h1>Privacy Policy</h1>
-      <p className="legal-updated">Last updated: May 27, 2026</p>
+      <p className="legal-updated">Last updated: August 10, 2026</p>
 
       <p>
         TWO (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) operates the note-taking application available at{" "}
@@ -54,12 +54,12 @@ export default function PrivacyPolicy() {
       <h2>Your Rights</h2>
       <p>
         You may request deletion of your account and associated data at any time by contacting us at{" "}
-        <strong>hey@two.so</strong>. We will process your request within 30 days.
+        <a href="mailto:hey@two.so">hey@two.so</a>. We will process your request within 30 days.
       </p>
 
       <h2>Contact</h2>
       <p>
-        Questions about this policy? Email us at <strong>hey@two.so</strong>.
+        Questions about this policy? Email us at <a href="mailto:hey@two.so">hey@two.so</a>.
       </p>
     </main>
   );
