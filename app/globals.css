@@ -264,6 +264,7 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .plan-col .btn { display: inline-block; font-size: 13px; font-weight: 500; padding: 9px 18px; border-radius: 999px; border: none; font-family: inherit; cursor: pointer; text-decoration: none; }
 .plan-col.pro .btn { background: var(--text-primary); color: var(--bg); }
 .plan-col:not(.pro) .btn { border: 1px solid var(--border-strong); color: var(--text-primary); background: none; }
+.plan-col.team .btn { border-style: dashed; color: var(--text-muted); cursor: default; }
 
 .spec-row { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); border-bottom: 1px solid var(--border); }
 .spec-row:last-child { border-bottom: none; }
@@ -275,12 +276,6 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .spec-cell span.dash { color: var(--text-muted); font-size: 13px; }
 .spec-row.cat { background: var(--bg-card); }
 .spec-row.cat .label { font-size: 13px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); }
-
-.pricing-annot { position: absolute; right: 24px; top: -46px; text-align: right; }
-.pricing-annot .line { position: absolute; right: 36px; top: 42px; width: 1px; height: 24px; background: var(--border-strong); }
-.pricing-annot .tick { position: absolute; right: 32px; top: 64px; width: 4px; height: 4px; border-radius: 50%; border: 1px solid var(--text-muted); background: var(--bg); }
-.pricing-annot .lbl { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
-.pricing-annot .lbl b { color: var(--clay); font-weight: 500; }
 
 .pricing-faq { max-width: 720px; margin: 0 auto 100px; }
 .pricing-faq h2 { text-align: center; font-size: 28px; line-height: 1.3; margin: 0 0 40px; }
@@ -882,9 +877,6 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 @media (max-width: 860px) {
   .pricing-hero h1 { font-size: 32px; }
   .pricing-toggle { flex-wrap: wrap; justify-content: center; }
-
-  .pricing-annot { position: static; text-align: left; margin-bottom: 16px; }
-  .pricing-annot .line, .pricing-annot .tick { display: none; }
 
   .plan-row { grid-template-columns: 1fr; border-bottom: none; }
   .plan-row > .spacer { display: none; }

@@ -16,7 +16,6 @@ declare global {
 const PADDLE_CLIENT_TOKEN = "live_5d79c55970d6730fce490b94bc1";
 const PRICE_PRO_MONTHLY = "pri_01ksjx3b0n6pg6fw44hbq9r03p";
 const PRICE_PRO_ANNUAL = "pri_01ksxjysx4n6ewv4dq2mxn5kjr";
-const PRICE_FOUNDING = "pri_01ksjx6e6xtrmq324ama45zyr0";
 
 const CHECK = (
   <svg viewBox="0 0 24 24" fill="none" stroke="#8f89e6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -42,8 +41,8 @@ const FAQS = [
   },
   {
     tag: "Pricing",
-    q: "What does the Founding Member plan include?",
-    a: "Founding Member is a one-time purchase that locks in lifetime access to every Pro feature — including everything we ship in the future. It's for people who believe in TWO early. Once it's gone, it's gone.",
+    q: "What's included in the Team plan?",
+    a: "Team includes everything in Pro, plus room for up to 10 members and 50GB of storage. It's launching soon.",
   },
   {
     tag: "Account",
@@ -78,14 +77,9 @@ export function PricingClient() {
     window.Paddle?.Checkout.open({ items: [{ priceId, quantity: 1 }] });
   }
 
-  function openFoundingCheckout() {
-    window.Paddle?.Checkout.open({ items: [{ priceId: PRICE_FOUNDING, quantity: 1 }] });
-  }
-
   return (
     <div className="hero-frame">
       <section className="pricing-hero">
-        <p className="micro">Pricing</p>
         <h1 className="display">Simple, honest pricing.</h1>
         <p>Start free. Upgrade when you&apos;re ready. No hidden fees.</p>
 
@@ -103,14 +97,6 @@ export function PricingClient() {
       </section>
 
       <div className="pricing-sheet">
-        <div className="pricing-annot">
-          <span className="lbl">
-            <b>500 slots only</b>
-          </span>
-          <div className="line"></div>
-          <div className="tick"></div>
-        </div>
-
         <div className="plan-row">
           <div className="spacer"></div>
           <div className="plan-col">
@@ -133,13 +119,13 @@ export function PricingClient() {
               Start free trial
             </button>
           </div>
-          <div className="plan-col">
-            <p className="name">FOUNDING</p>
-            <p className="price display">$49</p>
-            <span className="per">one-time</span>
-            <span className="note">500 slots only</span>
-            <button className="btn" onClick={openFoundingCheckout}>
-              Get lifetime access — $49
+          <div className="plan-col team">
+            <p className="name">TEAM</p>
+            <p className="price display">$10</p>
+            <span className="per">/ month</span>
+            <span className="note">Coming soon</span>
+            <button className="btn" disabled>
+              Coming soon
             </button>
           </div>
         </div>
@@ -183,7 +169,7 @@ export function PricingClient() {
             <span className="val">10GB</span>
           </div>
           <div className="spec-cell">
-            <span className="val">10GB</span>
+            <span className="val">50GB</span>
           </div>
         </div>
 
@@ -249,14 +235,10 @@ export function PricingClient() {
           <div className="spec-cell">{CHECK}</div>
         </div>
         <div className="spec-row">
-          <div className="label">Lifetime access — no subscription</div>
-          <div className="spec-cell">
-            <span className="dash">—</span>
-          </div>
-          <div className="spec-cell">
-            <span className="dash">—</span>
-          </div>
-          <div className="spec-cell">{CHECK}</div>
+          <div className="label">Members</div>
+          <div className="spec-cell"><span className="val">1</span></div>
+          <div className="spec-cell"><span className="val">1</span></div>
+          <div className="spec-cell"><span className="val">Up to 10</span></div>
         </div>
       </div>
 
