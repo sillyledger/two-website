@@ -21,6 +21,7 @@ export default function Home() {
             <a href="https://app.two.so/signup" className="btn solid">Start for free</a>
             <a href="/product/features/split-view" className="btn outline">See split view</a>
           </div>
+          <a href="/demo" className="dm-hero-link">Or try the demo — no signup required →</a>
         </div>
 
         <div className="stage">
