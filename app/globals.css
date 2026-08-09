@@ -165,6 +165,8 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .footer-col-title { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
 .footer-col a { font-size: 13px; color: var(--text-muted); text-decoration: none; }
 .footer-col a:hover { color: var(--text-primary); }
+.footer-demo-link { color: var(--indigo) !important; }
+.footer-demo-link:hover { color: var(--indigo) !important; opacity: 0.8; }
 
 .footer-bottom-row { padding-top: 20px; padding-bottom: 20px; }
 .footer-bottom-row p { font-size: 13px; color: var(--text-muted); margin: 0; }

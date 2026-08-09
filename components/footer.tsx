@@ -15,11 +15,19 @@ export function Footer() {
             <div className="footer-col">
               <span className="footer-col-title">Product</span>
               <a href="/product/features">Features</a>
-              <a href="https://two.so/#pricing">Pricing</a>
-              <a href="https://two.so/roadmap">Roadmap</a>
+              <a href="/solutions">Solutions</a>
+              <a href="/pricing">Pricing</a>
+              <a href="/roadmap">Roadmap</a>
               <a href="https://www.sorano.space/two-docs/changelog" target="_blank" rel="noopener noreferrer">
                 Changelog
               </a>
+              <a href="/demo" className="footer-demo-link">Try the demo</a>
+            </div>
+            <div className="footer-col">
+              <span className="footer-col-title">Resources</span>
+              <a href="/resources/templates">Templates</a>
+              <a href="/resources/help">Help Center</a>
+              <a href="/blog">Blog</a>
             </div>
             <div className="footer-col">
               <span className="footer-col-title">Compare</span>
@@ -29,12 +37,9 @@ export function Footer() {
               <a href="/compare/obsidian">TWO vs Obsidian</a>
             </div>
             <div className="footer-col">
-              <span className="footer-col-title">Account</span>
+              <span className="footer-col-title">Company</span>
               <a href="https://app.two.so/login">Log in</a>
               <a href="https://app.two.so/signup">Sign up</a>
-            </div>
-            <div className="footer-col">
-              <span className="footer-col-title">Legal</span>
               <a href="/privacy-policy">Privacy Policy</a>
               <a href="/terms-of-service">Terms of Service</a>
               <a href="/terms-of-service#refunds">Refund Policy</a>
