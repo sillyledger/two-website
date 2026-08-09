@@ -113,7 +113,7 @@ export function PricingClient() {
             <p className="price display">{yearly ? "$5" : "$6"}</p>
             <span className="per">/ month</span>
             <span className="note">
-              {yearly ? "Billed $60/year · save $12" : "14-day free trial · no credit card required"}
+              {yearly ? "Billed $60/year · save $12" : "No credit card required"}
             </span>
             <button className="btn" onClick={openProCheckout}>
               Start free trial
