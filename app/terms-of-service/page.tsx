@@ -9,7 +9,7 @@ export default function TermsOfService() {
     <main className="legal-page">
       <p className="legal-eyebrow">Legal</p>
       <h1>Terms of Service</h1>
-      <p className="legal-updated">Last updated: May 27, 2026</p>
+      <p className="legal-updated">Last updated: August 10, 2026</p>
 
       <p>
         These Terms of Service govern your use of TWO, the note-taking application available at{" "}
