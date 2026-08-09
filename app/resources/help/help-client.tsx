@@ -114,14 +114,32 @@ const ARTICLES: Article[] = [
   },
 ];
 
+const POPULAR_TITLES = [
+  "Your first doc",
+  "Split view",
+  "Multiple tabs",
+  "Library",
+  "Formatting",
+  "Shared workspaces",
+  "Wall",
+  "Billing & plans",
+];
+const POPULAR_ARTICLES = POPULAR_TITLES.map((t) => ARTICLES.find((a) => a.title === t)!).filter(Boolean);
+
 export function HelpCenterClient() {
   const [query, setQuery] = useState("");
+  const [searchFocused, setSearchFocused] = useState(false);
 
-  const filtered = ARTICLES.filter((a) => {
-    const q = query.trim().toLowerCase();
-    if (!q) return true;
-    return a.title.toLowerCase().includes(q) || a.desc.toLowerCase().includes(q) || a.category.toLowerCase().includes(q);
-  });
+  const q = query.trim().toLowerCase();
+  const searchResults = q
+    ? ARTICLES.filter(
+        (a) =>
+          a.title.toLowerCase().includes(q) ||
+          a.desc.toLowerCase().includes(q) ||
+          a.category.toLowerCase().includes(q)
+      ).slice(0, 6)
+    : [];
+  const showDropdown = searchFocused && q.length > 0;
 
   return (
     <div className="features-frame">
@@ -141,7 +159,23 @@ export function HelpCenterClient() {
             placeholder="Search articles"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onFocus={() => setSearchFocused(true)}
+            onBlur={() => setTimeout(() => setSearchFocused(false), 150)}
           />
+          {showDropdown && (
+            <div className="hc-search-dropdown">
+              {searchResults.length === 0 ? (
+                <p className="hc-search-empty">No articles match &quot;{query}&quot;.</p>
+              ) : (
+                searchResults.map((a) => (
+                  <a href={a.href} className="hc-search-dropdown-item" key={a.title}>
+                    <span className="cat">{a.category}</span>
+                    <span className="title">{a.title}</span>
+                  </a>
+                ))
+              )}
+            </div>
+          )}
         </div>
       </section>
 
@@ -189,26 +223,22 @@ export function HelpCenterClient() {
           <h2 className="display">Popular articles</h2>
         </div>
         <div className="hc-article-list">
-          {filtered.length === 0 ? (
-            <p className="hc-no-results">No articles match &quot;{query}&quot;.</p>
-          ) : (
-            filtered.map((a) => (
-              <a href={a.href} className="hc-article-row" key={a.title}>
-                <div className="mark" />
-                <div>
-                  <span className="hc-article-cat">{a.category}</span>
-                  <p className="hc-article-row-title">{a.title}</p>
-                  <p className="hc-article-row-desc">{a.desc}</p>
-                </div>
-              </a>
-            ))
-          )}
+          {POPULAR_ARTICLES.map((a) => (
+            <a href={a.href} className="hc-article-row" key={a.title}>
+              <div className="mark" />
+              <div>
+                <span className="hc-article-cat">{a.category}</span>
+                <p className="hc-article-row-title">{a.title}</p>
+                <p className="hc-article-row-desc">{a.desc}</p>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
 
       <div className="hc-cta">
         <p>Can&apos;t find what you&apos;re looking for?</p>
-        <a href="mailto:two@strevius.com">Contact support →</a>
+        <a href="mailto:hey@two.so">Contact support →</a>
       </div>
     </div>
   );
