@@ -291,6 +291,13 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .faq-cta .s { font-size: 13px; color: var(--text-muted); margin: 0 0 18px; }
 .faq-cta .btn { display: inline-block; font-size: 13px; font-weight: 500; padding: 9px 20px; border-radius: 999px; background: var(--indigo); color: var(--bg); text-decoration: none; }
 
+.in-steps { display: flex; flex-direction: column; }
+.in-step { padding: 18px 0; border-top: 1px solid var(--border); }
+.in-step:first-child { border-top: none; padding-top: 0; }
+.in-step .t { font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0 0 6px; display: flex; align-items: center; gap: 12px; }
+.in-step .t .n { width: 22px; height: 22px; border-radius: 50%; background: var(--indigo); color: var(--bg); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.in-step .d { font-size: 14px; color: var(--text-muted); margin: 0 0 0 34px; line-height: 1.65; }
+
 .roadmap-head { text-align: center; padding: 72px 0 8px; }
 .roadmap-head h1 { font-size: 40px; margin: 16px 0 14px; }
 .roadmap-head p { font-size: 17px; color: var(--text-muted); max-width: 440px; margin: 0 auto; line-height: 1.6; }

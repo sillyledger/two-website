@@ -11,7 +11,7 @@ export default function InstallPage() {
       <section className="rs-hero">
         <p className="micro">Get the app</p>
         <h1 className="display">Install TWO on your device.</h1>
-        <p>TWO works as a web app on iPhone, iPad, and Mac. No App Store needed — add it to your home screen or Dock in seconds.</p>
+        <p>TWO works as a web app on iPhone, iPad, and Mac. No App Store needed, add it to your home screen or Dock in seconds.</p>
       </section>
 
       <InstallSteps />
