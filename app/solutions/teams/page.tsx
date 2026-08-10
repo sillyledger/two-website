@@ -5,18 +5,18 @@ export const metadata: Metadata = {
 };
 
 const GALLERY: { key: string; title: string; desc: string }[] = [
-  { key: "shared", title: "Shared workspaces", desc: "Everyone works from the same place — no hunting through email or Slack for the latest version." },
-  { key: "sync", title: "Live, as you type", desc: "Edits sync in real time — see what your teammates are writing as they write it." },
+  { key: "shared", title: "Shared workspaces", desc: "Everyone works from the same place. No hunting through email or Slack for the latest version." },
+  { key: "sync", title: "Live, as you type", desc: "Edits sync in real time. See what your teammates are writing as they write it." },
   { key: "simple", title: "Simple enough for everyone", desc: "No onboarding sessions. If your team can use Apple Notes, they can use TWO." },
-  { key: "browser", title: "A web app that just works", desc: "Runs in the browser on Mac and iPad today — no install. Native apps are on the roadmap." },
-  { key: "clean", title: "Docs that look great shared", desc: "Send a proposal or brief to a client and it looks polished — not like a database row." },
-  { key: "activity", title: "Full activity history", desc: "See what your team's worked on at a glance — every edit and create, no surprises." },
+  { key: "browser", title: "A web app that just works", desc: "Runs in the browser on Mac and iPad today. No install. Native apps are on the roadmap." },
+  { key: "clean", title: "Docs that look great shared", desc: "Send a proposal or brief to a client and it looks polished, not like a database row." },
+  { key: "activity", title: "Full activity history", desc: "See what your team's worked on at a glance: every edit and create, no surprises." },
 ];
 
 const FILMSTRIP = [
   { title: "Team knowledge base", desc: "One place for processes, decisions, and what everyone needs to know." },
   { title: "Client deliverables", desc: "Write and share briefs, reports, and proposals that look professional." },
-  { title: "Meeting notes", desc: "Capture and share notes from every meeting — searchable, always available." },
+  { title: "Meeting notes", desc: "Capture and share notes from every meeting, searchable and always available." },
   { title: "Product & strategy docs", desc: "Keep your roadmap, strategy, and decisions documented." },
 ];
 
@@ -75,7 +75,7 @@ export default function ForTeamsPage() {
           A shared doc your <span className="ac">whole team actually opens.</span>
         </h1>
         <p className="sub">
-          Not a workspace platform. Not a database. Just real-time shared docs — clean, fast, and simple enough
+          Not a workspace platform. Not a database. Just real-time shared docs: clean, fast, and simple enough
           that nobody needs a walkthrough.
         </p>
         <div className="cta-row">
@@ -125,11 +125,8 @@ export default function ForTeamsPage() {
             <p>No install. Works on Mac and iPad today.</p>
           </div>
 
-          <div className="tw-leader tw-l1"><div className="tick" /><div className="line" /><div className="lbl">Presence — <b>see who&apos;s editing</b></div></div>
-          <div className="tw-leader tw-l2"><div className="tick" /><div className="line" /><div className="lbl">Activity — <b>full history, no surprises</b></div></div>
-        </div>
-        <div className="tw-board-cap">
-          <p>A real working spread — one shared doc, live edits, and a full activity trail.</p>
+          <div className="tw-leader tw-l1"><div className="tick" /><div className="line" /><div className="lbl">Presence: <b>see who&apos;s editing</b></div></div>
+          <div className="tw-leader tw-l2"><div className="tick" /><div className="line" /><div className="lbl">Activity: <b>full history, no surprises</b></div></div>
         </div>
       </section>
 
@@ -141,8 +138,7 @@ export default function ForTeamsPage() {
 
       <section>
         <div className="tw-gallery-head">
-          <p className="micro" style={{ marginBottom: 12 }}>BUILT FOR HOW SMALL TEAMS ACTUALLY WORK</p>
-          <h2 className="display">Six reasons the whole team actually uses it.</h2>
+          <h2 className="display">Six reasons the whole team uses it.</h2>
         </div>
         <div className="tw-grid">
           {GALLERY.map((g) => (
@@ -184,12 +180,11 @@ export default function ForTeamsPage() {
         </div>
       </section>
 
-      <section className="tw-closing">
-        <p>Your team shouldn&apos;t need a workspace admin. It should just <span className="ac">open the doc and start writing.</span></p>
-      </section>
-
       <section className="cta-section">
-        <h2 className="cta-title display">Get your team on the same page.</h2>
+        <h2 className="cta-title tw-cta-title display">
+          Your team shouldn&apos;t need a workspace admin. It should just{" "}
+          <span className="ac">open the doc and start writing.</span>
+        </h2>
         <p className="cta-sub">Free to start. No credit card. Ready in a minute.</p>
         <a className="btn-dark" href="https://app.two.so/signup">Start for free</a>
       </section>
