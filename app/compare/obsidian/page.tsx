@@ -18,11 +18,12 @@ const FEATURES: { label: string; two: React.ReactNode; other: React.ReactNode }[
   { label: "Built-in sync", two: CHECK, other: DASH },
   { label: "Split view", two: CHECK, other: CHECK },
   { label: "Web app", two: CHECK, other: DASH },
+  { label: "Native Mac app", two: SOON("Soon"), other: CHECK },
+  { label: "Native iPad app", two: SOON("Soon"), other: DASH },
   { label: "Works offline", two: SOON("Soon"), other: CHECK },
   { label: "Linked notes", two: CHECK, other: CHECK },
   { label: "Graph view", two: DASH, other: CHECK },
   { label: "Free plan", two: CHECK, other: CHECK },
-  { label: "Lifetime access — no subscription", two: CHECK, other: DASH },
 ];
 
 export default function CompareObsidianPage() {
@@ -31,7 +32,7 @@ export default function CompareObsidianPage() {
       <section className="cmp-hero">
         <p className="micro">Comparisons</p>
         <h1 className="display">TWO vs Obsidian.</h1>
-        <p>Obsidian is a powerful knowledge base for power users. TWO is for people who want to write — not configure a system.</p>
+        <p>Obsidian is a powerful knowledge base for power users. TWO is for people who want to write, not configure a system.</p>
         <div className="cmp-tabs">
           <a href="/compare/notion">vs Notion</a>
           <a href="/compare/apple-notes">vs Apple Notes</a>
@@ -70,11 +71,11 @@ export default function CompareObsidianPage() {
         <div className="cmp-bento-cell">
           <div className="lbl">Sync</div>
           <div className="num">Built-in</div>
-          <div className="sub">TWO syncs automatically. Obsidian sync costs extra — or you manage it yourself with iCloud or Git.</div>
+          <div className="sub">TWO syncs automatically. Obsidian sync costs extra, or you manage it yourself with iCloud or Git.</div>
         </div>
         <div className="cmp-bento-cell dark">
           <div className="lbl">The honest take</div>
-          <p>Obsidian is exceptional for building a personal knowledge base with linked notes and graphs. If you just want to write well and move fast — TWO gets out of your way in a way Obsidian never will.</p>
+          <p>Obsidian is exceptional for building a personal knowledge base with linked notes and graphs. If you just want to write well and move fast, TWO gets out of your way in a way Obsidian never will.</p>
         </div>
       </div>
 
