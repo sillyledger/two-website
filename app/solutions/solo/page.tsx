@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 const TOOLKIT = [
   { title: "Always with you", desc: "iPad on the go, Mac at your desk. Live Sync means your work follows you, not the other way around." },
   { title: "Fast to open, fast to write", desc: "No loading screens, no setup. Open TWO and you're writing within a second, every time." },
-  { title: "Every document, one place", desc: "Proposals, notes, drafts, and plans live in a single library — searchable, not scattered across five apps." },
-  { title: "Autosave, always", desc: "Every keystroke is saved as you type. Close the laptop mid-sentence — it's exactly as you left it." },
+  { title: "Every document, one place", desc: "Proposals, notes, drafts, and plans live in a single library, searchable and not scattered across five apps." },
+  { title: "Autosave, always", desc: "Every keystroke is saved as you type. Close the laptop mid-sentence, and it's exactly as you left it." },
   { title: "Clean enough to think in", desc: "No sidebars of unrelated features, no notification noise. Just you and the page." },
   { title: "Priced for one person", desc: "No per-seat pricing, no enterprise tiers you'll never use. One fair price, built for individuals." },
 ];
@@ -24,12 +24,12 @@ export default function ForSoloPage() {
           Nothing to manage but the work.
         </h1>
         <p className="sub">
-          TWO is built for indie founders, consultants, and freelancers who need to write fast and think clearly —
-          without babysitting a workspace built for a team of fifty.
+          TWO is built for indie founders, consultants, and freelancers who write fast and think clearly. It&apos;s
+          not a workspace built for a team of fifty. It&apos;s built for one.
         </p>
         <div className="cta-row">
           <a className="btn solid" href="https://app.two.so/signup">Start for free</a>
-          <a className="btn outline" href="/product/features/split-view">See how it works</a>
+          <a className="btn outline" href="/demo">See how it works</a>
         </div>
       </section>
 
@@ -55,9 +55,6 @@ export default function ForSoloPage() {
           <div className="sl-leader sl-l3"><div className="tick" /><div className="line" /><div className="lbl"><b>iPad to Mac</b> — same doc, instantly</div></div>
         </div>
       </section>
-      <div className="sl-doc-cap">
-        <p>This is the whole product: a document, and nothing standing between you and it.</p>
-      </div>
 
       <section className="sl-honest">
         <div className="sl-honest-grid">
@@ -67,14 +64,14 @@ export default function ForSoloPage() {
           <div className="sl-honest-right">
             <p>
               You don&apos;t need another dashboard, another database, another tool promising to replace your entire
-              stack. You need somewhere to write a proposal that actually sounds like you, capture a strategy before
-              it slips, and keep client notes straight — without turning &quot;write a document&quot; into a project
+              stack. You need somewhere to write a proposal that sounds like you, capture a strategy before
+              it slips, and keep client notes straight, without turning &quot;write a document&quot; into a project
               of its own.
             </p>
             <p>
               TWO does one thing: it&apos;s the fastest, cleanest place to write. No project boards, no CRM, no
-              invoicing bolted on. If your operation needs those, use the tools built for them — and let TWO be
-              where the thinking and the writing actually happen.
+              invoicing bolted on. If your operation needs those, use the tools built for them. TWO is where the
+              thinking and the writing happen.
             </p>
           </div>
         </div>
@@ -82,7 +79,7 @@ export default function ForSoloPage() {
 
       <section className="sl-list-wrap">
         <div className="sl-list-head">
-          <p className="micro" style={{ marginBottom: 14 }}>BUILT FOR HOW SOLO OPERATORS ACTUALLY WORK</p>
+          <p className="micro" style={{ marginBottom: 14 }}>BUILT FOR HOW SOLO OPERATORS WORK</p>
           <h2 className="display">Six reasons it stays out of your way.</h2>
         </div>
         <div className="sl-tk-list">
@@ -102,7 +99,7 @@ export default function ForSoloPage() {
         <div className="sl-price-inner">
           <div className="sl-price-left">
             <h3 className="display">No team pricing. No per-seat tax.</h3>
-            <p>Just a workspace, priced for the person actually using it.</p>
+            <p>Just a workspace, priced for the person using it.</p>
           </div>
           <div className="sl-price-right">
             <div className="sl-price-fact"><div className="num">$0</div><div className="lbl">Free to start</div></div>
