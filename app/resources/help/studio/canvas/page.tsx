@@ -17,13 +17,13 @@ export default function CanvasArticle() {
         <p className="harticle-meta">2 min read · Last updated Aug 2026</p>
 
         <p>
-          Canvas is Studio&apos;s infinite pan-and-zoom surface — the same pinning and connecting as Wall, but
+          Canvas is Studio&apos;s infinite pan-and-zoom surface, the same pinning and connecting as Wall, but
           with unlimited space instead of fixed edges.
         </p>
 
         <h2 className="display">Panning and zooming</h2>
         <p>
-          Click and drag anywhere on the empty canvas to pan around. Scroll to zoom in or out — it zooms toward
+          Click and drag anywhere on the empty canvas to pan around. Scroll to zoom in or out. It zooms toward
           wherever your cursor is, so you can zoom into a specific cluster of items without losing your place.
           Zoom ranges from 25% to 250%.
         </p>
@@ -46,13 +46,13 @@ export default function CanvasArticle() {
 
         <h2 className="display">Adding and connecting items</h2>
         <p>
-          Adding items works exactly like Wall — pin docs, notes, images, text, and color swatches, drag them
+          Adding items works exactly like Wall: pin docs, notes, images, text, and color swatches, drag them
           anywhere, and draw connectors between them. The only difference is the space you&apos;re working with.
         </p>
 
         <div className="harticle-tip">
           <p><b>Tip:</b>{" "}
-          Reach for Canvas when you&apos;re mapping something that keeps growing — a big project, a research map,
+          Reach for Canvas when you&apos;re mapping something that keeps growing: a big project, a research map,
           anything where you don&apos;t know the final shape yet. Use Wall when you want a contained space that
           stays a fixed size.</p>
         </div>
