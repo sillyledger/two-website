@@ -60,19 +60,19 @@ export default function VersionHistoryArticle() {
         <h2 className="display">Restoring a version</h2>
         <p>
           Select any version from the list to preview it on the right. If it&apos;s the one you want back, click
-          <b> Restore this version</b>. Your doc updates immediately — and the version you restored from is kept
+          <b> Restore this version</b>. Your doc updates immediately, and the version you restored from is kept
           too, so restoring is never a one-way trip.
         </p>
 
         <div className="harticle-tip">
           <p><b>Tip:</b>{" "}
-          Restoring doesn&apos;t just undo your last change — it replaces the doc with the exact title and
+          Restoring doesn&apos;t just undo your last change. It replaces the doc with the exact title and
           content from that saved version, no matter how long ago it was.</p>
         </div>
 
         <h2 className="display">How often versions are saved</h2>
         <p>
-          TWO saves a new version automatically as you write — roughly every 10 minutes of active editing, or
+          TWO saves a new version automatically as you write, roughly every 10 minutes of active editing, or
           immediately whenever you rename the doc. You don&apos;t need to save versions manually; it happens in
           the background alongside autosave.
         </p>
@@ -83,13 +83,13 @@ export default function VersionHistoryArticle() {
             <tr><th>Plan</th><th>History kept</th></tr>
             <tr><td>Free</td><td>Last 3 versions per doc</td></tr>
             <tr><td>Pro</td><td>Last 30 days per doc</td></tr>
-            <tr><td>Founding</td><td>Last 30 days per doc</td></tr>
+            <tr><td>Team</td><td>Last 30 days per doc</td></tr>
           </tbody>
         </table>
         <p>
           On the free plan, once a doc has more than 3 saved versions, the oldest one is quietly dropped as a new
-          one is saved — there&apos;s no warning or interruption, older versions just roll off. On Pro and
-          Founding, every version from the last 30 days stays available.
+          one is saved. There&apos;s no warning or interruption, older versions just roll off. On Pro and Team,
+          every version from the last 30 days stays available.
         </p>
 
         <div className="harticle-pn">
