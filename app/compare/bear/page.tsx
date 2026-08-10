@@ -16,12 +16,12 @@ const FEATURES: { label: string; two: React.ReactNode; other: React.ReactNode }[
   { label: "Visual rich text editor", two: CHECK, other: DASH },
   { label: "Web app", two: CHECK, other: DASH },
   { label: "Split view", two: CHECK, other: DASH },
-  { label: "Real-time sync", two: CHECK, other: CHECK },
+  { label: "Real-time sync", two: CHECK, other: DASH },
   { label: "Works on Windows & Android", two: CHECK, other: DASH },
   { label: "Export to PDF & Markdown", two: CHECK, other: CHECK },
   { label: "Native Mac app", two: SOON("Soon"), other: CHECK },
+  { label: "Native iPad app", two: SOON("Soon"), other: CHECK },
   { label: "Free plan", two: CHECK, other: CHECK },
-  { label: "Lifetime access — no subscription", two: CHECK, other: DASH },
 ];
 
 export default function CompareBearPage() {
@@ -30,7 +30,7 @@ export default function CompareBearPage() {
       <section className="cmp-hero">
         <p className="micro">Comparisons</p>
         <h1 className="display">TWO vs Bear.</h1>
-        <p>Bear is a beautiful Markdown editor for Apple devices. TWO is a rich writing app that works everywhere — and doesn&apos;t require Markdown to get started.</p>
+        <p>Bear is a beautiful Markdown editor for Apple devices. TWO is a rich writing app that works everywhere and doesn&apos;t require Markdown to get started.</p>
         <div className="cmp-tabs">
           <a href="/compare/notion">vs Notion</a>
           <a href="/compare/apple-notes">vs Apple Notes</a>
@@ -51,7 +51,7 @@ export default function CompareBearPage() {
         </div>
         <div className="cmp-verdict-card">
           <div className="name">Bear</div>
-          <p className="tag">A polished Markdown editor exclusive to Apple devices. Great for writers who love plain text — limited for everyone else.</p>
+          <p className="tag">A polished Markdown editor exclusive to Apple devices. Great for writers who love plain text, limited for everyone else.</p>
           <div className="cmp-pill-row">
             <span className="cmp-pill other">Apple-only</span>
             <span className="cmp-pill other">Markdown-based</span>
@@ -64,16 +64,16 @@ export default function CompareBearPage() {
         <div className="cmp-bento-cell">
           <div className="lbl">Platform support</div>
           <div className="num">Any</div>
-          <div className="sub">TWO runs in any browser. Bear is Mac and iPhone only — no Windows, no Android, no web.</div>
+          <div className="sub">TWO runs in any browser. Bear is Mac, iPhone, and iPad only, with no Windows, Android, or web app.</div>
         </div>
         <div className="cmp-bento-cell">
           <div className="lbl">Editor type</div>
           <div className="num">Visual</div>
-          <div className="sub">TWO uses a rich visual editor. Bear requires Markdown syntax — a learning curve for many writers.</div>
+          <div className="sub">TWO uses a rich visual editor. Bear requires Markdown syntax, a learning curve for many writers.</div>
         </div>
         <div className="cmp-bento-cell dark">
           <div className="lbl">The honest take</div>
-          <p>Bear is genuinely beautiful and a great fit for Markdown lovers on Apple devices. If you want a rich editor that works everywhere and doesn&apos;t require syntax knowledge — TWO is the better choice.</p>
+          <p>Bear is genuinely beautiful and a great fit for Markdown lovers on Apple devices. If you want a rich editor that works everywhere and doesn&apos;t require syntax knowledge, TWO is the better choice.</p>
         </div>
       </div>
 
