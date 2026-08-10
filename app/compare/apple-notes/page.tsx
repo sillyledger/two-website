@@ -15,13 +15,12 @@ const SOON = (label: string) => <span className="soon">{label}</span>;
 const FEATURES: { label: string; two: React.ReactNode; other: React.ReactNode }[] = [
   { label: "Rich text editor", two: CHECK, other: DASH },
   { label: "Split view", two: CHECK, other: DASH },
-  { label: "Web app", two: CHECK, other: DASH },
+  { label: "Web app", two: CHECK, other: CHECK },
   { label: "Real-time sync", two: CHECK, other: CHECK },
   { label: "Export to PDF & Markdown", two: CHECK, other: DASH },
-  { label: "Works on Windows & Android", two: CHECK, other: DASH },
   { label: "Native Mac app", two: SOON("Soon"), other: CHECK },
+  { label: "Native iPad app", two: SOON("Soon"), other: CHECK },
   { label: "Free plan", two: CHECK, other: CHECK },
-  { label: "Lifetime access — no subscription", two: CHECK, other: DASH },
 ];
 
 export default function CompareAppleNotesPage() {
@@ -42,11 +41,11 @@ export default function CompareAppleNotesPage() {
       <div className="cmp-verdict-grid">
         <div className="cmp-verdict-card two">
           <div className="name">TWO</div>
-          <p className="tag">A focused writing app with split view, real-time sync, and a rich editor — built for people who write seriously.</p>
+          <p className="tag">A focused writing app with split view, real-time sync, and a rich editor. Built for people who write seriously.</p>
           <div className="cmp-pill-row">
             <span className="cmp-pill two">Rich editor</span>
             <span className="cmp-pill two">Split view</span>
-            <span className="cmp-pill two">Web &amp; Mac</span>
+            <span className="cmp-pill two">Web, Mac &amp; iPad</span>
           </div>
         </div>
         <div className="cmp-verdict-card">
@@ -64,16 +63,16 @@ export default function CompareAppleNotesPage() {
         <div className="cmp-bento-cell">
           <div className="lbl">Editor richness</div>
           <div className="num">TWO</div>
-          <div className="sub">Headings, callouts, tables, images, export to PDF — Apple Notes has checklists and bold.</div>
+          <div className="sub">Headings, callouts, tables, images, export to PDF. Apple Notes has checklists and bold.</div>
         </div>
         <div className="cmp-bento-cell">
           <div className="lbl">Platform lock-in</div>
           <div className="num">None</div>
-          <div className="sub">TWO works on any browser. Apple Notes requires an Apple device — no Windows, no Android.</div>
+          <div className="sub">TWO works in any browser, no account required to try it. Apple Notes needs an Apple ID, and the full native experience is Apple-only.</div>
         </div>
         <div className="cmp-bento-cell dark">
           <div className="lbl">The honest take</div>
-          <p>Apple Notes is perfect for grocery lists and quick thoughts. If you&apos;re writing docs, briefs, or anything longer than a paragraph — TWO is the better tool.</p>
+          <p>Apple Notes is perfect for grocery lists and quick thoughts. If you&apos;re writing docs, briefs, or anything longer than a paragraph, TWO is the better tool.</p>
         </div>
       </div>
 
