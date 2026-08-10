@@ -10,7 +10,7 @@ export default function ProductFeaturesPage() {
       <section className="pf-hero">
         <p className="micro">Product Features</p>
         <h1 className="display">Everything you need.<br />Nothing you don&apos;t.</h1>
-        <p>TWO is built around how you actually think and write — focused, fast, and always in sync.</p>
+        <p>TWO is built around how you actually think and write, focused, fast, and always in sync.</p>
       </section>
 
       <div className="pf-bento">
@@ -38,7 +38,7 @@ export default function ProductFeaturesPage() {
         <a href="/product/features/live-sync" className="pf-card pf-tall-card linked">
           <div className="pf-eyebrow">Live Sync</div>
           <div className="pf-title">Always in sync.</div>
-          <div className="pf-desc">Changes appear instantly on every device — Mac, iPad, browser. No manual saves, no conflicts.</div>
+          <div className="pf-desc">Changes appear instantly on every device: Mac, iPad, browser. No manual saves, no conflicts.</div>
           <div className="pf-mini-explode" style={{ height: 130 }}>
             <div className="pf-mini-core" style={{ width: "45%", top: 0 }}>
               <div className="l" style={{ width: "60%" }} />
@@ -90,10 +90,10 @@ export default function ProductFeaturesPage() {
           <div className="pf-cta">Explore Shared Workspaces →</div>
         </a>
 
-        <div className="pf-card pf-third-card">
+        <a href="/resources/templates" className="pf-card pf-third-card linked">
           <div className="pf-eyebrow">Templates</div>
           <div className="pf-title">Start fast. Every time.</div>
-          <div className="pf-desc">Meeting notes, briefs, weekly reviews — one click away and ready to fill in.</div>
+          <div className="pf-desc">Meeting notes, briefs, weekly reviews, one click away and ready to fill in.</div>
           <div className="pf-mini-explode">
             <div className="pf-mini-core" style={{ width: "55%" }}>
               <div className="l" style={{ width: "60%" }} />
@@ -104,8 +104,8 @@ export default function ProductFeaturesPage() {
               <div className="l" style={{ width: "50%" }} />
             </div>
           </div>
-          <div className="pf-cta">Part of every doc</div>
-        </div>
+          <div className="pf-cta">Explore templates →</div>
+        </a>
 
         <div className="pf-card pf-third-card">
           <div className="pf-eyebrow">Linked Docs &amp; Notes</div>
@@ -127,7 +127,7 @@ export default function ProductFeaturesPage() {
         <div className="pf-card pf-third-card">
           <div className="pf-eyebrow">Activity Logbook</div>
           <div className="pf-title">See what changed.</div>
-          <div className="pf-desc">A full timeline of edits, creates, and shares — no surprises.</div>
+          <div className="pf-desc">A full timeline of edits, creates, and shares, no surprises.</div>
           <div className="pf-mini-explode">
             <div className="pf-mini-core" style={{ width: "55%" }}>
               <div className="l" style={{ width: "50%" }} />
