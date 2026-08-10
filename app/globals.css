@@ -1195,7 +1195,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .bl-empty{font-size:17px;color:var(--text-muted);padding:60px 0;text-align:center;}
 
 .bl-featured{display:block;text-decoration:none;color:inherit;background:var(--bg-elevated,#242426);border-radius:14px;padding:36px;margin-bottom:64px;}
-.bl-tag{font-size:13px;color:var(--clay);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:14px;display:block;}
+.bl-tag{font-size:13px;color:var(--indigo);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:14px;display:block;}
 .bl-featured .bl-title{font-size:28px;line-height:1.25;margin:0 0 12px;max-width:560px;}
 .bl-featured .bl-desc{font-size:17px;color:var(--text-muted);line-height:1.6;margin:0 0 14px;max-width:520px;}
 .bl-meta{font-size:13px;color:var(--text-muted);}
