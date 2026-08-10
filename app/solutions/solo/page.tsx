@@ -24,8 +24,8 @@ export default function ForSoloPage() {
           Nothing to manage but the work.
         </h1>
         <p className="sub">
-          TWO is built for indie founders, consultants, and freelancers who write fast and think clearly. It&apos;s
-          not a workspace built for a team of fifty. It&apos;s built for one.
+          TWO is built for writers, founders, and creatives who write fast and think clearly. It&apos;s not a
+          workspace built for a team of fifty. It&apos;s built for one.
         </p>
         <div className="cta-row">
           <a className="btn solid" href="https://app.two.so/signup">Start for free</a>
