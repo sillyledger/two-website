@@ -14,10 +14,10 @@ export default function YourFirstDocArticle() {
       <article className="harticle">
         <p className="harticle-eyebrow">Getting Started</p>
         <h1 className="display">Your first doc</h1>
-        <p className="harticle-meta">2 min read · Last updated May 2026</p>
+        <p className="harticle-meta">2 min read · Last updated Aug 2026</p>
 
         <p>
-          Creating a doc in TWO takes one click. This article walks you through everything — from creating your
+          Creating a doc in TWO takes one click. This article walks you through everything, from creating your
           first doc to understanding how it gets saved.
         </p>
 
@@ -30,14 +30,14 @@ export default function YourFirstDocArticle() {
 
         <div className="harticle-tip">
           <p>
-            <b>Tip:</b> TWO opens straight to your most recent doc every time you launch the app — so you can pick
+            <b>Tip:</b> TWO opens straight to your most recent doc every time you launch the app, so you can pick
             up exactly where you left off.
           </p>
         </div>
 
         <h2 className="display">Giving your doc a title</h2>
         <p>
-          Click at the top of the page and type your title. There&apos;s no separate title field — the first line
+          Click at the top of the page and type your title. There&apos;s no separate title field. The first line
           of your doc becomes the title automatically. It will appear in your dashboard and sidebar once
           you&apos;ve typed it.
         </p>
