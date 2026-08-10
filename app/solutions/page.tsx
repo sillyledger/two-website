@@ -9,8 +9,8 @@ export default function SolutionsPage() {
     <div className="features-frame">
       <section className="rs-hero">
         <p className="micro">Solutions</p>
-        <h1 className="display">Built for how<br />you actually work.</h1>
-        <p>The same fast, minimal docs editor — shaped around three different ways of working.</p>
+        <h1 className="display">Built for how<br />you work.</h1>
+        <p>The same fast, minimal docs editor, shaped around three different ways of working.</p>
       </section>
 
       <div className="rs-grid">
@@ -22,7 +22,7 @@ export default function SolutionsPage() {
           </div>
           <div className="rs-title">For Creatives</div>
           <div className="rs-desc">A studio wall, built into your docs. Briefs, references, and drafts kept together the way your work actually happens.</div>
-          <div className="rs-cta">See how it works →</div>
+          <div className="rs-cta">See the studio wall →</div>
         </a>
 
         <a href="/solutions/solo" className="rs-card">
@@ -33,8 +33,8 @@ export default function SolutionsPage() {
             </svg>
           </div>
           <div className="rs-title">For Solo Operators</div>
-          <div className="rs-desc">One document, fully yours. Built for founders, consultants, and freelancers — nothing to manage but the work.</div>
-          <div className="rs-cta">See how it works →</div>
+          <div className="rs-desc">One document, fully yours. Built for founders, consultants, and freelancers, nothing to manage but the work.</div>
+          <div className="rs-cta">See the solo workflow →</div>
         </a>
 
         <a href="/solutions/teams" className="rs-card">
@@ -48,7 +48,7 @@ export default function SolutionsPage() {
           </div>
           <div className="rs-title">For Small Teams</div>
           <div className="rs-desc">A shared doc your whole team actually opens. Real-time, simple enough that nobody needs a walkthrough.</div>
-          <div className="rs-cta">See how it works →</div>
+          <div className="rs-cta">See the team workflow →</div>
         </a>
       </div>
     </div>
