@@ -17,14 +17,14 @@ export default function LinkedDocsArticle() {
         <p className="harticle-meta">2 min read · Last updated Aug 2026</p>
 
         <p>
-          Reference one doc from inside another by turning any text into a clickable link — useful for pointing
+          Reference one doc from inside another by turning any text into a clickable link. Useful for pointing
           from a project brief to its meeting notes, or from an OKR tracker to the doc it came from.
         </p>
 
         <h2 className="display">Creating a link to another doc</h2>
         <p>
           Select the text you want to turn into a link, then click the link icon in the toolbar (or the bubble
-          menu that appears when you select text). A search box opens — type to search your docs by title, or
+          menu that appears when you select text). A search box opens. Type to search your docs by title, or
           paste a regular URL if you&apos;re linking outside TWO.
         </p>
 
@@ -54,19 +54,19 @@ export default function LinkedDocsArticle() {
         <h2 className="display">Following a link</h2>
         <p>
           Click any doc link and TWO takes you straight to that doc. If you want to keep your current doc open
-          too, open the link in split view instead — right-click it and choose to open in the second pane, or
+          too, open the link in split view instead. Right-click it and choose to open in the second pane, or
           copy the link and add it manually from the split-view picker.
         </p>
 
         <div className="harticle-tip">
-          <p><b>Tip:</b> Linking is one-directional right now — opening the doc you linked <i>to</i>{" "}
+          <p><b>Tip:</b> Linking is one-directional right now. Opening the doc you linked <i>to</i>{" "}
           won&apos;t show you a list of everything that links back to it. Keep that in mind if you&apos;re
           building out a web of connected docs.</p>
         </div>
 
         <h2 className="display">Removing a link</h2>
         <p>
-          Select the linked text, open the link tool again, and clear the field before applying — this turns it
+          Select the linked text, open the link tool again, and clear the field before applying. This turns it
           back into plain text without deleting the words themselves.
         </p>
 
