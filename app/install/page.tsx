@@ -15,12 +15,6 @@ export default function InstallPage() {
       </section>
 
       <InstallSteps />
-
-      <div className="cta-section">
-        <h2 className="display cta-title">Ready to start writing?</h2>
-        <p className="cta-sub">Create a free account and install TWO in under a minute.</p>
-        <a href="https://app.two.so/signup" className="btn-dark">Create a free account →</a>
-      </div>
     </div>
   );
 }
