@@ -76,6 +76,7 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .bottom-bar { display: flex; align-items: center; justify-content: center; text-align: center; gap: 40px; padding: 34px 0 60px; border-top: 1px solid var(--border); margin-top: 30px; }
 .bottom-bar .k { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px; }
 .bottom-bar .v { font-size: 13px; }
+.ws-bottom-bar { border-top: none; margin-top: 0; }
 
 /* ============ FEATURES ============ */
 .features-frame { max-width: 1180px; margin: 0 auto; padding: 60px 48px 100px; }

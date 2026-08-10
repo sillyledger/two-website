@@ -5,7 +5,7 @@ export const metadata: Metadata = {
 };
 
 const MEMBERS = [
-  { initial: "P", bg: "#3C3489", color: "#CECBF6", name: "Pieter", email: "pieter@strevius.co", role: "Owner" },
+  { initial: "P", bg: "#3C3489", color: "#CECBF6", name: "Pieter", email: "hey@two.so", role: "Owner" },
   { initial: "S", bg: "#085041", color: "#9FE1CB", name: "Sarah", email: "sarah@company.com", role: "Editor" },
   { initial: "M", bg: "#633806", color: "#FAC775", name: "Mark", email: "mark@company.com", role: "Viewer" },
 ];
@@ -17,7 +17,7 @@ const STEPS = [
   },
   {
     t: "Set their role",
-    d: "Owner, Editor, or Viewer — control who can write and who can only read.",
+    d: "Owner, Editor, or Viewer. Control who can write and who can only read.",
   },
   {
     t: "Write together, live",
@@ -30,13 +30,13 @@ const SPECS = [
   { label: "Invites", value: "By email, instant" },
   { label: "Presence", value: "Live, colour-coded cursors" },
   { label: "Guest access", value: "Per-doc, no full access" },
-  { label: "Availability", value: "Pro and Founding plans" },
+  { label: "Availability", value: "Pro and Team plans" },
 ];
 
 const USES = [
   {
     title: "Team knowledge base",
-    desc: "One place for everything your team needs to know — processes, decisions, references. Always up to date.",
+    desc: "One place for everything your team needs to know: processes, decisions, references. Always up to date.",
   },
   {
     title: "Client deliverables",
@@ -44,7 +44,7 @@ const USES = [
   },
   {
     title: "Co-writing in real time",
-    desc: "Two people, one doc, editing simultaneously. No conflicts, no overwriting — just fluid collaboration.",
+    desc: "Two people, one doc, editing simultaneously. No conflicts, no overwriting, just fluid collaboration.",
   },
   {
     title: "Guest access",
@@ -69,7 +69,7 @@ export default function SharedWorkspacesPage() {
 
       <div className="hero-cols">
         <p>
-          Invite teammates or guests in seconds. Everyone works from the same space — no emailing files, no version
+          Invite teammates or guests in seconds. Everyone works from the same space, no emailing files, no version
           confusion.
         </p>
         <p>See who&apos;s online, watch edits happen live, and keep your whole team on the same page. Literally.</p>
@@ -80,7 +80,7 @@ export default function SharedWorkspacesPage() {
           <div className="tick"></div>
           <div className="line"></div>
           <div className="lbl">
-            Live presence — <b>see who&apos;s here</b>
+            Live presence: <b>see who&apos;s here</b>
           </div>
         </div>
 
@@ -116,7 +116,7 @@ export default function SharedWorkspacesPage() {
 
         <div className="ws-doc-side">
           <div className="ws-doc-bar">
-            <div className="ws-doc-title">Q3 Strategy — Draft</div>
+            <div className="ws-doc-title">Q3 Strategy: Draft</div>
             <div className="ws-presence">
               <div className="ws-avatar" style={{ background: "#3C3489", color: "#CECBF6" }}>
                 P
@@ -153,14 +153,10 @@ export default function SharedWorkspacesPage() {
         </div>
       </div>
 
-      <div className="bottom-bar">
-        <div>
-          <span className="k">Roles</span>
-          <span className="v">Owner, Editor, Viewer</span>
-        </div>
+      <div className="bottom-bar ws-bottom-bar">
         <div>
           <span className="k">Availability</span>
-          <span className="v">Pro and Founding plans</span>
+          <span className="v">Pro and Team plans</span>
         </div>
       </div>
 
@@ -205,7 +201,7 @@ export default function SharedWorkspacesPage() {
 
       <div className="cta-section">
         <h2 className="display cta-title">Ready to bring your team in?</h2>
-        <p className="cta-sub">Shared Workspaces are included on Pro and Founding. Invite your first teammate today.</p>
+        <p className="cta-sub">Shared Workspaces are included on Pro and Team. Invite your first teammate today.</p>
         <a href="https://app.two.so/signup" className="btn-dark">
           Start writing for free
         </a>
