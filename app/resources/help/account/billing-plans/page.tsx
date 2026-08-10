@@ -23,15 +23,15 @@ export default function BillingPlansArticle() {
 
         <h2 className="display">Upgrading</h2>
         <p>
-          From the Billing tab you can start a 14-day free trial of Pro (no credit card required), or get
-          lifetime access as a Founding Member for a one-time payment while slots last. Both open a secure Paddle
-          checkout.
+          From the Billing tab you can start a 14-day free trial of Pro (no credit card required). This opens a
+          secure Paddle checkout. Team, with shared workspaces for up to 10 members and more storage, is coming
+          soon.
         </p>
 
         <h2 className="display">Tracking your storage</h2>
         <p>
           The Storage tab shows how much of your image and file storage you&apos;ve used against your plan&apos;s
-          limit — 1GB on Free, 10GB on Pro and Founding.
+          limit: 1GB on Free, 10GB on Pro, and 50GB on Team.
         </p>
 
         <div className="harticle-tip">
