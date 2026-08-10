@@ -5,10 +5,31 @@ export const metadata: Metadata = {
   title: "Live Sync: Instant Real-Time Document Sync | TWO",
 };
 
+const DEVICE_ICONS: Record<string, React.ReactNode> = {
+  Mac: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="4" width="16" height="11" rx="1.5" />
+      <path d="M2 18h20" />
+    </svg>
+  ),
+  iPad: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="6" y="2" width="12" height="20" rx="2" />
+      <line x1="10.5" y1="19" x2="13.5" y2="19" />
+    </svg>
+  ),
+  Browser: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <line x1="3" y1="9" x2="21" y2="9" />
+    </svg>
+  ),
+};
+
 const DEVICES = [
-  { icon: "💻", name: "Mac" },
-  { icon: "📱", name: "iPad" },
-  { icon: "🌐", name: "Browser" },
+  { name: "Mac" },
+  { name: "iPad" },
+  { name: "Browser" },
 ];
 
 const SYNC_LINES = [
@@ -21,7 +42,7 @@ const SYNC_LINES = [
 const STEPS = [
   {
     t: "Write on any device",
-    d: "Mac, iPad, or browser — start wherever you are.",
+    d: "Mac, iPad, or browser. Start wherever you are.",
   },
   {
     t: "Changes push instantly",
@@ -49,7 +70,7 @@ const USES = [
   },
   {
     title: "Always the latest version",
-    desc: 'No more "which version is newest?" — TWO has one version, always current, on every device.',
+    desc: 'No more "which version is newest?" TWO has one version, always current, on every device.',
   },
   {
     title: "Work offline, sync later",
@@ -77,7 +98,7 @@ export default function LiveSyncPage() {
       </h1>
 
       <p className="hero-sub">
-        Write on your iPad, pick up on your Mac. Changes appear the moment you make them — no saving, no waiting, no
+        Write on your iPad, pick up on your Mac. Changes appear the moment you make them, no saving, no waiting, no
         version conflicts.
       </p>
 
@@ -86,7 +107,7 @@ export default function LiveSyncPage() {
           <Fragment key={device.name}>
             <div className="ls-dev">
               <div className="ls-dev-label">
-                <span>{device.icon}</span> {device.name}
+                <span className="ls-dev-icon">{DEVICE_ICONS[device.name]}</span> {device.name}
                 <div className="ls-sync-dot"></div>
               </div>
               <div className="ls-dev-bar"></div>
@@ -103,7 +124,7 @@ export default function LiveSyncPage() {
         ))}
       </div>
 
-      <div className="bottom-bar">
+      <div className="bottom-bar ls-bottom-bar">
         <div>
           <span className="k">Sync speed</span>
           <span className="v">Instant, as you type</span>
