@@ -18,10 +18,11 @@ const FEATURES: { label: string; two: React.ReactNode; other: React.ReactNode }[
   { label: "Split view", two: CHECK, other: DASH },
   { label: "Real-time sync", two: CHECK, other: CHECK },
   { label: "Native Mac app", two: SOON("Soon"), other: CHECK },
+  { label: "Native iPad app", two: SOON("Soon"), other: CHECK },
   { label: "Works offline", two: SOON("Soon"), other: SOON("Partial") },
+  { label: "Export to PDF & Markdown", two: CHECK, other: CHECK },
   { label: "Databases & spreadsheets", two: DASH, other: CHECK },
   { label: "Free plan", two: CHECK, other: CHECK },
-  { label: "Lifetime access — no subscription", two: CHECK, other: DASH },
 ];
 
 export default function CompareNotionPage() {
