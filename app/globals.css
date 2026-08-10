@@ -361,9 +361,9 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .la1 { position: absolute; left: 542px; top: -30px; } .la1 .tick { left: -1.5px; top: 30px; } .la1 .line { left: 0; top: 0; width: 1px; height: 30px; } .la1 .lbl { left: 8px; top: -8px; }
 .la2 { position: absolute; left: 230px; top: -46px; } .la2 .tick { left: -1.5px; top: 46px; } .la2 .line { left: 0; top: 0; width: 1px; height: 46px; } .la2 .lbl { top: -8px; left: -8px; text-align: right; transform: translateX(-100%); }
 .la3 { position: absolute; right: 40px; top: -46px; } .la3 .tick { right: -1.5px; top: 46px; left: auto; } .la3 .line { right: 0; left: auto; top: 0; width: 1px; height: 46px; } .la3 .lbl { top: -8px; right: -8px; left: auto; text-align: right; }
-.la4 { position: absolute; left: 250px; bottom: -46px; } .la4 .tick { left: -1.5px; top: -2px; } .la4 .line { left: 0; top: 0; width: 1px; height: 40px; transform: translateY(-40px); } .la4 .lbl { top: -60px; left: -8px; text-align: right; transform: translateX(-100%); }
+.la4 { position: absolute; left: 250px; bottom: -30px; } .la4 .tick { left: -1.5px; bottom: 30px; } .la4 .line { left: 0; bottom: 0; width: 1px; height: 30px; } .la4 .lbl { left: 8px; bottom: -8px; }
 
-.sv-bottom-bar { display: flex; align-items: center; justify-content: center; gap: 40px; padding: 40px 0 80px; border-top: 1px solid var(--border); margin-top: 30px; }
+.sv-bottom-bar { display: flex; align-items: center; justify-content: center; gap: 40px; padding: 40px 0 80px; margin-top: 30px; }
 .sv-bottom-bar .k { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px; }
 .sv-bottom-bar .v { font-size: 13px; }
 

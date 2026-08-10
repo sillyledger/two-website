@@ -29,7 +29,7 @@ const PANE_2_LINES = [
 const STEPS = [
   {
     t: "Open any two notes or docs",
-    d: "Pick from anything in your library — notes and docs both work, no restrictions. From the home screen or straight from a tab.",
+    d: "Pick from anything in your library. Notes and docs both work, no restrictions. From the home screen or straight from a tab.",
   },
   {
     t: "Drag to resize",
@@ -37,14 +37,14 @@ const STEPS = [
   },
   {
     t: "Layout auto-saves",
-    d: "Close TWO and reopen it — your split is exactly where you left it.",
+    d: "Close TWO and reopen it. Your split is exactly where you left it.",
   },
 ];
 
 const SPECS = [
   { label: "Panes", value: "2, fully independent" },
   { label: "Resize", value: "Drag, any ratio" },
-  { label: "Content types", value: "Notes or docs — no restrictions" },
+  { label: "Content types", value: "Notes or docs, no restrictions" },
   { label: "Layout persistence", value: "Saved per device" },
   { label: "Sync", value: "Live, cross-device" },
   { label: "Availability", value: "Web now, Mac & iPad soon" },
@@ -91,7 +91,7 @@ export default function SplitViewPage() {
         </p>
         <p>
           Open any two notes or docs from your library. Your layout saves automatically. No setup, no
-          reconfiguring — just open TWO and pick up exactly where you left off.
+          reconfiguring. Just open TWO and pick up exactly where you left off.
         </p>
       </div>
 
@@ -100,28 +100,28 @@ export default function SplitViewPage() {
           <div className="tick"></div>
           <div className="line"></div>
           <div className="lbl">
-            Drag — <b>reshape anytime</b>
+            Drag: <b>reshape anytime</b>
           </div>
         </div>
         <div className="leader la2">
           <div className="tick"></div>
           <div className="line"></div>
           <div className="lbl">
-            Any doc — <b>swap either side</b>
+            Any doc: <b>swap either side</b>
           </div>
         </div>
         <div className="leader la3">
           <div className="tick"></div>
           <div className="line"></div>
           <div className="lbl">
-            Auto-saved — <b>layout remembered</b>
+            Auto-saved: <b>layout remembered</b>
           </div>
         </div>
         <div className="leader la4">
           <div className="tick"></div>
           <div className="line"></div>
           <div className="lbl">
-            One click — <b>from your library</b>
+            One click: <b>from your library</b>
           </div>
         </div>
 
@@ -138,7 +138,7 @@ export default function SplitViewPage() {
           <div className="panes">
             <div className="pane">
               <div className="pane-bar" style={{ background: "rgba(80,140,255,0.6)" }}></div>
-              <div className="pane-label">Product Brief — Q3</div>
+              <div className="pane-label">Product Brief: Q3</div>
               {PANE_1_LINES.map((line, i) => (
                 <div key={i} className={`sl${line.hi ? " hi" : ""}`} style={{ width: line.width }}></div>
               ))}
@@ -148,7 +148,7 @@ export default function SplitViewPage() {
             </div>
             <div className="pane">
               <div className="pane-bar" style={{ background: "rgba(60,200,120,0.6)" }}></div>
-              <div className="pane-label">Weekly Review — June</div>
+              <div className="pane-label">Weekly Review: June</div>
               {PANE_2_LINES.map((line, i) => (
                 <div key={i} className={`sl${line.hi ? " hi" : ""}`} style={{ width: line.width }}></div>
               ))}
@@ -175,7 +175,7 @@ export default function SplitViewPage() {
         <div className="intro-right">
           <p>
             Most tools make you choose: either you&apos;re reading, or you&apos;re writing. TWO lets you do both at
-            once — two documents, one window, zero context switching.
+            once. Two documents, one window, zero context switching.
           </p>
           <p>
             Drag the divider to give more space to whatever needs it. Pick any two docs from your library. Your
@@ -211,7 +211,7 @@ export default function SplitViewPage() {
 
       <div className="dark-strip">
         <p className="micro">Made for your workflow</p>
-        <h2 className="display dark-title">How writers and founders use it.</h2>
+        <h2 className="display dark-title">How writers, creatives and founders use it.</h2>
         <div className="uses">
           {USES.map((use) => (
             <div key={use.title} className="use">
