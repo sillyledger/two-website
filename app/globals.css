@@ -523,7 +523,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .cw-hero { text-align: center; padding: 76px 0 0; }
 .cw-tag { display: block; font-size: 13px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--indigo); margin-bottom: 20px; }
 .cw-hero h1 { font-size: 52px; line-height: 1.05; margin: 0 0 20px; }
-.cw-hero h1 .ac { color: var(--clay); }
+.cw-hero h1 .ac { color: var(--indigo); }
 .cw-hero p.sub { font-size: 17px; color: var(--text-muted); max-width: 480px; margin: 0 auto 30px; line-height: 1.6; }
 
 .cw-board { position: relative; width: 1000px; max-width: 100%; height: 500px; margin: 84px auto 0; }
@@ -576,15 +576,15 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .cw-leader .lbl { position: absolute; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
 .cw-leader .lbl b { color: var(--text-primary); font-weight: 500; }
 .cw-l1 { left: 450px; top: 480px; } .cw-l1 .tick{left:-2px;top:-2px;} .cw-l1 .line{left:0;top:0;width:1px;height:26px;transform:translateY(-26px);} .cw-l1 .lbl{top:-42px;left:-38px;}
-.cw-l2 { left: 970px; top: 200px; } .cw-l2 .tick{left:-2px;top:-2px;} .cw-l2 .line{left:-40px;top:1px;width:40px;height:1px;} .cw-l2 .lbl{left:-176px;top:-8px;text-align:right;width:132px;}
+.cw-l2 { left: 750px; top: 253px; } .cw-l2 .tick{left:-2px;top:-2px;} .cw-l2 .line{left:0;top:0;width:1px;height:30px;} .cw-l2 .lbl{top:30px;left:-60px;width:200px;}
 
 .cw-board-cap { text-align: center; margin: 40px 0 100px; }
 .cw-board-cap p { font-size: 13px; color: var(--text-muted); margin: 0; }
 
-.cw-intro { text-align: center; padding: 0 0 90px; border-top: 1px solid var(--border); }
+.cw-intro { text-align: center; padding: 0 0 90px; }
 .cw-intro-inner { max-width: 620px; margin: 70px auto 0; }
 .cw-intro p { font-size: 20px; line-height: 1.55; font-family: 'Fira Sans', sans-serif; font-weight: 500; margin: 0; }
-.cw-intro .ac { color: var(--clay); }
+.cw-intro .ac { color: var(--indigo); }
 
 .cw-gallery-head { text-align: center; margin-bottom: 56px; }
 .cw-gallery-head h2 { font-size: 28px; margin: 0; line-height: 1.3; }

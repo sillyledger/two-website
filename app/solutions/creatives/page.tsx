@@ -5,8 +5,8 @@ export const metadata: Metadata = {
 };
 
 const GALLERY: { key: string; title: string; desc: string }[] = [
-  { key: "ipad", title: "iPad-first writing", desc: "Native-feeling on the couch, in a café, or on a flight — not an afterthought bolted onto a desktop app." },
-  { key: "tabs", title: "Tabs, not tab-switching", desc: "Every doc for a project open at once, inside the app — not across five browser tabs." },
+  { key: "ipad", title: "iPad-first writing", desc: "Native-feeling on the couch, in a café, or on a flight, not an afterthought bolted onto a desktop app." },
+  { key: "tabs", title: "Tabs, not tab-switching", desc: "Every doc for a project open at once, inside the app, not across five browser tabs." },
   { key: "sync", title: "Mac and iPad in sync", desc: "Start on one, finish on the other. No exporting, no re-pasting, no version to reconcile." },
   { key: "rich", title: "Rich text that stays clean", desc: "Every formatting tool you reach for. None of the toolbar clutter you don't." },
   { key: "dark", title: "Dark mode, done right", desc: "Late-night sessions look as considered as morning ones, across every device." },
@@ -15,7 +15,7 @@ const GALLERY: { key: string; title: string; desc: string }[] = [
 
 const FILMSTRIP = [
   { title: "Creative briefs", desc: "Write and share project briefs clients actually open." },
-  { title: "Idea capture", desc: "Grab it the moment it hits — iPad, Mac, or web." },
+  { title: "Idea capture", desc: "Grab it the moment it hits, on iPad, Mac, or web." },
   { title: "Client proposals", desc: "Draft polished proposals without five apps open." },
   { title: "Personal journaling", desc: "A private place to think, write, and stay undistracted." },
 ];
@@ -69,12 +69,11 @@ export default function ForCreativesPage() {
           <span className="ac">built into your docs.</span>
         </h1>
         <p className="sub">
-          Briefs, references, and drafts — kept together the way your work actually happens, not filed away in
+          Briefs, references, and drafts, kept together the way your work actually happens, not filed away in
           folders you&apos;ll never reopen.
         </p>
         <div className="cta-row">
           <a className="btn solid" href="https://app.two.so/signup">Start for free</a>
-          <a className="btn outline" href="/product/features/split-view">See how it works</a>
         </div>
 
         <div className="cw-board">
@@ -89,7 +88,7 @@ export default function ForCreativesPage() {
             <div className="chip" style={{ background: "#2a2a1c" }} />
           </div>
           <div className="cw-atmo cw-sticky">
-            <p>Push the intro paragraph — too flat. Revisit after coffee.</p>
+            <p>Push the intro paragraph, too flat. Revisit after coffee.</p>
           </div>
 
           <div className="cw-app cw-doc">
@@ -129,11 +128,8 @@ export default function ForCreativesPage() {
             <p>Changes saved as you type.</p>
           </div>
 
-          <div className="cw-leader cw-l1"><div className="tick" /><div className="line" /><div className="lbl">Shared — <b>same doc, real-time</b></div></div>
-          <div className="cw-leader cw-l2"><div className="tick" /><div className="line" /><div className="lbl">Reference — <b>kept beside the doc</b></div></div>
-        </div>
-        <div className="cw-board-cap">
-          <p>A real working spread — brief, tabs, and sync are TWO. The photo, swatches, and note are your desk.</p>
+          <div className="cw-leader cw-l1"><div className="tick" /><div className="line" /><div className="lbl">Shared: <b>same doc, real-time</b></div></div>
+          <div className="cw-leader cw-l2"><div className="tick" /><div className="line" /><div className="lbl">Reference: <b>kept beside the doc</b></div></div>
         </div>
       </section>
 
@@ -148,7 +144,6 @@ export default function ForCreativesPage() {
 
       <section>
         <div className="cw-gallery-head">
-          <p className="micro" style={{ marginBottom: 12 }}>BUILT FOR HOW CREATIVES ACTUALLY WORK</p>
           <h2 className="display">Six things that make it feel right.</h2>
         </div>
         <div className="cw-grid">
