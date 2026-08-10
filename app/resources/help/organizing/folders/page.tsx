@@ -55,18 +55,18 @@ export default function FoldersArticle() {
         <p>
           Click the <b>···</b>{" "}
           that appears when you hover a folder to rename or delete it. Deleting a folder doesn&apos;t delete the
-          docs inside it — they move back to your main Docs list.
+          docs inside it. They move back to your main Docs list.
         </p>
 
         <h2 className="display">Pinning a folder</h2>
         <p>
           Pin any folder from its <b>···</b>{" "}
-          menu to keep it visible at the top of your sidebar, above the rest of your folder list — handy for
+          menu to keep it visible at the top of your sidebar, above the rest of your folder list. Handy for
           whatever you&apos;re actively working out of right now.
         </p>
 
         <div className="harticle-tip">
-          <p><b>Tip:</b> Folders are flat — you can&apos;t nest one folder inside another right now. If you need
+          <p><b>Tip:</b> Folders are flat. You can&apos;t nest one folder inside another right now. If you need
           more structure, splitting work across a few clearly named folders works better than trying to build a
           deep hierarchy.</p>
         </div>
