@@ -7,6 +7,7 @@ type Post = {
   id: string
   title: string
   slug: string
+  category: string | null
   seo_description: string | null
   published_at: string | null
 }
@@ -19,7 +20,7 @@ export default async function BlogPage() {
   const supabase = createClient()
   const { data: posts } = await supabase
     .from('posts')
-    .select('id, title, slug, seo_description, published_at')
+    .select('id, title, slug, category, seo_description, published_at')
     .eq('target_site', 'two.so')
     .eq('status', 'published')
     .order('published_at', { ascending: false })
@@ -41,7 +42,7 @@ export default async function BlogPage() {
         <>
           {featured && (
             <Link href={`/blog/${featured.slug}`} className="bl-featured">
-              <span className="bl-tag">Latest</span>
+              {featured.category && <span className="bl-cat">{featured.category}</span>}
               <div className="bl-title display">{featured.title}</div>
               {featured.seo_description && <p className="bl-desc">{featured.seo_description}</p>}
               {featured.published_at && <p className="bl-meta">{formatMonthYear(featured.published_at)}</p>}
@@ -56,6 +57,7 @@ export default async function BlogPage() {
                   <span className="bl-dot"></span>
                 </div>
                 <Link href={`/blog/${post.slug}`} className="bl-item-link bl-content">
+                  {post.category && <span className="bl-cat">{post.category}</span>}
                   <div className="bl-title display">{post.title}</div>
                   {post.seo_description && <p className="bl-desc">{post.seo_description}</p>}
                   {post.published_at && <p className="bl-meta">{formatMonthYear(post.published_at)}</p>}

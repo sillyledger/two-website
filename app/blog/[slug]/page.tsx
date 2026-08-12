@@ -1,11 +1,32 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import type { Metadata } from 'next'
 import { createClient } from '../../../lib/supabase'
 
 export const revalidate = 0
 
 function formatMonthYear(dateString: string) {
   return new Date(dateString).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const supabase = createClient()
+
+  const { data: post } = await supabase
+    .from('posts')
+    .select('seo_title, seo_description, title')
+    .eq('slug', slug)
+    .eq('target_site', 'two.so')
+    .eq('status', 'published')
+    .single()
+
+  if (!post) return {}
+
+  return {
+    title: post.seo_title || post.title,
+    description: post.seo_description || undefined,
+  }
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -39,6 +60,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <Link href="/blog" className="bc">← Back to blog</Link>
 
         <article>
+          {post.category && <span className="post-cat">{post.category}</span>}
           <h1 className="post-title display">{post.title}</h1>
           {post.published_at && <p className="post-meta">{formatMonthYear(post.published_at)}</p>}
           {post.seo_description && <p className="post-dek">{post.seo_description}</p>}
