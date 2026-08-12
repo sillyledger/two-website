@@ -67,6 +67,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           <div className="post-body" dangerouslySetInnerHTML={{ __html: post.content || '' }} />
 
+          <div className="post-author">
+            <img src="/pieter-avatar.png" alt="Pieter" className="post-author-avatar" />
+            <div>
+              <p className="post-author-name">Pieter</p>
+              <p className="post-author-bio">Founder of TWO Docs, blogger, and passionate about content creation.</p>
+            </div>
+          </div>
+
           <div className="post-footer">
             <Link href="/blog">← Back to all posts</Link>
           </div>
