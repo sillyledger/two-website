@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "TWO — Write better. Think clearer.",
@@ -32,6 +33,18 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="TWO" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-84HMJNBNS1"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-84HMJNBNS1');
+          `}
+        </Script>
       </head>
       <body style={{ background: "#161618" }}>
         <Navigation />
