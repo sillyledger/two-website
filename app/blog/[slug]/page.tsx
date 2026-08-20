@@ -63,7 +63,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {post.category && <span className="post-cat">{post.category}</span>}
           <h1 className="post-title display">{post.title}</h1>
           {post.published_at && <p className="post-meta">{formatMonthYear(post.published_at)}</p>}
-          {post.seo_description && <p className="post-dek">{post.seo_description}</p>}
 
           <div className="post-body" dangerouslySetInnerHTML={{ __html: post.content || '' }} />
 

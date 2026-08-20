@@ -1242,6 +1242,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .post-body li{margin-bottom:4px;}
 .post-body li p{margin:0;}
 .post-body li > p:last-child{margin:0;}
+.post-body img{max-width:100%;height:auto;display:block;border-radius:12px;margin:40px auto;}
 
 .post-footer{margin-top:80px;padding-top:32px;border-top:1px solid var(--border);}
 .post-footer a{font-size:13px;color:var(--text-muted);text-decoration:none;}
