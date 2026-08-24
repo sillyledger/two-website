@@ -74,6 +74,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           </div>
 
+          <div className="post-cta">
+            <p className="post-cta-title">Write your best work in TWO</p>
+            <p className="post-cta-sub">Split-view docs, live sync, and shared workspaces. Free to start.</p>
+            <a href="https://app.two.so/signup" className="post-cta-btn">Start for free</a>
+          </div>
+
           <div className="post-footer">
             <Link href="/blog">← Back to all posts</Link>
           </div>
