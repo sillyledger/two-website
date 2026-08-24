@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Infinity, ArrowUpCircle, MessageCircle } from "lucide-react"
+import WaitlistForm from "@/components/WaitlistForm"
 
 export const metadata: Metadata = {
   title: "Beta Access | TWO",
@@ -23,10 +24,7 @@ export default function Invite() {
         </p>
       </div>
 
-      <div className="inv-form">
-        <input type="email" placeholder="you@email.com" />
-        <button type="button">Join waitlist</button>
-      </div>
+      <WaitlistForm />
       <p className="inv-caption">68 spots left in this round.</p>
 
       <div className="inv-cards">
