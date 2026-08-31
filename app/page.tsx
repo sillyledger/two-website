@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { createClient } from "../lib/supabase";
 
 export const metadata: Metadata = {
   title: "Minimalist Docs Editor & Writing App for iPad, Mac & Web",
 };
+
+export const revalidate = 300;
 
 const PT_CHECK = (
   <svg viewBox="0 0 24 24" fill="none" stroke="#8f89e6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
@@ -10,7 +13,22 @@ const PT_CHECK = (
   </svg>
 );
 
-export default function Home() {
+function formatMonthYear(dateString: string) {
+  return new Date(dateString).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+}
+
+export default async function Home() {
+  const supabase = createClient();
+  const { data: latestPosts } = await supabase
+    .from("posts")
+    .select("id, title, slug, category, seo_description, published_at")
+    .eq("target_site", "two.so")
+    .eq("status", "published")
+    .order("published_at", { ascending: false })
+    .limit(3);
+
+  const pillClasses = ["bf-c1", "bf-c2", "bf-c3"];
+
   return (
     <>
       {/* ============ HERO ============ */}
@@ -374,6 +392,35 @@ export default function Home() {
           <div className="pt-compare">
             <a href="/pricing">Compare all plans and features →</a>
           </div>
+
+          {latestPosts && latestPosts.length > 0 && (
+            <div className="bf-section">
+              <div className="bf-head">
+                <p className="micro">From our blog</p>
+                <h2 className="display">Thoughts on writing, and building TWO.</h2>
+                <p>Ideas on focus, collaboration, and the tools we use to think.</p>
+              </div>
+
+              <div className="bf-grid">
+                {latestPosts.map((post, i) => (
+                  <a key={post.id} href={`/blog/${post.slug}`} className="bf-card">
+                    {post.category && (
+                      <span className={`bf-pill ${pillClasses[i % pillClasses.length]}`}>
+                        {post.category}
+                      </span>
+                    )}
+                    <h3 className="bf-title">{post.title}</h3>
+                    {post.seo_description && <p className="bf-desc">{post.seo_description}</p>}
+                    {post.published_at && <p className="bf-meta">{formatMonthYear(post.published_at)}</p>}
+                  </a>
+                ))}
+              </div>
+
+              <div className="bf-more">
+                <a href="/blog">Read more on the blog →</a>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
