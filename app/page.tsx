@@ -25,7 +25,7 @@ export default async function Home() {
     .eq("target_site", "two.so")
     .eq("status", "published")
     .order("published_at", { ascending: false })
-    .limit(3);
+    .limit(6);
 
   const pillClasses = ["bf-c1", "bf-c2", "bf-c3"];
 
