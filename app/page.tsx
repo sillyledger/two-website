@@ -27,8 +27,6 @@ export default async function Home() {
     .order("published_at", { ascending: false })
     .limit(6);
 
-  const pillClasses = ["bf-c1", "bf-c2", "bf-c3"];
-
   return (
     <>
       {/* ============ HERO ============ */}
@@ -402,12 +400,10 @@ export default async function Home() {
               </div>
 
               <div className="bf-grid">
-                {latestPosts.map((post, i) => (
+                {latestPosts.map((post) => (
                   <a key={post.id} href={`/blog/${post.slug}`} className="bf-card">
                     {post.category && (
-                      <span className={`bf-pill ${pillClasses[i % pillClasses.length]}`}>
-                        {post.category}
-                      </span>
+                      <span className="bf-pill">{post.category}</span>
                     )}
                     <h3 className="bf-title">{post.title}</h3>
                     {post.seo_description && <p className="bf-desc">{post.seo_description}</p>}

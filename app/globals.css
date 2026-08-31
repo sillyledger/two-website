@@ -254,10 +254,7 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .bf-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color .15s; }
 .bf-card:hover { border-color: var(--border-strong); }
 
-.bf-pill { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; margin-bottom: 12px; }
-.bf-pill.bf-c1 { background: var(--indigo-pill); color: var(--indigo); }
-.bf-pill.bf-c2 { background: var(--clay-pill); color: var(--clay); }
-.bf-pill.bf-c3 { background: var(--green-pill); color: var(--green); }
+.bf-pill { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; margin-bottom: 12px; background: var(--bg-tertiary); color: var(--text-muted); }
 
 .bf-title { font-family: 'Fira Sans', sans-serif; font-weight: 600; font-size: 15px; line-height: 1.35; color: var(--text-primary); margin: 0 0 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .bf-desc { font-size: 13px; line-height: 1.5; color: var(--text-muted); margin: 0 0 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
