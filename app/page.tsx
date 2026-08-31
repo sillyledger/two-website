@@ -413,7 +413,7 @@ export default async function Home() {
               </div>
 
               <div className="bf-more">
-                <a href="/blog">Read more on the blog →</a>
+                <a href="/blog">Read all blog posts →</a>
               </div>
             </div>
           )}
