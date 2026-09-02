@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createClient } from "../lib/supabase";
+import WaitlistForm from "@/components/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "Minimalist Docs Editor & Writing App for iPad, Mac & Web",
@@ -32,18 +33,18 @@ export default async function Home() {
       {/* ============ HERO ============ */}
       <div className="hero-frame">
         <div className="hero">
-          <p className="micro">Currently in beta on web</p>
+          <span className="inv-badge">Founding beta</span>
           <h1 className="display headline">
-            Two docs.
+            Lifetime access.
             <br />
-            <span className="accent">One</span> screen.
+            Before anyone else.
           </h1>
-          <p className="body-copy">Write in one. Reference the other. No AI. No alt-tab, ever.</p>
-          <div className="cta-row">
-            <a href="https://app.two.so/signup" className="btn solid">Start for free</a>
-            <a href="/product/features/split-view" className="btn outline">See split view</a>
-          </div>
-          <a href="/demo" className="dm-hero-link">Or try the demo — no signup required →</a>
+          <p className="body-copy">
+            Join a small group of beta testers and get every feature, free, for as long as TWO exists. You&apos;ll stay grandfathered through every future upgrade.
+          </p>
+          <WaitlistForm />
+          <p className="inv-caption">68 spots left in this round.</p>
+          <a href="/product/features/split-view" className="dm-hero-link">Already sold? See split view in action →</a>
         </div>
 
         <div className="stage">
