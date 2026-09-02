@@ -34,6 +34,7 @@ const PREV_ITEMS = [
   "Activity redesign",
   "Library redesign",
   "Version history",
+  "Canvas",
 ];
 
 const CHECK = (
@@ -80,8 +81,10 @@ export default function Roadmap() {
             <span className="rm-badge shipped">✓ Done</span>
           </div>
           <div className="roadmap-card">
-            <p className="t">Canvas</p>
-            <p className="d">An infinite pan-and-zoom surface inside Studio, built for the way you&apos;d sketch and rearrange ideas on iPad.</p>
+            <p className="t">Nested folders</p>
+            <p className="d">
+              Organize folders inside folders, with breadcrumb navigation to get back to where you started. Rename and delete any folder or subfolder right from the folder view.
+            </p>
             <span className="rm-badge shipped">✓ Done</span>
           </div>
         </div>
