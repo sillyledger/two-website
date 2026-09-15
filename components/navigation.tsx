@@ -278,6 +278,10 @@ export function Navigation() {
                   The feature TWO is built around.{" "}
                   <a href="/product/features/split-view">See how it works →</a>
                 </p>
+                <p className="cap report-link">
+                  Found a bug?{" "}
+                  <a href="/report-a-bug">Report it →</a>
+                </p>
               </div>
 
               <div className="mega-all">

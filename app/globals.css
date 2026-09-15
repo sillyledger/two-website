@@ -472,6 +472,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .mp-annot { position: absolute; left: 50%; bottom: -22px; transform: translateX(-50%); font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
 .mp-annot::before { content: ''; position: absolute; left: 50%; bottom: 100%; width: 1px; height: 10px; background: var(--border-strong); }
 .mega-preview .cap { font-size: 13px; color: var(--text-muted); margin: 32px 0 0; line-height: 1.55; }
+.mega-preview .report-link { margin-top: 8px; }
 .mega-preview .cap a { color: var(--indigo); text-decoration: none; }
 
 .simple-dd { position: absolute; top: calc(100% + 12px); left: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.4); z-index: 20; min-width: 260px; }
