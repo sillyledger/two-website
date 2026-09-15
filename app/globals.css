@@ -1562,3 +1562,46 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   .dm-toast.visible { transform: translateY(0); }
   .dm-toast span { white-space: normal; }
 }
+
+/* ============ REPORT A BUG (rb-) ============ */
+.rb-hero { padding: 72px 0 44px; max-width: 560px; }
+.rb-hero h1 { font-size: 40px; margin: 16px 0 12px; }
+.rb-hero p { font-size: 17px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+.rb-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 8px; }
+.rb-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px;
+  padding: 24px 22px; text-align: left; cursor: pointer; font-family: inherit; color: inherit;
+  transition: border-color .15s, background .15s;
+}
+.rb-card:hover { border-color: var(--border-strong); }
+.rb-card.active { border-color: var(--indigo); background: var(--bg-tertiary); }
+.rb-card .mark { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; margin-bottom: 16px; }
+.rb-card[data-color="indigo"] .mark { background: var(--indigo-pill); }
+.rb-card[data-color="clay"] .mark { background: var(--clay-pill); }
+.rb-card[data-color="green"] .mark { background: var(--green-pill); }
+.rb-card .title { font-family: 'Fira Sans', sans-serif; font-weight: 600; font-size: 16px; margin: 0 0 6px; }
+.rb-card .desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+.rb-guidance {
+  margin-top: 28px; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-card);
+  padding: 34px 36px; max-height: 0; opacity: 0; overflow: hidden;
+  transition: max-height .3s ease, opacity .25s ease, padding .3s ease, margin-top .3s ease;
+}
+.rb-guidance.open { max-height: 500px; opacity: 1; }
+.rb-guidance .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin: 0 0 4px; }
+.rb-guidance .lbl b { color: var(--indigo); font-weight: 600; }
+.rb-guidance h3 { font-family: 'Fira Sans', sans-serif; font-size: 20px; font-weight: 600; margin: 4px 0 18px; }
+.rb-guidance ul { margin: 0 0 26px; padding: 0; list-style: none; }
+.rb-guidance li { font-size: 15px; color: var(--text-secondary); line-height: 1.6; padding-left: 22px; position: relative; margin-bottom: 8px; }
+.rb-guidance li::before { content: ''; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--indigo); }
+.rb-email-row { display: flex; align-items: center; gap: 12px; padding-top: 22px; border-top: 1px solid var(--border); }
+.rb-email-row span { font-size: 13.5px; color: var(--text-muted); }
+.rb-email-btn { font-family: 'Fira Sans', sans-serif; font-size: 17px; font-weight: 600; color: var(--indigo); text-decoration: none; }
+.rb-email-btn:hover { text-decoration: underline; }
+.rb-note { font-size: 13.5px; color: var(--text-muted); margin-top: 24px; }
+.rb-note-link { color: var(--indigo); }
+
+@media (max-width: 900px) {
+  .rb-grid { grid-template-columns: 1fr; }
+}
