@@ -37,8 +37,12 @@ export function Footer() {
               <a href="/compare/obsidian">TWO vs Obsidian</a>
             </div>
             <div className="footer-col">
-              <span className="footer-col-title">Company</span>
+              <span className="footer-col-title">Support</span>
               <a href="/contact">Contact</a>
+              <a href="/report-a-bug">Report a bug</a>
+            </div>
+            <div className="footer-col">
+              <span className="footer-col-title">Company</span>
               <a href="https://app.two.so/login">Log in</a>
               <a href="https://app.two.so/signup">Sign up</a>
               <a href="/privacy-policy">Privacy Policy</a>
