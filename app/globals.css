@@ -186,7 +186,10 @@ body { margin: 0; background: var(--bg); color: var(--text-primary); font-family
 .legal-page strong { color: var(--text-primary); font-weight: 500; }
 
 @media (max-width: 860px) {
-  .hero-frame, .features-frame { padding-left: 24px; padding-right: 24px; }
+  .hero-frame, .features-frame, .footer-frame { padding-left: 24px; padding-right: 24px; }
+  .footer-top { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 24px; }
+  .footer-cols { display: contents; }
+  .footer-brand { max-width: none; }
 
   .headline { font-size: 40px; }
   .body-copy { font-size: 14px; }
