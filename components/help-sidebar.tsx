@@ -35,7 +35,6 @@ const NAV = {
   studio: {
     label: "Studio",
     links: [
-      { title: "Wall", href: "/resources/help/studio/wall" },
       { title: "Canvas", href: "/resources/help/studio/canvas" },
     ],
   },

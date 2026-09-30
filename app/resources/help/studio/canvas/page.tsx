@@ -14,11 +14,12 @@ export default function CanvasArticle() {
       <article className="harticle">
         <p className="harticle-eyebrow">Studio</p>
         <h1 className="display">Canvas</h1>
-        <p className="harticle-meta">2 min read · Last updated Aug 2026</p>
+        <p className="harticle-meta">3 min read · Last updated Sep 2026</p>
 
         <p>
-          Canvas is Studio&apos;s infinite pan-and-zoom surface, the same pinning and connecting as Wall, but
-          with unlimited space instead of fixed edges.
+          Canvas is Studio&apos;s open board: an infinite surface where you can pin docs and notes, add images,
+          text, shapes and color cards, and draw connections between them. Use it for anything that doesn&apos;t
+          have a final shape yet.
         </p>
 
         <h2 className="display">Panning and zooming</h2>
@@ -44,22 +45,36 @@ export default function CanvasArticle() {
 
         <p>Use the zoom controls in the corner to zoom in, zoom out, or reset back to 100% and centered.</p>
 
-        <h2 className="display">Adding and connecting items</h2>
+        <h2 className="display">Adding items</h2>
         <p>
-          Adding items works exactly like Wall: pin docs, notes, images, text, and color swatches, drag them
-          anywhere, and draw connectors between them. The only difference is the space you&apos;re working with.
+          Use the toolbar to add something to your canvas: link a doc, link a note, add text, upload an image,
+          add a shape, or add a color card. Drag any item to move it around.
+        </p>
+        <p>
+          Shapes come in four forms: rectangle, rounded rectangle, circle and diamond. Drag the corner to resize
+          one, choose a fill or no fill, and type inside it to label it.
+        </p>
+        <p>
+          Click the color on a color card to change it. Pick a preset, use the color picker, or type a hex code.
+          The Copy button copies the hex value so you can paste it anywhere.
+        </p>
+
+        <h2 className="display">Connecting items</h2>
+        <p>
+          To connect two items, drag from the connector handle on the corner of one item and drop it onto
+          another. Connectors stay attached when you move either item.
+        </p>
+
+        <h2 className="display">Organizing your canvases</h2>
+        <p>
+          On the Canvas page in Studio, group your canvases into color-coded categories, nested as deep as you
+          like. Use a canvas&apos;s ⋮ menu to rename it, delete it, or move it into a category.
         </p>
 
         <div className="harticle-tip">
           <p><b>Tip:</b>{" "}
-          Reach for Canvas when you&apos;re mapping something that keeps growing: a big project, a research map,
-          anything where you don&apos;t know the final shape yet. Use Wall when you want a contained space that
-          stays a fixed size.</p>
-        </div>
-
-        <div className="harticle-pn">
-          <a href="/resources/help/studio/wall">← Wall</a>
-          <span />
+          Reach for Canvas when you&apos;re mapping something that keeps growing and you don&apos;t know its final
+          shape yet: a research map, a plot, a moodboard.</p>
         </div>
 
         <HelpFeedback />

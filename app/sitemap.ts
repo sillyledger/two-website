@@ -46,7 +46,6 @@ const staticRoutes = [
   '/resources/help/collaboration/shared-workspaces',
   '/resources/help/collaboration/activity',
   '/resources/help/studio',
-  '/resources/help/studio/wall',
   '/resources/help/studio/canvas',
   '/resources/help/account',
   '/resources/help/account/settings-appearance',

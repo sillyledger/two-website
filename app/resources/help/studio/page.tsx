@@ -6,11 +6,6 @@ export const metadata: Metadata = {
 
 const ARTICLES: { title: string; desc: string; href: string }[] = [
   {
-    title: "Wall",
-    desc: "Pin docs, notes, and images to a bounded board.",
-    href: "/resources/help/studio/wall",
-  },
-  {
     title: "Canvas",
     desc: "An infinite pan-and-zoom surface for freeform thinking.",
     href: "/resources/help/studio/canvas",
@@ -28,7 +23,7 @@ export default function StudioCategoryPage() {
         <div className="hc-cat-mark" style={{ background: "var(--clay)" }} />
         <p className="micro">Studio</p>
         <h1 className="display">Freeform thinking in TWO.</h1>
-        <p>Wall and Canvas — two ways to pin, sketch, and connect ideas.</p>
+        <p>Canvas: an open board to pin, sketch, and connect ideas.</p>
       </section>
 
       <div className="hcat-list">

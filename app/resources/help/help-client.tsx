@@ -90,12 +90,6 @@ const ARTICLES: Article[] = [
   },
   {
     category: "Studio",
-    title: "Wall",
-    desc: "Pin docs, notes, and images to a bounded board.",
-    href: "/resources/help/studio/wall",
-  },
-  {
-    category: "Studio",
     title: "Canvas",
     desc: "An infinite pan-and-zoom surface for freeform thinking.",
     href: "/resources/help/studio/canvas",
@@ -121,7 +115,7 @@ const POPULAR_TITLES = [
   "Library",
   "Formatting",
   "Shared workspaces",
-  "Wall",
+  "Canvas",
   "Billing & plans",
 ];
 const POPULAR_ARTICLES = POPULAR_TITLES.map((t) => ARTICLES.find((a) => a.title === t)!).filter(Boolean);
@@ -207,8 +201,8 @@ export function HelpCenterClient() {
         <a href="/resources/help/studio" className="hc-cat linked">
           <div className="hc-cat-mark" style={{ background: "var(--clay)" }} />
           <div className="hc-cat-title">Studio</div>
-          <div className="hc-cat-desc">Wall and Canvas — two ways to pin, sketch, and connect ideas.</div>
-          <div className="hc-cat-meta">2 articles →</div>
+          <div className="hc-cat-desc">An open board to pin, sketch, and connect ideas.</div>
+          <div className="hc-cat-meta">1 article →</div>
         </a>
         <a href="/resources/help/account" className="hc-cat linked">
           <div className="hc-cat-mark" style={{ background: "var(--indigo)" }} />

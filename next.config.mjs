@@ -6,6 +6,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/resources/help/studio/wall',
+        destination: '/resources/help/studio/canvas',
+        permanent: true,
+      },
+    ];
+  },
 }
 
 export default nextConfig
