@@ -24,6 +24,13 @@ const ICON_SHARED = (
   </svg>
 );
 
+const ICON_STUDIO = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 3l9 5-9 5-9-5z" />
+    <path d="M3 13l9 5 9-5" />
+  </svg>
+);
+
 const ICON_PEN = (
   <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
     <path d="M17 3a2.83 2.83 0 014 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
@@ -168,7 +175,7 @@ export function Navigation() {
                     <p className="t">
                       Mac App <span className="soon-tag">Soon</span>
                     </p>
-                    <p className="d">A dedicated Mac experience — fast, native, lives in your dock.</p>
+                    <p className="d">A dedicated Mac experience. Fast, native, lives in your dock.</p>
                   </div>
                 </div>
                 <div className="simple-item">
@@ -237,6 +244,15 @@ export function Navigation() {
                   <p className="d">Two docs, one screen. Drag to resize.</p>
                 </div>
               </a>
+              <a href="/product/features/studio" className="mega-item">
+                <span className="icon">{ICON_STUDIO}</span>
+                <div>
+                  <p className="t">
+                    Studio <span className="soon-tag">Beta</span>
+                  </p>
+                  <p className="d">Ideas and an open canvas, before the doc.</p>
+                </div>
+              </a>
               <a href="/product/features/live-sync" className="mega-item">
                 <span className="icon">{ICON_SYNC}</span>
                 <div>
@@ -252,7 +268,7 @@ export function Navigation() {
                 </div>
               </a>
 
-              <div className="mega-preview">
+              <div className="mega-preview tall">
                 <p className="lbl">Preview</p>
                 <div className="mini-device">
                   <div className="mini-panes">
@@ -272,7 +288,7 @@ export function Navigation() {
                       <div className="mini-sl" style={{ width: "50%" }}></div>
                     </div>
                   </div>
-                  <div className="mp-annot">Split view — drag to resize</div>
+                  <div className="mp-annot">Split view: drag to resize</div>
                 </div>
                 <p className="cap">
                   The feature TWO is built around.{" "}
@@ -344,6 +360,9 @@ export function Navigation() {
         <span className="mm-group-label">Product</span>
         <a href="/product/features/split-view" onClick={closeMobile}>
           Split View
+        </a>
+        <a href="/product/features/studio" onClick={closeMobile}>
+          Studio
         </a>
         <a href="/product/features/live-sync" onClick={closeMobile}>
           Live Sync

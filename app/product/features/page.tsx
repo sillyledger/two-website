@@ -118,7 +118,7 @@ export default function ProductFeaturesPage() {
           </div>
           <div className="fh-head-r">
             <p>Studio holds everything before a doc: a list of ideas and an open canvas to work them out. When one is ready, it becomes a doc.</p>
-            <a href="/resources/help/studio">Studio guide →</a>
+            <a href="/product/features/studio">Explore Studio →</a>
           </div>
         </div>
 
