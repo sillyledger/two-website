@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Link from "next/link";
 
 declare global {
@@ -19,47 +19,87 @@ const PRICE_PRO_MONTHLY = "pri_01ksjx3b0n6pg6fw44hbq9r03p";
 const PRICE_PRO_ANNUAL = "pri_01ksxjysx4n6ewv4dq2mxn5kjr";
 
 const CHECK = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#8f89e6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8f89e6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <polyline points="20 6 9 17 4 12" />
   </svg>
 );
 
-const FAQS = [
+type Cell = string | boolean;
+type Row = { label: string; badge?: string; cells: [Cell, Cell, Cell] };
+
+const TABLE: { cat: string; rows: Row[] }[] = [
   {
-    tag: "Pricing",
-    q: "Is the free plan actually free? No credit card stuff?",
-    a: "Yes — completely free, no credit card required, no trial timer. The free plan is generous enough to use TWO as your main writing tool. You only upgrade when you want more.",
+    cat: "Writing",
+    rows: [
+      { label: "Docs", cells: ["30", "Unlimited", "Unlimited"] },
+      { label: "Split view and tabs", cells: [true, true, true] },
+      { label: "Notes with nested categories", cells: [true, true, true] },
+      { label: "Templates", cells: [true, true, true] },
+      { label: "Export to PDF and Markdown", cells: [true, true, true] },
+    ],
   },
   {
-    tag: "Product",
-    q: "What's the difference between TWO and Notion?",
-    a: "Notion is a database tool that happens to have a text editor. TWO is a writing app — fast to open, zero setup, nothing to configure. No blocks, no databases, no templates you need to build before you can start. Just open and write.",
+    cat: "Thinking and planning",
+    rows: [
+      { label: "Studio: Ideas and Canvas", badge: "Beta", cells: [true, true, true] },
+      { label: "Turn an idea into a doc", cells: ["Counts toward 30", true, true] },
+      { label: "Planner with tasks linked to docs", cells: [true, true, true] },
+      { label: "Library and Activity", cells: [true, true, true] },
+    ],
   },
   {
-    tag: "Product",
-    q: "Does split view work on iPad too?",
-    a: "Split view is available on web and Mac right now. iPad support is on the roadmap — it's a natural fit and one of our most-requested features.",
+    cat: "Storage and history",
+    rows: [
+      { label: "Storage", cells: ["1 GB", "10 GB", "50 GB"] },
+      { label: "Version history", cells: ["Last 3 versions", "30 days", "30 days"] },
+      { label: "Workspaces", cells: ["1", "Unlimited", "Unlimited"] },
+    ],
   },
   {
-    tag: "Pricing",
-    q: "What's included in the Team plan?",
-    a: "Team includes everything in Pro, plus room for up to 10 members and 50GB of storage. It's launching soon.",
-  },
-  {
-    tag: "Account",
-    q: "Can I use TWO across multiple devices?",
-    a: "Yes. Your docs sync instantly across every device you're signed into — Mac, web, and iPad. Changes push in real time, so you're never working on a stale version.",
-  },
-  {
-    tag: "General",
-    q: "Is my data private? Who can see my docs?",
-    a: "Only you. Your docs are private by default — we don't read them, train on them, or share them. You can share individual docs if you choose to, but nothing is public unless you make it so.",
+    cat: "Sharing",
+    rows: [
+      { label: "Shared workspaces", cells: [false, true, true] },
+      { label: "Members per shared workspace", cells: [false, "2 invited", "Up to 10"] },
+      { label: "Priority support", cells: [false, true, true] },
+    ],
   },
 ];
 
+const FAQS = [
+  {
+    q: "Is the free plan really free?",
+    a: "Yes. No card, no timer. Thirty docs is enough to make TWO your main writing app and decide for yourself.",
+  },
+  {
+    q: "Does TWO use AI?",
+    a: "No. There is no AI writing, summarizing or suggesting anywhere in the app, and your words are never used to train anything.",
+  },
+  {
+    q: "Can I use it on my Mac or iPad?",
+    a: "TWO runs in any browser and installs to your Dock or home screen like an app. Native Mac and iPad apps are on the roadmap.",
+  },
+  {
+    q: "What happens when my trial ends?",
+    a: "You move to the Free plan automatically. Nothing is deleted. You can upgrade again at any time.",
+  },
+  {
+    q: "What will Team include?",
+    a: "Everything in Pro, room for up to 10 members and 50 GB of storage. It is launching soon.",
+  },
+  {
+    q: "Do you charge per person?",
+    a: "No. Pro and Team are flat monthly prices. Inviting someone into a shared workspace never changes your bill.",
+  },
+];
+
+function renderCell(c: Cell) {
+  if (c === true) return <span className="pp-yes" aria-label="Included">✓</span>;
+  if (c === false) return <span className="pp-no" aria-label="Not included">–</span>;
+  return c;
+}
+
 export function PricingClient() {
   const [yearly, setYearly] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
     if (document.getElementById("paddle-js")) return;
@@ -80,188 +120,135 @@ export function PricingClient() {
 
   return (
     <div className="hero-frame">
-      <section className="pricing-hero">
-        <h1 className="display">Simple, honest pricing.</h1>
-        <p>Start free. Upgrade when you&apos;re ready. No hidden fees.</p>
-
-        <div className="pricing-toggle">
-          <div className="pricing-toggle-pill">
-            <button className={!yearly ? "active" : ""} onClick={() => setYearly(false)}>
-              Monthly
-            </button>
-            <button className={yearly ? "active" : ""} onClick={() => setYearly(true)}>
-              Yearly
-            </button>
-          </div>
-          <span className="pricing-save-badge">Save 20%</span>
+      <section className="pp-hero">
+        <p className="micro">Pricing</p>
+        <h1 className="display">One price. Never per seat.</h1>
+        <p className="pp-sub">
+          Start free and stay free as long as you like. Upgrade when you need more room. Bring people into a workspace without your bill changing.
+        </p>
+        <div className="pp-toggle">
+          <button className={!yearly ? "on" : ""} onClick={() => setYearly(false)}>Monthly</button>
+          <button className={yearly ? "on" : ""} onClick={() => setYearly(true)}>Yearly</button>
+          <span className="pp-save">Save $12</span>
         </div>
       </section>
 
-      <div className="pricing-sheet">
-        <div className="plan-row">
-          <div className="spacer"></div>
-          <div className="plan-col">
-            <p className="name">FREE</p>
-            <p className="price display">$0</p>
-            <span className="per">/ month</span>
-            <span className="note"></span>
-            <a href="https://app.two.so/signup" className="btn">
-              Get started free
-            </a>
+      <section className="pp-cards">
+        <div className="pp-card">
+          <div>
+            <div className="pp-card-head">
+              <p className="pp-name">Free</p>
+            </div>
+            <p className="pp-tagline">For trying TWO properly.</p>
           </div>
-          <div className="plan-col pro">
-            <p className="name">PRO</p>
-            <p className="price display">{yearly ? "$5" : "$6"}</p>
-            <span className="per">/ month</span>
-            <span className="note">
-              {yearly ? "Billed $60/year · save $12" : "No credit card required"}
-            </span>
-            <button className="btn" onClick={openProCheckout}>
-              Start free trial
-            </button>
-          </div>
-          <div className="plan-col team">
-            <p className="name">TEAM</p>
-            <p className="price display">$10</p>
-            <span className="per">/ month</span>
-            <span className="note">Coming soon</span>
-            <button className="btn" disabled>
-              Coming soon
-            </button>
-          </div>
+          <p className="pp-price">
+            <span className="display">$0</span>
+            <span className="pp-per">forever</span>
+          </p>
+          <a href="https://app.two.so/signup" className="pp-btn outline">Start free</a>
+          <ul className="pp-list">
+            <li>{CHECK}30 docs, plus Notes</li>
+            <li>{CHECK}Split view and tabs</li>
+            <li>{CHECK}Studio, Planner and templates</li>
+            <li>{CHECK}1 GB storage, last 3 versions</li>
+          </ul>
         </div>
 
-        <div className="spec-row cat">
-          <div className="label">Content &amp; storage</div>
-          <div className="spec-cell"></div>
-          <div className="spec-cell"></div>
-          <div className="spec-cell"></div>
-        </div>
-        <div className="spec-row">
-          <div className="label">Documents</div>
-          <div className="spec-cell">
-            <span className="val">30</span>
+        <div className="pp-card pro">
+          <div>
+            <div className="pp-card-head">
+              <p className="pp-name">Pro</p>
+              <span className="pp-badge pro">14 days free</span>
+            </div>
+            <p className="pp-tagline">For writing every day.</p>
           </div>
-          <div className="spec-cell">
-            <span className="val">Unlimited</span>
-          </div>
-          <div className="spec-cell">
-            <span className="val">Unlimited</span>
-          </div>
-        </div>
-        <div className="spec-row">
-          <div className="label">Private workspaces</div>
-          <div className="spec-cell">
-            <span className="val">1</span>
-          </div>
-          <div className="spec-cell">
-            <span className="val">Unlimited</span>
-          </div>
-          <div className="spec-cell">
-            <span className="val">Unlimited</span>
-          </div>
-        </div>
-        <div className="spec-row">
-          <div className="label">Storage</div>
-          <div className="spec-cell">
-            <span className="val">1GB</span>
-          </div>
-          <div className="spec-cell">
-            <span className="val">10GB</span>
-          </div>
-          <div className="spec-cell">
-            <span className="val">50GB</span>
-          </div>
+          <p className="pp-price">
+            <span className="display">{yearly ? "$5" : "$6"}</span>
+            <span className="pp-per">{yearly ? "a month, billed $60 yearly" : "a month"}</span>
+          </p>
+          <button className="pp-btn solid" onClick={openProCheckout}>Start free trial</button>
+          <ul className="pp-list">
+            <li>{CHECK}Everything in Free</li>
+            <li>{CHECK}Unlimited docs and workspaces</li>
+            <li>{CHECK}Share a workspace, no seat fees</li>
+            <li>{CHECK}10 GB storage, 30-day history</li>
+          </ul>
         </div>
 
-        <div className="spec-row cat">
-          <div className="label">Editor</div>
-          <div className="spec-cell"></div>
-          <div className="spec-cell"></div>
-          <div className="spec-cell"></div>
-        </div>
-        <div className="spec-row">
-          <div className="label">Rich text editor</div>
-          <div className="spec-cell">{CHECK}</div>
-          <div className="spec-cell">{CHECK}</div>
-          <div className="spec-cell">{CHECK}</div>
-        </div>
-        <div className="spec-row">
-          <div className="label">Planner &amp; activity</div>
-          <div className="spec-cell">{CHECK}</div>
-          <div className="spec-cell">{CHECK}</div>
-          <div className="spec-cell">{CHECK}</div>
-        </div>
-        <div className="spec-row">
-          <div className="label">Version history</div>
-          <div className="spec-cell">
-            <span className="val">3 versions</span>
+        <div className="pp-card">
+          <div>
+            <div className="pp-card-head">
+              <p className="pp-name">Team</p>
+              <span className="pp-badge soon">Coming soon</span>
+            </div>
+            <p className="pp-tagline">For small teams writing together.</p>
           </div>
-          <div className="spec-cell">
-            <span className="val">30 days</span>
-          </div>
-          <div className="spec-cell">
-            <span className="val">30 days</span>
-          </div>
+          <p className="pp-price">
+            <span className="display">$10</span>
+            <span className="pp-per">a month</span>
+          </p>
+          <button className="pp-btn soon" disabled>Coming soon</button>
+          <ul className="pp-list">
+            <li>{CHECK}Everything in Pro</li>
+            <li>{CHECK}Up to 10 members</li>
+            <li>{CHECK}50 GB storage</li>
+          </ul>
         </div>
+      </section>
 
-        <div className="spec-row cat">
-          <div className="label">Collaboration &amp; support</div>
-          <div className="spec-cell"></div>
-          <div className="spec-cell"></div>
-          <div className="spec-cell"></div>
-        </div>
-        <div className="spec-row">
-          <div className="label">Shared workspaces</div>
-          <div className="spec-cell">
-            <span className="dash">—</span>
-          </div>
-          <div className="spec-cell">{CHECK}</div>
-          <div className="spec-cell">{CHECK}</div>
-        </div>
-        <div className="spec-row">
-          <div className="label">Collaboration</div>
-          <div className="spec-cell">
-            <span className="dash">—</span>
-          </div>
-          <div className="spec-cell">{CHECK}</div>
-          <div className="spec-cell">{CHECK}</div>
-        </div>
-        <div className="spec-row">
-          <div className="label">Priority support</div>
-          <div className="spec-cell">
-            <span className="dash">—</span>
-          </div>
-          <div className="spec-cell">{CHECK}</div>
-          <div className="spec-cell">{CHECK}</div>
-        </div>
-        <div className="spec-row">
-          <div className="label">Members</div>
-          <div className="spec-cell"><span className="val">1</span></div>
-          <div className="spec-cell"><span className="val">1</span></div>
-          <div className="spec-cell"><span className="val">Up to 10</span></div>
-        </div>
-      </div>
+      <p className="pp-fineprint">No credit card for the trial. When it ends, you move to Free and keep everything you wrote.</p>
 
-      <section className="pricing-faq">
+      <section className="pp-section">
+        <h2 className="display">Compare every plan.</h2>
+        <div className="pp-table-wrap">
+          <div className="pp-table">
+            <div className="pp-tr head">
+              <span></span>
+              <span>Free</span>
+              <span className="pro">Pro</span>
+              <span>Team <span className="pp-inline-badge">Soon</span></span>
+            </div>
+            {TABLE.map((group) => (
+              <Fragment key={group.cat}>
+                <div className="pp-cat">{group.cat}</div>
+                {group.rows.map((row) => (
+                  <div className="pp-tr" key={row.label}>
+                    <span>
+                      {row.label}
+                      {row.badge && <span className="pp-inline-badge">{row.badge}</span>}
+                    </span>
+                    <span>{renderCell(row.cells[0])}</span>
+                    <span>{renderCell(row.cells[1])}</span>
+                    <span>{renderCell(row.cells[2])}</span>
+                  </div>
+                ))}
+              </Fragment>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pp-section">
         <h2 className="display">Things people ask.</h2>
-        {FAQS.map((item, i) => (
-          <div key={i} className="faq-row" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
-            <p className="q">
-              <span>
-                <span className="q-tag">{item.tag}</span>
-                {item.q}
-              </span>
-              <span className="plus">{openFaq === i ? "−" : "+"}</span>
-            </p>
-            {openFaq === i && <p className="a">{item.a}</p>}
-          </div>
-        ))}
-        <div className="faq-cta">
-          <p className="t">Still have questions?</p>
-          <p className="s">Browse guides and answers in the Help Center.</p>
-          <Link href="/resources/help" className="btn">Visit Help Center</Link>
+        <div className="pp-faq">
+          {FAQS.map((item) => (
+            <div key={item.q}>
+              <h3>{item.q}</h3>
+              <p>{item.a}</p>
+            </div>
+          ))}
         </div>
+        <p className="pp-help">
+          <Link href="/resources/help">More answers in the Help Center →</Link>
+        </p>
+      </section>
+
+      <section className="pp-cta">
+        <div>
+          <h2 className="display">Two docs, one screen.</h2>
+          <p>Free to start. Takes ten seconds.</p>
+        </div>
+        <a href="https://app.two.so/signup" className="pp-btn solid">Start writing free</a>
       </section>
     </div>
   );

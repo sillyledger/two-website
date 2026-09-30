@@ -1609,3 +1609,70 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 @media (max-width: 900px) {
   .rb-grid { grid-template-columns: 1fr; }
 }
+
+/* ============ PRICING PAGE (pp-) ============ */
+.pp-hero { text-align: center; padding: 96px 0 0; display: flex; flex-direction: column; align-items: center; }
+.pp-hero h1 { font-size: 64px; line-height: 1.04; letter-spacing: -0.035em; margin: 20px 0 0; }
+.pp-sub { font-size: 17px; line-height: 1.6; color: var(--text-secondary); max-width: 560px; margin: 22px 0 0; }
+.pp-toggle { display: inline-flex; align-items: center; gap: 4px; padding: 4px; margin-top: 36px; border-radius: 11px; background: var(--bg-card); border: 1px solid var(--border); }
+.pp-toggle button { height: 34px; padding: 0 16px; border: 0; border-radius: 8px; background: transparent; color: var(--text-muted); font-family: inherit; font-size: 13.5px; cursor: pointer; }
+.pp-toggle button.on { background: #2e2e30; color: var(--text-primary); }
+.pp-save { font-size: 12px; color: var(--green); padding: 0 12px 0 6px; }
+
+.pp-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 52px; }
+.pp-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 18px; padding: 36px; display: flex; flex-direction: column; gap: 24px; }
+.pp-card.pro { border-color: rgba(143,137,230,0.5); background: linear-gradient(180deg, rgba(107,92,231,0.12), var(--bg-card) 55%); }
+.pp-card-head { display: flex; justify-content: space-between; align-items: center; min-height: 22px; }
+.pp-name { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin: 0; }
+.pp-card.pro .pp-name { color: #c4b8ff; }
+.pp-badge { font-size: 11px; font-weight: 600; padding: 4px 9px; border-radius: 6px; }
+.pp-badge.pro { color: #c4b8ff; background: rgba(107,92,231,0.22); }
+.pp-badge.soon { color: #e0a44d; background: rgba(224,164,77,0.14); }
+.pp-tagline { font-size: 14px; color: var(--text-muted); margin: 10px 0 0; }
+.pp-price { display: flex; align-items: baseline; gap: 8px; margin: 0; }
+.pp-price .display { font-size: 56px; line-height: 1; letter-spacing: -0.035em; }
+.pp-per { font-size: 14px; color: var(--text-muted); }
+.pp-btn { display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0 20px; border-radius: 10px; font-family: inherit; font-size: 14.5px; font-weight: 500; text-decoration: none; cursor: pointer; }
+.pp-btn.solid { background: var(--text-primary); color: var(--bg); border: 0; }
+.pp-btn.outline { background: transparent; border: 1px solid var(--border-strong); color: var(--text-primary); }
+.pp-btn.soon { background: transparent; border: 1px dashed var(--border-strong); color: var(--text-muted); cursor: default; }
+.pp-list { list-style: none; margin: 0; padding: 22px 0 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 12px; }
+.pp-list li { display: flex; gap: 10px; font-size: 14.5px; line-height: 1.45; color: #c4c4c4; }
+.pp-list li svg { flex-shrink: 0; margin-top: 3px; }
+.pp-fineprint { text-align: center; font-size: 13.5px; color: #8a8a92; margin: 28px 0 0; }
+
+.pp-section { padding-top: 110px; }
+.pp-section h2 { font-size: 44px; line-height: 1.04; letter-spacing: -0.035em; margin: 0; }
+.pp-table-wrap { margin-top: 30px; overflow-x: auto; }
+.pp-table { min-width: 640px; }
+.pp-tr { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); align-items: center; border-bottom: 1px solid var(--border); font-size: 14.5px; }
+.pp-tr > span { padding: 15px 20px; }
+.pp-tr > span:first-child { color: #c4c4c4; }
+.pp-tr.head { border-bottom-color: var(--border-strong); font-weight: 600; }
+.pp-tr.head .pro { color: #c4b8ff; }
+.pp-cat { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--indigo); padding: 34px 20px 12px; border-bottom: 1px solid var(--border); }
+.pp-yes { color: var(--indigo); }
+.pp-no { color: #5a5a64; }
+.pp-inline-badge { font-size: 9.5px; font-weight: 600; letter-spacing: 0.03em; color: #e0a44d; background: rgba(224,164,77,0.14); padding: 2px 6px; border-radius: 5px; margin-left: 6px; vertical-align: middle; }
+
+.pp-faq { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 72px; margin-top: 40px; }
+.pp-faq h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 10px; }
+.pp-faq p { font-size: 14.5px; line-height: 1.65; color: var(--text-muted); margin: 0; }
+.pp-help { margin: 40px 0 0; font-size: 14px; }
+.pp-help a { color: #c4b8ff; text-decoration: none; }
+.pp-help a:hover { color: var(--text-primary); }
+
+.pp-cta { margin: 120px 0 100px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 18px; padding: 56px 64px; display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+.pp-cta h2 { font-size: 44px; line-height: 1.04; letter-spacing: -0.035em; margin: 0; }
+.pp-cta p { font-size: 16px; color: var(--text-muted); margin: 12px 0 0; }
+.pp-cta .pp-btn { height: 52px; padding: 0 26px; flex-shrink: 0; }
+
+@media (max-width: 860px) {
+  .pp-hero { padding-top: 64px; }
+  .pp-hero h1 { font-size: 44px; }
+  .pp-cards { grid-template-columns: 1fr; }
+  .pp-section { padding-top: 80px; }
+  .pp-section h2, .pp-cta h2 { font-size: 32px; }
+  .pp-faq { grid-template-columns: 1fr; gap: 32px; }
+  .pp-cta { flex-direction: column; align-items: flex-start; padding: 36px 28px; margin-top: 80px; }
+}
