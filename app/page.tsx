@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { createClient } from "../lib/supabase";
-import WaitlistForm from "@/components/WaitlistForm";
+import { HomeAppDemo } from "@/components/home-app-demo";
 
 export const metadata: Metadata = {
   title: "Minimalist Docs Editor & Writing App for iPad, Mac & Web",
@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export const revalidate = 300;
 
-const PT_CHECK = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#8f89e6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+const CHECK = (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8f89e6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <polyline points="20 6 9 17 4 12" />
   </svg>
 );
@@ -26,400 +26,293 @@ export default async function Home() {
     .eq("target_site", "two.so")
     .eq("status", "published")
     .order("published_at", { ascending: false })
-    .limit(6);
+    .limit(3);
 
   return (
-    <>
+    <div className="hm">
       {/* ============ HERO ============ */}
-      <div className="hero-frame">
-        <div className="hero">
-          <span className="inv-badge">Founding beta</span>
-          <h1 className="display headline">
-            Lifetime access.
-            <br />
-            Before anyone else.
-          </h1>
-          <p className="body-copy">
-            Join a small group of beta testers and get every feature, free, for as long as TWO exists. You&apos;ll stay grandfathered through every future upgrade.
+      <section className="hm-wrap hm-hero">
+        <a href="/product/features/studio" className="hm-news">
+          <span className="hm-new">New</span>
+          Studio is here: capture ideas, then turn them into docs
+          <span className="arrow">→</span>
+        </a>
+        <h1 className="display">
+          Two docs. One screen.
+          <br />
+          <span>One to write. One to think.</span>
+        </h1>
+        <div className="hm-hero-row">
+          <p>
+            A calm writing app for people who think on their own. Write with your research open beside you, and keep
+            your rough ideas in Studio until they are ready to become docs. No AI, nothing to set up.
           </p>
-          <WaitlistForm />
-          <p className="inv-caption">68 spots left in this round.</p>
-          <a href="/product/features/split-view" className="dm-hero-link">Already sold? See split view in action →</a>
-        </div>
-
-        <div className="stage">
-          <div className="cards">
-            <div className="card">
-              <div className="folder tl">
-                <svg viewBox="0 0 64 56">
-                  <path
-                    d="M4 14a4 4 0 014-4h14l6 8h28a4 4 0 014 4v26a4 4 0 01-4 4H8a4 4 0 01-4-4z"
-                    fill="#8f89e6"
-                    opacity="0.9"
-                  />
-                </svg>
-              </div>
-              <div className="doc-bar">
-                <i></i>
-                <i></i>
-                <i></i>
-                <span className="pill roadmap">ROADMAP</span>
-              </div>
-              <div className="ln title w46"></div>
-              <div className="ln w97"></div>
-              <div className="ln w91"></div>
-              <div className="ln w88"></div>
-              <div className="ln w72"></div>
-              <div className="gap"></div>
-              <div className="ln w95"></div>
-              <div className="ln w83"></div>
-              <div className="ln w91"></div>
-              <div className="ln w64"></div>
-              <div className="gap"></div>
-              <div className="ln w55"></div>
-              <div className="ln w70"></div>
-              <div className="ln w40">
-                &nbsp;<span className="cursor"></span>
-              </div>
+          <div className="hm-hero-actions">
+            <div className="hm-btns">
+              <a href="/pricing" className="hm-btn outline">See pricing</a>
+              <a href="https://app.two.so/signup" className="hm-btn solid">Start writing free</a>
             </div>
-            <div className="card">
-              <div className="folder br">
-                <svg viewBox="0 0 64 56">
-                  <path
-                    d="M4 14a4 4 0 014-4h14l6 8h28a4 4 0 014 4v26a4 4 0 01-4 4H8a4 4 0 01-4-4z"
-                    fill="#c98a5e"
-                    opacity="0.9"
-                  />
-                </svg>
-              </div>
-              <div className="doc-bar">
-                <i></i>
-                <i></i>
-                <i></i>
-                <span className="pill notes">MEETING NOTES</span>
-              </div>
-              <div className="ln title w46"></div>
-              <div className="ln w88"></div>
-              <div className="ln w95"></div>
-              <div className="ln w72"></div>
-              <div className="ln w91"></div>
-              <div className="gap"></div>
-              <div className="ln w80"></div>
-              <div className="ln w97"></div>
-              <div className="ln w64"></div>
-              <div className="ln w83"></div>
-              <div className="gap"></div>
-              <div className="ln w70"></div>
-              <div className="ln w55"></div>
-            </div>
-            <div className="seam-wrap">
-              <div className="line"></div>
-            </div>
-            <div className="seam-dot"></div>
-          </div>
-
-          <div className="leader la">
-            <div className="tick"></div>
-            <div className="line"></div>
-            <div className="lbl">
-              Split view — <b>drag to resize</b>
-            </div>
-          </div>
-          <div className="leader lb">
-            <div className="tick"></div>
-            <div className="line"></div>
-            <div className="lbl">
-              <b>Folders</b> — keep things tidy
-            </div>
-          </div>
-          <div className="leader lc">
-            <div className="tick"></div>
-            <div className="line"></div>
-            <div className="lbl">
-              Live, <b>as you type</b>
-            </div>
+            <p className="hm-fine">Free for 30 docs. Pro is $6 a month, with 14 days free and no card.</p>
           </div>
         </div>
+      </section>
 
-        <div className="bottom-bar">
+      {/* ============ CLICKABLE APP ============ */}
+      <section className="hm-wrap hm-demo-wrap">
+        <HomeAppDemo />
+      </section>
+
+      <div className="hm-wrap hm-facts">
+        <div><span className="k">Platforms</span><span className="v">Web, installable on Mac &amp; iPad</span></div>
+        <div><span className="k">AI</span><span className="v">None, on purpose</span></div>
+        <div><span className="k">Pricing</span><span className="v">Flat, never per seat</span></div>
+      </div>
+
+      {/* ============ JOURNEY ============ */}
+      <section className="hm-wrap hm-section">
+        <div className="hm-head">
           <div>
-            <span className="k">Platforms</span>
-            <span className="v">Web · Mac &amp; iPad soon</span>
+            <span className="hm-num">How work moves through TWO</span>
+            <h2 className="display">From rough idea<br />to finished doc.</h2>
           </div>
-        </div>
-      </div>
-
-      {/* ============ FEATURES ============ */}
-      <div className="features-frame">
-        <div className="section-head">
-          <h2 className="display">Two more reasons to switch.</h2>
-          <p>Tabs keep every doc one click away. Linking keeps your notes and docs from living apart.</p>
+          <p>
+            Docs are for finished thinking. Studio is for the unfinished kind. An idea can travel all the way from a
+            one-line note to a doc you write with your research open beside it.
+          </p>
         </div>
 
-        <div className="flagships">
-          <div className="flag">
-            <div className="flag-leader">
-              <div className="tick"></div>
-              <div className="line"></div>
-              <div className="lbl">
-                Tabs — <b>never lose your place</b>
-              </div>
+        <div className="hm-steps">
+          <div className="hm-step">
+            <div className="hm-vis hm-vis-ideas">
+              <div className="hm-mini-head"><b>Ideas</b><span>24</span></div>
+              <div className="hm-mini-row"><i style={{ background: "#6ec39a" }} />Why I write without AI</div>
+              <div className="hm-mini-row"><i style={{ background: "#5a5a64" }} /><span className="t">Harbor photo essay</span><span className="hm-turn sm">Turn into Doc</span></div>
+              <div className="hm-mini-row"><i style={{ background: "#e0a44d" }} />Episode 12</div>
             </div>
-            <div className="demo">
-              <div className="tabbar">
-                <span className="active">Weekly Review</span>
-                <span>OKR Tracker</span>
-                <span>Product Brief</span>
-              </div>
-              <div className="fakeln w90"></div>
-              <div className="fakeln w70"></div>
-              <div className="fakeln w80"></div>
-              <div className="fakeln w55"></div>
-            </div>
+            <span className="hm-num sm">01</span>
+            <b>Capture in Ideas</b>
+            <span>A simple list of what you might write next, with a status and a place it will live.</span>
           </div>
-          <div className="flag">
-            <div className="flag-leader">
-              <div className="tick"></div>
-              <div className="line"></div>
-              <div className="lbl">
-                Linking — <b>jump straight there</b>
-              </div>
+          <div className="hm-step">
+            <div className="hm-vis hm-vis-canvas" aria-hidden="true">
+              <span className="c-text">Hook ideas</span>
+              <span className="c-shape">Calm</span>
+              <span className="c-swatch" />
+              <span className="c-diamond" />
             </div>
-            <div className="demo">
-              <div className="fakeln w90"></div>
-              <div className="link-row">
-                <div className="fakeln" style={{ width: "44%" }}></div>
-                <span className="fakeln linked">the meeting notes</span>
-              </div>
-              <div className="fakeln w70"></div>
-              <div className="fakeln w80"></div>
-              <div className="ref-drop">
-                <div className="ref-connector"></div>
-              </div>
-              <div className="ref-chip">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#c98a5e" strokeWidth="1.6">
-                  <path d="M4 4h13l3 3v13H4z" />
-                  <line x1="8" y1="9" x2="14" y2="9" />
-                </svg>
-                <span>Meeting Notes</span>
-              </div>
+            <span className="hm-num sm">02</span>
+            <b>Work it out on a Canvas</b>
+            <span>Pin docs and notes, add colors and shapes, draw the connections.</span>
+          </div>
+          <div className="hm-step">
+            <div className="hm-vis hm-vis-doc">
+              <b className="title">Harbor photo essay</b>
+              <span className="from">From Ideas</span>
+              <div className="hm-ln" style={{ width: "94%" }} />
+              <div className="hm-ln" style={{ width: "84%" }} />
+              <div className="hm-ln" style={{ width: "70%" }} />
+              <div className="hm-ln" style={{ width: "88%" }} />
             </div>
+            <span className="hm-num sm">03</span>
+            <b>Turn it into a Doc</b>
+            <span>One click. The doc stays linked to its idea, both ways.</span>
+          </div>
+          <div className="hm-step">
+            <div className="hm-vis hm-vis-split" aria-hidden="true">
+              <div className="p"><b>Harbor essay</b><div className="hm-ln" style={{ width: "90%" }} /><div className="hm-ln" style={{ width: "76%" }} /><div className="hm-ln" style={{ width: "84%" }} /></div>
+              <div className="s"><span /></div>
+              <div className="p alt"><b>Canvas notes</b><div className="hm-ln clay" style={{ width: "80%" }} /><div className="hm-ln" style={{ width: "66%" }} /></div>
+            </div>
+            <span className="hm-num sm">04</span>
+            <b>Write it side by side</b>
+            <span>Open your canvas notes next to the draft in split view.</span>
           </div>
         </div>
+        <a href="/product/features/studio" className="hm-link">Explore Studio →</a>
+      </section>
 
-        <div className="support-head">
-          <p className="micro">And the rest of the toolkit</p>
-          <h3 className="display">Four smaller things, all worth having.</h3>
-        </div>
-
-        <div className="bento2">
-          <div className="tile t-tpl">
-            <div className="icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4">
-                <rect x="4" y="3" width="16" height="18" rx="2" />
-                <line x1="4" y1="8" x2="20" y2="8" />
-                <line x1="8" y1="13" x2="16" y2="13" />
-              </svg>
-            </div>
-            <h4>Start fast, every time</h4>
-            <p className="desc">Meeting notes, briefs, roadmaps — one click away.</p>
-            <div className="tpl-grid">
-              <div className="tpl-cell">
-                <div className="dot" style={{ background: "var(--clay)" }}></div>
-                <p>Meeting Notes</p>
-              </div>
-              <div className="tpl-cell">
-                <div className="dot" style={{ background: "var(--indigo)" }}></div>
-                <p>OKR Tracker</p>
-              </div>
-              <div className="tpl-cell">
-                <div className="dot" style={{ background: "#5b9bd6" }}></div>
-                <p>Product Brief</p>
-              </div>
-              <div className="tpl-cell">
-                <div className="dot" style={{ background: "var(--green)" }}></div>
-                <p>Blog Post</p>
-              </div>
-            </div>
+      {/* ============ TOOLKIT COLLAGE ============ */}
+      <section className="hm-wrap hm-section">
+        <div className="hm-head">
+          <div>
+            <span className="hm-num">The rest of the toolkit</span>
+            <h2 className="display">Quietly there<br />when you need it.</h2>
           </div>
-
-          <div className="tile t-sync">
-            <div className="icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4">
-                <path d="M3 12a9 9 0 0115-6.7M21 12a9 9 0 01-15 6.7" />
-                <path d="M18 3v4h-4M6 21v-4h4" />
-              </svg>
-            </div>
-            <h4>Every device, always current</h4>
-            <p className="desc">Changes push instantly across Mac, web, and iPad.</p>
-            <div className="sync-row">
-              <span className="lbl">Mac</span>
-              <div className="track">
-                <div className="fill" style={{ width: "96%" }}></div>
-              </div>
-              <span className="dot"></span>
-            </div>
-            <div className="sync-row">
-              <span className="lbl">Web</span>
-              <div className="track">
-                <div className="fill" style={{ width: "96%" }}></div>
-              </div>
-              <span className="dot"></span>
-            </div>
-            <div className="sync-row">
-              <span className="lbl">iPad</span>
-              <div className="track">
-                <div className="fill" style={{ width: "96%" }}></div>
-              </div>
-              <span className="dot"></span>
-            </div>
-          </div>
-
-          <div className="tile t-shared">
-            <div className="icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4">
-                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-              </svg>
-            </div>
-            <h4>Shared, when you want it</h4>
-            <p className="desc">Bring one or two people into a doc — not a whole workspace of noise.</p>
-            <div className="avatars">
-              <div className="av a1">P</div>
-              <div className="av a2">R</div>
-              <div className="av a3">+2</div>
-            </div>
-          </div>
-
-          <div className="tile t-log">
-            <div className="log-copy">
-              <div className="icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 7v5l3 3" />
-                </svg>
-              </div>
-              <h4>Know what changed, and when</h4>
-              <p className="desc" style={{ marginBottom: 0 }}>
-                A running log of every edit, across every workspace.
-              </p>
-            </div>
-            <div className="timeline">
-              <div className="tl-node">
-                <div className="line2"></div>
-                <div className="dot2"></div>
-                <span className="cap">Mon</span>
-              </div>
-              <div className="tl-node active">
-                <div className="line2"></div>
-                <div className="dot2"></div>
-                <span className="cap">Edited</span>
-              </div>
-              <div className="tl-node">
-                <div className="line2"></div>
-                <div className="dot2"></div>
-                <span className="cap">Sun</span>
-              </div>
-              <div className="tl-node">
-                <div className="dot2"></div>
-                <span className="cap">Sat</span>
-              </div>
-            </div>
+          <div className="hm-head-r">
+            <p>Small tools that stay out of the way until you reach for them. Every one of them is on the Free plan.</p>
+            <a href="/product/features" className="hm-link">See all features →</a>
           </div>
         </div>
 
-        <div className="pricing-teaser">
-          <div className="pt-head">
-            <h2 className="display">Free to start. $6/mo when you&apos;re ready.</h2>
-            <p>14-day free trial on Pro. No credit card required.</p>
-          </div>
-
-          <div className="pt-row">
-            <div className="pt-block">
-              <span className="pt-badge spacer" aria-hidden="true">Most popular</span>
-              <div>
-                <p className="pt-name">FREE</p>
-                <div className="pt-price">
-                  <span className="amt display">$0</span>
-                  <span className="per">/ month</span>
-                </div>
-              </div>
-              <ul className="pt-features">
-                <li>{PT_CHECK} Split view</li>
-                <li>{PT_CHECK} 30 docs</li>
-                <li>{PT_CHECK} 3-version history</li>
-              </ul>
-              <a href="https://app.two.so/signup" className="pt-btn outline">Start free</a>
-            </div>
-
-            <div className="pt-block pro">
-              <span className="pt-badge">Most popular</span>
-              <div>
-                <p className="pt-name">PRO</p>
-                <div className="pt-price">
-                  <span className="amt display">$6</span>
-                  <span className="per">/ month</span>
-                </div>
-              </div>
-              <ul className="pt-features">
-                <li>{PT_CHECK} Unlimited docs</li>
-                <li>{PT_CHECK} Shared workspaces</li>
-                <li>{PT_CHECK} 30-day version history</li>
-              </ul>
-              <a href="/pricing" className="pt-btn solid">Start free trial</a>
-            </div>
-
-            <div className="pt-block">
-              <span className="pt-badge spacer" aria-hidden="true">Most popular</span>
-              <div>
-                <p className="pt-name">TEAM</p>
-                <div className="pt-price">
-                  <span className="amt display">$10</span>
-                  <span className="per">/ month</span>
-                </div>
-              </div>
-              <ul className="pt-features">
-                <li>{PT_CHECK} Everything in Pro</li>
-                <li>{PT_CHECK} 10 members</li>
-                <li>{PT_CHECK} 50GB storage</li>
-              </ul>
-              <a href="/pricing" className="pt-btn outline">Get Team</a>
+        <div className="hm-collage">
+          <div className="hm-frag f-notes">
+            <span className="hm-flbl"><i /><b>Notes</b> sorted by color</span>
+            <div className="hm-fcard hm-fpills">
+              <span className="on">All</span>
+              <span><i style={{ background: "#8f89e6" }} />Journal</span>
+              <span><i style={{ background: "#c98a5e" }} />Clients</span>
+              <span><i style={{ background: "#6ec39a" }} />Reading</span>
             </div>
           </div>
-
-          <div className="pt-compare">
-            <a href="/pricing">Compare all plans and features →</a>
-          </div>
-
-          {latestPosts && latestPosts.length > 0 && (
-            <div className="bf-section">
-              <div className="bf-head">
-                <p className="micro">From our blog</p>
-                <h2 className="display">Thoughts on writing, and building TWO.</h2>
-                <p>Ideas on focus, collaboration, and the tools we use to think.</p>
-              </div>
-
-              <div className="bf-grid">
-                {latestPosts.map((post) => (
-                  <a key={post.id} href={`/blog/${post.slug}`} className="bf-card">
-                    {post.category && (
-                      <span className="bf-pill">{post.category}</span>
-                    )}
-                    <h3 className="bf-title">{post.title}</h3>
-                    {post.seo_description && <p className="bf-desc">{post.seo_description}</p>}
-                    {post.published_at && <p className="bf-meta">{formatMonthYear(post.published_at)}</p>}
-                  </a>
-                ))}
-              </div>
-
-              <div className="bf-more">
-                <a href="/blog">Read all blog posts →</a>
-              </div>
+          <div className="hm-frag f-planner">
+            <span className="hm-flbl"><i /><b>Planner</b> tied to docs</span>
+            <div className="hm-fcard hm-ftasks">
+              <div><span className="hm-check" /><span className="t">Finish chapter three</span><span className="hi">High</span></div>
+              <div><span className="hm-check" /><span className="t">Send moodboard</span><span>Fri</span></div>
+              <div className="done"><span className="hm-check on" /><span className="t">Outline research</span></div>
             </div>
-          )}
+          </div>
+          <div className="hm-frag f-history">
+            <span className="hm-flbl"><i /><b>Version history</b></span>
+            <div className="hm-fcard hm-fhist">
+              <div className="line"><span /><em /><span /><em /><span className="on" /><em /><span /></div>
+              <div className="labels"><span>Mon</span><span>Tue</span><span className="on">Restore</span><span>Now</span></div>
+            </div>
+          </div>
+          <div className="hm-frag f-jump">
+            <span className="hm-flbl"><i /><b>Quick Jump</b> ⌘K</span>
+            <div className="hm-fcard hm-fjump">
+              <div className="q">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>
+                harb<span className="caret" /><span className="k">⌘K</span>
+              </div>
+              <div className="r on">Harbor photo essay</div>
+              <div className="r">Research: harbor towns</div>
+            </div>
+          </div>
+          <div className="hm-frag f-sync">
+            <span className="hm-flbl"><i /><b>Live sync</b></span>
+            <div className="hm-fcard hm-fsync">
+              <div><i />Laptop<span>Up to date</span></div>
+              <div><i />Tablet<span>Up to date</span></div>
+            </div>
+          </div>
+          <div className="hm-frag f-export">
+            <span className="hm-flbl"><i /><b>Export</b> anytime</span>
+            <div className="hm-fcard hm-fexport">
+              <span>Export PDF</span>
+              <span>Export Markdown</span>
+              <span>Copy</span>
+            </div>
+          </div>
+          <div className="hm-frag f-templates">
+            <span className="hm-flbl"><i /><b>Templates</b> to start fast</span>
+            <div className="hm-ftpl">
+              <div className="hm-fcard" style={{ borderTopColor: "#c98a5e" }}>Meeting notes</div>
+              <div className="hm-fcard" style={{ borderTopColor: "#8f89e6" }}>Weekly review</div>
+              <div className="hm-fcard" style={{ borderTopColor: "#6ec39a" }}>Podcast episode</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </>
+      </section>
+
+      {/* ============ WHAT TWO LEAVES OUT ============ */}
+      <section className="hm-wrap hm-section">
+        <div className="hm-leaves-head">
+          <h2 className="display">What TWO leaves out.</h2>
+          <p>Every other docs app keeps adding. We decided what not to build.</p>
+        </div>
+        <div className="hm-leaves">
+          <div>
+            <p className="display">No AI writing for you.</p>
+            <p>No suggestions, no summaries, no chatbot in the margin. The thinking stays yours.</p>
+          </div>
+          <div>
+            <p className="display">No blocks or databases.</p>
+            <p>Open it and write. There is no system to build before the first sentence.</p>
+          </div>
+          <div>
+            <p className="display">No per-seat pricing.</p>
+            <p>One flat price. Bring someone into a workspace and your bill stays the same.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ PRICING ============ */}
+      <section className="hm-wrap hm-section">
+        <div className="hm-center">
+          <p className="micro">Pricing</p>
+          <h2 className="display">Free to start. $6 when you&apos;re ready.</h2>
+          <p>14-day Pro trial, no credit card. Never per seat.</p>
+        </div>
+        <div className="hm-plans">
+          <div className="hm-plan">
+            <p className="hm-plan-name">Free</p>
+            <p className="hm-plan-price"><span className="display">$0</span><span>forever</span></p>
+            <ul>
+              <li>{CHECK}30 docs, plus Notes</li>
+              <li>{CHECK}Split view, Studio, Planner</li>
+              <li>{CHECK}1 GB storage</li>
+            </ul>
+            <a href="https://app.two.so/signup" className="hm-btn outline">Start free</a>
+          </div>
+          <div className="hm-plan pro">
+            <div className="hm-plan-top">
+              <p className="hm-plan-name">Pro</p>
+              <span className="hm-badge pro">14 days free</span>
+            </div>
+            <p className="hm-plan-price"><span className="display">$6</span><span>a month, or $5 yearly</span></p>
+            <ul>
+              <li>{CHECK}Unlimited docs and workspaces</li>
+              <li>{CHECK}Share a workspace, no seat fees</li>
+              <li>{CHECK}10 GB storage, 30-day history</li>
+            </ul>
+            <a href="/pricing" className="hm-btn solid">Start free trial</a>
+          </div>
+          <div className="hm-plan">
+            <div className="hm-plan-top">
+              <p className="hm-plan-name">Team</p>
+              <span className="hm-badge soon">Coming soon</span>
+            </div>
+            <p className="hm-plan-price"><span className="display">$10</span><span>a month</span></p>
+            <ul>
+              <li>{CHECK}Everything in Pro</li>
+              <li>{CHECK}Up to 10 members</li>
+              <li>{CHECK}50 GB storage</li>
+            </ul>
+            <span className="hm-btn soon">Coming soon</span>
+          </div>
+        </div>
+        <div className="hm-center-link">
+          <a href="/pricing" className="hm-link">Compare all plans →</a>
+        </div>
+      </section>
+
+      {/* ============ BLOG ============ */}
+      {latestPosts && latestPosts.length > 0 && (
+        <section className="hm-wrap hm-section">
+          <div className="hm-blog-head">
+            <div>
+              <p className="micro">From the blog</p>
+              <h2 className="display">Thoughts on writing, and building TWO.</h2>
+            </div>
+            <a href="/blog" className="hm-link">Read all posts →</a>
+          </div>
+          <div className="hm-blog">
+            {latestPosts.map((post) => (
+              <a key={post.id} href={`/blog/${post.slug}`} className="hm-post">
+                {post.category && <span className="cat">{post.category}</span>}
+                <span className="t">{post.title}</span>
+                {post.seo_description && <span className="d">{post.seo_description}</span>}
+                {post.published_at && <span className="m">{formatMonthYear(post.published_at)}</span>}
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ============ CTA ============ */}
+      <section className="hm-wrap hm-cta">
+        <h2 className="display">
+          Start with one doc.
+          <br />
+          <span>Open a second one later.</span>
+        </h2>
+        <div className="hm-btns">
+          <a href="/pricing" className="hm-btn outline lg">See pricing</a>
+          <a href="https://app.two.so/signup" className="hm-btn solid lg">Start writing free</a>
+        </div>
+      </section>
+    </div>
   );
 }
