@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Minimalist Docs Editor & Writing App for iPad, Mac & Web",
 };
 
-export const revalidate = 300;
+export const revalidate = 60;
 
 const CHECK = (
   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8f89e6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -26,7 +26,7 @@ export default async function Home() {
     .eq("target_site", "two.so")
     .eq("status", "published")
     .order("published_at", { ascending: false })
-    .limit(3);
+    .limit(4);
 
   return (
     <div className="hm">
@@ -42,18 +42,12 @@ export default async function Home() {
           <br />
           <span>One to write. One to think.</span>
         </h1>
-        <div className="hm-hero-row">
-          <p>
-            A calm writing app for people who think on their own. Write with your research open beside you, and keep
-            your rough ideas in Studio until they are ready to become docs. No AI, nothing to set up.
-          </p>
-          <div className="hm-hero-actions">
-            <div className="hm-btns">
-              <a href="/pricing" className="hm-btn outline">See pricing</a>
-              <a href="https://app.two.so/signup" className="hm-btn solid">Start writing free</a>
-            </div>
-            <p className="hm-fine">Free for 30 docs. Pro is $6 a month, with 14 days free and no card.</p>
+        <div className="hm-hero-cta">
+          <div className="hm-btns">
+            <a href="https://app.two.so/signup" className="hm-btn solid">Start writing free</a>
+            <a href="/pricing" className="hm-btn outline">See pricing</a>
           </div>
+          <p className="hm-fine">Free for 30 docs. No AI, nothing to set up.</p>
         </div>
       </section>
 
@@ -279,27 +273,47 @@ export default async function Home() {
       </section>
 
       {/* ============ BLOG ============ */}
-      {latestPosts && latestPosts.length > 0 && (
-        <section className="hm-wrap hm-section">
-          <div className="hm-blog-head">
-            <div>
-              <p className="micro">From the blog</p>
-              <h2 className="display">Thoughts on writing, and building TWO.</h2>
-            </div>
-            <a href="/blog" className="hm-link">Read all posts →</a>
+      <section className="hm-wrap hm-section">
+        <div className="hm-blog-head">
+          <div>
+            <p className="micro">From the blog</p>
+            <h2 className="display">Notes on writing, and building TWO.</h2>
           </div>
-          <div className="hm-blog">
-            {latestPosts.map((post) => (
-              <a key={post.id} href={`/blog/${post.slug}`} className="hm-post">
-                {post.category && <span className="cat">{post.category}</span>}
-                <span className="t">{post.title}</span>
-                {post.seo_description && <span className="d">{post.seo_description}</span>}
-                {post.published_at && <span className="m">{formatMonthYear(post.published_at)}</span>}
-              </a>
-            ))}
+          <a href="/blog" className="hm-link">Read all posts →</a>
+        </div>
+        {latestPosts && latestPosts.length > 0 ? (
+          <div className="hm-blog2">
+            <a href={`/blog/${latestPosts[0].slug}`} className="hm-feat">
+              <div className="hm-feat-meta">
+                {latestPosts[0].category && <span className="cat">{latestPosts[0].category}</span>}
+                <span className="m">
+                  Latest{latestPosts[0].published_at ? ` · ${formatMonthYear(latestPosts[0].published_at)}` : ""}
+                </span>
+              </div>
+              <span className="display hm-feat-t">{latestPosts[0].title}</span>
+              {latestPosts[0].seo_description && <span className="d">{latestPosts[0].seo_description}</span>}
+              <span className="go">Read the post →</span>
+            </a>
+            {latestPosts.length > 1 && (
+              <div className="hm-blist">
+                {latestPosts.slice(1).map((post) => (
+                  <a key={post.id} href={`/blog/${post.slug}`} className="hm-brow">
+                    <span className="l">
+                      {post.category && <span className="cat">{post.category}</span>}
+                      <b>{post.title}</b>
+                    </span>
+                    {post.published_at && <em>{formatMonthYear(post.published_at)}</em>}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
-        </section>
-      )}
+        ) : (
+          <p className="hm-blog-empty">
+            New posts are on the way. <a href="/blog">Visit the blog →</a>
+          </p>
+        )}
+      </section>
 
       {/* ============ CTA ============ */}
       <section className="hm-wrap hm-cta">
