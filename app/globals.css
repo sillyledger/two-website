@@ -2347,3 +2347,29 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .hm-cta-actions { align-items: stretch; margin-top: 32px; }
   .hm-cta-actions .hm-btns { flex-direction: column; }
 }
+
+/* ============ ROADMAP HERO (rmh-) ============ */
+.rmh-hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 72px; align-items: end; padding-top: 36px; }
+.rmh-hero h1 { font-size: 80px; line-height: 1.02; letter-spacing: -0.035em; margin: 20px 0 0; }
+.rmh-intro p { font-size: 17px; line-height: 1.6; color: #c4c4c4; margin: 0; }
+.rmh-links { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 22px; font-size: 14px; }
+.rmh-links a { color: #c4b8ff; text-decoration: none; }
+.rmh-links a:hover { color: var(--text-primary); }
+.rmh-stats { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; margin-top: 72px; border-top: 1px solid rgba(255,255,255,0.14); }
+.rmh-stat { position: relative; display: flex; flex-direction: column; gap: 6px; padding-top: 22px; }
+.rmh-stat b { font-family: 'Fira Sans', sans-serif; font-size: 34px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; color: var(--text-primary); }
+.rmh-stat b.dim { color: #6a6a74; }
+.rmh-stat > span:last-child { font-size: 13.5px; color: var(--text-muted); }
+.rmh-node { position: absolute; top: -6px; left: 0; width: 11px; height: 11px; border-radius: 50%; border: 1.5px solid var(--indigo); background: var(--bg); box-sizing: border-box; }
+.rmh-node.shipped { background: var(--green); border-color: var(--green); }
+.rmh-node.progress { background: var(--indigo); }
+.rmh-node.horizon { border-style: dashed; }
+
+@media (max-width: 860px) {
+  .rmh-hero { grid-template-columns: 1fr; gap: 18px; padding-top: 8px; }
+  .rmh-hero h1 { font-size: 46px; margin-top: 16px; }
+  .rmh-intro p { font-size: 16px; }
+  .rmh-stats { grid-template-columns: 1fr 1fr; gap: 28px 20px; margin-top: 44px; }
+  .rmh-stat:nth-child(n+3) { padding-top: 0; }
+  .rmh-stat:nth-child(n+3) .rmh-node { display: none; }
+}
