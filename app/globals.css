@@ -2337,3 +2337,13 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .hm-brow { grid-template-columns: 1fr; gap: 6px; padding: 18px 0; }
   .hm-brow b { font-size: 16px; }
 }
+
+/* ============ HOMEPAGE: closing CTA option A + no wrapping button labels ============ */
+.hm-btn { white-space: nowrap; }
+.hm-cta.hm-cta-a { display: block; }
+.hm-cta-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 40px; }
+.hm-cta-actions .hm-fine { font-size: 14px; color: #8a8a92; margin: 0; }
+@media (max-width: 860px) {
+  .hm-cta-actions { align-items: stretch; margin-top: 32px; }
+  .hm-cta-actions .hm-btns { flex-direction: column; }
+}
