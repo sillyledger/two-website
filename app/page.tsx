@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createClient } from "../lib/supabase";
 import { HomeAppDemo } from "@/components/home-app-demo";
+import { PageCta } from "@/components/page-cta";
 
 export const metadata: Metadata = {
   title: "Minimalist Docs Editor & Writing App for iPad, Mac & Web",
@@ -316,20 +317,14 @@ export default async function Home() {
       </section>
 
       {/* ============ CTA ============ */}
-      <section className="hm-wrap hm-cta hm-cta-a">
-        <h2 className="display">
-          Start with one doc.
-          <br />
-          <span>Open a second one later.</span>
-        </h2>
-        <div className="hm-cta-actions">
-          <div className="hm-btns">
-            <a href="https://app.two.so/signup" className="hm-btn solid lg">Start writing free</a>
-            <a href="/pricing" className="hm-btn outline lg">See pricing</a>
-          </div>
-          <p className="hm-fine">Free for 30 docs. No AI, nothing to set up.</p>
-        </div>
-      </section>
+      <PageCta
+        className="hm-wrap"
+        title="Start with one doc."
+        subtitle="Open a second one later."
+        primary={{ label: "Start writing free", href: "https://app.two.so/signup" }}
+        secondary={{ label: "See pricing", href: "/pricing" }}
+        note="Free for 30 docs. No AI, nothing to set up."
+      />
     </div>
   );
 }

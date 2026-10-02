@@ -2395,3 +2395,27 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .legal-page { padding-top: 56px; }
   .legal-page h1 { font-size: 38px; }
 }
+
+/* ============ SHARED CLOSING CTA (pcta-) ============ */
+.pcta { padding-top: 150px; padding-bottom: 40px; display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; }
+.pcta-title { font-size: 60px; line-height: 1.04; letter-spacing: -0.035em; margin: 0; min-width: 0; }
+.pcta-title span { color: #6a6a74; }
+.pcta-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 14px; flex-shrink: 0; }
+.pcta-btns { display: flex; gap: 10px; }
+.pcta-btn { display: inline-flex; align-items: center; justify-content: center; height: 52px; padding: 0 26px; border-radius: 10px; font-size: 15.5px; font-weight: 500; text-decoration: none; white-space: nowrap; box-sizing: border-box; }
+.pcta-btn.solid { background: var(--text-primary); color: var(--bg); }
+.pcta-btn.outline { border: 1px solid var(--border-strong); color: var(--text-primary); }
+.pcta-note { font-size: 13.5px; color: #8a8a92; margin: 0; text-align: right; }
+
+@media (max-width: 1100px) {
+  .pcta-title { font-size: 48px; }
+}
+
+@media (max-width: 860px) {
+  .pcta { flex-direction: column; align-items: stretch; gap: 28px; padding-top: 96px; }
+  .pcta-title { font-size: 38px; }
+  .pcta-actions { align-items: stretch; }
+  .pcta-btns { flex-direction: column; }
+  .pcta-btn { width: 100%; }
+  .pcta-note { text-align: left; }
+}

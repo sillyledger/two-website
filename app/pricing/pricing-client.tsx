@@ -2,6 +2,7 @@
 
 import { Fragment, useEffect, useState } from "react";
 import Link from "next/link";
+import { PageCta } from "@/components/page-cta";
 
 declare global {
   interface Window {
@@ -243,13 +244,12 @@ export function PricingClient() {
         </p>
       </section>
 
-      <section className="pp-cta">
-        <div>
-          <h2 className="display">Two docs, one screen.</h2>
-          <p>Free to start. Takes ten seconds.</p>
-        </div>
-        <a href="https://app.two.so/signup" className="pp-btn solid">Start writing free</a>
-      </section>
+      <PageCta
+        title="Two docs. One screen."
+        subtitle="Free to start."
+        primary={{ label: "Start writing free", href: "https://app.two.so/signup" }}
+        note="Takes ten seconds. No card needed."
+      />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageCta } from "@/components/page-cta";
 
 export const metadata: Metadata = {
   title: "Product Features: Minimal Docs App, Sync & More | TWO",
@@ -314,14 +315,13 @@ export default function ProductFeaturesPage() {
       </section>
 
       {/* ============ CTA ============ */}
-      <section className="fh-cta">
-        <h2 className="display">Everything but sharing is free.</h2>
-        <p>Up to 30 docs on the Free plan. Try Pro for 14 days, no card.</p>
-        <div className="fh-cta-row">
-          <a href="/pricing" className="fh-btn outline">See pricing</a>
-          <a href="https://app.two.so/signup" className="fh-btn solid">Start writing free</a>
-        </div>
-      </section>
+      <PageCta
+        title="Everything but sharing"
+        subtitle="is on the Free plan."
+        primary={{ label: "Start writing free", href: "https://app.two.so/signup" }}
+        secondary={{ label: "See pricing", href: "/pricing" }}
+        note="Try Pro for 14 days, no card."
+      />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageCta } from "@/components/page-cta";
 
 export const metadata: Metadata = {
   title: "Studio: Ideas & Canvas for Writers | TWO",
@@ -258,16 +259,12 @@ export default function StudioFeaturePage() {
       </section>
 
       {/* ============ CTA ============ */}
-      <section className="sd-cta">
-        <h2 className="display">
-          Start with an idea.<br />
-          <span>Finish with a doc.</span>
-        </h2>
-        <div className="sd-btns">
-          <a href="https://app.two.so/signup" className="sd-btn solid">Try Studio free</a>
-          <a href="/product/features" className="sd-btn outline">All features</a>
-        </div>
-      </section>
+      <PageCta
+        title="Start with an idea."
+        subtitle="Finish with a doc."
+        primary={{ label: "Try Studio free", href: "https://app.two.so/signup" }}
+        secondary={{ label: "All features", href: "/product/features" }}
+      />
     </div>
   );
 }
