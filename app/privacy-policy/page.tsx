@@ -9,10 +9,10 @@ export default function PrivacyPolicy() {
     <main className="legal-page">
       <p className="legal-eyebrow">Legal</p>
       <h1>Privacy Policy</h1>
-      <p className="legal-updated">Last updated: August 10, 2026</p>
+      <p className="legal-updated">Last updated: October 2, 2026</p>
 
       <p>
-        TWO (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) operates the note-taking application available at{" "}
+        TWO (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) operates the document editor available at{" "}
         <strong>app.two.so</strong> and the marketing website at <strong>two.so</strong>. This Privacy Policy explains
         how we collect, use, and protect your information.
       </p>
@@ -47,8 +47,8 @@ export default function PrivacyPolicy() {
 
       <h2>Cookies</h2>
       <p>
-        We use cookies solely for authentication purposes (to keep you logged in). We do not use tracking or
-        advertising cookies.
+        We use cookies to keep you logged in. On two.so we also use Google Analytics, which sets cookies to understand
+        how the site is used. We do not use advertising cookies.
       </p>
 
       <h2>Your Rights</h2>

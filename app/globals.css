@@ -2386,3 +2386,12 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
 .roadmap-prev-item { font-size: 14.5px; }
 .roadmap-horizon-card .t { font-size: 16.5px; font-weight: 500; margin: 0 0 6px; }
 .roadmap-horizon-card .d { font-size: 14.5px; }
+
+/* ============ LEGAL PAGES: header refresh ============ */
+.legal-page .legal-eyebrow { font-size: 11px; letter-spacing: 0.14em; color: var(--text-muted); margin: 0 0 16px; }
+.legal-page .legal-updated { font-size: 13px; color: var(--text-muted); }
+.legal-page h1 { font-size: 52px; line-height: 1.04; letter-spacing: -0.035em; margin: 0 0 14px; }
+@media (max-width: 860px) {
+  .legal-page { padding-top: 56px; }
+  .legal-page h1 { font-size: 38px; }
+}

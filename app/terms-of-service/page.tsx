@@ -9,16 +9,16 @@ export default function TermsOfService() {
     <main className="legal-page">
       <p className="legal-eyebrow">Legal</p>
       <h1>Terms of Service</h1>
-      <p className="legal-updated">Last updated: August 10, 2026</p>
+      <p className="legal-updated">Last updated: October 2, 2026</p>
 
       <p>
-        These Terms of Service govern your use of TWO, the note-taking application available at{" "}
+        These Terms of Service govern your use of TWO, the document editor available at{" "}
         <strong>app.two.so</strong>. By creating an account, you agree to these terms.
       </p>
 
       <h2>Use of the Service</h2>
       <p>
-        You may use TWO for personal and professional note-taking purposes. You agree not to use the service to
+        You may use TWO for personal and professional writing purposes. You agree not to use the service to
         store or distribute unlawful content, attempt to reverse-engineer the application, or interfere with its
         operation.
       </p>
@@ -49,7 +49,7 @@ export default function TermsOfService() {
 
       <h2 id="refunds">Refund Policy</h2>
       <p>
-        We offer a <strong>14-day free trial</strong> on all paid plans — no credit card required. This gives you
+        We offer a <strong>14-day free trial</strong> on all paid plans, no credit card required. This gives you
         full access before any payment is taken.
       </p>
       <p>
