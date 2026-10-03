@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PageCta } from "@/components/page-cta";
 
 type Article = {
   category: string;
@@ -31,7 +32,7 @@ const ARTICLES: Article[] = [
   {
     category: "Docs & Editor",
     title: "Formatting",
-    desc: "Headers, bold, lists, code blocks — everything the editor supports.",
+    desc: "Headers, bold, lists, code blocks: everything the editor supports.",
     href: "/resources/help/docs-editor/formatting",
   },
   {
@@ -230,10 +231,12 @@ export function HelpCenterClient() {
         </div>
       </div>
 
-      <div className="hc-cta">
-        <p>Can&apos;t find what you&apos;re looking for?</p>
-        <a href="/contact">Contact support →</a>
-      </div>
+      <PageCta
+        title="Can't find what you need?"
+        subtitle="Ask us directly."
+        primary={{ label: "Contact support", href: "/contact" }}
+        note="A real person reads every message."
+      />
     </div>
   );
 }

@@ -2533,3 +2533,14 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .dv-done { flex-direction: column; align-items: stretch; }
   .dv-done .dv-btn { margin-left: 0; width: 100%; }
 }
+
+/* ============ HELP CENTER: type refresh ============ */
+.hc-hero-left h1 { font-size: 52px; line-height: 1.04; letter-spacing: -0.035em; }
+.hc-cats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.hc-cat-desc { font-size: 14.5px; }
+.hc-article-row-title { font-size: 15.5px; font-weight: 600; margin: 0 0 4px; }
+.hc-article-row-desc { font-size: 14px; line-height: 1.55; }
+@media (max-width: 860px) {
+  .hc-hero-left h1 { font-size: 38px; }
+  .hc-cats { grid-template-columns: 1fr; }
+}
