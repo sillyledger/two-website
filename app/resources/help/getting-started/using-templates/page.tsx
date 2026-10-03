@@ -27,107 +27,95 @@ export default function UsingTemplatesArticle() {
           appear, showing all available templates.
         </p>
 
-        <div className="htpl-picker">
-          <div className="htpl-tile"><div className="l" /><div className="l" /><div className="l" style={{ width: "60%" }} /><p>Meeting Notes</p></div>
-          <div className="htpl-tile"><div className="l" /><div className="l" /><div className="l" style={{ width: "70%" }} /><p>Blog Post</p></div>
-          <div className="htpl-tile"><div className="l" /><div className="l" /><div className="l" style={{ width: "50%" }} /><p>Product Brief</p></div>
-        </div>
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win hil-pad">
+              <div className="hil-toolbar">
+                <b className="hil-dt sm hil-tpl-title">Templates</b>
+                <div className="hil-search">⌕ Search templates…</div>
+              </div>
+              <div className="hil-pills">
+                <span className="hil-pill on">All</span>
+                <span className="hil-pill">Business</span>
+                <span className="hil-pill">Creative</span>
+                <span className="hil-pill hide-sm">Strategy</span>
+              </div>
+              <div className="hil-tpls">
+                <div className="hil-tpl" style={{ borderTopColor: "#c98a5e" }}>
+                  Meeting notes
+                  <div className="hil-ln" style={{ width: "90%" }} />
+                  <div className="hil-ln" style={{ width: "60%" }} />
+                </div>
+                <div className="hil-tpl" style={{ borderTopColor: "#8f89e6" }}>
+                  Blog post
+                  <div className="hil-ln" style={{ width: "85%" }} />
+                  <div className="hil-ln" style={{ width: "70%" }} />
+                </div>
+                <div className="hil-tpl" style={{ borderTopColor: "#6ec39a" }}>
+                  Product brief
+                  <div className="hil-ln" style={{ width: "80%" }} />
+                  <div className="hil-ln" style={{ width: "50%" }} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>Templates button</b>top right of your dashboard</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Pick one</b>it opens as a new doc</span></div>
+          </div>
+        </figure>
 
         <h2 className="display">Available templates</h2>
         <p>Some of our popular templates are:</p>
 
-        <div className="tp-grid htpl-grid">
-          <a href="https://app.two.so/new?template=meeting-notes" className="tp-card business">
-            <div className="tp-doc">
-              <div className="tp-doc-bar"><i /><i /><i /></div>
-              <div className="tp-doc-title">Meeting notes</div>
-              <div className="tp-ln tp-w90" />
-              <div className="tp-ln tp-w60" />
-              <div className="tp-ln tp-w75" />
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win">
+              <a href="https://app.two.so/new?template=meeting-notes" className="hil-tl">
+                <i className="hil-dot" style={{ background: "#c98a5e" }} />
+                <span className="n">Meeting notes</span>
+                <span className="c">Business</span>
+                <span className="d">Agenda, decisions, and action items, all in one structured doc.</span>
+                <span className="u">Use →</span>
+              </a>
+              <a href="https://app.two.so/new?template=blog-post" className="hil-tl">
+                <i className="hil-dot" style={{ background: "#8f89e6" }} />
+                <span className="n">Blog post</span>
+                <span className="c">Creative</span>
+                <span className="d">Hook, three sections, CTA, and a pre-publish checklist.</span>
+                <span className="u">Use →</span>
+              </a>
+              <a href="https://app.two.so/new?template=product-brief" className="hil-tl">
+                <i className="hil-dot" style={{ background: "#6ec39a" }} />
+                <span className="n">Product brief</span>
+                <span className="c">Strategy</span>
+                <span className="d">Problem, users, goals, scope, and risk, in one tight doc.</span>
+                <span className="u">Use →</span>
+              </a>
+              <a href="https://app.two.so/new?template=weekly-review" className="hil-tl">
+                <i className="hil-dot" style={{ background: "#5b9bd6" }} />
+                <span className="n">Weekly review</span>
+                <span className="c">Personal</span>
+                <span className="d">Wins, blockers, priorities, and metrics. Every week, sorted.</span>
+                <span className="u">Use →</span>
+              </a>
+              <a href="https://app.two.so/new?template=okr-tracker" className="hil-tl">
+                <i className="hil-dot" style={{ background: "#6ec39a" }} />
+                <span className="n">OKR tracker</span>
+                <span className="c">Strategy</span>
+                <span className="d">Three objectives, key results, and progress targets, all tracked.</span>
+                <span className="u">Use →</span>
+              </a>
+              <a href="https://app.two.so/new?template=competitor-analysis" className="hil-tl">
+                <i className="hil-dot" style={{ background: "#e0a44d" }} />
+                <span className="n">Competitor analysis</span>
+                <span className="c">Research</span>
+                <span className="d">Compare competitors side by side: strengths, weaknesses, and pricing.</span>
+                <span className="u">Use →</span>
+              </a>
             </div>
-            <div className="tp-card-body">
-              <p className="tp-cat-label">Business</p>
-              <p className="tp-card-title">Meeting notes</p>
-              <p className="tp-card-desc">Agenda, decisions, and action items, all in one structured doc.</p>
-              <span className="tp-use">Use template →</span>
-            </div>
-          </a>
-          <a href="https://app.two.so/new?template=blog-post" className="tp-card creative">
-            <div className="tp-doc">
-              <div className="tp-doc-bar"><i /><i /><i /></div>
-              <div className="tp-doc-title">Blog post</div>
-              <div className="tp-ln tp-w90" />
-              <div className="tp-ln tp-w60" />
-              <div className="tp-ln tp-w75" />
-            </div>
-            <div className="tp-card-body">
-              <p className="tp-cat-label">Creative</p>
-              <p className="tp-card-title">Blog post</p>
-              <p className="tp-card-desc">Hook, three sections, CTA, and a pre-publish checklist.</p>
-              <span className="tp-use">Use template →</span>
-            </div>
-          </a>
-          <a href="https://app.two.so/new?template=product-brief" className="tp-card strategy">
-            <div className="tp-doc">
-              <div className="tp-doc-bar"><i /><i /><i /></div>
-              <div className="tp-doc-title">Product brief</div>
-              <div className="tp-ln tp-w90" />
-              <div className="tp-ln tp-w60" />
-              <div className="tp-ln tp-w75" />
-            </div>
-            <div className="tp-card-body">
-              <p className="tp-cat-label">Strategy</p>
-              <p className="tp-card-title">Product brief</p>
-              <p className="tp-card-desc">Problem, users, goals, scope, and risk, in one tight doc.</p>
-              <span className="tp-use">Use template →</span>
-            </div>
-          </a>
-          <a href="https://app.two.so/new?template=weekly-review" className="tp-card personal">
-            <div className="tp-doc">
-              <div className="tp-doc-bar"><i /><i /><i /></div>
-              <div className="tp-doc-title">Weekly review</div>
-              <div className="tp-ln tp-w90" />
-              <div className="tp-ln tp-w60" />
-              <div className="tp-ln tp-w75" />
-            </div>
-            <div className="tp-card-body">
-              <p className="tp-cat-label">Personal</p>
-              <p className="tp-card-title">Weekly review</p>
-              <p className="tp-card-desc">Wins, blockers, priorities, and metrics. Every week, sorted.</p>
-              <span className="tp-use">Use template →</span>
-            </div>
-          </a>
-          <a href="https://app.two.so/new?template=okr-tracker" className="tp-card strategy">
-            <div className="tp-doc">
-              <div className="tp-doc-bar"><i /><i /><i /></div>
-              <div className="tp-doc-title">OKR tracker</div>
-              <div className="tp-ln tp-w90" />
-              <div className="tp-ln tp-w60" />
-              <div className="tp-ln tp-w75" />
-            </div>
-            <div className="tp-card-body">
-              <p className="tp-cat-label">Strategy</p>
-              <p className="tp-card-title">OKR tracker</p>
-              <p className="tp-card-desc">Three objectives, key results, and progress targets, all tracked.</p>
-              <span className="tp-use">Use template →</span>
-            </div>
-          </a>
-          <a href="https://app.two.so/new?template=competitor-analysis" className="tp-card research">
-            <div className="tp-doc">
-              <div className="tp-doc-bar"><i /><i /><i /></div>
-              <div className="tp-doc-title">Competitor analysis</div>
-              <div className="tp-ln tp-w90" />
-              <div className="tp-ln tp-w60" />
-              <div className="tp-ln tp-w75" />
-            </div>
-            <div className="tp-card-body">
-              <p className="tp-cat-label">Research</p>
-              <p className="tp-card-title">Competitor analysis</p>
-              <p className="tp-card-desc">Compare competitors side by side: strengths, weaknesses, and pricing.</p>
-              <span className="tp-use">Use template →</span>
-            </div>
-          </a>
-        </div>
+          </div>
+        </figure>
 
         <a href="/resources/templates" className="btn-dark htpl-cta">See all templates →</a>
 

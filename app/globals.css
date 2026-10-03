@@ -2721,3 +2721,24 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .hil-shape { left: 76%; top: 24px; width: 20%; }
   .hil-notes { flex-direction: column; gap: 10px; }
 }
+
+/* ============ HELP ILLUSTRATIONS: templates article ============ */
+.hil .hil-tpl-title { margin: 0; flex-shrink: 0; }
+.hil-tpls { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+.hil-tpl { border-radius: 8px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.07); border-top: 2px solid; padding: 12px; font-size: 12px; color: var(--text-primary); }
+.hil-tpl .hil-ln { height: 4px; margin-top: 7px; }
+.harticle .hil a.hil-tl { display: grid; grid-template-columns: 8px minmax(0, 150px) 80px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 16px; border: 0; border-bottom: 1px solid rgba(255,255,255,0.06); color: var(--text-primary); text-decoration: none; font-size: 12.5px; }
+.harticle .hil a.hil-tl:last-child { border-bottom: 0; }
+.harticle .hil a.hil-tl:hover { background: rgba(255,255,255,0.03); }
+.hil-tl .n { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hil-tl .c { font-size: 11px; color: #8a8a92; }
+.hil-tl .d { font-size: 12px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hil-tl .u { font-size: 12px; color: #c4b8ff; white-space: nowrap; }
+.harticle .hil a.hil-tl:hover .u { color: var(--text-primary); }
+@media (max-width: 860px) {
+  .hil-tpls { grid-template-columns: 1fr 1fr; }
+  .hil-tpl:nth-child(3) { display: none; }
+  .harticle .hil a.hil-tl { grid-template-columns: 8px minmax(0, 1fr) auto; row-gap: 4px; padding: 12px; }
+  .hil-tl .c { display: none; }
+  .hil-tl .d { grid-column: 2 / 4; grid-row: 2; white-space: normal; }
+}
