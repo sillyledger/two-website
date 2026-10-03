@@ -2947,3 +2947,10 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .ivx-confirm { padding-top: 40px; }
   .ivx-confirm-btns { flex-direction: column; }
 }
+
+/* Invite: headline full width, intro + form below; two lines on phones */
+.ivx-hero { grid-template-columns: 1fr; gap: 28px; }
+.ivx-hero-r { max-width: 560px; }
+@media (max-width: 860px) {
+  .ivx-hero h1, .ivx-confirm h1 { font-size: 38px; }
+}
