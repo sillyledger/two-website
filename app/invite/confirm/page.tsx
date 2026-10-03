@@ -34,7 +34,7 @@ export default async function ConfirmWaitlist({
         ) : (
           <>
             <h1 className="display">
-              This link has expired.
+              Link expired.
               <br />
               <span>Let&apos;s try again.</span>
             </h1>
