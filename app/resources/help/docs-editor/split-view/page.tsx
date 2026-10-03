@@ -28,40 +28,37 @@ export default function SplitViewArticle() {
           the left.
         </p>
 
-        <div className="svh-stage">
-          <div className="svh-panes">
-            <div className="svh-pane">
-              <div className="svh-bar"><i /><i /><i /></div>
-              <div className="svh-ln" style={{ width: "70%" }} />
-              <div className="svh-ln" style={{ width: "90%" }} />
-              <div className="svh-ln" style={{ width: "60%" }} />
-            </div>
-            <div className="svh-divider" />
-            <div className="svh-pane">
-              <div className="svh-bar"><i /><i /><i /></div>
-              <div className="svh-ln" style={{ width: "80%" }} />
-              <div className="svh-ln" style={{ width: "55%" }} />
-              <div className="svh-ln" style={{ width: "75%" }} />
-            </div>
-          </div>
-          <div className="svh-annot">
-            <div className="svh-col">
-              <div className="tick"></div>
-              <div className="line"></div>
-              <div className="lbl"><b>Left pane</b>your original doc</div>
-            </div>
-            <div className="svh-col">
-              <div className="tick"></div>
-              <div className="line"></div>
-              <div className="lbl"><b>Drag divider</b>resize either side</div>
-            </div>
-            <div className="svh-col">
-              <div className="tick"></div>
-              <div className="line"></div>
-              <div className="lbl"><b>Right pane</b>any doc or note</div>
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win">
+              <div className="hil-tabs">
+                <span className="hil-tab on">Chapter three</span>
+                <span className="hil-tab">Research notes</span>
+                <span className="hil-tb-icon on" aria-hidden="true">◫</span>
+              </div>
+              <div className="hil-split">
+                <div className="hil-pane">
+                  <b className="hil-dt">Chapter three</b>
+                  <p className="hil-tx">By the time the ferry came in, Ana had already decided not to tell anyone about the letter.</p>
+                  <div className="hil-ln" style={{ width: "88%" }} />
+                  <div className="hil-ln" style={{ width: "72%" }} />
+                </div>
+                <div className="hil-seam"><span /></div>
+                <div className="hil-pane alt">
+                  <b className="hil-dt">Research notes</b>
+                  <p className="hil-tx">Ferries run twice a day in winter.</p>
+                  <div className="hil-ln" style={{ width: "80%" }} />
+                  <div className="hil-ln clay" style={{ width: "60%" }} />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>Left pane</b>your original doc</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Drag the divider</b>give either side room</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Right pane</b>any doc or note</span></div>
+          </div>
+        </figure>
 
         <h2 className="display">Resizing panes</h2>
         <p>

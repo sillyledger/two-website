@@ -29,19 +29,26 @@ export default function CanvasArticle() {
           Zoom ranges from 25% to 250%.
         </p>
 
-        <div className="cv-stage">
-          <div className="cv-canvas">
-            <div className="cv-item doc" style={{ top: 30, left: 40 }}>Meeting Notes</div>
-            <div className="cv-item swatch" style={{ top: 90, left: 160, background: "#8f89e6" }} />
-            <div className="cv-item note" style={{ top: 20, left: 220 }}>Note</div>
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win hil-board">
+              <svg className="hil-links" viewBox="0 0 600 200" preserveAspectRatio="none" fill="none" stroke="#8f89e6" strokeWidth="1.2" aria-hidden="true">
+                <path d="M170 64 C 215 64, 215 112, 260 112" vectorEffect="non-scaling-stroke" />
+                <path d="M410 112 C 440 112, 440 72, 470 72" vectorEffect="non-scaling-stroke" />
+              </svg>
+              <div className="hil-ci c-doc"><span className="k doc">DOC</span>Client brief</div>
+              <div className="hil-ci c-note"><span className="k">NOTE</span>Quieter, like a bookshop</div>
+              <div className="hil-shape">Calm</div>
+              <div className="hil-swatch"><i /><u /></div>
+              <div className="hil-zoom">− 100% + ⟲</div>
+            </div>
           </div>
-          <div className="cv-controls">
-            <span>−</span>
-            <span>100%</span>
-            <span>+</span>
-            <span>⟲</span>
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>Pin docs and notes</b>plus text, images and shapes</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Connect</b>drag from a corner handle</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Zoom</b>25% to 250%</span></div>
           </div>
-        </div>
+        </figure>
 
         <p>Use the zoom controls in the corner to zoom in, zoom out, or reset back to 100% and centered.</p>
 

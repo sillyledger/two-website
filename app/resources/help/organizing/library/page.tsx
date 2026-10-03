@@ -32,30 +32,29 @@ export default function LibraryArticle() {
           narrows down to docs in your shared workspaces.
         </p>
 
-        <div className="lib-stage">
-          <div className="lib-search">Search library...</div>
-          <div className="lib-toggle">
-            <span className="active">Folders</span>
-            <span>Labels</span>
-          </div>
-          <div className="lib-pills">
-            <span className="lib-pill active">All</span>
-            <span className="lib-pill">Unfiled</span>
-            <span className="lib-pill">Shared</span>
-          </div>
-          <div className="lib-grid">
-            <div className="lib-tile" style={{ borderColor: "#EF9F27" }}>
-              <div className="lib-tile-ln" />
-              <div className="lib-tile-ln" style={{ width: "60%" }} />
-              <p>Roadmap</p>
-            </div>
-            <div className="lib-tile" style={{ borderColor: "#85B7EB" }}>
-              <div className="lib-tile-ln" />
-              <div className="lib-tile-ln" style={{ width: "70%" }} />
-              <p>Development</p>
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win hil-pad">
+              <div className="hil-toolbar">
+                <div className="hil-search">⌕ Search library…</div>
+                <div className="hil-seg"><span className="on">Folders</span><span>Labels</span></div>
+              </div>
+              <div className="hil-pills">
+                <span className="hil-pill on">All</span>
+                <span className="hil-pill">Unfiled</span>
+                <span className="hil-pill">Shared</span>
+              </div>
+              <p className="hil-lb gap">Clients</p>
+              <div className="hil-lr">Brief<span>Edited 2h ago</span></div>
+              <div className="hil-lr">Moodboard notes<span>Yesterday</span></div>
             </div>
           </div>
-        </div>
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>Search</b>filters what you see</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Folders or Labels</b>two ways to group</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Pills</b>All, Unfiled, Shared</span></div>
+          </div>
+        </figure>
 
         <h2 className="display">Searching your Library</h2>
         <p>

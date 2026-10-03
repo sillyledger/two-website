@@ -27,22 +27,34 @@ export default function FoldersArticle() {
           in your sidebar immediately, ready to rename.
         </p>
 
-        <div className="fd-stage">
-          <div className="fd-row">
-            <span className="fd-swatch" style={{ background: "#EF9F27" }} />
-            <span className="fd-name">Roadmap</span>
-            <span className="fd-dots">⋯</span>
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win hil-row">
+              <div className="hil-tree">
+                <div className="hil-fr">▾ <i>▢</i>Clients</div>
+                <div className="hil-fr in on">▾ <i>▢</i>Studio Kiko<span className="hil-more">···</span></div>
+                <div className="hil-fr in2"><i>▤</i>Brief</div>
+                <div className="hil-fr in2"><i>▤</i>Moodboard notes</div>
+                <div className="hil-fr">▸ <i>▢</i>Writing</div>
+                <div className="hil-pop hil-pop-folder">
+                  <div className="hil-pr">📌 Pin</div>
+                  <div className="hil-pr">Rename</div>
+                  <div className="hil-pr danger">Delete</div>
+                </div>
+              </div>
+              <div className="hil-body grow hide-sm">
+                <p className="hil-lb">Clients › Studio Kiko</p>
+                <div className="hil-ln" style={{ width: "70%" }} />
+                <div className="hil-ln" style={{ width: "55%" }} />
+              </div>
+            </div>
           </div>
-          <div className="fd-row">
-            <span className="fd-swatch" style={{ background: "#85B7EB" }} />
-            <span className="fd-name">Development</span>
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>Folders inside folders</b>as deep as you like</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>··· menu</b>pin, rename or delete</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Breadcrumbs</b>find your way back up</span></div>
           </div>
-          <div className="fd-menu">
-            <div className="fd-menu-item"><span className="fd-pin">📌</span>Pin</div>
-            <div className="fd-menu-item">Rename</div>
-            <div className="fd-menu-item danger">Delete</div>
-          </div>
-        </div>
+        </figure>
 
         <h2 className="display">Moving docs into a folder</h2>
         <p>

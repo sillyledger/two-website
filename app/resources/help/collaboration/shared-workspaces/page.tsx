@@ -41,19 +41,20 @@ export default function SharedWorkspacesArticle() {
           accept.
         </p>
 
-        <div className="wsh-stage">
-          <div className="wsh-invite">
-            <div className="wsh-invite-row">
-              <span className="wsh-input">alex@company.com</span>
-              <span className="wsh-role">Editor</span>
-            </div>
-            <div className="wsh-invite-row">
-              <span className="wsh-input">jordan@company.com</span>
-              <span className="wsh-role">Viewer</span>
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win hil-pad">
+              <b className="hil-dt sm">Invite to Studio Kiko</b>
+              <div className="hil-ir"><span>alex@company.com</span><span className="hil-role">Editor ▾</span></div>
+              <div className="hil-ir"><span>jordan@company.com</span><span className="hil-role">Viewer ▾</span></div>
+              <span className="hil-btn">Send invites</span>
             </div>
           </div>
-          <div className="wsh-send">Send invites</div>
-        </div>
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>One role each</b>admin, editor, commenter or viewer</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Separate space</b>your private one stays private</span></div>
+          </div>
+        </figure>
 
         <h2 className="display">Roles</h2>
         <p>Each person you invite gets one of four roles:</p>

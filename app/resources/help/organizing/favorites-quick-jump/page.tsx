@@ -27,16 +27,23 @@ export default function FavoritesQuickJumpArticle() {
           starred everywhere that doc shows up.
         </p>
 
-        <div className="fq-stage">
-          <div className="fq-row">
-            <div className="fq-ln" style={{ width: "60%" }} />
-            <span className="fq-star active">★</span>
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win hil-pad">
+              <div className="hil-pills">
+                <span className="hil-pill">Recent</span>
+                <span className="hil-pill on">Favorites</span>
+              </div>
+              <div className="hil-lr gap">Launch plan<span className="hil-star">★</span></div>
+              <div className="hil-lr">Chapter three<span className="hil-star">★</span></div>
+              <div className="hil-lr muted">Meeting notes<span className="hil-star off">☆</span></div>
+            </div>
           </div>
-          <div className="fq-row muted">
-            <div className="fq-ln" style={{ width: "45%" }} />
-            <span className="fq-star">☆</span>
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>Star a doc</b>hover it, click the star</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Favorites pill</b>every starred doc on Home</span></div>
           </div>
-        </div>
+        </figure>
 
         <h2 className="display">Viewing your favorites</h2>
         <p>
@@ -58,13 +65,22 @@ export default function FavoritesQuickJumpArticle() {
           folders by name. Use the arrow keys and Enter to jump straight there without touching your mouse.
         </p>
 
-        <div className="fq-stage">
-          <div className="fq-palette">
-            <div className="fq-palette-input">Jump to a doc or folder...</div>
-            <div className="fq-palette-row active">Product Roadmap</div>
-            <div className="fq-palette-row">Product Brief</div>
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win hil-pad center">
+              <div className="hil-palette">
+                <div className="hil-pr q">⌕ cha<span className="hil-caret" /><span className="hil-kbd">⌘K</span></div>
+                <div className="hil-pr on">Chapter three</div>
+                <div className="hil-pr">Chapter four</div>
+                <div className="hil-pr">Changelog notes</div>
+              </div>
+            </div>
           </div>
-        </div>
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>⌘K or Ctrl+K</b>from anywhere in the app</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Arrows and Enter</b>no mouse needed</span></div>
+          </div>
+        </figure>
 
         <div className="harticle-pn">
           <a href="/resources/help/organizing/library">← Library</a>

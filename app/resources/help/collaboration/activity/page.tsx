@@ -36,27 +36,25 @@ export default function ActivityArticle() {
           (activity from your shared workspaces).
         </p>
 
-        <div className="act-stage">
-          <div className="act-pills">
-            <span className="act-pill active">All</span>
-            <span className="act-pill">Created</span>
-            <span className="act-pill">Edited</span>
-          </div>
-          <div className="act-entry">
-            <span className="act-avatar" style={{ background: "#52e0b8" }}>P</span>
-            <div>
-              <p className="act-entry-title">You edited <b>Product Roadmap</b></p>
-              <p className="act-entry-meta">Development · 1h ago</p>
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win hil-pad">
+              <div className="hil-pills">
+                <span className="hil-pill on">All</span>
+                <span className="hil-pill">Created</span>
+                <span className="hil-pill">Edited</span>
+              </div>
+              <p className="hil-lb gap">Today</p>
+              <div className="hil-ar"><i className="hil-av">P</i><span><b>You</b> edited Product roadmap</span><span className="m">Development · 1h ago</span></div>
+              <div className="hil-ar"><i className="hil-av clay">A</i><span><b>Alex</b> edited Meeting notes</span><span className="m">Shared · 3h ago</span></div>
             </div>
           </div>
-          <div className="act-entry">
-            <span className="act-avatar" style={{ background: "#e05252" }}>A</span>
-            <div>
-              <p className="act-entry-title">Alex edited <b>Meeting Notes</b></p>
-              <p className="act-entry-meta">Shared Workspace · 3h ago</p>
-            </div>
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>Filter</b>created or edited</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Grouped by day</b>the last 30 days</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Who and when</b>not what changed</span></div>
           </div>
-        </div>
+        </figure>
 
         <h2 className="display">What Activity does and doesn&apos;t show</h2>
         <p>

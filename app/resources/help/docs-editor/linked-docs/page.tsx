@@ -28,28 +28,25 @@ export default function LinkedDocsArticle() {
           paste a regular URL if you&apos;re linking outside TWO.
         </p>
 
-        <div className="ld-stage">
-          <div className="ld-modal">
-            <p className="ld-modal-label">Insert link</p>
-            <div className="ld-input">Product Roa...</div>
-            <div className="ld-results">
-              <div className="ld-result active">
-                <span className="ld-file-icon" />
-                Product Roadmap Visual
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win rel">
+              <div className="hil-body">
+                <b className="hil-dt">Product brief</b>
+                <p className="hil-tx">The plan follows the <span className="hil-chip">→ Product roadmap</span> we agreed on in May.</p>
+                <p className="hil-tx">Link another: <span className="hil-strong">Prod</span><span className="hil-caret" /></p>
               </div>
-              <div className="ld-result">
-                <span className="ld-file-icon" />
-                Product Brief
+              <div className="hil-pop hil-pop-link">
+                <div className="hil-pr on">Product roadmap</div>
+                <div className="hil-pr">Product launch checklist</div>
               </div>
             </div>
           </div>
-          <div className="ld-arrow">→</div>
-          <div className="ld-doc">
-            <div className="ld-ln" style={{ width: "80%" }} />
-            <div className="ld-ln-link">Product Roadmap Visual</div>
-            <div className="ld-ln" style={{ width: "60%" }} />
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>Link chip</b>click to jump there</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Type to search</b>any doc in your workspace</span></div>
           </div>
-        </div>
+        </figure>
 
         <h2 className="display">Following a link</h2>
         <p>

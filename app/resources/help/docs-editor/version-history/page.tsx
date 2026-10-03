@@ -27,35 +27,30 @@ export default function VersionHistoryArticle() {
           section. A panel opens showing every saved version of that doc, grouped by day, newest first.
         </p>
 
-        <div className="vh-stage">
-          <div className="vh-menu">
-            <p className="vh-menu-label">History</p>
-            <div className="vh-menu-item"><span className="vh-menu-dot" />Version history</div>
-          </div>
-          <div className="vh-arrow">→</div>
-          <div className="vh-modal">
-            <div className="vh-modal-head">Version history</div>
-            <div className="vh-modal-body">
-              <div className="vh-list">
-                <p className="vh-day">Today</p>
-                <div className="vh-row active">
-                  <span className="vh-avatar" style={{ background: "#52e0b8" }}>P</span>
-                  1:42 PM
-                </div>
-                <div className="vh-row">
-                  <span className="vh-avatar" style={{ background: "#e05252" }}>P</span>
-                  11:05 AM
-                </div>
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win hil-row">
+              <div className="hil-list">
+                <p className="hil-lb">Today</p>
+                <div className="hil-vr on"><i className="hil-av">P</i>1:42 PM</div>
+                <div className="hil-vr"><i className="hil-av">P</i>11:05 AM</div>
+                <p className="hil-lb gap">Yesterday</p>
+                <div className="hil-vr"><i className="hil-av">P</i>4:18 PM</div>
               </div>
-              <div className="vh-preview">
-                <div className="vh-ln" style={{ width: "70%" }} />
-                <div className="vh-ln" style={{ width: "90%" }} />
-                <div className="vh-ln" style={{ width: "55%" }} />
-                <div className="vh-restore">Restore this version</div>
+              <div className="hil-body grow col">
+                <b className="hil-dt">Launch plan</b>
+                <div className="hil-ln" style={{ width: "90%" }} />
+                <div className="hil-ln" style={{ width: "76%" }} />
+                <div className="hil-ln" style={{ width: "84%" }} />
+                <span className="hil-btn">Restore this version</span>
               </div>
             </div>
           </div>
-        </div>
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>Pick a version</b>preview it on the right</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Restore</b>the current one is kept too</span></div>
+          </div>
+        </figure>
 
         <h2 className="display">Restoring a version</h2>
         <p>

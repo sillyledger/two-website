@@ -33,50 +33,29 @@ export default function MultipleTabsArticle() {
           you&apos;re currently on.
         </p>
 
-        <div className="mt-stage">
-          <div className="mt-tabbar">
-            <div className="mt-tab active">
-              <span className="mt-dot" style={{ background: "#e8a33d" }} />
-              <span className="mt-title">Product Roadmap</span>
-            </div>
-            <div className="mt-tab">
-              <span className="mt-dot" style={{ background: "#5b93e0" }} />
-              <span className="mt-title">Meeting Notes</span>
-            </div>
-            <div className="mt-tab">
-              <span className="mt-dot" style={{ background: "#5cc98f" }} />
-              <span className="mt-title">Q3 Budget</span>
-            </div>
-            <div className="mt-tab">
-              <span className="mt-dot" style={{ background: "#8f8fe0" }} />
-              <span className="mt-title">Draft Launch</span>
-            </div>
-            <div className="mt-plus">+</div>
-            <div className="mt-closeall">⛒</div>
-          </div>
-          <div className="mt-annot">
-            <div className="mt-col">
-              <div className="tick"></div>
-              <div className="line"></div>
-              <div className="lbl"><b>Colored dot</b>spot a doc at a glance</div>
-            </div>
-            <div className="mt-col">
-              <div className="tick"></div>
-              <div className="line"></div>
-              <div className="lbl"><b>Active tab</b>highlighted background</div>
-            </div>
-            <div className="mt-col">
-              <div className="tick"></div>
-              <div className="line"></div>
-              <div className="lbl"><b>Close tab</b>hover to reveal ×</div>
-            </div>
-            <div className="mt-col">
-              <div className="tick"></div>
-              <div className="line"></div>
-              <div className="lbl"><b>Close all</b>appears at 2+ tabs</div>
+        <figure className="hil">
+          <div className="hil-frame">
+            <div className="hil-win">
+              <div className="hil-tabs tall">
+                <span className="hil-tab on"><i className="hil-dot" style={{ background: "#8f89e6" }} />Product roadmap</span>
+                <span className="hil-tab hide-sm"><i className="hil-dot" style={{ background: "#c98a5e" }} />Meeting notes</span>
+                <span className="hil-tab hov"><i className="hil-dot" style={{ background: "#6ec39a" }} />Q3 budget<span className="hil-x">×</span></span>
+                <span className="hil-tab hide-sm"><i className="hil-dot" style={{ background: "#5b9bd6" }} />Launch</span>
+                <span className="hil-tb-icon push" aria-hidden="true">+</span>
+                <span className="hil-tb-icon close-all" aria-hidden="true">⊗</span>
+              </div>
+              <div className="hil-body">
+                <div className="hil-ln" style={{ width: "70%" }} />
+                <div className="hil-ln" style={{ width: "50%" }} />
+              </div>
             </div>
           </div>
-        </div>
+          <div className="hil-notes">
+            <div className="hil-note"><span className="hil-tick" /><span><b>Coloured dot</b>spot a doc at a glance</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Hover a tab</b>to reveal ×</span></div>
+            <div className="hil-note"><span className="hil-tick" /><span><b>Close all</b>appears at 2+ tabs</span></div>
+          </div>
+        </figure>
 
         <h2 className="display">Closing tabs</h2>
         <p>
