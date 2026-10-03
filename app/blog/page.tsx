@@ -1,72 +1,47 @@
-import Link from 'next/link'
 import { createClient } from '../../lib/supabase'
+import { BlogList, type BlogPost } from '@/components/blog-list'
+import { PageCta } from '@/components/page-cta'
 
 export const revalidate = 0
 
-type Post = {
-  id: string
-  title: string
-  slug: string
-  category: string | null
-  seo_description: string | null
-  published_at: string | null
-}
-
-function formatMonthYear(dateString: string) {
-  return new Date(dateString).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
-}
-
 export default async function BlogPage() {
   const supabase = createClient()
-  const { data: posts } = await supabase
+  const { data } = await supabase
     .from('posts')
     .select('id, title, slug, category, seo_description, published_at')
     .eq('target_site', 'two.so')
     .eq('status', 'published')
     .order('published_at', { ascending: false })
 
-  const featured = posts?.[0] ?? null
-  const rest = posts?.slice(1) ?? []
+  const posts: BlogPost[] = data ?? []
 
   return (
     <div className="features-frame">
-      <section className="bl-hero">
-        <p className="micro">Blog</p>
-        <h1 className="display">Thoughts on writing.<br />And building TWO.</h1>
-        <p className="body-copy">Ideas on collaboration, focus, and the tools we use to think.</p>
+      <section className="bx-hero">
+        <div>
+          <p className="micro">Blog</p>
+          <h1 className="display">
+            Notes on writing.
+            <br />
+            <span>And building TWO.</span>
+          </h1>
+        </div>
+        <p className="bx-hero-p">Ideas on writing, focus, and the tools we use to think. New posts every few weeks.</p>
       </section>
 
-      {!posts || posts.length === 0 ? (
-        <div className="bl-empty">No posts yet. Check back soon.</div>
+      {posts.length === 0 ? (
+        <p className="bx-empty">No posts yet. Check back soon.</p>
       ) : (
-        <>
-          {featured && (
-            <Link href={`/blog/${featured.slug}`} className="bl-featured">
-              {featured.category && <span className="bl-cat">{featured.category}</span>}
-              <div className="bl-title display">{featured.title}</div>
-              {featured.seo_description && <p className="bl-desc">{featured.seo_description}</p>}
-              {featured.published_at && <p className="bl-meta">{formatMonthYear(featured.published_at)}</p>}
-            </Link>
-          )}
-
-          <div className="bl-index">
-            {rest.map((post, i) => (
-              <div key={post.id} className="bl-item">
-                <div className="bl-rail">
-                  <span className="bl-num">{String(i + 1).padStart(2, "0")}</span>
-                  <span className="bl-dot"></span>
-                </div>
-                <Link href={`/blog/${post.slug}`} className="bl-item-link bl-content">
-                  {post.category && <span className="bl-cat">{post.category}</span>}
-                  <div className="bl-title display">{post.title}</div>
-                  {post.seo_description && <p className="bl-desc">{post.seo_description}</p>}
-                  {post.published_at && <p className="bl-meta">{formatMonthYear(post.published_at)}</p>}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </>
+        <BlogList posts={posts} />
       )}
+
+      <PageCta
+        title="Done reading?"
+        subtitle="Write something of your own."
+        primary={{ label: 'Start writing free', href: 'https://app.two.so/signup' }}
+        secondary={{ label: 'See how it works', href: '/demo' }}
+        note="Free for 30 docs. No AI, nothing to set up."
+      />
     </div>
   )
 }
