@@ -2954,3 +2954,52 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
 @media (max-width: 860px) {
   .ivx-hero h1, .ivx-confirm h1 { font-size: 38px; }
 }
+
+/* ============ CONTACT PAGE (cx-) ============ */
+.cx-hero { padding-top: 36px; }
+.cx-hero h1 { font-size: 80px; line-height: 1.02; letter-spacing: -0.035em; margin: 20px 0 0; }
+.cx-hero h1 span { color: #6a6a74; }
+
+.cx-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 72px; align-items: start; margin-top: 64px; }
+.cx-card { padding: 36px; border-radius: 18px; background: var(--bg-card); border: 1px solid var(--border); }
+.cx-email { display: inline-block; font-size: 40px; letter-spacing: -0.03em; line-height: 1.1; color: #c4b8ff; text-decoration: none; margin-top: 16px; word-break: break-all; }
+.cx-email:hover { color: var(--text-primary); }
+.cx-note { font-size: 14.5px; color: var(--text-muted); margin: 12px 0 0; }
+.cx-btns { display: flex; gap: 10px; margin-top: 26px; }
+.cx-btn { display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0 20px; border-radius: 10px; font-size: 14.5px; font-weight: 500; text-decoration: none; white-space: nowrap; font-family: inherit; cursor: pointer; box-sizing: border-box; }
+.cx-btn.solid { background: var(--text-primary); color: var(--bg); border: 0; }
+.cx-btn.outline { background: transparent; border: 1px solid var(--border-strong); color: var(--text-primary); }
+
+.cx-routes-label { margin: 0 0 8px; }
+.cx-route { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: 16px; align-items: center; padding: 20px 0; border-top: 1px solid var(--border); color: var(--text-primary); text-decoration: none; }
+.cx-route:last-of-type { border-bottom: 1px solid var(--border); }
+.cx-ic { width: 36px; height: 36px; border-radius: 10px; background: var(--bg-card); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
+.cx-txt b { display: block; font-size: 16px; font-weight: 500; }
+.cx-txt span { display: block; font-size: 14px; color: var(--text-muted); margin-top: 3px; line-height: 1.5; }
+.cx-go { font-size: 13.5px; color: #c4b8ff; white-space: nowrap; }
+.cx-route:hover .cx-go { color: var(--text-primary); }
+.cx-roadmap { font-size: 13.5px; color: #8a8a92; margin: 18px 0 0; }
+.cx-roadmap a { color: #c4b8ff; text-decoration: none; }
+.cx-roadmap a:hover { color: var(--text-primary); }
+
+@media (max-width: 1100px) {
+  .cx-hero h1 { font-size: 64px; }
+}
+
+@media (max-width: 860px) {
+  .cx-hero { padding-top: 8px; }
+  .cx-hero h1 { font-size: 44px; margin-top: 14px; }
+  .cx-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 32px; }
+  .cx-card { padding: 22px; border-radius: 16px; }
+  .cx-email { font-size: 30px; margin-top: 12px; }
+  .cx-btns { flex-direction: column; }
+  .cx-btn { width: 100%; height: 48px; }
+  .cx-route { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 16px 0; }
+  .cx-ic { display: none; }
+}
+
+/* Phone headlines: two lines down to 360px screens */
+@media (max-width: 860px) {
+  .cx-hero h1 { font-size: 36px; }
+  .ivx-hero h1, .ivx-confirm h1 { font-size: 36px; }
+}
