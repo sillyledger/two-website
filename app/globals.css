@@ -2742,3 +2742,6 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .hil-tl .c { display: none; }
   .hil-tl .d { grid-column: 2 / 4; grid-row: 2; white-space: normal; }
 }
+
+/* Templates article: full descriptions on desktop */
+.hil-tl .d { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.45; }
