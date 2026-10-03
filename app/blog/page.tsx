@@ -37,7 +37,7 @@ export default async function BlogPage() {
 
       <PageCta
         title="Done reading?"
-        subtitle="Write something of your own."
+        subtitle="Write your own."
         primary={{ label: 'Start writing free', href: 'https://app.two.so/signup' }}
         secondary={{ label: 'See how it works', href: '/demo' }}
         note="Free for 30 docs. No AI, nothing to set up."

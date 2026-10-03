@@ -2851,3 +2851,7 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .bx-row-t { font-size: 18px; }
   .bx-row-d { font-size: 14px; margin-top: 6px; }
 }
+
+/* Blog index: headline full width, intro below */
+.bx-hero { grid-template-columns: 1fr; gap: 24px; }
+.bx-hero-p { max-width: 560px; }
