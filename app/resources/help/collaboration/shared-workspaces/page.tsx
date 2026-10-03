@@ -30,8 +30,8 @@ export default function SharedWorkspacesArticle() {
         <h2 className="display">Creating a shared workspace</h2>
         <p>
           Click the <b>+</b> next to <b>Shared workspaces</b>{" "}
-          in your sidebar and give it a name. It works just like your private workspace — folders, docs, and
-          everything else — except anyone you invite can see and edit inside it too.
+          in your sidebar and give it a name. It works just like your private workspace, folders, docs, and
+          everything else, except anyone you invite can see and edit inside it too.
         </p>
 
         <h2 className="display">Inviting people</h2>
@@ -58,16 +58,16 @@ export default function SharedWorkspacesArticle() {
         <h2 className="display">Roles</h2>
         <p>Each person you invite gets one of four roles:</p>
         <ul>
-          <li><b>Admin</b> — full edit access, plus can invite and manage other members.</li>
-          <li><b>Editor</b> — can create and edit docs and folders in the workspace.</li>
-          <li><b>Commenter</b> — can view and comment, without editing doc content.</li>
-          <li><b>Viewer</b> — read-only access to everything in the workspace.</li>
+          <li><b>Admin</b>: full edit access, plus can invite and manage other members.</li>
+          <li><b>Editor</b>: can create and edit docs and folders in the workspace.</li>
+          <li><b>Commenter</b>: can view and comment, without editing doc content.</li>
+          <li><b>Viewer</b>: read-only access to everything in the workspace.</li>
         </ul>
 
         <h2 className="display">Member limit</h2>
         <p>
           Right now, every shared workspace supports up to <b>2 invited members</b>{", "}
-          regardless of plan — this applies whether you&apos;re on Pro or Founding. If you need more seats than
+          regardless of plan. This applies whether you&apos;re on Pro or Founding. If you need more seats than
           that today, reach out and let us know; team size limits are something we&apos;re actively reviewing.
         </p>
 

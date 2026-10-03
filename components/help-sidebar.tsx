@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const NAV = {
   gs: {
     label: "Getting Started",
@@ -48,94 +52,55 @@ const NAV = {
 };
 
 export function HelpSidebar({ activeHref }: { activeHref: string }) {
+  const [open, setOpen] = useState(false);
+
+  const GROUPS = [
+    { cls: "gs", group: NAV.gs },
+    { cls: "docs", group: NAV.docs },
+    { cls: "organizing", group: NAV.organizing },
+    { cls: "collaboration", group: NAV.collaboration },
+    { cls: "studio", group: NAV.studio },
+    { cls: "account", group: NAV.account },
+  ];
+
+  let currentLabel = "Browse articles";
+  for (const g of GROUPS) {
+    const hit = g.group.links.find((l) => l.href === activeHref);
+    if (hit) currentLabel = `${g.group.label} · ${hit.title}`;
+  }
+
   return (
     <aside className="hsb">
       <a href="/resources/help" className="hsb-back">
         ← Help Center
       </a>
 
-      <div className="hsb-group gs">
-        <div className="hsb-group-head">
-          <span className="hsb-dot" />
-          <span className="hsb-group-label">{NAV.gs.label}</span>
-        </div>
-        <div className="hsb-links">
-          {NAV.gs.links.map((l) => (
-            <a href={l.href} className={`hsb-link${l.href === activeHref ? " active" : ""}`} key={l.href}>
-              {l.title}
-            </a>
-          ))}
-        </div>
-      </div>
+      <button
+        type="button"
+        className="hsb-toggle"
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}
+      >
+        <span>{currentLabel}</span>
+        <span className="hsb-caret" aria-hidden="true">{open ? "▴" : "▾"}</span>
+      </button>
 
-      <div className="hsb-group docs">
-        <div className="hsb-group-head">
-          <span className="hsb-dot" />
-          <span className="hsb-group-label">{NAV.docs.label}</span>
-        </div>
-        <div className="hsb-links">
-          {NAV.docs.links.map((l) => (
-            <a href={l.href} className={`hsb-link${l.href === activeHref ? " active" : ""}`} key={l.href}>
-              {l.title}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div className="hsb-group organizing">
-        <div className="hsb-group-head">
-          <span className="hsb-dot" />
-          <span className="hsb-group-label">{NAV.organizing.label}</span>
-        </div>
-        <div className="hsb-links">
-          {NAV.organizing.links.map((l) => (
-            <a href={l.href} className={`hsb-link${l.href === activeHref ? " active" : ""}`} key={l.href}>
-              {l.title}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div className="hsb-group collaboration">
-        <div className="hsb-group-head">
-          <span className="hsb-dot" />
-          <span className="hsb-group-label">{NAV.collaboration.label}</span>
-        </div>
-        <div className="hsb-links">
-          {NAV.collaboration.links.map((l) => (
-            <a href={l.href} className={`hsb-link${l.href === activeHref ? " active" : ""}`} key={l.href}>
-              {l.title}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div className="hsb-group studio">
-        <div className="hsb-group-head">
-          <span className="hsb-dot" />
-          <span className="hsb-group-label">{NAV.studio.label}</span>
-        </div>
-        <div className="hsb-links">
-          {NAV.studio.links.map((l) => (
-            <a href={l.href} className={`hsb-link${l.href === activeHref ? " active" : ""}`} key={l.href}>
-              {l.title}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <div className="hsb-group account">
-        <div className="hsb-group-head">
-          <span className="hsb-dot" />
-          <span className="hsb-group-label">{NAV.account.label}</span>
-        </div>
-        <div className="hsb-links">
-          {NAV.account.links.map((l) => (
-            <a href={l.href} className={`hsb-link${l.href === activeHref ? " active" : ""}`} key={l.href}>
-              {l.title}
-            </a>
-          ))}
-        </div>
+      <div className={`hsb-groups${open ? " open" : ""}`}>
+        {GROUPS.map((g) => (
+          <div className={`hsb-group ${g.cls}`} key={g.cls}>
+            <div className="hsb-group-head">
+              <span className="hsb-dot" />
+              <span className="hsb-group-label">{g.group.label}</span>
+            </div>
+            <div className="hsb-links">
+              {g.group.links.map((l) => (
+                <a href={l.href} className={`hsb-link${l.href === activeHref ? " active" : ""}`} key={l.href}>
+                  {l.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </aside>
   );

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 const ARTICLES: { title: string; desc: string; href: string }[] = [
   {
     title: "Formatting",
-    desc: "Headers, bold, lists, code blocks — everything the editor supports.",
+    desc: "Headers, bold, lists, code blocks: everything the editor supports.",
     href: "/resources/help/docs-editor/formatting",
   },
   {
@@ -43,7 +43,7 @@ export default function DocsEditorCategoryPage() {
         <div className="hc-cat-mark" style={{ background: "var(--clay)" }} />
         <p className="micro">Docs &amp; Editor</p>
         <h1 className="display">Writing and formatting in TWO.</h1>
-        <p>Everything about the editor — headers, links, code blocks, and more.</p>
+        <p>Everything about the editor: headers, links, code blocks, and more.</p>
       </section>
 
       <div className="hcat-list">

@@ -17,7 +17,7 @@ const ARTICLES: { title: string; desc: string; href: string }[] = [
   },
   {
     title: "Using TWO as a web app",
-    desc: "Add TWO to your home screen and use it like a native app right in your browser — no App Store required.",
+    desc: "Add TWO to your home screen and use it like a native app right in your browser. No App Store required.",
     href: "/resources/help/getting-started/using-two-as-a-web-app",
   },
 ];

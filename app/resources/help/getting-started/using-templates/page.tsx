@@ -48,7 +48,7 @@ export default function UsingTemplatesArticle() {
             <div className="tp-card-body">
               <p className="tp-cat-label">Business</p>
               <p className="tp-card-title">Meeting notes</p>
-              <p className="tp-card-desc">Agenda, decisions, and action items — all in one structured doc.</p>
+              <p className="tp-card-desc">Agenda, decisions, and action items, all in one structured doc.</p>
               <span className="tp-use">Use template →</span>
             </div>
           </a>
@@ -78,7 +78,7 @@ export default function UsingTemplatesArticle() {
             <div className="tp-card-body">
               <p className="tp-cat-label">Strategy</p>
               <p className="tp-card-title">Product brief</p>
-              <p className="tp-card-desc">Problem, users, goals, scope, and risk — in one tight doc.</p>
+              <p className="tp-card-desc">Problem, users, goals, scope, and risk, in one tight doc.</p>
               <span className="tp-use">Use template →</span>
             </div>
           </a>
@@ -93,7 +93,7 @@ export default function UsingTemplatesArticle() {
             <div className="tp-card-body">
               <p className="tp-cat-label">Personal</p>
               <p className="tp-card-title">Weekly review</p>
-              <p className="tp-card-desc">Wins, blockers, priorities, and metrics — every week, sorted.</p>
+              <p className="tp-card-desc">Wins, blockers, priorities, and metrics. Every week, sorted.</p>
               <span className="tp-use">Use template →</span>
             </div>
           </a>
@@ -108,7 +108,7 @@ export default function UsingTemplatesArticle() {
             <div className="tp-card-body">
               <p className="tp-cat-label">Strategy</p>
               <p className="tp-card-title">OKR tracker</p>
-              <p className="tp-card-desc">Three objectives, key results, and progress targets — all tracked.</p>
+              <p className="tp-card-desc">Three objectives, key results, and progress targets, all tracked.</p>
               <span className="tp-use">Use template →</span>
             </div>
           </a>
@@ -123,7 +123,7 @@ export default function UsingTemplatesArticle() {
             <div className="tp-card-body">
               <p className="tp-cat-label">Research</p>
               <p className="tp-card-title">Competitor analysis</p>
-              <p className="tp-card-desc">Compare competitors side by side — strengths, weaknesses, and pricing.</p>
+              <p className="tp-card-desc">Compare competitors side by side: strengths, weaknesses, and pricing.</p>
               <span className="tp-use">Use template →</span>
             </div>
           </a>
@@ -131,11 +131,11 @@ export default function UsingTemplatesArticle() {
 
         <a href="/resources/templates" className="btn-dark htpl-cta">See all templates →</a>
 
-        <p>Need a blank doc instead? Just click <b>+ New Doc</b> from your dashboard — no template required.</p>
+        <p>Need a blank doc instead? Just click <b>+ New Doc</b> from your dashboard. No template required.</p>
 
         <h2 className="display">Using a template</h2>
         <p>
-          Click any template to open it instantly as a new doc. The structure is already in place — just replace
+          Click any template to open it instantly as a new doc. The structure is already in place. Just replace
           the placeholder content with your own and start writing.
         </p>
 

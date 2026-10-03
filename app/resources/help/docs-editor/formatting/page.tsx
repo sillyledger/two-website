@@ -18,16 +18,16 @@ export default function FormattingArticle() {
 
         <p>
           TWO&apos;s editor supports rich text formatting that keeps your docs clean and readable. Everything is
-          accessible from the toolbar at the top of the editor — no markdown required, though shortcuts are
+          accessible from the toolbar at the top of the editor. No markdown required, though shortcuts are
           supported too.
         </p>
 
         <h2 className="display">Headings</h2>
         <p>Use headings to structure longer documents. TWO supports three levels:</p>
         <ul>
-          <li><b>H1</b> — Large section heading. Best used once per doc as the main title of a section.</li>
-          <li><b>H2</b> — Medium heading. Great for breaking a doc into clear parts.</li>
-          <li><b>H3</b> — Small heading. Useful for sub-sections within a larger section.</li>
+          <li><b>H1</b>: Large section heading. Best used once per doc as the main title of a section.</li>
+          <li><b>H2</b>: Medium heading. Great for breaking a doc into clear parts.</li>
+          <li><b>H3</b>: Small heading. Useful for sub-sections within a larger section.</li>
         </ul>
         <p>Click the H1, H2, or H3 button in the toolbar, or select your text first then apply the style.</p>
 
@@ -39,14 +39,14 @@ export default function FormattingArticle() {
         </ul>
 
         <h2 className="display">Strikethrough</h2>
-        <p>Cross out text without deleting it — useful for showing something is done or no longer relevant. Select your text and click the strikethrough button in the toolbar.</p>
+        <p>Cross out text without deleting it, useful for showing something is done or no longer relevant. Select your text and click the strikethrough button in the toolbar.</p>
 
         <h2 className="display">Lists</h2>
         <p>TWO supports three types of lists:</p>
         <ul>
-          <li><b>Bullet list</b> — for unordered items. Click the bullet list icon in the toolbar.</li>
-          <li><b>Numbered list</b> — for ordered steps or rankings. Click the numbered list icon.</li>
-          <li><b>Task list</b> — for to-dos with checkboxes. Click the task list icon to insert a checklist. Click any checkbox to mark it done.</li>
+          <li><b>Bullet list</b>: for unordered items. Click the bullet list icon in the toolbar.</li>
+          <li><b>Numbered list</b>: for ordered steps or rankings. Click the numbered list icon.</li>
+          <li><b>Task list</b>: for to-dos with checkboxes. Click the task list icon to insert a checklist. Click any checkbox to mark it done.</li>
         </ul>
         <p>Press <b>Enter</b> to add a new list item, <b>Tab</b> to indent, and <b>Enter</b> twice to exit the list.</p>
 
@@ -59,7 +59,7 @@ export default function FormattingArticle() {
         </ul>
 
         <h2 className="display">Callouts</h2>
-        <p>Use callouts to highlight important information — tips, warnings, or key takeaways. Click the callout icon in the toolbar to insert a callout block, then type your message inside it.</p>
+        <p>Use callouts to highlight important information: tips, warnings, or key takeaways. Click the callout icon in the toolbar to insert a callout block, then type your message inside it.</p>
         <div className="harticle-tip">
           <p><b>Tip:</b> Callouts stand out visually from the rest of your doc, making them ideal for anything you want readers to notice at a glance.</p>
         </div>
@@ -70,8 +70,8 @@ export default function FormattingArticle() {
         <h2 className="display">Code</h2>
         <p>TWO supports two types of code formatting:</p>
         <ul>
-          <li><b>Inline code</b> — for short snippets within a sentence. Highlight text and click the inline code icon.</li>
-          <li><b>Code block</b> — for multi-line code. Click the code block icon in the toolbar to insert a full block.</li>
+          <li><b>Inline code</b>: for short snippets within a sentence. Highlight text and click the inline code icon.</li>
+          <li><b>Code block</b>: for multi-line code. Click the code block icon in the toolbar to insert a full block.</li>
         </ul>
 
         <h2 className="display">Blockquote</h2>

@@ -17,8 +17,8 @@ export default function LibraryArticle() {
         <p className="harticle-meta">2 min read · Last updated Aug 2026</p>
 
         <p>
-          Library is the one place that shows everything you&apos;ve written — across every folder and every
-          workspace, personal and shared — so you never have to remember exactly where a doc lives.
+          Library is the one place that shows everything you&apos;ve written, across every folder and every
+          workspace, personal and shared, so you never have to remember exactly where a doc lives.
         </p>
 
         <h2 className="display">Grouping and filtering</h2>
@@ -60,7 +60,7 @@ export default function LibraryArticle() {
         <h2 className="display">Searching your Library</h2>
         <p>
           The search bar at the top filters by title as you type, across whatever grouping and pill you currently
-          have selected — so a search under <b>Shared</b>{" "}
+          have selected, so a search under <b>Shared</b>{" "}
           only searches your shared docs, not everything.
         </p>
 
@@ -73,7 +73,7 @@ export default function LibraryArticle() {
         <div className="harticle-tip">
           <p><b>Tip:</b>{" "}
           If a doc feels hard to find, it&apos;s usually sitting in whichever grouping mode you aren&apos;t
-          currently viewing — try switching between Folders and Labels before assuming it&apos;s missing.</p>
+          currently viewing. Try switching between Folders and Labels before assuming it&apos;s missing.</p>
         </div>
 
         <div className="harticle-pn">

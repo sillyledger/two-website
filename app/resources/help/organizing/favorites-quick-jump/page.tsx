@@ -46,7 +46,7 @@ export default function FavoritesQuickJumpArticle() {
 
         <div className="harticle-tip">
           <p><b>Tip:</b>{" "}
-          The sidebar also has a section labeled &quot;Favorites&quot; — that&apos;s a different feature. It
+          The sidebar also has a section labeled &quot;Favorites&quot;. That&apos;s a different feature. It
           shows folders you&apos;ve pinned, not starred docs. Starred docs only live under the Favorites pill on
           Home.</p>
         </div>
@@ -55,7 +55,7 @@ export default function FavoritesQuickJumpArticle() {
         <p>
           Press <b>⌘K</b> (or <b>Ctrl+K</b>{" "}
           on Windows) from anywhere in the app to open Quick Jump. Start typing and it searches your docs and
-          folders by name — use the arrow keys and Enter to jump straight there without touching your mouse.
+          folders by name. Use the arrow keys and Enter to jump straight there without touching your mouse.
         </p>
 
         <div className="fq-stage">

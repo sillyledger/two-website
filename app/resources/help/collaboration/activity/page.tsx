@@ -17,8 +17,8 @@ export default function ActivityArticle() {
         <p className="harticle-meta">2 min read · Last updated Aug 2026</p>
 
         <p>
-          Activity shows everything you&apos;ve touched in the last 30 days — and in shared workspaces, everything
-          your teammates have touched too — as a single timeline, grouped by day.
+          Activity shows everything you&apos;ve touched in the last 30 days, and in shared workspaces, everything
+          your teammates have touched too, as a single timeline, grouped by day.
         </p>
 
         <h2 className="display">Filtering by type</h2>
@@ -60,7 +60,7 @@ export default function ActivityArticle() {
 
         <h2 className="display">What Activity does and doesn&apos;t show</h2>
         <p>
-          Each entry tells you who touched a doc and when — it doesn&apos;t show you what changed inside it. To
+          Each entry tells you who touched a doc and when. It doesn&apos;t show you what changed inside it. To
           see the actual content of a past state, use version history on that specific doc instead.
         </p>
 
