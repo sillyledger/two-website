@@ -49,7 +49,7 @@ export default function WaitlistForm() {
           aria-label="Email address"
         />
         <button type="submit" disabled={status === "loading"}>
-          {status === "loading" ? "Joining..." : "Join waitlist"}
+          {status === "loading" ? "Joining..." : "Join the beta"}
         </button>
       </form>
       {status === "error" && <p className="inv-error">{error}</p>}

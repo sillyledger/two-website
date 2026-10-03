@@ -15,23 +15,36 @@ export default async function ConfirmWaitlist({
   const isSuccess = status === "success"
 
   return (
-    <div className="inv-frame">
-      <span className="inv-badge">Founding beta</span>
-      <div className="inv-head">
+    <div className="features-frame ivx">
+      <section className="ivx-confirm">
+        <p className="micro ivx-eyebrow">Founding beta</p>
         {isSuccess ? (
           <>
-            <h1 className="display">You&apos;re confirmed.</h1>
+            <h1 className="display">
+              You&apos;re confirmed.
+              <br />
+              <span>Welcome in.</span>
+            </h1>
             <p>Welcome to the founding beta. We&apos;ll email you when your invite opens.</p>
-            <Link href="/" className="inv-link">Back to homepage</Link>
+            <div className="ivx-confirm-btns">
+              <Link href="/demo" className="ivx-btn solid">Try the live demo</Link>
+              <Link href="/" className="ivx-btn outline">Back to homepage</Link>
+            </div>
           </>
         ) : (
           <>
-            <h1 className="display">This link is invalid or has expired.</h1>
-            <p>Confirm links expire after 48 hours.</p>
-            <Link href="/invite" className="inv-link">Try again</Link>
+            <h1 className="display">
+              This link has expired.
+              <br />
+              <span>Let&apos;s try again.</span>
+            </h1>
+            <p>Confirm links expire after 48 hours, or this one may be invalid. Join again and we&apos;ll send a fresh link.</p>
+            <div className="ivx-confirm-btns">
+              <Link href="/invite" className="ivx-btn solid">Try again</Link>
+            </div>
           </>
         )}
-      </div>
+      </section>
     </div>
   )
 }
