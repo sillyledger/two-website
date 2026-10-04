@@ -1,211 +1,136 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { LiveCoEditDemo, InviteDemo } from "@/components/shared-demos";
+import { PageCta } from "@/components/page-cta";
 
 export const metadata: Metadata = {
   title: "Shared Workspaces: Real-Time Team Collaboration | TWO",
 };
 
-const MEMBERS = [
-  { initial: "P", bg: "#3C3489", color: "#CECBF6", name: "Pieter", email: "hey@two.so", role: "Owner" },
-  { initial: "S", bg: "#085041", color: "#9FE1CB", name: "Sarah", email: "sarah@company.com", role: "Editor" },
-  { initial: "M", bg: "#633806", color: "#FAC775", name: "Mark", email: "mark@company.com", role: "Viewer" },
+const USES = [
+  { t: "Client work", d: "Share briefs and drafts with a client as a Viewer or Commenter. They see exactly what you choose." },
+  { t: "Co-writing", d: "Two people in one doc, editing at the same time, changes showing up live." },
+  { t: "Feedback rounds", d: "Invite a reviewer as a Commenter. They can respond without changing your words." },
+  { t: "A side project with a friend", d: "One shared space for the plan, the notes and the drafts. Your private work stays separate." },
 ];
 
 const STEPS = [
-  {
-    t: "Invite by email",
-    d: "Add anyone to your workspace in seconds. They get a link, click it, and they're in.",
-  },
-  {
-    t: "Set their role",
-    d: "Owner, Editor, or Viewer. Control who can write and who can only read.",
-  },
-  {
-    t: "Write together, live",
-    d: "See who's in the doc right now. Coloured cursors show exactly where each person is writing.",
-  },
+  { n: "01", t: "Create a shared workspace", d: "Separate from your private one. Name it after the project." },
+  { n: "02", t: "Invite by email", d: "Give each person a role: Editor, Commenter or Viewer." },
+  { n: "03", t: "Write together, live", d: "See who else is in a doc and watch their edits appear as they type." },
 ];
 
 const SPECS = [
-  { label: "Roles", value: "Owner, Editor, Viewer" },
-  { label: "Invites", value: "By email, instant" },
-  { label: "Presence", value: "Live, colour-coded cursors" },
-  { label: "Guest access", value: "Per-doc, no full access" },
-  { label: "Availability", value: "Pro and Team plans" },
-];
-
-const USES = [
-  {
-    title: "Team knowledge base",
-    desc: "One place for everything your team needs to know: processes, decisions, references. Always up to date.",
-  },
-  {
-    title: "Client deliverables",
-    desc: "Invite clients as Viewers to share briefs and reports. Professional, polished, no extra tools needed.",
-  },
-  {
-    title: "Co-writing in real time",
-    desc: "Two people, one doc, editing simultaneously. No conflicts, no overwriting, just fluid collaboration.",
-  },
-  {
-    title: "Guest access",
-    desc: "Bring in a freelancer or external collaborator without giving them access to your whole workspace.",
-  },
+  { label: "Roles", value: "Editor, Commenter, Viewer" },
+  { label: "Invites", value: "By email, sent by the workspace owner" },
+  { label: "Presence", value: "See who else is viewing a doc" },
+  { label: "Editing", value: "Live, changes appear as people type" },
+  { label: "Members on Pro", value: "2 invited people per shared workspace" },
+  { label: "Members on Team", value: "Up to 10 (coming soon)" },
+  { label: "Your private workspace", value: "Always stays private" },
+  { label: "Price", value: "Flat. Inviting someone never changes your bill." },
 ];
 
 export default function SharedWorkspacesPage() {
   return (
     <div className="features-frame">
-      <div className="bc">
-        <a href="/product/features">Features</a>
-        <span>/</span>
-        <span className="cur">Shared Workspaces</span>
-      </div>
-
-      <h1 className="display hero-title">
-        Your team,
-        <br />
-        one workspace.
-      </h1>
-
-      <div className="hero-cols">
+      <section className="swx-hero">
+        <div className="swx-crumbs">
+          <Link href="/product/features">Features</Link>
+          <span>/</span>
+          <span className="cur">Shared workspaces</span>
+          <span className="swx-tag">Pro</span>
+        </div>
+        <h1 className="display">
+          Write together.
+          <br />
+          <span>Only if you want.</span>
+        </h1>
         <p>
-          Invite teammates or guests in seconds. Everyone works from the same space, no emailing files, no version
-          confusion.
+          Open a shared workspace for a project, invite someone by email, and write in the same doc at the same time.
+          Every change shows up on their screen as you type. Your own workspace stays private.
         </p>
-        <p>See who&apos;s online, watch edits happen live, and keep your whole team on the same page. Literally.</p>
-      </div>
+      </section>
 
-      <div className="ws-stage">
-        <div className="leader la3">
-          <div className="tick"></div>
-          <div className="line"></div>
-          <div className="lbl">
-            Live presence: <b>see who&apos;s here</b>
-          </div>
-        </div>
+      <section className="swx-live-wrap">
+        <LiveCoEditDemo />
+      </section>
 
-        <div className="ws-invite-card">
-          <div className="ws-card-bar">Invite to workspace</div>
-          <div className="ws-card-body">
-            <p className="ws-field-label">Add people</p>
-            <div className="ws-invite-row">
-              <span className="email">sarah@company.com</span>
-              <span className="role">Editor</span>
-            </div>
-            <div className="ws-invite-row">
-              <span className="email">mark@company.com</span>
-              <span className="role">Viewer</span>
-            </div>
-            <div className="ws-invite-btn">Send invites</div>
-
-            <p className="ws-members-label">Members · 4</p>
-            {MEMBERS.map((m) => (
-              <div className="ws-member-row" key={m.name}>
-                <div className="ws-avatar" style={{ background: m.bg, color: m.color }}>
-                  {m.initial}
-                </div>
-                <div>
-                  <div className="ws-member-name">{m.name}</div>
-                  <div className="ws-member-email">{m.email}</div>
-                </div>
-                <div className="ws-member-role">{m.role}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="ws-doc-side">
-          <div className="ws-doc-bar">
-            <div className="ws-doc-title">Q3 Strategy: Draft</div>
-            <div className="ws-presence">
-              <div className="ws-avatar" style={{ background: "#3C3489", color: "#CECBF6" }}>
-                P
-              </div>
-              <div className="ws-avatar" style={{ background: "#085041", color: "#9FE1CB" }}>
-                S
-              </div>
-            </div>
-          </div>
-          <div className="ws-doc-content">
-            <div className="ws-dline hi" style={{ width: "88%" }}></div>
-            <div className="ws-dline" style={{ width: "72%" }}></div>
-            <div className="ws-dline hi" style={{ width: "65%" }}></div>
-            <div className="ws-dline" style={{ width: "80%" }}></div>
-            <div className="ws-cursor-block">
-              <div className="ws-cursor-label" style={{ background: "#3C3489", color: "#CECBF6" }}>
-                Pieter
-              </div>
-              <div className="ws-dline hi" style={{ width: "38%", flexShrink: 0 }}></div>
-              <div className="ws-inline-cursor" style={{ background: "#7F77DD" }}></div>
-            </div>
-            <div className="ws-dline" style={{ width: "77%" }}></div>
-            <div className="ws-dline hi" style={{ width: "44%" }}></div>
-            <div className="ws-cursor-block">
-              <div className="ws-cursor-label" style={{ background: "#085041", color: "#9FE1CB" }}>
-                Sarah
-              </div>
-              <div className="ws-dline hi" style={{ width: "50%", flexShrink: 0 }}></div>
-              <div className="ws-inline-cursor" style={{ background: "#1D9E75" }}></div>
-            </div>
-            <div className="ws-dline" style={{ width: "59%" }}></div>
-            <div className="ws-dline hi" style={{ width: "83%" }}></div>
-          </div>
-        </div>
-      </div>
-
-      <div className="bottom-bar ws-bottom-bar">
+      <section className="swx-section swx-invite">
         <div>
-          <span className="k">Availability</span>
-          <span className="v">Pro and Team plans</span>
+          <p className="micro">Invite</p>
+          <h2 className="display">
+            Pick who joins.
+            <br />
+            Pick what they do.
+          </h2>
+          <p className="swx-sub">
+            Invite by email and give each person a role. Only the workspace owner can invite, and your private
+            workspace is never part of it.
+          </p>
         </div>
-      </div>
+        <InviteDemo />
+      </section>
 
-      <div className="split">
+      <section className="swx-section swx-two">
         <div>
-          <p className="how-title">How it works</p>
-          <div className="steps">
-            {STEPS.map((step, i) => (
-              <div key={step.t} className={`step${i === 0 ? " active" : ""}`}>
-                <p className="t">{step.t}</p>
-                <p className="d">{step.d}</p>
-              </div>
-            ))}
-          </div>
+          <p className="micro">Made for</p>
+          <h2 className="display">
+            A few people.
+            <br />
+            One project.
+          </h2>
         </div>
-        <div>
-          <p className="ws-spec-title">Details</p>
-          {SPECS.map((spec) => (
-            <div key={spec.label} className="ws-spec-row">
-              <span className="label">{spec.label}</span>
-              <span className="value">{spec.value}</span>
+        <div className="swx-uses">
+          {USES.map((u) => (
+            <div className="swx-use" key={u.t}>
+              <b>{u.t}</b>
+              <span>{u.d}</span>
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      <div className="dark-strip">
-        <p className="micro">Built for small teams</p>
-        <h2 className="display dark-title">How teams use shared workspaces.</h2>
-        <div className="uses">
-          {USES.map((use) => (
-            <div key={use.title} className="use">
-              <span className="use-arrow">→</span>
-              <div>
-                <p className="use-title">{use.title}</p>
-                <p className="use-desc">{use.desc}</p>
-              </div>
+      <section className="swx-section">
+        <p className="micro">How it works</p>
+        <div className="swx-steps">
+          {STEPS.map((s, i) => (
+            <div className="swx-step" key={s.n}>
+              <span className={`swx-node${i === 0 ? " filled" : ""}`} />
+              <span className="swx-num">{s.n}</span>
+              <b>{s.t}</b>
+              <span>{s.d}</span>
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      <div className="cta-section">
-        <h2 className="display cta-title">Ready to bring your team in?</h2>
-        <p className="cta-sub">Shared Workspaces are included on Pro and Team. Invite your first teammate today.</p>
-        <a href="https://app.two.so/signup" className="btn-dark">
-          Start writing for free
-        </a>
-      </div>
+      <section className="swx-section swx-two">
+        <div>
+          <p className="micro">At a glance</p>
+          <h2 className="display">
+            Private first.
+            <br />
+            Shared on purpose.
+          </h2>
+        </div>
+        <div className="swx-specs">
+          {SPECS.map((s) => (
+            <div className="swx-spec" key={s.label}>
+              <span>{s.label}</span>
+              <span>{s.value}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <PageCta
+        title="Bring someone in."
+        subtitle="Share on purpose."
+        primary={{ label: "Try Pro free", href: "/pricing" }}
+        secondary={{ label: "How sharing works", href: "/resources/help/collaboration/shared-workspaces" }}
+        note="14 days free, no card needed."
+      />
     </div>
   );
 }
