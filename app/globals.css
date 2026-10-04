@@ -3133,3 +3133,11 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .lsx-glance h2 { font-size: 34px; }
   .lsx-spec { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* Live sync: textarea fills the space under the heading; no window dots on phones */
+.lsx-doc { display: flex; flex-direction: column; }
+.lsx-doc b { flex-shrink: 0; }
+.lsx-doc textarea { flex: 1 1 auto; height: auto; min-height: 0; }
+@media (max-width: 860px) {
+  .lsx-lights { display: none; }
+}

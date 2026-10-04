@@ -81,7 +81,7 @@ export default function LiveSyncPage() {
       </section>
 
       <PageCta
-        title="Try it on two screens."
+        title="Open two screens."
         subtitle="Watch it happen."
         primary={{ label: "Start writing free", href: "https://app.two.so/signup" }}
         secondary={{ label: "All features", href: "/product/features" }}
