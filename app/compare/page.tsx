@@ -1,43 +1,46 @@
 import type { Metadata } from "next";
+import { PageCta } from "@/components/page-cta";
+import { CHECKED, COMPETITORS } from "@/components/compare-data";
 
 export const metadata: Metadata = {
-  title: "Compare TWO vs Notion, Apple Notes, Bear & Obsidian",
+  title: "Compare TWO with Notion, Apple Notes, Bear and Obsidian | TWO",
 };
 
-export default function ComparePage() {
+export default function CompareIndexPage() {
   return (
     <div className="features-frame">
-      <section className="rs-hero">
-        <p className="micro">Comparisons</p>
-        <h1 className="display">See how TWO stacks up.</h1>
-        <p>A closer look at how TWO compares to the tools you might be using today.</p>
+      <section className="cpx-hero">
+        <p className="micro">Compare</p>
+        <h1 className="display">
+          TWO, compared.
+          <br />
+          <span>Honestly.</span>
+        </h1>
+        <p className="cpx-intro">
+          Each comparison says when the other app is the better pick, and when TWO is. Checked against every app in{" "}
+          {CHECKED}.
+        </p>
       </section>
 
-      <div className="rs-grid" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
-        <a href="/compare/notion" className="rs-card">
-          <div className="rs-title">TWO vs Notion</div>
-          <div className="rs-desc">One is a writing app. The other is a database that also lets you write. They&apos;re not the same thing.</div>
-          <div className="rs-cta">Compare →</div>
-        </a>
+      <section className="cpx-index">
+        {COMPETITORS.map((c) => (
+          <a href={`/compare/${c.slug}`} className="cpx-card" key={c.slug}>
+            <span className="cpx-card-t">TWO vs {c.name}</span>
+            <span className="cpx-card-d">{c.intro}</span>
+            <span className="cpx-card-k">Pick {c.name} if</span>
+            <span className="cpx-card-v">{c.them[0]}</span>
+            <span className="cpx-card-go">See the comparison →</span>
+          </a>
+        ))}
+      </section>
 
-        <a href="/compare/apple-notes" className="rs-card">
-          <div className="rs-title">TWO vs Apple Notes</div>
-          <div className="rs-desc">Apple Notes is fast and free. But it&apos;s built for quick captures, not serious writing. TWO is.</div>
-          <div className="rs-cta">Compare →</div>
-        </a>
-
-        <a href="/compare/bear" className="rs-card">
-          <div className="rs-title">TWO vs Bear</div>
-          <div className="rs-desc">Bear is a beautiful Markdown editor for Apple devices. TWO works everywhere — no Markdown required.</div>
-          <div className="rs-cta">Compare →</div>
-        </a>
-
-        <a href="/compare/obsidian" className="rs-card">
-          <div className="rs-title">TWO vs Obsidian</div>
-          <div className="rs-desc">Obsidian is a powerful knowledge base for power users. TWO is for people who want to write, not configure a system.</div>
-          <div className="rs-cta">Compare →</div>
-        </a>
-      </div>
+      <PageCta
+        title="Try it yourself."
+        subtitle="It's free to start."
+        primary={{ label: "Start for free", href: "https://app.two.so/signup" }}
+        secondary={{ label: "Try the demo", href: "/demo" }}
+        note="Free for 30 docs. No card needed."
+      />
     </div>
   );
 }
