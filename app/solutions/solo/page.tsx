@@ -1,119 +1,148 @@
 import type { Metadata } from "next";
+import { SoloDemo } from "@/components/solo-demo";
+import { PageCta } from "@/components/page-cta";
 
 export const metadata: Metadata = {
-  title: "TWO for Solo Founders & Builders | Minimalist Docs Editor",
+  title: "TWO for Solo Work: Freelancers, Founders and Writers | TWO",
 };
 
-const TOOLKIT = [
-  { title: "Always with you", desc: "iPad on the go, Mac at your desk. Live Sync means your work follows you, not the other way around." },
-  { title: "Fast to open, fast to write", desc: "No loading screens, no setup. Open TWO and you're writing within a second, every time." },
-  { title: "Every document, one place", desc: "Proposals, notes, drafts, and plans live in a single library, searchable and not scattered across five apps." },
-  { title: "Autosave, always", desc: "Every keystroke is saved as you type. Close the laptop mid-sentence, and it's exactly as you left it." },
-  { title: "Clean enough to think in", desc: "No sidebars of unrelated features, no notification noise. Just you and the page." },
-  { title: "Priced for one person", desc: "No per-seat pricing, no enterprise tiers you'll never use. One fair price, built for individuals." },
+const USES = [
+  { t: "Client proposals", d: "Draft with the call notes open beside it. Export a clean PDF when it's ready to send." },
+  { t: "Plans and strategy", d: "A product brief, a quarterly plan, a weekly review. Start from a template or a blank page." },
+  { t: "Writing and newsletters", d: "Keep post ideas in Ideas, turn the good ones into docs, and mark them published." },
+  { t: "The small stuff", d: "Meeting notes, client details and quick lists live in Notes, sorted into nested categories." },
+];
+
+const IN_TWO = [
+  "Docs with split view and tabs",
+  "Notes in nested categories",
+  "Ideas and Canvas in Studio",
+  "Tasks linked to your docs",
+  "Export to PDF and Markdown",
+];
+
+const NOT_IN_TWO = [
+  "A CRM or invoicing",
+  "Databases and dashboards",
+  "AI writing or summaries",
+  "Per-seat pricing",
+  "A setup project before you write",
+];
+
+const SPECS = [
+  { label: "Free", value: "Up to 30 docs, no card, no time limit" },
+  { label: "Pro", value: "$6 a month, or $5 a month billed yearly" },
+  { label: "Pro adds", value: "Unlimited docs, 10 GB, 30 days of version history" },
+  { label: "Saving", value: "As you type, synced live across your devices" },
+  { label: "Works on", value: "Any browser. Installs on Mac and iPad." },
+  { label: "AI", value: "None. Your words are never used to train anything." },
+  { label: "Sharing", value: "Optional. Invite 2 people on Pro when you need to." },
 ];
 
 export default function ForSoloPage() {
   return (
     <div className="features-frame">
-      <section className="sl-hero">
-        <span className="sl-tag">For Solo Operators</span>
+      <section className="slx-hero">
+        <p className="micro">For solo work</p>
         <h1 className="display">
-          One document, <span className="ac">fully yours.</span>
+          One person.
           <br />
-          Nothing to manage but the work.
+          <span>Two docs open.</span>
         </h1>
-        <p className="sub">
-          TWO is built for writers, founders, and creatives who write fast and think clearly. It&apos;s not a
-          workspace built for a team of fifty. It&apos;s built for one.
+        <p className="slx-intro">
+          Proposals, client notes, plans and drafts in one calm place. Write in one doc with the other open beside
+          it. No AI, no team admin, never priced per seat.
         </p>
-        <div className="cta-row">
-          <a className="btn solid" href="https://app.two.so/signup">Start for free</a>
-          <a className="btn outline" href="/demo">See how it works</a>
+        <div className="slx-ctas">
+          <a className="slx-btn solid" href="https://app.two.so/signup">Start for free</a>
+          <a className="slx-btn outline" href="/demo">Try the demo</a>
+        </div>
+        <div className="slx-kv">
+          <div><span className="k">For</span><span className="v">Freelancers, founders, writers</span></div>
+          <div><span className="k">Free</span><span className="v">Up to 30 docs</span></div>
+          <div><span className="k">AI</span><span className="v">None, on purpose</span></div>
         </div>
       </section>
 
-      <section className="sl-doc-wrap">
-        <div className="sl-doc-outer">
-          <div className="sl-doc">
-            <div className="sl-doc-bar">
-              <i /><i /><i />
-              <span className="saved"><span className="dot" />Saved</span>
-            </div>
-            <div className="sl-title-ln">Q3 Retainer Proposal — Draft 2</div>
-            <div className="sl-ln sl-w97" />
-            <div className="sl-ln sl-w88" />
-            <div className="sl-ln sl-w80" />
-            <div className="sl-ln sl-w70" />
-            <div className="sl-ln sl-w55" style={{ marginBottom: 22 }} />
-            <div className="sl-ln sl-w97" />
-            <div className="sl-ln sl-w80" />
-            <div className="sl-ln sl-w40" />
-          </div>
-          <div className="sl-leader sl-l1"><div className="tick" /><div className="line" /><div className="lbl">Open — <b>in under a second</b></div></div>
-          <div className="sl-leader sl-l2"><div className="tick" /><div className="line" /><div className="lbl">Autosaved — <b>never lose a line</b></div></div>
-          <div className="sl-leader sl-l3"><div className="tick" /><div className="line" /><div className="lbl"><b>iPad to Mac</b> — same doc, instantly</div></div>
-        </div>
-      </section>
+      <SoloDemo />
 
-      <section className="sl-honest">
-        <div className="sl-honest-grid">
-          <div className="sl-honest-left display">
-            TWO won&apos;t run your operation. It&apos;s not trying to.
-          </div>
-          <div className="sl-honest-right">
-            <p>
-              You don&apos;t need another dashboard, another database, another tool promising to replace your entire
-              stack. You need somewhere to write a proposal that sounds like you, capture a strategy before
-              it slips, and keep client notes straight, without turning &quot;write a document&quot; into a project
-              of its own.
-            </p>
-            <p>
-              TWO does one thing: it&apos;s the fastest, cleanest place to write. No project boards, no CRM, no
-              invoicing bolted on. If your operation needs those, use the tools built for them. TWO is where the
-              thinking and the writing happen.
-            </p>
-          </div>
+      <section className="slx-section slx-two">
+        <div>
+          <p className="micro">Made for</p>
+          <h2 className="display">
+            One person.
+            <br />
+            Many hats.
+          </h2>
         </div>
-      </section>
-
-      <section className="sl-list-wrap">
-        <div className="sl-list-head">
-          <p className="micro" style={{ marginBottom: 14 }}>BUILT FOR HOW SOLO OPERATORS WORK</p>
-          <h2 className="display">Six reasons it stays out of your way.</h2>
-        </div>
-        <div className="sl-tk-list">
-          {TOOLKIT.map((item) => (
-            <div className="sl-tk-item" key={item.title}>
-              <div className="mark" />
-              <div className="body">
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-              </div>
+        <div className="slx-uses">
+          {USES.map((u) => (
+            <div className="slx-use" key={u.t}>
+              <b>{u.t}</b>
+              <span>{u.d}</span>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="sl-price">
-        <div className="sl-price-inner">
-          <div className="sl-price-left">
-            <h3 className="display">No team pricing. No per-seat tax.</h3>
-            <p>Just a workspace, priced for the person using it.</p>
+      <section className="slx-section slx-two">
+        <div>
+          <p className="micro">Honest about it</p>
+          <h2 className="display">
+            It won&apos;t run
+            <br />
+            your business.
+          </h2>
+          <p className="slx-sub">TWO is where the thinking and the writing happen. Use the tools built for the rest.</p>
+        </div>
+        <div className="slx-yn-cols">
+          <div>
+            <p className="micro">In TWO</p>
+            {IN_TWO.map((x) => (
+              <div className="slx-yn" key={x}>
+                <i aria-hidden="true">✓</i>
+                {x}
+              </div>
+            ))}
           </div>
-          <div className="sl-price-right">
-            <div className="sl-price-fact"><div className="num">$0</div><div className="lbl">Free to start</div></div>
-            <div className="sl-price-fact"><div className="num">$6/mo</div><div className="lbl">Pro, monthly</div></div>
-            <div className="sl-price-fact"><div className="num">1</div><div className="lbl">Person, not a seat count</div></div>
+          <div>
+            <p className="micro">Not in TWO</p>
+            {NOT_IN_TWO.map((x) => (
+              <div className="slx-yn no" key={x}>
+                <i aria-hidden="true">×</i>
+                {x}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="cta-section">
-        <h2 className="cta-title display">Write the next proposal in TWO.</h2>
-        <p className="cta-sub">Free to start. No credit card. Ready in a minute.</p>
-        <a className="btn-dark" href="https://app.two.so/signup">Start for free</a>
+      <section className="slx-section slx-two">
+        <div>
+          <p className="micro">At a glance</p>
+          <h2 className="display">
+            Fair price.
+            <br />
+            No seat count.
+          </h2>
+        </div>
+        <div className="slx-specs">
+          {SPECS.map((s) => (
+            <div className="slx-spec" key={s.label}>
+              <span>{s.label}</span>
+              <span>{s.value}</span>
+            </div>
+          ))}
+        </div>
       </section>
+
+      <PageCta
+        title="Do the work."
+        subtitle="Skip the setup."
+        primary={{ label: "Start for free", href: "https://app.two.so/signup" }}
+        secondary={{ label: "Try the demo", href: "/demo" }}
+        note="Free for 30 docs. No card needed."
+      />
     </div>
   );
 }
