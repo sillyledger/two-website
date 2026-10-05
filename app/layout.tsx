@@ -33,6 +33,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="TWO" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-84HMJNBNS1"
           strategy="afterInteractive"
