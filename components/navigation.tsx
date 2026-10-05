@@ -191,7 +191,7 @@ export function Navigation() {
                   <span className="icon">{ICON_INSTALL}</span>
                   <div>
                     <p className="t">Install Web App</p>
-                    <p className="d">Add TWO to your home screen.</p>
+                    <p className="d">Add TWO to your Dock or Home Screen.</p>
                   </div>
                 </a>
               </div>

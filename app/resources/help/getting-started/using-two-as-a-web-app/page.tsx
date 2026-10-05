@@ -14,17 +14,17 @@ export default function UsingTwoAsAWebAppArticle() {
       <article className="harticle">
         <p className="harticle-eyebrow">Getting Started</p>
         <h1 className="display">Using TWO as a web app</h1>
-        <p className="harticle-meta">3 min read · Last updated May 2026</p>
+        <p className="harticle-meta">3 min read · Last updated October 2026</p>
 
         <p>
-          TWO works as a web app on Mac, iPad, and iPhone. No App Store needed. Once installed, it opens in its
-          own window and feels just like a native app.
+          TWO works as a web app on Mac and iPad. No App Store needed. Once installed, it opens in its own window
+          and feels just like a native app. TWO is made for bigger screens, so there&apos;s no phone app.
         </p>
 
         <div className="harticle-tip">
           <p>
-            <b>Note:</b> Installation only works in Safari. Chrome and Firefox don&apos;t support web app
-            installation on Apple devices.
+            <b>Tip:</b> Use Safari. On a Mac, Chrome can install TWO too: open the ⋮ menu, then Cast, save and
+            share, then Install page as app.
           </p>
         </div>
 
@@ -44,16 +44,8 @@ export default function UsingTwoAsAWebAppArticle() {
         <ol className="harticle-ol">
           <li><b>Open Safari</b> and go to <a href="https://app.two.so">app.two.so</a>.</li>
           <li>Tap the <b>Share</b> icon in the toolbar.</li>
-          <li>Tap <b>Add to Home Screen</b>, confirm the name, and tap Add.</li>
+          <li>Tap <b>Add to Home Screen</b>. If you see <b>Open as Web App</b>, leave it on, then tap <b>Add</b>.</li>
           <li>TWO opens full screen on your iPad with no browser UI.</li>
-        </ol>
-
-        <h2 className="display">iPhone: Add to your Home Screen</h2>
-        <ol className="harticle-ol">
-          <li><b>Open Safari</b> and go to <a href="https://app.two.so">app.two.so</a>.</li>
-          <li>Tap the <b>Share</b> icon at the bottom of the screen.</li>
-          <li>Scroll down and tap <b>Add to Home Screen</b>, then tap Add.</li>
-          <li>TWO lives on your home screen like any native app: full screen, no browser chrome.</li>
         </ol>
 
         <h2 className="display">Common questions</h2>
