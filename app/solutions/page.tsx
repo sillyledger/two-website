@@ -1,66 +1,64 @@
 import type { Metadata } from "next";
+import { SolutionsPicker } from "@/components/solutions-picker";
+import { PageCta } from "@/components/page-cta";
 
 export const metadata: Metadata = {
   title: "Solutions: TWO for Writers, Creatives, Solo Operators & Teams",
 };
 
+const SPECS = [
+  { label: "AI", value: "None. Your words are never used to train anything." },
+  { label: "Split view", value: "Two docs side by side, on every plan" },
+  { label: "Saving", value: "As you type, synced live across your devices" },
+  { label: "Studio", value: "Ideas and Canvas, on every plan (beta)" },
+  { label: "Works on", value: "Any browser. Installs on Mac and iPad." },
+  { label: "Price", value: "Free for 30 docs. Pro is $6 a month, never per seat." },
+];
+
 export default function SolutionsPage() {
   return (
     <div className="features-frame">
-      <section className="rs-hero">
+      <section className="six-hero">
         <p className="micro">Solutions</p>
-        <h1 className="display">Built for how<br />you work.</h1>
-        <p>The same fast, minimal docs editor, shaped around different ways of working.</p>
+        <h1 className="display">
+          One editor.
+          <br />
+          <span>Four ways in.</span>
+        </h1>
+        <p className="six-intro">
+          TWO is the same calm, AI-free editor for everyone. Each page below shows it from one angle. Pick the one
+          closest to how you work, or let us pick.
+        </p>
       </section>
 
-      <div className="rs-grid wrx-index">
-        <a href="/solutions/writers" className="rs-card">
-          <div className="rs-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M17 3a2.83 2.83 0 014 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
-            </svg>
-          </div>
-          <div className="rs-title">For Writers and Bloggers</div>
-          <div className="rs-desc">A calm editor for posts, essays and newsletters, with your notes open beside the draft. No AI, on purpose.</div>
-          <div className="rs-cta">See the writing workflow →</div>
-        </a>
-        <a href="/solutions/creatives" className="rs-card">
-          <div className="rs-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M17 3a2.83 2.83 0 014 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
-            </svg>
-          </div>
-          <div className="rs-title">For Creatives</div>
-          <div className="rs-desc">A studio wall, built into your docs. Briefs, references, and drafts kept together the way your work actually happens.</div>
-          <div className="rs-cta">See the studio wall →</div>
-        </a>
+      <SolutionsPicker />
 
-        <a href="/solutions/solo" className="rs-card">
-          <div className="rs-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M4 21v-1a8 8 0 0116 0v1" />
-            </svg>
-          </div>
-          <div className="rs-title">For Solo Operators</div>
-          <div className="rs-desc">One document, fully yours. Built for founders, consultants, and freelancers, nothing to manage but the work.</div>
-          <div className="rs-cta">See the solo workflow →</div>
-        </a>
+      <section className="six-section six-two">
+        <div>
+          <p className="micro">In every version</p>
+          <h2 className="display">
+            Pick any one.
+            <br />
+            Same calm editor.
+          </h2>
+        </div>
+        <div className="six-specs">
+          {SPECS.map((s) => (
+            <div className="six-spec" key={s.label}>
+              <span>{s.label}</span>
+              <span>{s.value}</span>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        <a href="/solutions/teams" className="rs-card">
-          <div className="rs-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="9" cy="8" r="3.2" />
-              <circle cx="17" cy="9" r="2.6" />
-              <path d="M3 20v-1a6 6 0 0112 0v1" />
-              <path d="M15 14.5a4.5 4.5 0 014.5 4.5v1" />
-            </svg>
-          </div>
-          <div className="rs-title">For Small Teams</div>
-          <div className="rs-desc">A shared doc your whole team actually opens. Real-time, simple enough that nobody needs a walkthrough.</div>
-          <div className="rs-cta">See the team workflow →</div>
-        </a>
-      </div>
+      <PageCta
+        title="Still not sure?"
+        subtitle="Try it free."
+        primary={{ label: "Start for free", href: "https://app.two.so/signup" }}
+        secondary={{ label: "Try the demo", href: "/demo" }}
+        note="Free for 30 docs. No card needed."
+      />
     </div>
   );
 }

@@ -4105,3 +4105,85 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .wrx-spec span:last-child { font-size: 14.5px; }
   .wrx-index { grid-template-columns: 1fr; }
 }
+
+/* ============ SOLUTIONS INDEX PAGE (six-) ============ */
+.six-hero { padding-top: 20px; }
+.six-hero .micro { margin: 0; }
+.six-hero h1 { font-size: 80px; line-height: 1.02; letter-spacing: -0.035em; margin: 22px 0 0; }
+.six-hero h1 span { color: #6a6a74; }
+.six-intro { font-size: 17px; line-height: 1.6; color: #c4c4c4; margin: 28px 0 0; max-width: 600px; }
+
+.six-pick { padding-top: 80px; }
+.six-bar { position: relative; display: flex; align-items: center; flex-wrap: wrap; gap: 16px 40px; padding: 18px 22px; border-radius: 14px; border: 1px solid var(--border); background: #1a1a1c; }
+.six-bar-l { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; color: #c4b8ff; white-space: nowrap; }
+.six-q { display: flex; align-items: center; gap: 12px; }
+.six-q-l { font-size: 13.5px; color: var(--text-muted); white-space: nowrap; }
+.six-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.six-chip { height: 36px; padding: 0 14px; border-radius: 9px; border: 1px solid rgba(255,255,255,0.1); background: var(--bg-card); color: var(--text-muted); font-family: inherit; font-size: 13.5px; cursor: pointer; white-space: nowrap; }
+.six-chip.on { border-color: rgba(143,137,230,0.55); background: rgba(143,137,230,0.12); color: var(--text-primary); }
+.six-clear { margin-left: auto; padding: 4px 0; border: 0; background: transparent; color: #8a8a92; font-family: inherit; font-size: 13px; cursor: pointer; }
+.six-note { font-size: 13.5px; line-height: 1.5; color: #6a6a74; margin: 12px 0 0 2px; min-height: 20px; }
+.six-note.ok { color: var(--text-muted); }
+.six-note.warn { color: #e0b48c; }
+
+.six-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 18px; }
+.six-card { position: relative; display: flex; flex-direction: column; border-radius: 16px; background: var(--bg-card); border: 1px solid var(--border); padding: 28px; text-decoration: none; color: inherit; transition: border-color 0.15s, opacity 0.15s; }
+.six-card:hover { border-color: rgba(143,137,230,0.5); }
+.six-card.best { border-color: var(--indigo); box-shadow: 0 0 0 4px rgba(143,137,230,0.12); }
+.six-card.also { border-color: rgba(143,137,230,0.4); }
+.six-card.dim { opacity: 0.55; }
+.six-ico { width: 38px; height: 38px; border-radius: 10px; background: var(--bg-tertiary); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
+.six-ico svg { width: 17px; height: 17px; }
+.six-t { display: block; font-size: 16.5px; font-weight: 500; margin-top: 20px; color: var(--text-primary); }
+.six-h { display: block; font-family: 'Fira Sans', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; margin-top: 10px; color: var(--text-primary); }
+.six-h span { color: #6a6a74; }
+.six-d { display: block; font-size: 14.5px; line-height: 1.55; color: var(--text-muted); margin-top: 12px; }
+.six-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+.six-tags span { font-size: 11.5px; padding: 4px 9px; border-radius: 6px; background: var(--bg-tertiary); color: #c4c4c4; }
+.six-go { display: block; margin-top: auto; padding-top: 22px; font-size: 14px; font-weight: 500; color: #c4b8ff; }
+.six-badge { position: absolute; top: 24px; right: 24px; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; padding: 4px 9px; border-radius: 6px; white-space: nowrap; }
+.six-badge.best { color: var(--bg); background: var(--indigo); }
+.six-badge.also { color: #c4b8ff; background: rgba(143,137,230,0.14); }
+
+.six-section { padding-top: 140px; }
+.six-two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 72px; align-items: start; }
+.six-two .micro { margin: 0; }
+.six-two h2 { font-size: 44px; line-height: 1.04; letter-spacing: -0.035em; margin: 14px 0 0; }
+.six-specs { border-top: 1px solid rgba(255,255,255,0.07); }
+.six-spec { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 16px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-size: 15px; line-height: 1.5; }
+.six-spec span:first-child { color: var(--text-muted); }
+
+@media (max-width: 1100px) {
+  .six-hero h1 { font-size: 64px; }
+}
+
+@media (max-width: 860px) {
+  .six-hero { padding-top: 4px; }
+  .six-hero h1 { font-size: 36px; margin-top: 16px; }
+  .six-intro { font-size: 15.5px; margin-top: 18px; }
+  .six-pick { padding-top: 44px; }
+  .six-bar { flex-direction: column; align-items: stretch; flex-wrap: nowrap; gap: 0; padding: 16px 16px 18px; }
+  .six-q { flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 14px; }
+  .six-q-l { font-size: 13px; }
+  .six-chip { padding: 0 12px; font-size: 13px; }
+  .six-clear { position: absolute; top: 12px; right: 14px; margin: 0; }
+  .six-note { font-size: 13px; min-height: 40px; }
+  .six-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 12px; }
+  .six-card { padding: 20px; border-radius: 14px; }
+  .six-ico { width: 34px; height: 34px; border-radius: 9px; }
+  .six-ico svg { width: 16px; height: 16px; }
+  .six-t { font-size: 16px; margin-top: 16px; }
+  .six-h { font-size: 22px; margin-top: 8px; }
+  .six-d { font-size: 14px; margin-top: 10px; }
+  .six-tags { margin-top: 14px; }
+  .six-tags span { font-size: 11px; padding: 3px 8px; }
+  .six-go { padding-top: 16px; }
+  .six-badge { top: 18px; right: 18px; font-size: 10px; padding: 3px 8px; }
+  .six-section { padding-top: 96px; }
+  .six-two { grid-template-columns: 1fr; gap: 22px; }
+  .six-two h2 { font-size: 34px; margin-top: 12px; }
+  .six-spec { grid-template-columns: 1fr; gap: 4px; padding: 15px 0; }
+  .six-spec span:first-child { font-size: 12.5px; }
+  .six-spec span:last-child { font-size: 14.5px; }
+}
+@media (min-width: 861px) { .six-bar { column-gap: 16px; } }
