@@ -1,193 +1,169 @@
 import type { Metadata } from "next";
+import { SeatsDemo } from "@/components/teams-demo";
+import { PageCta } from "@/components/page-cta";
 
 export const metadata: Metadata = {
-  title: "TWO for Teams: Fast, Collaborative Workspace Docs",
+  title: "TWO for Small Teams: Shared Workspaces, Flat Price | TWO",
 };
 
-const GALLERY: { key: string; title: string; desc: string }[] = [
-  { key: "shared", title: "Shared workspaces", desc: "Everyone works from the same place. No hunting through email or Slack for the latest version." },
-  { key: "sync", title: "Live, as you type", desc: "Edits sync in real time. See what your teammates are writing as they write it." },
-  { key: "simple", title: "Simple enough for everyone", desc: "No onboarding sessions. If your team can use Apple Notes, they can use TWO." },
-  { key: "browser", title: "A web app that just works", desc: "Runs in the browser on Mac and iPad today. No install. Native apps are on the roadmap." },
-  { key: "clean", title: "Docs that look great shared", desc: "Send a proposal or brief to a client and it looks polished, not like a database row." },
-  { key: "activity", title: "Full activity history", desc: "See what your team's worked on at a glance: every edit and create, no surprises." },
+const FEATURES = [
+  { t: "Write together, live", d: "Two people in one doc, edits showing up as they type." },
+  { t: "See who's there", d: "See who else has a doc open before you start rewriting it." },
+  { t: "Roles that fit", d: "Editor, Commenter or Viewer. Only the owner sends invites." },
+  { t: "Know what changed", d: "Activity shows which docs changed and who edited them last." },
+  { t: "Go back in time", d: "Version history keeps 30 days on Pro, so nothing is lost for good." },
+  { t: "Send it out", d: "Export any doc as a clean PDF or Markdown for people outside the team." },
 ];
 
-const FILMSTRIP = [
-  { title: "Team knowledge base", desc: "One place for processes, decisions, and what everyone needs to know." },
-  { title: "Client deliverables", desc: "Write and share briefs, reports, and proposals that look professional." },
-  { title: "Meeting notes", desc: "Capture and share notes from every meeting, searchable and always available." },
-  { title: "Product & strategy docs", desc: "Keep your roadmap, strategy, and decisions documented." },
+const PRIVATE_DOCS = ["Q4 plan", "Journal", "Pricing ideas", "Reading list"];
+
+const SHARED_DOCS = [
+  { t: "Brand brief", who: "Sarah" },
+  { t: "Meeting notes, Oct 2", who: "You" },
+  { t: "Moodboard plan", who: "Mark" },
+  { t: "Launch checklist", who: "You" },
 ];
 
-function GalleryVisual({ visualKey }: { visualKey: string }) {
-  switch (visualKey) {
-    case "shared":
-      return (
-        <div className="tw-mv-shared">
-          <div className="av" style={{ background: "var(--indigo-pill)", color: "var(--indigo)" }}>JL</div>
-          <div className="av" style={{ background: "var(--clay-pill)", color: "var(--clay)" }}>MK</div>
-          <div className="av" style={{ background: "var(--bg-card)", color: "var(--text-muted)", border: "1px solid var(--border-strong)" }}>+2</div>
-        </div>
-      );
-    case "sync":
-      return (
-        <div className="tw-mv-sync">
-          <div className="dev" /><div className="pulse" /><div className="dev" />
-        </div>
-      );
-    case "simple":
-      return (
-        <div className="tw-mv-simple">
-          <div className="l" /><div className="l" /><div className="l" />
-        </div>
-      );
-    case "browser":
-      return (
-        <div className="tw-mv-browser">
-          <div className="bar"><i /><i /><i /></div>
-        </div>
-      );
-    case "clean":
-      return (
-        <div className="tw-mv-doc-clean">
-          <div className="l" /><div className="l" /><div className="l" />
-        </div>
-      );
-    case "activity":
-    default:
-      return (
-        <div className="tw-mv-activity">
-          <div className="row"><div className="d" /><span>Edited Client Brief</span></div>
-          <div className="row"><div className="d" /><span>Created Meeting Notes</span></div>
-          <div className="row"><div className="d" /><span>Shared Roadmap</span></div>
-        </div>
-      );
-  }
+const SPECS = [
+  { label: "Today", value: "Pro: $6 a month, or $5 a month billed yearly" },
+  { label: "People on Pro", value: "You plus 2 invited people per shared workspace" },
+  { label: "Team plan", value: "Up to 10 people, 50 GB, $10 a month flat (coming soon)" },
+  { label: "Roles", value: "Editor, Commenter, Viewer. Only the owner invites." },
+  { label: "Editing", value: "Live, and you see who's in a doc" },
+  { label: "Not included", value: "Share links for single docs, per-person cursors" },
+  { label: "Free plan", value: "Up to 30 docs for one person. Sharing needs Pro." },
+];
+
+function DocIcon() {
+  return <i className="tmx-doc-i" aria-hidden="true" />;
 }
 
 export default function ForTeamsPage() {
   return (
     <div className="features-frame">
-      <section className="tw-hero">
-        <span className="tw-tag">For Small Teams</span>
+      <section className="tmx-hero">
+        <p className="micro">For small teams</p>
         <h1 className="display">
-          A shared doc your <span className="ac">whole team actually opens.</span>
+          A small team.
+          <br />
+          <span>No admin needed.</span>
         </h1>
-        <p className="sub">
-          Not a workspace platform. Not a database. Just real-time shared docs: clean, fast, and simple enough
-          that nobody needs a walkthrough.
+        <p className="tmx-intro">
+          Open a shared workspace for a project, invite the people you write with, and edit the same doc live.
+          Your own docs stay private. One flat price, never per seat.
         </p>
-        <div className="cta-row">
-          <a className="btn solid" href="https://app.two.so/signup">Start for free</a>
-          <a className="btn outline" href="/product/features/shared-workspaces">See how it works</a>
+        <div className="tmx-ctas">
+          <a className="tmx-btn solid" href="/pricing">Try Pro free</a>
+          <a className="tmx-btn outline" href="/product/features/shared-workspaces">How sharing works</a>
         </div>
+        <div className="tmx-kv">
+          <div><span className="k">Pro</span><span className="v">You plus 2 people</span></div>
+          <div><span className="k">Team</span><span className="v">Up to 10, coming soon</span></div>
+          <div><span className="k">Price</span><span className="v">Flat, never per seat</span></div>
+        </div>
+      </section>
 
-        <div className="tw-board">
-          <div className="tw-app tw-doc">
-            <div className="tw-doc-bar">
-              <i /><i /><i />
-              <div className="tw-presence">
-                <div className="tw-av tw-av1">JL</div>
-                <div className="tw-av tw-av2">MK</div>
+      <section className="tmx-seats">
+        <div>
+          <p className="micro">Who&apos;s in?</p>
+          <h2 className="display">
+            Add people.
+            <br />
+            The price stays.
+          </h2>
+          <p className="tmx-sub">
+            Try it: add teammates and see which plan fits. Within a plan, one more person never changes the bill.
+          </p>
+        </div>
+        <SeatsDemo />
+      </section>
+
+      <section className="tmx-section tmx-two">
+        <div>
+          <p className="micro">In a shared workspace</p>
+          <h2 className="display">
+            Everything you
+            <br />
+            need. No more.
+          </h2>
+        </div>
+        <div className="tmx-feats">
+          {FEATURES.map((f) => (
+            <div className="tmx-feat" key={f.t}>
+              <b>{f.t}</b>
+              <span>{f.d}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="tmx-section tmx-two">
+        <div>
+          <p className="micro">Private first</p>
+          <h2 className="display">
+            Your desk.
+            <br />
+            The team table.
+          </h2>
+          <p className="tmx-sub">
+            Shared workspaces sit next to your private one. Nothing moves across unless you put it there.
+          </p>
+        </div>
+        <div className="tmx-wss">
+          <div className="tmx-ws">
+            <div className="tmx-ws-head">
+              <b>My Workspace</b>
+              <span className="tmx-tag plain">Only you</span>
+            </div>
+            {PRIVATE_DOCS.map((d, i) => (
+              <div className={i === 3 ? "tmx-ws-doc x" : "tmx-ws-doc"} key={d}>
+                <DocIcon />
+                {d}
               </div>
+            ))}
+          </div>
+          <div className="tmx-ws shared">
+            <div className="tmx-ws-head">
+              <b>Studio Kiko</b>
+              <span className="tmx-tag indigo">You + 2</span>
             </div>
-            <div className="tw-ln tw-w95" style={{ height: 2, background: "var(--text-muted)" }} />
-            <div className="tw-ln tw-w95" style={{ marginTop: 14 }} />
-            <div className="tw-ln tw-w80" />
-            <div className="tw-ln tw-w70" />
-            <div className="tw-ln tw-w50" />
+            {SHARED_DOCS.map((d, i) => (
+              <div className={i === 3 ? "tmx-ws-doc x" : "tmx-ws-doc"} key={d.t}>
+                <DocIcon />
+                {d.t}
+                <span className="who">{d.who}</span>
+              </div>
+            ))}
           </div>
-
-          <div className="tw-app tw-shared">
-            <div className="k">SHARED WITH</div>
-            <div className="tw-avatars">
-              <div className="av" style={{ background: "var(--indigo-pill)", color: "var(--indigo)" }}>JL</div>
-              <div className="av" style={{ background: "var(--clay-pill)", color: "var(--clay)" }}>MK</div>
-              <div className="av" style={{ background: "var(--bg-tertiary)", color: "var(--text-muted)" }}>+2</div>
-            </div>
-          </div>
-
-          <div className="tw-app tw-sync">
-            <div className="tw-sync-row"><div className="tw-sync-dot" /><span style={{ fontSize: 11.5, fontWeight: 600 }}>Live sync</span></div>
-            <p>Edits appear as they&apos;re typed.</p>
-          </div>
-
-          <div className="tw-app tw-activity">
-            <div className="k">RECENT ACTIVITY</div>
-            <div className="tw-act-row"><div className="d" />JL edited Client Brief · 2m</div>
-            <div className="tw-act-row"><div className="d c" />MK created Meeting Notes · 1h</div>
-            <div className="tw-act-row"><div className="d" />JL shared Roadmap · 3h</div>
-          </div>
-
-          <div className="tw-app tw-web">
-            <div className="k">RUNS IN YOUR BROWSER</div>
-            <p>No install. Works on Mac and iPad today.</p>
-          </div>
-
-          <div className="tw-leader tw-l1"><div className="tick" /><div className="line" /><div className="lbl">Presence: <b>see who&apos;s editing</b></div></div>
-          <div className="tw-leader tw-l2"><div className="tick" /><div className="line" /><div className="lbl">Activity: <b>full history, no surprises</b></div></div>
         </div>
       </section>
 
-      <section className="tw-intro">
-        <div className="tw-intro-inner">
-          <p>Notion was built for teams of 50. You have five people and <span className="ac">zero patience for complexity.</span></p>
+      <section className="tmx-section tmx-two">
+        <div>
+          <p className="micro">At a glance</p>
+          <h2 className="display">
+            Flat price.
+            <br />
+            Clear limits.
+          </h2>
         </div>
-      </section>
-
-      <section>
-        <div className="tw-gallery-head">
-          <h2 className="display">Six reasons the whole team uses it.</h2>
-        </div>
-        <div className="tw-grid">
-          {GALLERY.map((g) => (
-            <div className="tw-tile" key={g.key}>
-              <div className="tw-tile-visual"><GalleryVisual visualKey={g.key} /></div>
-              <div className="tw-tile-body"><h3>{g.title}</h3><p>{g.desc}</p></div>
+        <div className="tmx-specs">
+          {SPECS.map((s) => (
+            <div className="tmx-spec" key={s.label}>
+              <span>{s.label}</span>
+              <span>{s.value}</span>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="tw-filmstrip-wrap">
-        <div className="tw-fs-head">
-          <p className="micro" style={{ marginBottom: 12 }}>WHAT SMALL TEAMS USE TWO FOR</p>
-          <h2 className="display">Four documents, every week.</h2>
-        </div>
-        <div className="tw-filmstrip">
-          {FILMSTRIP.map((f) => (
-            <div className="tw-frame" key={f.title}>
-              <div className="mini"><div className="l hi" /><div className="l" style={{ width: "80%" }} /><div className="l" style={{ width: "60%" }} /></div>
-              <h4>{f.title}</h4>
-              <p>{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="tw-price">
-        <div className="tw-price-inner">
-          <div className="tw-price-left">
-            <h3 className="display">One price. However many teammates you invite.</h3>
-            <p>No per-seat pricing, no headcount tax as the team grows.</p>
-          </div>
-          <div className="tw-price-right">
-            <div className="tw-price-fact"><div className="num">$0</div><div className="lbl">Free to start</div></div>
-            <div className="tw-price-fact"><div className="num">$6/mo</div><div className="lbl">Pro, monthly</div></div>
-            <div className="tw-price-fact"><div className="num">1</div><div className="lbl">Flat price, not per seat</div></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="cta-section">
-        <h2 className="cta-title tw-cta-title display">
-          Your team shouldn&apos;t need a workspace admin. It should just{" "}
-          <span className="ac">open the doc and start writing.</span>
-        </h2>
-        <p className="cta-sub">Free to start. No credit card. Ready in a minute.</p>
-        <a className="btn-dark" href="https://app.two.so/signup">Start for free</a>
-      </section>
+      <PageCta
+        title="Start with three."
+        subtitle="Grow to ten."
+        primary={{ label: "Try Pro free", href: "/pricing" }}
+        secondary={{ label: "How sharing works", href: "/product/features/shared-workspaces" }}
+        note="14 days free, no card needed."
+      />
     </div>
   );
 }
