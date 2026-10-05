@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Solutions: TWO for Creatives, Solo Operators & Teams",
+  title: "Solutions: TWO for Writers, Creatives, Solo Operators & Teams",
 };
 
 export default function SolutionsPage() {
@@ -10,10 +10,20 @@ export default function SolutionsPage() {
       <section className="rs-hero">
         <p className="micro">Solutions</p>
         <h1 className="display">Built for how<br />you work.</h1>
-        <p>The same fast, minimal docs editor, shaped around three different ways of working.</p>
+        <p>The same fast, minimal docs editor, shaped around different ways of working.</p>
       </section>
 
-      <div className="rs-grid">
+      <div className="rs-grid wrx-index">
+        <a href="/solutions/writers" className="rs-card">
+          <div className="rs-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M17 3a2.83 2.83 0 014 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+            </svg>
+          </div>
+          <div className="rs-title">For Writers and Bloggers</div>
+          <div className="rs-desc">A calm editor for posts, essays and newsletters, with your notes open beside the draft. No AI, on purpose.</div>
+          <div className="rs-cta">See the writing workflow →</div>
+        </a>
         <a href="/solutions/creatives" className="rs-card">
           <div className="rs-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">

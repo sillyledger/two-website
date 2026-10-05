@@ -18,6 +18,7 @@ const staticRoutes = [
   '/product/features/shared-workspaces',
   '/product/features/studio',
   '/solutions',
+  '/solutions/writers',
   '/solutions/creatives',
   '/solutions/solo',
   '/solutions/teams',

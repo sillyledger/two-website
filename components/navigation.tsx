@@ -37,6 +37,15 @@ const ICON_PEN = (
   </svg>
 );
 
+const ICON_BOARD = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="8" height="10" rx="1.5" />
+    <rect x="13" y="3" width="8" height="6" rx="1.5" />
+    <rect x="13" y="11" width="8" height="10" rx="1.5" />
+    <rect x="3" y="15" width="8" height="6" rx="1.5" />
+  </svg>
+);
+
 const ICON_SOLO = (
   <svg viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="8" r="4" />
@@ -310,11 +319,18 @@ export function Navigation() {
         {openMenu === "solutions" && (
           <div className="mega">
             <div className="mega-inner">
-              <a href="/solutions/creatives" className="mega-item">
+              <a href="/solutions/writers" className="mega-item">
                 <span className="icon">{ICON_PEN}</span>
                 <div>
+                  <p className="t">For Writers and Bloggers</p>
+                  <p className="d">Posts, essays and newsletters, written next to your notes.</p>
+                </div>
+              </a>
+              <a href="/solutions/creatives" className="mega-item">
+                <span className="icon">{ICON_BOARD}</span>
+                <div>
                   <p className="t">For Creatives</p>
-                  <p className="d">Writers, designers, and makers who need a quiet place to think.</p>
+                  <p className="d">Designers and makers who think in boards, references and briefs.</p>
                 </div>
               </a>
               <a href="/solutions/solo" className="mega-item">
@@ -332,7 +348,7 @@ export function Navigation() {
                 </div>
               </a>
 
-              <div className="mega-preview">
+              <div className="mega-preview tall">
                 <p className="lbl">Preview</p>
                 <div className="mini-device">
                   <div className="mini-panes">
@@ -375,6 +391,9 @@ export function Navigation() {
         </a>
 
         <span className="mm-group-label">Solutions</span>
+        <a href="/solutions/writers" onClick={closeMobile}>
+          For Writers and Bloggers
+        </a>
         <a href="/solutions/creatives" onClick={closeMobile}>
           For Creatives
         </a>

@@ -3967,3 +3967,141 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .crx-dot { max-width: 20px; }
   .crx-sw span { padding: 1px 2px; }
 }
+
+/* ============ WRITERS SOLUTIONS PAGE (wrx-) ============ */
+.wrx-hero { padding-top: 20px; }
+.wrx-hero .micro { margin: 0; }
+.wrx-hero h1 { font-size: 80px; line-height: 1.02; letter-spacing: -0.035em; margin: 22px 0 0; }
+.wrx-hero h1 span { color: #6a6a74; }
+.wrx-intro { font-size: 17px; line-height: 1.6; color: #c4c4c4; margin: 28px 0 0; max-width: 620px; }
+.wrx-ctas { display: flex; gap: 14px; margin-top: 36px; }
+.wrx-btn { display: inline-flex; align-items: center; justify-content: center; height: 52px; padding: 0 26px; border-radius: 10px; font-size: 15.5px; font-weight: 500; text-decoration: none; white-space: nowrap; box-sizing: border-box; }
+.wrx-btn.solid { background: var(--text-primary); color: var(--bg); }
+.wrx-btn.outline { border: 1px solid var(--border-strong); color: var(--text-primary); }
+.wrx-kv { display: flex; flex-wrap: wrap; gap: 12px 56px; margin-top: 44px; }
+.wrx-kv div { display: flex; gap: 10px; align-items: baseline; }
+.wrx-kv .k { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+.wrx-kv .v { font-size: 13.5px; color: #c4c4c4; }
+
+.wrx-demo { margin-top: 120px; }
+.wrx-demo-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; }
+.wrx-demo-head .micro { margin: 0; }
+.wrx-h { font-size: 32px; line-height: 1.1; letter-spacing: -0.03em; margin: 14px 0 0; }
+.wrx-demo-sub { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0; max-width: 380px; text-align: right; }
+.wrx-win { margin-top: 24px; border-radius: 16px; background: var(--bg-card); border: 1px solid var(--border); overflow: hidden; }
+.wrx-bar { height: 42px; display: flex; align-items: center; gap: 7px; padding: 0 14px; border-bottom: 1px solid rgba(255,255,255,0.07); background: #1a1a1c; }
+.wrx-bar .dot { width: 10px; height: 10px; border-radius: 50%; background: #3a3a3e; flex-shrink: 0; }
+.wrx-crumb { margin-left: 14px; font-size: 12px; color: #8a8a92; white-space: nowrap; }
+.wrx-split { display: grid; grid-template-columns: 1fr 1fr; height: 440px; }
+.wrx-draft { display: flex; flex-direction: column; min-width: 0; min-height: 0; padding: 30px 36px 16px; border-right: 1px solid rgba(255,255,255,0.08); }
+.wrx-doc-t { font-family: system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.01em; color: var(--text-primary); }
+.wrx-ta { flex: 1 1 auto; min-height: 0; margin-top: 16px; width: 100%; box-sizing: border-box; background: transparent; border: 0; outline: none; resize: none; color: #d8d8dc; font-family: inherit; font-size: 15px; line-height: 1.75; padding: 0; caret-color: var(--indigo); }
+.wrx-foot { display: flex; align-items: center; gap: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 12px; color: #8a8a92; white-space: nowrap; }
+.wrx-save { color: var(--text-muted); }
+.wrx-save.ok { color: #6ec39a; }
+.wrx-hint { margin-left: auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; color: #6a6a74; }
+.wrx-side { display: flex; flex-direction: column; min-width: 0; min-height: 0; background: #1a1a1c; }
+.wrx-tabs { display: flex; gap: 4px; padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.wrx-tab { height: 30px; padding: 0 12px; border-radius: 7px; border: 0; background: transparent; color: #8a8a92; font-family: inherit; font-size: 12.5px; cursor: pointer; white-space: nowrap; }
+.wrx-tab.on { background: #2a2a2d; color: var(--text-primary); }
+.wrx-pane { padding: 26px 32px; overflow: hidden; }
+.wrx-pane-t { display: block; font-family: system-ui, -apple-system, sans-serif; font-size: 19px; font-weight: 700; margin-bottom: 14px; color: var(--text-primary); }
+.wrx-pane p, .wrx-pane li { font-size: 14px; line-height: 1.7; color: #c4c4c4; }
+.wrx-pane p { margin: 0 0 12px; }
+.wrx-pane ol { margin: 0; padding-left: 20px; }
+.wrx-quote { margin-top: 16px; padding: 12px 14px; border-left: 3px solid var(--indigo); background: rgba(143,137,230,0.07); border-radius: 0 8px 8px 0; font-size: 13.5px; line-height: 1.6; color: #c4c4c4; }
+.wrx-ln { display: block; height: 7px; border-radius: 4px; background: rgba(255,255,255,0.07); margin-top: 11px; }
+.wrx-hint-m { display: none; }
+
+.wrx-section { padding-top: 140px; }
+.wrx-pipe { display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); gap: 64px; align-items: start; }
+.wrx-pipe .micro, .wrx-two .micro { margin: 0; }
+.wrx-pipe h2, .wrx-two h2 { font-size: 44px; line-height: 1.04; letter-spacing: -0.035em; margin: 14px 0 0; }
+.wrx-sub { font-size: 16px; line-height: 1.6; color: var(--text-muted); margin: 20px 0 0; }
+.wrx-board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.wrx-col { min-width: 0; min-height: 260px; box-sizing: border-box; border-radius: 14px; background: #1a1a1c; border: 1px solid rgba(255,255,255,0.07); padding: 14px; }
+.wrx-col-h { display: flex; align-items: center; gap: 7px; margin: 0 0 12px; font-size: 12px; font-weight: 500; color: var(--text-muted); }
+.wrx-col-h i { display: block; width: 7px; height: 7px; border-radius: 50%; }
+.wrx-col-h span { margin-left: auto; color: #6a6a74; }
+.wrx-card { border-radius: 10px; background: #232326; border: 1px solid rgba(255,255,255,0.08); padding: 12px 12px 10px; margin-bottom: 8px; }
+.wrx-card b { display: block; font-size: 13.5px; font-weight: 500; line-height: 1.35; color: var(--text-primary); }
+.wrx-meta { display: flex; align-items: center; gap: 8px; margin-top: 9px; }
+.wrx-chip { font-size: 10.5px; padding: 2px 7px; border-radius: 5px; background: #2e2e30; color: var(--text-muted); white-space: nowrap; }
+.wrx-act { margin-left: auto; height: 24px; padding: 0 9px; border-radius: 6px; border: 1px solid rgba(143,137,230,0.45); background: rgba(143,137,230,0.1); color: #c4b8ff; font-family: inherit; font-size: 11px; cursor: pointer; white-space: nowrap; }
+.wrx-done { margin-left: auto; font-size: 11px; color: #6ec39a; white-space: nowrap; }
+.wrx-empty { font-size: 12px; color: #6a6a74; margin: 0; padding: 4px 2px; }
+
+.wrx-two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 72px; align-items: start; }
+.wrx-feats { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 40px; }
+.wrx-feat b { display: block; font-size: 16.5px; font-weight: 500; margin-bottom: 6px; color: var(--text-primary); }
+.wrx-feat span { font-size: 14.5px; line-height: 1.55; color: var(--text-muted); }
+.wrx-lead { font-size: 17px; line-height: 1.65; color: #c4c4c4; margin: 0; }
+.wrx-two .micro.wrx-also { margin: 32px 0 6px; }
+.wrx-no { display: flex; gap: 12px; align-items: baseline; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-size: 15px; color: var(--text-muted); }
+.wrx-no i { font-style: normal; width: 14px; flex-shrink: 0; font-size: 13px; color: #6a6a74; }
+.wrx-specs { border-top: 1px solid rgba(255,255,255,0.07); }
+.wrx-spec { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 16px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-size: 15px; line-height: 1.5; }
+.wrx-spec span:first-child { color: var(--text-muted); }
+
+/* /solutions index: 4 cards in a 2 x 2 grid */
+.wrx-index { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 1100px) {
+  .wrx-hero h1 { font-size: 64px; }
+  .wrx-pipe { grid-template-columns: 1fr; gap: 28px; }
+}
+
+@media (max-width: 860px) {
+  .wrx-hero { padding-top: 4px; }
+  .wrx-hero h1 { font-size: 36px; margin-top: 16px; }
+  .wrx-intro { font-size: 15.5px; margin-top: 18px; }
+  .wrx-ctas { flex-direction: column; gap: 10px; margin-top: 28px; }
+  .wrx-btn { width: 100%; height: 50px; font-size: 15px; }
+  .wrx-kv { flex-direction: column; gap: 10px; margin-top: 28px; }
+  .wrx-kv .k { width: 60px; flex-shrink: 0; }
+  .wrx-demo { margin-top: 80px; }
+  .wrx-demo-head { display: block; }
+  .wrx-h { font-size: 26px; margin-top: 12px; }
+  .wrx-demo-sub { text-align: left; max-width: none; margin-top: 12px; }
+  .wrx-win { margin-top: 18px; border-radius: 14px; }
+  .wrx-bar { height: 32px; gap: 5px; padding: 0 12px; }
+  .wrx-bar .dot { width: 8px; height: 8px; }
+  .wrx-crumb { margin-left: 10px; font-size: 10.5px; }
+  .wrx-split { grid-template-columns: 1fr; height: auto; }
+  .wrx-draft { height: 250px; box-sizing: border-box; padding: 18px 18px 10px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .wrx-doc-t { font-size: 18px; }
+  .wrx-ta { margin-top: 10px; font-size: 14px; line-height: 1.65; }
+  .wrx-foot { gap: 12px; padding-top: 9px; font-size: 11.5px; }
+  .wrx-hint { display: none; }
+  .wrx-tabs { padding: 8px 10px; }
+  .wrx-tab { flex: 1; height: 32px; padding: 0 6px; }
+  .wrx-pane { height: 190px; box-sizing: border-box; padding: 16px 18px; }
+  .wrx-pane-t { font-size: 15px; margin-bottom: 8px; }
+  .wrx-pane p, .wrx-pane li { font-size: 13px; line-height: 1.65; }
+  .wrx-pane p { margin-bottom: 9px; }
+  .wrx-pane p.x, .wrx-ln { display: none; }
+  .wrx-pane ol { padding-left: 18px; }
+  .wrx-quote { margin-top: 10px; padding: 9px 11px; font-size: 12.5px; line-height: 1.55; }
+  .wrx-hint-m { display: block; font-size: 12px; color: #6a6a74; margin: 10px 0 0; }
+  .wrx-section { padding-top: 96px; }
+  .wrx-pipe { gap: 22px; }
+  .wrx-pipe h2, .wrx-two h2 { font-size: 34px; margin-top: 12px; }
+  .wrx-sub { font-size: 15px; margin-top: 16px; }
+  .wrx-board { grid-template-columns: 1fr; gap: 10px; }
+  .wrx-col { min-height: 0; padding: 12px; border-radius: 12px; }
+  .wrx-col-h { margin-bottom: 4px; }
+  .wrx-card { padding: 10px 11px; margin: 8px 0 0; border-radius: 9px; }
+  .wrx-act { height: 28px; padding: 0 10px; font-size: 11.5px; border-radius: 7px; }
+  .wrx-two { grid-template-columns: 1fr; gap: 22px; }
+  .wrx-feats { grid-template-columns: 1fr; gap: 0; }
+  .wrx-feat { padding: 16px 0; border-top: 1px solid rgba(255,255,255,0.07); }
+  .wrx-feat b { font-size: 16px; margin-bottom: 5px; }
+  .wrx-feat span { font-size: 14px; }
+  .wrx-lead { font-size: 15.5px; }
+  .wrx-two .micro.wrx-also { margin-top: 28px; }
+  .wrx-no { font-size: 14.5px; padding: 11px 0; }
+  .wrx-spec { grid-template-columns: 1fr; gap: 4px; padding: 15px 0; }
+  .wrx-spec span:first-child { font-size: 12.5px; }
+  .wrx-spec span:last-child { font-size: 14.5px; }
+  .wrx-index { grid-template-columns: 1fr; }
+}
