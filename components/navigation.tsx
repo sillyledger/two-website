@@ -363,7 +363,7 @@ export function Navigation() {
                   <div className="mp-annot">Shared, however you work</div>
                 </div>
                 <p className="cap">
-                  One app, three ways to use it.{" "}
+                  One app, four ways to use it.{" "}
                   <a href="/product/features/shared-workspaces">See how sharing works →</a>
                 </p>
               </div>
