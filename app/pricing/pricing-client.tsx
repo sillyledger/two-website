@@ -151,11 +151,11 @@ export function PricingClient() {
           </ul>
         </div>
 
-        <div className="pp-card pfx-founding">
+        <div className="pp-card pro">
           <div>
             <div className="pp-card-head">
               <p className="pp-name">Founding Member</p>
-              <span className="pp-badge pfx-badge">Pay once</span>
+              <span className="pp-badge pro">Pay once</span>
             </div>
             <p className="pp-tagline">For backing TWO early.</p>
           </div>
@@ -163,20 +163,20 @@ export function PricingClient() {
             <span className="display">$99</span>
             <span className="pp-per">once, Pro for life</span>
           </p>
-          <a href={SIGNUP_FOUNDING} className="pp-btn pfx-btn">Get lifetime Pro</a>
+          <a href={SIGNUP_FOUNDING} className="pp-btn solid">Get lifetime Pro</a>
           <ul className="pp-list">
-            <li><Check tone="clay" />Everything in Pro, for life</li>
-            <li><Check tone="clay" />One payment, no subscription</li>
-            <li><Check tone="clay" />Share a workspace with 2 people</li>
-            <li><Check tone="clay" />Limited to 500 founding members</li>
+            <li><Check />Everything in Pro, for life</li>
+            <li><Check />One payment, no subscription</li>
+            <li><Check />Share a workspace with 2 people</li>
+            <li><Check />Limited to 500 founding members</li>
           </ul>
         </div>
 
-        <div className="pp-card pro">
+        <div className="pp-card">
           <div>
             <div className="pp-card-head">
               <p className="pp-name">Pro</p>
-              <span className="pp-badge pro">14 days free</span>
+              <span className="pp-badge pfx-neutral">14 days free</span>
             </div>
             <p className="pp-tagline">For writing every day.</p>
           </div>
@@ -184,7 +184,7 @@ export function PricingClient() {
             <span className="display">{yearly ? "$5" : "$6"}</span>
             <span className="pp-per">{yearly ? "a month, billed $60 yearly" : "a month"}</span>
           </p>
-          <a href={SIGNUP_PRO} className="pp-btn outline pfx-pro-btn">Start free trial</a>
+          <a href={SIGNUP_PRO} className="pp-btn outline">Start free trial</a>
           <ul className="pp-list">
             <li><Check />Everything in Free</li>
             <li><Check />Unlimited docs and workspaces</li>
@@ -198,7 +198,7 @@ export function PricingClient() {
         <div className="pfx-team-l">
           <div className="pfx-team-head">
             <p className="pp-name">Team</p>
-            <span className="pp-badge soon">Coming soon</span>
+            <span className="pp-badge pfx-neutral">Coming soon</span>
           </div>
           <p className="pp-tagline">For small teams writing together.</p>
           <p className="pp-price pfx-team-price">

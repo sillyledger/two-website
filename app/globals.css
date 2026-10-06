@@ -4317,3 +4317,6 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
 /* ============ NAV DOWNLOAD DROPDOWN FIX ============ */
 /* .nav-links a (padding 0, gap 5px, align center) was overriding the linked Install Web App row */
 .simple-dd:not(.rd-dd) a.simple-item { padding: 10px 12px; gap: 12px; align-items: stretch; }
+
+/* ============ PRICING: SINGLE ACCENT (pfx-) ============ */
+.pp-badge.pfx-neutral { color: #c4c4c4; background: var(--bg-tertiary); }
