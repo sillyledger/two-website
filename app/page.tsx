@@ -33,10 +33,14 @@ export default async function Home() {
     <div className="hm">
       {/* ============ HERO ============ */}
       <section className="hm-wrap hm-hero">
-        <a href="/product/features/studio" className="hm-news">
-          <span className="hm-new">New</span>
-          Studio is here: capture ideas, then turn them into docs
-          <span className="arrow">→</span>
+        <a href="/pricing" className="hfx-pill">
+          <span className="hfx-tag">
+            <span className="hfx-long">Founding Member</span>
+            <span className="hfx-short">Founding</span>
+          </span>
+          <span className="hfx-long">Pay once, keep Pro for life. $99, limited to 500</span>
+          <span className="hfx-short">$99 once, Pro for life</span>
+          <span className="hfx-arrow" aria-hidden="true">→</span>
         </a>
         <h1 className="display">
           Two docs. One screen.
@@ -46,7 +50,7 @@ export default async function Home() {
         <div className="hm-hero-cta">
           <div className="hm-btns">
             <a href="https://app.two.so/signup" className="hm-btn solid">Start writing free</a>
-            <a href="/pricing" className="hm-btn outline">See pricing</a>
+            <a href="https://app.two.so/signup?plan=founding" className="hm-btn hfx-ind">Get lifetime Pro, $99</a>
           </div>
           <p className="hm-fine">Free for 30 docs. No AI, nothing to set up.</p>
         </div>
@@ -227,8 +231,8 @@ export default async function Home() {
       <section className="hm-wrap hm-section">
         <div className="hm-center">
           <p className="micro">Pricing</p>
-          <h2 className="display">Free to start. $6 when you&apos;re ready.</h2>
-          <p>14-day Pro trial, no credit card. Never per seat.</p>
+          <h2 className="display">Free to start. Or pay once.</h2>
+          <p>Pro is $6 a month with a 14-day trial, or $99 once for life. Never per seat.</p>
         </div>
         <div className="hm-plans">
           <div className="hm-plan">
@@ -243,8 +247,21 @@ export default async function Home() {
           </div>
           <div className="hm-plan pro">
             <div className="hm-plan-top">
+              <p className="hm-plan-name">Founding Member</p>
+              <span className="hm-badge pro">Pay once</span>
+            </div>
+            <p className="hm-plan-price"><span className="display">$99</span><span>once, Pro for life</span></p>
+            <ul>
+              <li>{CHECK}Everything in Pro, for life</li>
+              <li>{CHECK}One payment, no subscription</li>
+              <li>{CHECK}Limited to 500 founding members</li>
+            </ul>
+            <a href="https://app.two.so/signup?plan=founding" className="hm-btn solid">Get lifetime Pro</a>
+          </div>
+          <div className="hm-plan">
+            <div className="hm-plan-top">
               <p className="hm-plan-name">Pro</p>
-              <span className="hm-badge pro">14 days free</span>
+              <span className="hm-badge hfx-grey">14 days free</span>
             </div>
             <p className="hm-plan-price"><span className="display">$6</span><span>a month, or $5 yearly</span></p>
             <ul>
@@ -252,25 +269,13 @@ export default async function Home() {
               <li>{CHECK}Share a workspace, no seat fees</li>
               <li>{CHECK}10 GB storage, 30-day history</li>
             </ul>
-            <a href="/pricing" className="hm-btn solid">Start free trial</a>
-          </div>
-          <div className="hm-plan">
-            <div className="hm-plan-top">
-              <p className="hm-plan-name">Team</p>
-              <span className="hm-badge soon">Coming soon</span>
-            </div>
-            <p className="hm-plan-price"><span className="display">$10</span><span>a month</span></p>
-            <ul>
-              <li>{CHECK}Everything in Pro</li>
-              <li>{CHECK}Up to 10 members</li>
-              <li>{CHECK}50 GB storage</li>
-            </ul>
-            <span className="hm-btn soon">Coming soon</span>
+            <a href="https://app.two.so/signup?plan=pro" className="hm-btn outline">Start free trial</a>
           </div>
         </div>
-        <div className="hm-center-link">
+        <p className="hfx-team">
+          Team, for up to 10 people, is coming soon.{" "}
           <a href="/pricing" className="hm-link">Compare all plans →</a>
-        </div>
+        </p>
       </section>
 
       {/* ============ BLOG ============ */}

@@ -4320,3 +4320,23 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
 
 /* ============ PRICING: SINGLE ACCENT (pfx-) ============ */
 .pp-badge.pfx-neutral { color: #c4c4c4; background: var(--bg-tertiary); }
+
+/* ============ HOMEPAGE: FOUNDING MEMBER (hfx-) ============ */
+.hfx-pill { display: inline-flex; align-items: center; gap: 10px; max-width: 100%; box-sizing: border-box; padding: 6px 14px 6px 6px; border-radius: 30px; border: 1px solid rgba(143,137,230,0.45); background: linear-gradient(90deg, rgba(107,92,231,0.16), var(--bg-card) 70%); font-size: 13.5px; color: #d8d8dc; text-decoration: none; }
+.hfx-pill:hover { border-color: var(--indigo); color: var(--text-primary); }
+.hfx-tag { flex-shrink: 0; font-size: 11px; font-weight: 600; color: var(--bg); background: #c4b8ff; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
+.hfx-arrow { color: var(--indigo); }
+.hfx-short { display: none; }
+.hm-btn.hfx-ind { border: 1px solid rgba(143,137,230,0.55); background: rgba(107,92,231,0.1); color: var(--text-primary); }
+.hm-btn.hfx-ind:hover { border-color: var(--indigo); }
+.hm-badge.hfx-grey { color: #c4c4c4; background: var(--bg-tertiary); }
+.hfx-team { text-align: center; margin: 28px 0 0; font-size: 14px; line-height: 1.6; color: #8a8a92; }
+
+@media (max-width: 860px) {
+  .hfx-pill { gap: 8px; font-size: 12.5px; }
+  .hfx-tag { font-size: 10.5px; }
+  .hfx-long { display: none; }
+  .hfx-short { display: inline; }
+  .hfx-team { text-align: left; font-size: 13.5px; margin-top: 22px; }
+}
+.hfx-team a { white-space: nowrap; }
