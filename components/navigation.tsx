@@ -191,7 +191,7 @@ export function Navigation() {
                   <span className="icon">{ICON_TABLET}</span>
                   <div>
                     <p className="t">
-                      iPad App <span className="soon-tag">Soon</span>
+                      iPad App <span className="soon-tag">Planned</span>
                     </p>
                     <p className="d">A dedicated iPad experience built for the way you think and write.</p>
                   </div>
@@ -420,7 +420,7 @@ export function Navigation() {
           Mac App <span className="soon-tag">Soon</span>
         </span>
         <span style={{ fontSize: 14, color: "var(--text-secondary)", padding: "10px 0", display: "flex", alignItems: "center", gap: 8 }}>
-          iPad App <span className="soon-tag">Soon</span>
+          iPad App <span className="soon-tag">Planned</span>
         </span>
         <a href="/install" onClick={closeMobile}>
           Install Web App

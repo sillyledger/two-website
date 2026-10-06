@@ -4313,3 +4313,7 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .pfx-team-list { grid-template-columns: 1fr; gap: 12px; padding-top: 20px; border-top: 1px solid var(--border); }
   .pfx-team-btn { justify-self: stretch; }
 }
+
+/* ============ NAV DOWNLOAD DROPDOWN FIX ============ */
+/* .nav-links a (padding 0, gap 5px, align center) was overriding the linked Install Web App row */
+.simple-dd:not(.rd-dd) a.simple-item { padding: 10px 12px; gap: 12px; align-items: stretch; }
