@@ -43,9 +43,16 @@ export default async function Home() {
           <span className="hfx-arrow" aria-hidden="true">→</span>
         </a>
         <h1 className="display">
-          Two docs. One screen.
-          <br />
-          <span>One to write. One to think.</span>
+          <span className="hfx-d1">
+            Two docs. One screen.
+            <br />
+          </span>
+          <span className="hfx-d2">One to write. One to think.</span>
+          <span className="hfx-m">
+            Two docs.
+            <br />
+            <span>One screen.</span>
+          </span>
         </h1>
         <div className="hm-hero-cta">
           <div className="hm-btns">

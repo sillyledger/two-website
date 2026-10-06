@@ -4388,3 +4388,12 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .ifx-card li { font-size: 14px; }
   .ifx-links { flex-direction: column; gap: 4px; font-size: 13.5px; margin-top: 20px; }
 }
+
+/* ============ HOMEPAGE HERO: PHONE HEADLINE (hfx-) ============ */
+.hm-hero h1 .hfx-d1, .hm-hero h1 .hfx-m { color: var(--text-primary); }
+.hm-hero h1 .hfx-m { display: none; }
+.hm-hero h1 .hfx-m span { color: #6a6a74; }
+@media (max-width: 860px) {
+  .hm-hero h1 .hfx-d1, .hm-hero h1 .hfx-d2 { display: none; }
+  .hm-hero h1 .hfx-m { display: inline; }
+}
