@@ -1,29 +1,29 @@
 "use client";
 
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import Link from "next/link";
 import { PageCta } from "@/components/page-cta";
 
-declare global {
-  interface Window {
-    Paddle?: {
-      Initialize: (opts: { token: string }) => void;
-      Checkout: {
-        open: (opts: { items: { priceId: string; quantity: number }[] }) => void;
-      };
-    };
-  }
+const SIGNUP_PRO = "https://app.two.so/signup?plan=pro";
+const SIGNUP_FOUNDING = "https://app.two.so/signup?plan=founding";
+
+function Check({ tone = "indigo" }: { tone?: "indigo" | "clay" }) {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={tone === "clay" ? "#c98a5e" : "#8f89e6"}
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+  );
 }
-
-const PADDLE_CLIENT_TOKEN = "live_5d79c55970d6730fce490b94bc1";
-const PRICE_PRO_MONTHLY = "pri_01ksjx3b0n6pg6fw44hbq9r03p";
-const PRICE_PRO_ANNUAL = "pri_01ksxjysx4n6ewv4dq2mxn5kjr";
-
-const CHECK = (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8f89e6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
 
 type Cell = string | boolean;
 type Row = { label: string; badge?: string; cells: [Cell, Cell, Cell] };
@@ -64,9 +64,21 @@ const TABLE: { cat: string; rows: Row[] }[] = [
       { label: "Priority support", cells: [false, true, true] },
     ],
   },
+  {
+    cat: "Billing",
+    rows: [{ label: "How you pay", cells: ["Free", "Monthly, yearly or once", "Monthly"] }],
+  },
 ];
 
 const FAQS = [
+  {
+    q: "What is Founding Member?",
+    a: "A one-time $99 payment for Pro, for life. No subscription and no renewals. It's limited to 500 founding members, and when they're gone the offer closes. Already using TWO? You can get it from Settings in the app.",
+  },
+  {
+    q: "Does Founding Member include Team?",
+    a: "No. Founding Member is Pro for life, including sharing a workspace with 2 people. Team will be its own plan.",
+  },
   {
     q: "Is the free plan really free?",
     a: "Yes. No card, no timer. Thirty docs is enough to make TWO your main writing app and decide for yourself.",
@@ -76,48 +88,31 @@ const FAQS = [
     a: "No. There is no AI writing, summarizing or suggesting anywhere in the app, and your words are never used to train anything.",
   },
   {
-    q: "Can I use it on my Mac or iPad?",
-    a: "TWO runs in any browser and installs to your Dock or home screen like an app. Native Mac and iPad apps are on the roadmap.",
-  },
-  {
     q: "What happens when my trial ends?",
     a: "You move to the Free plan automatically. Nothing is deleted. You can upgrade again at any time.",
   },
   {
-    q: "What will Team include?",
-    a: "Everything in Pro, room for up to 10 members and 50 GB of storage. It is launching soon.",
+    q: "Can I get a refund?",
+    a: "Founding Member can be refunded within 14 days if TWO isn't for you. If you're ever charged by mistake, email us within 14 days for a full refund.",
   },
   {
     q: "Do you charge per person?",
-    a: "No. Pro and Team are flat monthly prices. Inviting someone into a shared workspace never changes your bill.",
+    a: "No. Pro and Team are flat prices, and Founding Member is one payment. Inviting someone into a shared workspace never changes your bill.",
+  },
+  {
+    q: "Can I use it on my Mac or iPad?",
+    a: "TWO runs in any browser and installs to your Dock or home screen like an app. Native Mac and iPad apps are on the roadmap.",
   },
 ];
 
 function renderCell(c: Cell) {
   if (c === true) return <span className="pp-yes" aria-label="Included">✓</span>;
-  if (c === false) return <span className="pp-no" aria-label="Not included">–</span>;
+  if (c === false) return <span className="pp-no" aria-label="Not included">·</span>;
   return c;
 }
 
 export function PricingClient() {
   const [yearly, setYearly] = useState(false);
-
-  useEffect(() => {
-    if (document.getElementById("paddle-js")) return;
-    const script = document.createElement("script");
-    script.id = "paddle-js";
-    script.src = "https://cdn.paddle.com/paddle/v2/paddle.js";
-    script.async = true;
-    script.onload = () => {
-      window.Paddle?.Initialize({ token: PADDLE_CLIENT_TOKEN });
-    };
-    document.head.appendChild(script);
-  }, []);
-
-  function openProCheckout() {
-    const priceId = yearly ? PRICE_PRO_ANNUAL : PRICE_PRO_MONTHLY;
-    window.Paddle?.Checkout.open({ items: [{ priceId, quantity: 1 }] });
-  }
 
   return (
     <div className="hero-frame">
@@ -125,7 +120,8 @@ export function PricingClient() {
         <p className="micro">Pricing</p>
         <h1 className="display">One price. Never per seat.</h1>
         <p className="pp-sub">
-          Start free and stay free as long as you like. Upgrade when you need more room. Bring people into a workspace without your bill changing.
+          Start free and stay free as long as you like. Upgrade when you need more room, or pay once and keep Pro for
+          life.
         </p>
         <div className="pp-toggle">
           <button className={!yearly ? "on" : ""} onClick={() => setYearly(false)}>Monthly</button>
@@ -148,10 +144,31 @@ export function PricingClient() {
           </p>
           <a href="https://app.two.so/signup" className="pp-btn outline">Start free</a>
           <ul className="pp-list">
-            <li>{CHECK}30 docs, plus Notes</li>
-            <li>{CHECK}Split view and tabs</li>
-            <li>{CHECK}Studio, Planner and templates</li>
-            <li>{CHECK}1 GB storage, last 3 versions</li>
+            <li><Check />30 docs, plus Notes</li>
+            <li><Check />Split view and tabs</li>
+            <li><Check />Studio, Planner and templates</li>
+            <li><Check />1 GB storage, last 3 versions</li>
+          </ul>
+        </div>
+
+        <div className="pp-card pfx-founding">
+          <div>
+            <div className="pp-card-head">
+              <p className="pp-name">Founding Member</p>
+              <span className="pp-badge pfx-badge">Pay once</span>
+            </div>
+            <p className="pp-tagline">For backing TWO early.</p>
+          </div>
+          <p className="pp-price">
+            <span className="display">$99</span>
+            <span className="pp-per">once, Pro for life</span>
+          </p>
+          <a href={SIGNUP_FOUNDING} className="pp-btn pfx-btn">Get lifetime Pro</a>
+          <ul className="pp-list">
+            <li><Check tone="clay" />Everything in Pro, for life</li>
+            <li><Check tone="clay" />One payment, no subscription</li>
+            <li><Check tone="clay" />Share a workspace with 2 people</li>
+            <li><Check tone="clay" />Limited to 500 founding members</li>
           </ul>
         </div>
 
@@ -167,34 +184,35 @@ export function PricingClient() {
             <span className="display">{yearly ? "$5" : "$6"}</span>
             <span className="pp-per">{yearly ? "a month, billed $60 yearly" : "a month"}</span>
           </p>
-          <button className="pp-btn solid" onClick={openProCheckout}>Start free trial</button>
+          <a href={SIGNUP_PRO} className="pp-btn outline pfx-pro-btn">Start free trial</a>
           <ul className="pp-list">
-            <li>{CHECK}Everything in Free</li>
-            <li>{CHECK}Unlimited docs and workspaces</li>
-            <li>{CHECK}Share a workspace, no seat fees</li>
-            <li>{CHECK}10 GB storage, 30-day history</li>
+            <li><Check />Everything in Free</li>
+            <li><Check />Unlimited docs and workspaces</li>
+            <li><Check />Share a workspace, no seat fees</li>
+            <li><Check />10 GB storage, 30-day history</li>
           </ul>
         </div>
+      </section>
 
-        <div className="pp-card">
-          <div>
-            <div className="pp-card-head">
-              <p className="pp-name">Team</p>
-              <span className="pp-badge soon">Coming soon</span>
-            </div>
-            <p className="pp-tagline">For small teams writing together.</p>
+      <section className="pfx-team" aria-label="Team plan, coming soon">
+        <div className="pfx-team-l">
+          <div className="pfx-team-head">
+            <p className="pp-name">Team</p>
+            <span className="pp-badge soon">Coming soon</span>
           </div>
-          <p className="pp-price">
+          <p className="pp-tagline">For small teams writing together.</p>
+          <p className="pp-price pfx-team-price">
             <span className="display">$10</span>
-            <span className="pp-per">a month</span>
+            <span className="pp-per">a month, flat</span>
           </p>
-          <button className="pp-btn soon" disabled>Coming soon</button>
-          <ul className="pp-list">
-            <li>{CHECK}Everything in Pro</li>
-            <li>{CHECK}Up to 10 members</li>
-            <li>{CHECK}50 GB storage</li>
-          </ul>
         </div>
+        <ul className="pfx-team-list">
+          <li><Check />Everything in Pro</li>
+          <li><Check />Up to 10 members</li>
+          <li><Check />50 GB storage</li>
+          <li><Check />One bill, never per seat</li>
+        </ul>
+        <span className="pp-btn soon pfx-team-btn">Coming soon</span>
       </section>
 
       <p className="pp-fineprint">No credit card for the trial. When it ends, you move to Free and keep everything you wrote.</p>
@@ -206,7 +224,7 @@ export function PricingClient() {
             <div className="pp-tr head">
               <span></span>
               <span>Free</span>
-              <span className="pro">Pro</span>
+              <span className="pro">Founding and Pro</span>
               <span>Team <span className="pp-inline-badge">Soon</span></span>
             </div>
             {TABLE.map((group) => (

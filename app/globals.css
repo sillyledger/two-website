@@ -4282,3 +4282,34 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .cpx-card-k { margin-top: 16px; }
   .cpx-card-go { padding-top: 16px; }
 }
+
+/* ============ PRICING: FOUNDING MEMBER + TEAM BLOCK (pfx-) ============ */
+.pp-card.pfx-founding { border-color: rgba(201,138,94,0.75); background: linear-gradient(180deg, rgba(201,138,94,0.16), var(--bg-card) 55%); box-shadow: 0 0 0 4px rgba(201,138,94,0.08); }
+.pp-card.pfx-founding .pp-name { color: #e0b48c; }
+.pp-badge.pfx-badge { color: var(--bg); background: #e0b48c; }
+.pp-btn.pfx-btn { background: var(--clay); color: var(--bg); border: 0; }
+.pp-btn.pfx-btn:hover { background: #d69a6e; }
+.pp-btn.pfx-pro-btn { border-color: rgba(143,137,230,0.5); }
+.pp-btn.pfx-pro-btn:hover { border-color: var(--indigo); }
+.pp-btn { white-space: nowrap; }
+
+.pfx-team { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) auto; gap: 48px; align-items: center; margin-top: 20px; padding: 30px 36px; border-radius: 18px; background: #1a1a1c; border: 1px dashed var(--border-strong); }
+.pfx-team-head { display: flex; align-items: center; gap: 12px; min-height: 22px; }
+.pfx-team .pp-tagline { margin-top: 10px; }
+.pfx-team-price { margin-top: 16px; }
+.pfx-team-price .display { font-size: 44px; }
+.pfx-team-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
+.pfx-team-list li { display: flex; gap: 10px; font-size: 14.5px; line-height: 1.45; color: #c4c4c4; }
+.pfx-team-list li svg { flex-shrink: 0; margin-top: 3px; }
+.pfx-team-btn { padding: 0 28px; }
+
+@media (max-width: 1100px) {
+  .pfx-team { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
+  .pfx-team-btn { grid-column: 1 / -1; justify-self: start; }
+}
+
+@media (max-width: 860px) {
+  .pfx-team { grid-template-columns: 1fr; gap: 20px; padding: 26px 24px; margin-top: 12px; }
+  .pfx-team-list { grid-template-columns: 1fr; gap: 12px; padding-top: 20px; border-top: 1px solid var(--border); }
+  .pfx-team-btn { justify-self: stretch; }
+}
