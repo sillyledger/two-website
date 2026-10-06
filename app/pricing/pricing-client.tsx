@@ -263,10 +263,10 @@ export function PricingClient() {
       </section>
 
       <PageCta
-        title="Two docs. One screen."
-        subtitle="Free to start."
+        title="Two docs."
+        subtitle="One screen."
         primary={{ label: "Start writing free", href: "https://app.two.so/signup" }}
-        note="Takes ten seconds. No card needed."
+        note="Free to start. No card needed."
       />
     </div>
   );
