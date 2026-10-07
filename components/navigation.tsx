@@ -213,9 +213,7 @@ export function Navigation() {
             <a href="/roadmap">Roadmap</a>
           </li>
           <li>
-            <a href="https://www.sorano.space/two-docs/changelog" target="_blank" rel="noopener noreferrer">
-              Changelog
-            </a>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
 
@@ -432,8 +430,8 @@ export function Navigation() {
         <a href="/roadmap" onClick={closeMobile}>
           Roadmap
         </a>
-        <a href="https://www.sorano.space/two-docs/changelog" target="_blank" rel="noopener noreferrer" onClick={closeMobile}>
-          Changelog
+        <a href="/contact" onClick={closeMobile}>
+          Contact
         </a>
 
         <div className="mm-cta">
