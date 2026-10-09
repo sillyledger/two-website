@@ -4397,3 +4397,56 @@ button.hm-sbi:hover { background: rgba(255,255,255,0.07); color: #e8e7e1; }
   .hm-hero h1 .hfx-d1, .hm-hero h1 .hfx-d2 { display: none; }
   .hm-hero h1 .hfx-m { display: inline; }
 }
+
+/* ============ ROADMAP: MAC BUILD (rmm-) ============ */
+.rmm { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 72px; align-items: start; margin: 120px 0 110px; }
+.rmm-left { position: sticky; top: 110px; }
+.rmm-h { font-size: 44px; line-height: 1.06; letter-spacing: -0.03em; margin: 18px 0 0; }
+.rmm-lede { font-size: 16px; line-height: 1.6; color: #c4c4c4; margin: 16px 0 0; max-width: 40ch; }
+.rmm-prog { margin-top: 36px; max-width: 340px; }
+.rmm-count { display: flex; align-items: baseline; gap: 10px; }
+.rmm-count b { font-family: 'Fira Sans', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -0.02em; line-height: 1; color: var(--text-primary); }
+.rmm-count span { font-size: 13.5px; color: var(--text-muted); }
+.rmm-bar { display: flex; gap: 4px; margin: 14px 0 12px; }
+.rmm-bar span { flex: 1; height: 5px; border-radius: 3px; background: var(--bg-tertiary); }
+.rmm-bar .rmm-done { background: var(--green); }
+.rmm-bar .rmm-progress { background: var(--indigo); }
+.rmm-upd { font-size: 13px; color: #8a8a92; margin: 0; }
+.rmm-scope { font-size: 13.5px; line-height: 1.55; color: #8a8a92; margin: 28px 0 0; padding-top: 18px; border-top: 1px solid var(--border); max-width: 340px; }
+.rmm-scope-m { display: none; margin-top: 30px; }
+.rmm-track { list-style: none; margin: 0; padding: 4px 0 0 32px; }
+.rmm-step { position: relative; padding-bottom: 28px; }
+.rmm-step:last-child { padding-bottom: 0; }
+.rmm-step::before { content: ""; position: absolute; left: -23px; top: 18px; bottom: -2px; width: 1px; background: var(--border-strong); }
+.rmm-step:last-child::before { display: none; }
+.rmm-step.rmm-done::before { background: var(--green); opacity: 0.5; }
+.rmm-node { position: absolute; left: -28px; top: 6px; width: 11px; height: 11px; border-radius: 50%; border: 1.5px solid #5a5a62; background: var(--bg); box-sizing: border-box; }
+.rmm-step.rmm-done .rmm-node { border-color: var(--green); background: var(--green); }
+.rmm-step.rmm-progress .rmm-node { border-color: var(--indigo); background: var(--indigo); animation: rmm-pulse 2.4s ease-out infinite; }
+@keyframes rmm-pulse { 0% { box-shadow: 0 0 0 0 rgba(143,137,230,0.55); } 70% { box-shadow: 0 0 0 8px rgba(143,137,230,0); } 100% { box-shadow: 0 0 0 0 rgba(143,137,230,0); } }
+@media (prefers-reduced-motion: reduce) { .rmm-step.rmm-progress .rmm-node { animation: none; } }
+.rmm-top { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+.rmm-top .rm-badge { white-space: nowrap; flex-shrink: 0; }
+.rmm-t { margin: 0; font-size: 16.5px; line-height: 1.3; font-weight: 500; letter-spacing: -0.005em; color: var(--text-primary); }
+.rmm-step.rmm-done .rmm-t { color: #c4c4c4; }
+.rmm-step.rmm-next .rmm-t { color: var(--text-muted); }
+.rmm-d { margin: 6px 0 0; font-size: 14.5px; line-height: 1.6; color: #7c7c84; max-width: 46ch; }
+.rmm-step.rmm-progress .rmm-card { margin: -12px 0 0 -18px; padding: 16px 18px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+.rmm-step.rmm-progress .rmm-d { color: var(--text-muted); }
+.rmm-inc { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 9px 20px; }
+.rmm-inc li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #c4c4c4; }
+.rmm-inc li::before { content: ""; flex: none; width: 12px; height: 1px; background: var(--indigo); opacity: 0.7; }
+.rmm-divider { margin: 0; }
+.rmm-link { display: inline-block; margin-left: 10px; font-size: 13px; color: #c4b8ff; text-decoration: none; }
+.rmm-link:hover { color: var(--text-primary); }
+
+@media (max-width: 860px) {
+  .rmm { grid-template-columns: 1fr; gap: 36px; margin: 80px 0 72px; }
+  .rmm-left { position: static; }
+  .rmm-h { font-size: 34px; }
+  .rmm-lede { font-size: 15.5px; }
+  .rmm-prog { margin-top: 26px; }
+  .rmm-left .rmm-scope { display: none; }
+  .rmm-scope-m { display: block; }
+  .rmm-inc { grid-template-columns: 1fr; }
+}

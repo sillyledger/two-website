@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Product Roadmap & Upcoming Features | TWO",
 };
 
-type Card = { t: string; d: string };
+type Card = { t: string; d: string; link?: { label: string; href: string } };
 
 const DEPLOYED: Card[] = [
   {
@@ -28,7 +28,7 @@ const DEPLOYED: Card[] = [
 const IN_PROGRESS: Card[] = [
   { t: "Onboarding flow", d: "A guided first-run experience so new users hit the ground running." },
   { t: "Inline comments", d: "Highlight any text and leave a comment. Threaded feedback, built right into the doc." },
-  { t: "Native Mac app", d: "A dedicated Mac experience. Fast, native, lives in your Dock." },
+  { t: "Native Mac app", d: "A dedicated Mac experience. Fast, native, lives in your Dock.", link: { label: "See the build ↑", href: "#mac" } },
 ];
 
 const SOON: Card[] = [
@@ -39,6 +39,22 @@ const SOON: Card[] = [
 
 const HORIZON: Card[] = [
   { t: "Offline-first", d: "Full functionality without an internet connection, always." },
+];
+
+type MacStatus = "done" | "progress" | "next";
+type MacMilestone = { t: string; d: string; s: MacStatus; i: string[] };
+
+const MAC_UPDATED = "Oct 9, 2026";
+
+const MAC: MacMilestone[] = [
+  { t: "Sign in and sync", s: "progress", d: "Log in with your TWO account. Everything you wrote on the web is already there.", i: ["Email and password login", "Password reset", "Synced with the web app", "Log out"] },
+  { t: "Home and navigation", s: "next", d: "The sidebar, your recent docs and quick search.", i: ["Sidebar with favorites", "Recent docs on Home", "Quick search with ⌘K", "Grid and list views"] },
+  { t: "The editor", s: "next", d: "Headings, lists, tables, images and code, in a fully native editor.", i: ["Headings, lists and task lists", "Tables, images and code blocks", "Markdown shortcuts", "Autosave and version history"] },
+  { t: "Tabs and Split View", s: "next", d: "Two docs, one screen. The reason TWO exists.", i: ["Docs open as tabs", "Two docs side by side", "Drag the divider to resize", "Picks up where you left off"] },
+  { t: "Folders and Library", s: "next", d: "Nested folders, pinned favorites and one place to see everything.", i: ["Nested folders with colors", "Pin folders to the sidebar", "Library overview", "Trash and restore"] },
+  { t: "Notes", s: "next", d: "Quick notes, sorted into nested categories.", i: ["Grid or list of notes", "Nested categories", "Export as Markdown or PDF", "Open a note in Split View"] },
+  { t: "Planner and Activity", s: "next", d: "Tasks tied to your docs, and a feed of what changed.", i: ["Tasks linked to docs", "Today, Upcoming and Overdue", "Board and list view", "Activity by day"] },
+  { t: "Settings and finish", s: "next", d: "Themes, text size, shortcuts and the last details.", i: ["Dark, light or system theme", "Editor text size", "Date format and time zone", "Plan and storage"] },
 ];
 
 const PREV_ITEMS = [
@@ -83,6 +99,16 @@ const CHECK = (
 
 export default function Roadmap() {
   const shippedCount = PREV_ITEMS.length + DEPLOYED.length;
+  const macDone = MAC.filter((m) => m.s === "done").length;
+  const macFirstNext = MAC.findIndex((m) => m.s === "next");
+  const macBadge = (m: MacMilestone, k: number) =>
+    m.s === "done" ? (
+      <span className="rm-badge shipped">✓ Done</span>
+    ) : m.s === "progress" ? (
+      <span className="rm-badge progress">Building now</span>
+    ) : (
+      <span className="rm-badge soon">{k === macFirstNext ? "Up next" : "Planned"}</span>
+    );
   const [flagship, ...restDeployed] = DEPLOYED;
 
   return (
@@ -131,6 +157,61 @@ export default function Roadmap() {
         </div>
       </div>
 
+      {/* ============ MAC BUILD ============ */}
+      <section className="rmm" id="mac" aria-labelledby="rmm-h">
+        <div className="rmm-left">
+          <div className="roadmap-col-head">
+            <div className="dot progress"></div>
+            <span>Native Mac app</span>
+          </div>
+          <h2 className="display rmm-h" id="rmm-h">
+            The Mac app,
+            <br />
+            built from scratch.
+          </h2>
+          <p className="rmm-lede">Fully native and written in Swift, not the website in a window. Here is where the build stands.</p>
+          <div className="rmm-prog">
+            <div className="rmm-count">
+              <b>{macDone}</b>
+              <span>of {MAC.length} milestones done</span>
+            </div>
+            <div className="rmm-bar" aria-hidden="true">
+              {MAC.map((m) => (
+                <span key={m.t} className={`rmm-${m.s}`} />
+              ))}
+            </div>
+            <p className="rmm-upd">Updated {MAC_UPDATED}</p>
+          </div>
+          <p className="rmm-scope">The first version covers private workspaces. Shared workspaces and Canvas come after.</p>
+        </div>
+        <div>
+          <ol className="rmm-track">
+            {MAC.map((m, k) => (
+              <li key={m.t} className={`rmm-step rmm-${m.s}`}>
+                <span className="rmm-node" aria-hidden="true" />
+                <div className="rmm-card">
+                  <div className="rmm-top">
+                    <h3 className="rmm-t">{m.t}</h3>
+                    {macBadge(m, k)}
+                  </div>
+                  {m.s !== "done" && <p className="rmm-d">{m.d}</p>}
+                  {m.s === "progress" && (
+                    <ul className="rmm-inc">
+                      {m.i.map((x) => (
+                        <li key={x}>{x}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
+          <p className="rmm-scope rmm-scope-m">The first version covers private workspaces. Shared workspaces and Canvas come after.</p>
+        </div>
+      </section>
+
+      <div className="roadmap-divider rmm-divider"></div>
+
       {/* ============ BOARD ============ */}
       <div className="roadmap-board">
         <div>
@@ -171,6 +252,9 @@ export default function Roadmap() {
               <p className="t">{c.t}</p>
               <p className="d">{c.d}</p>
               <span className="rm-badge progress">In progress</span>
+              {c.link && (
+                <a href={c.link.href} className="rmm-link">{c.link.label}</a>
+              )}
             </div>
           ))}
         </div>
