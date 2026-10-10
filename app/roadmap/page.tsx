@@ -44,12 +44,12 @@ const HORIZON: Card[] = [
 type MacStatus = "done" | "progress" | "next";
 type MacMilestone = { t: string; d: string; s: MacStatus; i: string[] };
 
-const MAC_UPDATED = "Oct 9, 2026";
+const MAC_UPDATED = "Oct 10, 2026";
 
 const MAC: MacMilestone[] = [
-  { t: "Sign in and sync", s: "progress", d: "Log in with your TWO account. Everything you wrote on the web is already there.", i: ["Email and password login", "Password reset", "Synced with the web app", "Log out"] },
+  { t: "Sign in and sync", s: "done", d: "Log in with your TWO account. Everything you wrote on the web is already there.", i: ["Email and password login", "Password reset", "Synced with the web app", "Log out"] },
+  { t: "The editor", s: "progress", d: "Headings, lists, tables, images and code, in a fully native editor.", i: ["Headings, lists and task lists", "Tables, images and code blocks", "Markdown shortcuts", "Autosave and version history"] },
   { t: "Home and navigation", s: "next", d: "The sidebar, your recent docs and quick search.", i: ["Sidebar with favorites", "Recent docs on Home", "Quick search with ⌘K", "Grid and list views"] },
-  { t: "The editor", s: "next", d: "Headings, lists, tables, images and code, in a fully native editor.", i: ["Headings, lists and task lists", "Tables, images and code blocks", "Markdown shortcuts", "Autosave and version history"] },
   { t: "Tabs and Split View", s: "next", d: "Two docs, one screen. The reason TWO exists.", i: ["Docs open as tabs", "Two docs side by side", "Drag the divider to resize", "Picks up where you left off"] },
   { t: "Folders and Library", s: "next", d: "Nested folders, pinned favorites and one place to see everything.", i: ["Nested folders with colors", "Pin folders to the sidebar", "Library overview", "Trash and restore"] },
   { t: "Notes", s: "next", d: "Quick notes, sorted into nested categories.", i: ["Grid or list of notes", "Nested categories", "Export as Markdown or PDF", "Open a note in Split View"] },
