@@ -44,14 +44,14 @@ const HORIZON: Card[] = [
 type MacStatus = "done" | "progress" | "next";
 type MacMilestone = { t: string; d: string; s: MacStatus; i: string[] };
 
-const MAC_UPDATED = "Oct 19, 2026";
+const MAC_UPDATED = "Oct 22, 2026";
 
 const MAC: MacMilestone[] = [
   { t: "Sign in and sync", s: "done", d: "Log in with your TWO account. Everything you wrote on the web is already there.", i: ["Email and password login", "Password reset", "Synced with the web app", "Log out"] },
   { t: "The editor", s: "done", d: "Headings, lists, tables, images and code, in a fully native editor.", i: ["Headings, lists and task lists", "Tables, images and code blocks", "Markdown shortcuts", "Autosave and version history"] },
-  { t: "Home and navigation", s: "progress", d: "The sidebar, your recent docs and quick search.", i: ["Sidebar with favorites", "Recent docs on Home", "Quick search with ⌘K", "Grid and list views"] },
-  { t: "Tabs and Split View", s: "next", d: "Two docs, one screen. The reason TWO exists.", i: ["Docs open as tabs", "Two docs side by side", "Drag the divider to resize", "Picks up where you left off"] },
-  { t: "Folders and Library", s: "next", d: "Nested folders, pinned favorites and one place to see everything.", i: ["Nested folders with colors", "Pin folders to the sidebar", "Library overview", "Trash and restore"] },
+  { t: "Home and navigation", s: "done", d: "The sidebar, your recent docs and quick search.", i: ["Sidebar with favorites", "Recent docs on Home", "Quick search with ⌘K", "Grid and list views"] },
+  { t: "Tabs and Split View", s: "done", d: "Two docs, one screen. The reason TWO exists.", i: ["Docs open as tabs", "Two docs side by side", "Drag the divider to resize", "Picks up where you left off"] },
+  { t: "Folders and Library", s: "progress", d: "Nested folders, pinned favorites and one place to see everything.", i: ["Folders and subfolders", "Pinned favorites", "Folder colours that match everywhere", "Library"] },
   { t: "Notes", s: "next", d: "Quick notes, sorted into nested categories.", i: ["Grid or list of notes", "Nested categories", "Export as Markdown or PDF", "Open a note in Split View"] },
   { t: "Planner and Activity", s: "next", d: "Tasks tied to your docs, and a feed of what changed.", i: ["Tasks linked to docs", "Today, Upcoming and Overdue", "Board and list view", "Activity by day"] },
   { t: "Settings and finish", s: "next", d: "Themes, text size, shortcuts and the last details.", i: ["Dark, light or system theme", "Editor text size", "Date format and time zone", "Plan and storage"] },
