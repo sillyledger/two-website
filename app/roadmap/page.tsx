@@ -54,7 +54,8 @@ const MAC: MacMilestone[] = [
   { t: "Folders and Library", s: "done", d: "Nested folders, pinned favorites and one place to see everything.", i: ["Folders and subfolders", "Pinned favorites", "Folder colors that match everywhere", "Library"] },
   { t: "Notes", s: "done", d: "Quick notes, sorted into nested categories.", i: ["Grid or list of notes", "Nested categories", "Export as Markdown or PDF", "Open a note in Split View"] },
   { t: "Planner and Activity", s: "done", d: "Tasks tied to your docs, and a feed of what changed.", i: ["Tasks linked to docs", "Today, Upcoming and Overdue", "Board and list view", "Activity by day"] },
-  { t: "Settings and finish", s: "progress", d: "Themes, text size, shortcuts and the last details.", i: ["Dark, light or system theme", "Editor text size", "Date format and time zone", "Plan and storage"] },
+  { t: "Settings and Help", s: "done", d: "Themes, text size, shortcuts and your account.", i: ["Dark, light or system theme", "Editor text size", "Date format and time zone", "Plan and storage"] },
+  { t: "Doc details and launch", s: "progress", d: "The last doc page features, then testing and the beta.", i: ["Labels and comments", "Version history", "Public links and live sync", "Testing and fine-tuning"] },
 ];
 
 const PREV_ITEMS = [
