@@ -44,7 +44,7 @@ const HORIZON: Card[] = [
 type MacStatus = "done" | "progress" | "next";
 type MacMilestone = { t: string; d: string; s: MacStatus; i: string[] };
 
-const MAC_UPDATED = "Oct 24, 2026";
+const MAC_UPDATED = "Oct 25, 2026";
 
 const MAC: MacMilestone[] = [
   { t: "Sign in and sync", s: "done", d: "Log in with your TWO account. Everything you wrote on the web is already there.", i: ["Email and password login", "Password reset", "Synced with the web app", "Log out"] },
@@ -53,8 +53,8 @@ const MAC: MacMilestone[] = [
   { t: "Tabs and Split View", s: "done", d: "Two docs, one screen. The reason TWO exists.", i: ["Docs open as tabs", "Two docs side by side", "Drag the divider to resize", "Picks up where you left off"] },
   { t: "Folders and Library", s: "done", d: "Nested folders, pinned favorites and one place to see everything.", i: ["Folders and subfolders", "Pinned favorites", "Folder colors that match everywhere", "Library"] },
   { t: "Notes", s: "done", d: "Quick notes, sorted into nested categories.", i: ["Grid or list of notes", "Nested categories", "Export as Markdown or PDF", "Open a note in Split View"] },
-  { t: "Planner and Activity", s: "progress", d: "Tasks tied to your docs, and a feed of what changed.", i: ["Tasks linked to docs", "Today, Upcoming and Overdue", "Board and list view", "Activity by day"] },
-  { t: "Settings and finish", s: "next", d: "Themes, text size, shortcuts and the last details.", i: ["Dark, light or system theme", "Editor text size", "Date format and time zone", "Plan and storage"] },
+  { t: "Planner and Activity", s: "done", d: "Tasks tied to your docs, and a feed of what changed.", i: ["Tasks linked to docs", "Today, Upcoming and Overdue", "Board and list view", "Activity by day"] },
+  { t: "Settings and finish", s: "progress", d: "Themes, text size, shortcuts and the last details.", i: ["Dark, light or system theme", "Editor text size", "Date format and time zone", "Plan and storage"] },
 ];
 
 const PREV_ITEMS = [
