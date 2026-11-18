@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Minimalist Docs Editor & Writing App for iPad, Mac & Web",
 };
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 const CHECK = (
   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8f89e6" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
